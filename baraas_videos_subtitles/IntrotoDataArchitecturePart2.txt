@@ -1,0 +1,4358 @@
+All
+right.
+>> [music]
+[music]
+[music]
+[music]
+[music]
+[music]
+>> Hello everyone.
+Hello everyone. So, welcome to our
+second live stream for data architect
+and data architecture. I hope that you
+can hear me as you can hear the music.
+Let me check whether it is out.
+So, can you hear me well? Is everything
+working? Let me see here.
+still can hear the music. I think
+there's some delay and should be not
+there anymore.
+Hello everyone. So, welcome to the live
+stream. I hope that you can hear me
+well. If yes, then say yes. Um yeah, I'm
+really happy that we are live again
+as I promised last Tuesday. I thought
+that we going to make part two and now
+we are making part two. So I hope that
+you're going to enjoy this session. I
+hope that it will not be that long like
+last time 4 hours and I was really
+surprised with the reactions on the live
+stream. I checked like it has really
+around 70,000 views now. So a lot of
+people did turn later to check the
+stream and they uh they enjoyed it. So
+I'm really happy for that that this
+topic is something interesting for you
+because I know many of you are data
+analyst, data engineers and uh yeah I
+don't know there they are like um people
+that are interested in the data
+architecture and the data architect
+role. So now we going to do part two and
+this time it's going to be like let's
+say handson session. So what we're going
+to do I will open let's say uh draw a or
+some tool in order to show you how I
+yeah how I think how I draw the
+architecture. So today we're going to
+have like practice or let's say we're
+going to draw things. It will not be
+only theory. But before that there is
+only one concept that I would like to
+explain for you because now it is
+getting a lot of attention which is uh
+from data bricks. I don't know whether
+you heard about it the ltap
+architecture. I think it is going to be
+relevant for many of you because I know
+that many of you are learning data
+bricks. So I thought maybe I'm going to
+explain it for you because it is little
+bit confusing and still it is very fresh
+concept. The audio is low, right? So,
+you cannot hear me well.
+Can you hear me well or should I
+increase the audio?
+Let me check
+if I can increase something.
+This is important that you hear me well.
+Otherwise, it makes no sense, right? So,
+let me check.
+Yeah, I think I should increase it a
+little bit.
+How about now? Is it better? I think it
+should be better now. You can You should
+be hearing me better. Mhm. I post it
+now.
+So, is it now better? You can hear me
+good. All right.
+So, yeah. Um as I said uh today it's
+going to be uh LTAP
+concept little bit quickly so that you
+understand it and after that we going to
+go and draw an architecture and I'm
+going to give you my mindset on how I
+draw it. Okay. So now let's start but uh
+first I'm going to share my screen and
+maybe check whether you guys
+can see it. Oh I think I have to fix
+something.
+Give me a second.
+uh
+it is not sharing the right screen. So
+that's why I'm going to switch
+something.
+So
+and then this. Perfect. [snorts]
+Now you should see my screen right now.
+I'm going to hide this.
+Yeah, you are able to see it. So, I'm
+going to mix myself a little bit smaller
+here. Maybe like this.
+Yeah. So, it should be good. All right.
+So, now there is a new architecture that
+is getting in trend or let's say people
+are talking about it. It is the LTP
+architecture. It sounds a little bit
+complicated for you but uh I'm going to
+say it is not that hard. So I'm going to
+try to explain it in easy words so that
+if you see people are discussing about
+it online forums or LinkedIn or maybe at
+work you understand what people are
+talking about because it is getting now
+a lot of attention. So the Ltap
+architecture
+which might break let's say the way how
+we draw that architecture. So I'm going
+to go through this and then after that
+we're going to draw some architecture
+using drawo. But first I would like to
+cover this concept here. So now let's
+start. I think um many of you knows what
+is actually
+an OLAB system or OLTP system. I think
+um by the way this might be some
+questions in the interview so you should
+know about those concepts. Now I'm going
+to try to explain it in simple words.
+The old like this is something very old.
+It's not something like new or anything
+like that. If you build any application,
+uh if you build any applications, you
+need like it has maybe it's a website or
+something. Um you're going to need a
+storage behind it. Now
+um
+in the application going to be like
+there is transactions events like
+customers ordering things if you are
+doing e-commerce whatever the business
+is you need something called the
+database of course to do transactional
+work on the database. So so far this is
+something that the business do and um
+not like nothing is crazy. Now the thing
+is
+so this is just a database
+and it could be anything it could be
+like um an oracle possess MySQL
+whatever.
+So now this is something that we call
+um OLTP
+I think should make the font a little
+bit bigger. So, OLTP.
+All right. Ah, yes. I can do it like
+this. I'm checking whether I have an
+icon for it or not. No, I don't have.
+So, now an OLTB it is a transactional
+system. So, um uh OLTB stands for online
+um transactional processing. So um it is
+all about that we store the data very
+fast inside the database and usually we
+store the database you know like in
+rows. So the data going to be stored in
+rows like for example if you have
+customers each row going to be like um
+one customer right or one order whatever
+like that. So it's going to be stored in
+rows and the database going to be
+designed in a way that is can write and
+read very fast. But what is very
+important is that writing fast to that
+database because here the transaction is
+going to happen very fast. A new
+customer going to log in a new order
+going to happen. So a lot of things
+happening on the app and what is very
+important is this arrow writing very
+fast. So I'm going to be here. Can I
+write here? So writing
+should be very fast. This is the most
+important thing. That's why they
+designed the databases to quickly write
+the data inside rows. So this is what we
+call
+row store.
+So it is designed like this. Let me get
+it like this. So
+nothing so far crazy. All applications
+that we build going to be focusing on
+yeah OLTB systems. This is what we call
+OLTB. But now over the time we got the
+analysts.
+Let me get this one here. So the analyst
+want to go and build some reports. So
+they are not from let's say from the app
+side. The app side we have a lot of
+usual customer from the business. Let me
+just hide this here.
+Make this bigger.
+So now the normal user users of the apps
+going to be the normal customers of the
+business right they're going to log in
+register and so on and the setup is
+totally fine. Now on the right side from
+the company side we get the data analyst
+we get the yeah the people that want
+analyze the data they have the big
+questions. Now again those people going
+to target the same database and they
+will not be writing actually anything
+here. So what what they going to do is
+actually
+so
+they need to let's say read a lot of
+data and for that they write SQL queries
+something like this
+write SQL queries or the PowerBI or
+whatever. Now reading
+from those databases going to be really
+slow if it is stored like in row store
+because the ro store going to be only
+optimized for the transactions right. So
+for small databases, for small
+businesses, this is um not a problem at
+all. But we have noticed that those guys
+are writing really big SQL queries. And
+this big SQL query is going to run on
+the roster store which makes everything
+slow. So actually this is a setup that
+is not prepared actually for analytics.
+It is only prepared for
+um yeah how to call it for transactions.
+That's why we decided to move the data
+and build pipelines
+to new systems like for example maybe
+the a data leak or the data warehouse or
+whatever. So I'm going to say data leak
+for now. So we decided to take one copy
+of the data from the database and put it
+inside a data league so that those
+people they will not bother anymore
+first of all the database right and they
+going to read the data from a data
+league which is um something not that
+bad because
+uh we have here another let me just find
+this here maybe I can find it delta uh
+like for example we can store the data
+in something called a delta tables or
+data delta lake where the data is
+actually stored in a different format so
+the data going to be stored like in
+something called column store now the
+column store it is I don't know whether
+you know about databases and how the
+indexes are stored so the column store
+it is a perfect format in order to do
+analytical word analytical network. So
+it runs very perfect on those big SQL
+queries and you're going to get amazing
+performance in order to aggregate the
+data. Like for example, if you are
+aggregating by the year by the category,
+if you're storing the data inside a
+column store, things going to be
+so column
+store. So things going to be very fast.
+So that yeah the reaction from those
+yeah storage like like a delta tables or
+market files
+um it's going to be way faster than the
+let's say the reaction that you get from
+a normal databases
+that's why uh we said about those
+systems that focuses on
+reading for analytics or online
+analytical processes
+All right. So again, we have those two
+arrows. Maybe I'm going to do it again
+with different coloring. So you send a
+request with your query. But what is
+very important is the reading.
+So you should read very fast from this.
+So again this is actually the basic
+concept that
+uh between those two words we need one
+database that is prepared in order to do
+transactional work.
+So the classical databases that we have
+in postcarism mysql and so on. It is
+prepared and optimized for fast reading
+fast writing but it is not prepared for
+big analytical questions. All right.
+That's why what we do, we take a copy.
+Maybe I'm going to put here a copy.
+We take we take a copy of the data into
+a new system. It could be data lake. It
+could be data warehouse, could be
+whatever
+that is separated first of all from the
+normal database and store the data in
+different format like the column store.
+And this going to react way faster for
+reading or let's say for big analytical
+queries. Now writing the data we
+actually we don't care about it like the
+transactional systems because here
+writing the data maybe we do it in one
+patch you know so it could take I don't
+know yeah maybe 3 hours 4 hours. So
+writing it is not something uh that we
+have a big stress about it. So right
+write means like copying the data from
+left to right. So for the OLAP writing
+it is not big issue we can do it once a
+day full batch but reading for us is
+very important that our analytical
+questions comes very fast. Now about
+that column store it is not something
+that you're going to find only in data
+bricks right or like say the open um
+bracket format you're going to find
+actually this type of storage in many
+many tools like for example even if you
+make a simple PowerBI report
+if you load the data inside PowerBI
+actually my friends
+PowerBI internally inside your PowerBI
+file going to turn
+all your data into a column store. All
+right. So that means
+many analytical tools that you know and
+you are already working with like as
+will Tableau
+everything is stored as my friends a
+column store because this is the best
+format for fast reaction. If you again
+if you run the query on the row store
+good luck getting the answer maybe after
+a few minute like half an hour or an
+hour but if you store things inside the
+column store things going to be in
+seconds maybe yeah that's why many
+platforms many tools adopt this format
+in order to yeah to uh to help the
+analytics to answer fast the analytical
+questions. Now
+I think this is not something new all
+right this is something very very old
+like I don't know maybe 30 years we know
+about this it's not something that is
+crazy that we we need an OLAB now thing
+is
+comes data bricks and says
+uh you know what we going to like you
+know what
+currently you have like two boards. All
+right. So, I'm going to split it like
+this. You're going to have people that's
+working on the left side building this
+system and you're going to have as well
+on the right side completely different
+people working on those. Now, on the
+left as I as I told you uh postress
+maybe I have here. Yeah.
+Yeah. So on the left maybe it is on the
+onrem maybe it is a classical old
+database but on the right side things
+are getting more modern and people are
+let's say getting yeah high-end
+solutions. So those two worlds are
+getting far and separated from each
+others and we have always to go and copy
+the data between those two platforms. So
+now data bricks says and they try to do
+it like step by step. They said hey we
+yeah we have now a perfect platform for
+the OLAB we have yeah we have a platform
+where you can do analytics you can store
+the data inside delta tables and all
+those stuff so they won really yeah big
+on the OLAB now what they are trying
+they are trying to go to this world as
+well so they are saying now they as well
+partnered with posress and now they have
+something called the lake pays so they
+are doing a lot of work on this
+direction where they try to convince
+this word to go to data bricks as well.
+So with that they are dominating both of
+those over the time they want to have
+both of the words okay the TB and the
+Olab. Now they start working on this
+like I think a year ago something like
+that where they start like selling the
+lake base and they start selling this
+architecture. Hey, come to us. We can do
+the whole application inside data bricks
+and all those stuff. But over the time
+and month ago, it's it's something brand
+new guys. It's just like look at this.
+We are talking about a month month ago.
+So it's very very fresh where they came
+with a big announcement and they say you
+know what this picture makes no sense at
+all.
+We're going to all transition let's say
+yeah
+to something called LTAP.
+So the LTAP it is lake uh let me see it
+is like transactional analytical
+processing. So it is combining where is
+it? So it is combining both of the
+words. But how they going to do this?
+Well, it is uh not that um yeah, not
+that crazy.
+They're going to have they're going to
+still have the delta files
+as an open format for the data.
+Let me bring it like this. So, one
+storage for the data
+and you're going to have on top of it.
+So,
+and then they try to build both of the
+words on top of one copy of the data.
+So, they going to try to bring um that
+maybe Mhm. Yeah.
+Yeah. Maybe bring this one here
+just to let you know.
+So, they are saying you don't have to
+copy the data anymore from left to
+right. It's going to be only one copy of
+the data. It's only one one data. So you
+don't have like left and right. You
+don't have like two databases. You don't
+have to build a data pipeline. You don't
+have to do all those stuff. You're going
+to have one copy of the data. And this
+is the most important message from them.
+Say one
+copy of the data.
+Let me check whether you can hear me
+right.
+So now one copy of the data and you're
+going to have the two engines that
+actually
+working with this data. The first one is
+going to be yeah they're going to have
+like
+[snorts] something like this
+transactional engine.
+Uh this is the lake base
+and another one going to be the
+analytical engine.
+Yeah. So they're going to have like two
+engines that's works on top of that same
+data
+and that means
+uh so that means your application going
+to be sending the data and storing the
+data
+using the transactional engine and it's
+going to be stored inside one open
+format one copy of the data and the
+analytical words going to be used the
+analytical engine in order to consume
+the same copy of the data
+and they want the whole thing of course
+to be inside
+an OLTB system.
+Um no let me see so like this. So the
+basic idea is to say we would like you
+to use the open format
+and we're going to have both of the
+engines on top of it and depend on the
+user. If they are normal users they're
+going to of course interact with your
+app
+and if you have analytical user
+they going to be interacting with the
+analytical apps. All right. Now it's
+very weird, right?
+[snorts]
+Yeah. The arrow is not working now. So
+yeah,
+so this is their main idea and they say
+for this you don't actually need the old
+world, the OLAP and the OOLTB. So, it's
+announced last um um last month and I
+have of course I'm going to say um yeah
+maybe this going to work but I have some
+concerns. I'm going to let you know sure
+uh what what I think about it. Now
+uh one more thing that you have to
+understand that this is this setup to
+say I'm going to store the data the
+database
+um inside an open format this is
+completely different than the normal
+databases maybe you have to understand
+that databases
+that it's something very closed it's
+very locked so database
+um it one engine it is it is like um you
+know
+let me see a database bring someone here
+so now as a user of a database you will
+not see anything it is super closed
+format that means if you want to access
+the data you want I don't know to check
+the files you will not see anything it
+is very locked and uh you can use only
+for example the postgress in order to
+work with this database case. So it is
+or MySQL or SQL server. So it is super
+locked system. You cannot use the data
+for any other purposes.
+Only the database server can work on on
+it. Only this application can work on
+it. Now data bricks with this with the
+lake base is of course to say no the
+data it is not something dedicated only
+for one database. the data going to be
+stored inside an open format. We can use
+it for anything. We can use it for
+applications. We can use it for
+analytics, for AI, for any other
+purposes. That's why they are trying to
+break this concept of having let's say
+the data is locked behind a vendor
+behind one database and nothing else can
+access it and no one can see it. No one
+can let's say yeah directly manipulate
+it and they want to go into the
+direction of the open uh delta files or
+open yeah data format. Of course delta
+files is not the only open format that
+we have. So yeah, I just want to let you
+know about those new architecture let's
+say concept that it's been discussed now
+and uh yeah now why I am not sure about
+this it is of course a very good idea I
+would like of course to have all the
+data company in one place I don't want
+of course to go and build the pipelines
+I don't want to go and write the data
+from left to right this is all time
+consuming this is all something that is
+of course um yeah
+um yeah it's something that is annoying
+but
+so so what I I'm trying to say is that I
+believe in this of course and I think
+this going to be something very big in
+the future but we do OLAB not only for
+this we do OLAB for many other reasons
+as well my friends because if you know a
+data warehouse let me show you here
+maybe we talked about this before
+um
+now the thing is OLAP systems yeah I'm
+I'm going to maybe here do it like this
+here the OLAP systems it is not only
+like one copy from the OOLTP OLAP
+systems is as well moving into direction
+like
+uh let me draw it like this
+we use OLAP systems as well in order to
+integrate the data
+So we're going to get the data from
+multiple formats.
+So so
+uh what I'm trying to say is that
+so
+we use OLAP as well in order to
+integrate the data from multiple source
+systems not only to have like one copy
+of the data. This is very simple said.
+So that's why
+there there will be two use cases for
+this. Like if you want as a data analyst
+to analyze multiple source systems.
+Yeah, those are multiple source systems.
+You cannot go and jump between Oh, let
+me
+So you cannot go and jump between yeah
+different
+um OLTP systems or source systems and
+start building the reports. You would
+like to have one central place in order
+to consume the data. So that means if
+your reports are integrating or using
+the data from multiple source systems
+you still need this OLAB
+but in many cases there are operative
+reports that actually always like one to
+one to one source system. So I call it
+always operative report or something
+like that. So if we have a reports that
+actually
+needs
+one source system
+then I think this new idea it is a
+perfect idea
+because I don't need an extra copy
+I just go over here and start consuming
+the data but now how about those
+analytical reports needs multiple source
+system because my friends source system
+only focus on one topic. They don't care
+about you as a data analyst that you're
+going to get the data from multiple
+source system. This is something that is
+the application don't care about it. The
+applications want just one thing to be
+fast to read and to load the data.
+That's [snorts] why
+all yeah systems only focusing on one
+system that's it. But we as we work on
+the OLAB we focus on multiple source
+systems. So how they going to solve
+this? Of course currently there is no
+solution for it. They always think we
+make one report from one source system.
+Yeah. So that's why I believe my
+question of course to data bricks that's
+how you going to solve the data
+integrations. How you going to solve
+those
+reports those dashboards that's needs
+let's say multiple source systems. So
+uh yeah so that's why it's something
+new. I'm going to say but usually I
+think the platforms don't care about
+let's say those integrated yeah or like
+let's say complex reports they care more
+about yeah you have one source system
+and you're going to have one reporting
+system on top of it but I think from my
+point of view if this happens then we
+can move all those use cases
+that's actually needs only one source
+system we can all move them to the LT
+tap system because it is awesome that
+you have only one copy of the data but
+of course that who going to be
+responsible yeah on shaping this data
+this as well big question right because
+you're going to have like still always
+two teams I cannot believe one team
+going to deal with all those stuff so I
+still think you're going to need those
+data engineers and data analyst that
+they going to say yeah this format out
+of delta table is not suitable for me.
+So they start I don't know that maybe
+they're going to start making different
+copies and things causing chaos. I still
+can't imagine it but I can imagine it
+for only those annoying reports that
+only needs one source system. Maybe we
+split the word people are analyzing
+directly in the source systems which is
+awesome thing because as well
+I'm just bouncing now ideas because I
+didn't thought about it so much that's
+why I'm talking with you about it now
+what I'm trying to see is
+yes we're going to have a struggle with
+how we're going to ship the data in this
+world we're going to have a struggle how
+you're going to integrate the data
+between source systems multiple source
+systems. How you going to make this big
+dashboard? But what is really awesome in
+this picture is that yeah we have a lot
+of customers in reporting and analytics
+they going to ask about live data. I
+don't know whether like once you work on
+companies one of the best requirement
+that people going to ask you is
+um
+you know what I would like to have real
+data I would like to have live data so
+that's why it's going to be really hard
+currently to be honest it's it is really
+hard to make our app system live with
+the changes that happens from the OLTP
+yeah we try doing streaming the delta
+alive and all those techniques but it is
+a hard job but now if you have all the
+data here stored in one copy all those
+reports my friends are live reports so
+they going to do live analytical yeah
+processing or let's say reports insights
+on top of live data which is I think
+people going to love it yeah so there
+are yeah I'm going to say there are a
+lot of benefits if We managed to do this
+but it is a big task. I don't see this
+going to happen like very soon in the
+companies. They will start I believe
+yeah they have first to migrate yeah
+from their old systems to data bricks
+and then they have to find a way how
+those two words going to be agreeing on
+stuff and yeah this might be very
+overwhelming but I don't see this going
+to happen in very soon but um if I'm
+back to work I might
+push a little bit more on this at
+companies like If I get hired as a data
+architect, I'm going to try to push uh
+on this in order to bring all those use
+cases from OLTP to the live data. But
+still I don't see this going to happen
+for those big integrated reports. So I
+just want to let you know about what is
+happening now. Maybe this is little bit
+easier than checking the documents from
+data bricks and seeing such a pictures.
+Yeah, I would like understanding those
+stuff. If you are not too deep dive into
+how this works but this is the story.
+Yeah, I always try to simplify it for
+you. We still have the OLTP, we still
+have OLAP. This is going to happen for
+years. Most of the companies are
+splitted between those two. It's
+something completely new. But you should
+know about it now. If you hear what is
+LTAP, someone say that in LinkedIn or in
+YouTube or maybe at your company now you
+know what they mean. And as well I'm
+going to say those are my open questions
+about this architecture.
+I I would like subscribe for this. I
+would say it is a cool idea to do but um
+but um yeah we have to see we have to
+try to try this out because bringing two
+teams into one it's not only technical
+thing it is as well the community it is
+as well the politics behind teams um how
+the organization of teams so it is
+something not that simple because the
+world is now splitted if you go to
+organizations you're going to find a
+data team And you're going to find a
+team that is responsible about the
+source systems. So now merging
+everything in one that means merging
+organizations, merging teams, new
+titles, new stuff. So it is a big thing.
+But I think this is super modern. If I
+make new company, I might go directly to
+such architecture. So you might think
+what par is talking about is it like
+data engineering topics? No, this is
+architecture topic. This is discussion
+in the architecture. If
+like yeah you know if if you are you are
+joining a new company as a data
+architect you might start discussing
+those stuff. Yeah. So that was a quick
+let's say discussion from my side
+about the LTP again. Yeah it is like
+transactional analytical yeah
+processing. So here the T is
+transaction, the A is analytical and
+here you have the T and the A. This
+means we are combining both together.
+But now if you are just a junior, if you
+are just now learning about data, don't
+worry about it a lot. Uh you will not
+find this now. If you join company, you
+will not find this at all. It is
+something completely new and the experts
+still qu questioning this. Yeah. Whether
+is this going to work? uh I don't think
+that's going to happen very fast but I
+wanted you to know about those
+principles. So thus we have covered all
+those three. So I hope you guys did um
+yeah
+did you understand it? Do we have any
+questions about this before we go to the
+next topic? Is this clear?
+So
+I'm going to say uh this is about the
+yeah first topic that I wanted to cover
+today. Now we're going to go to another
+topic which is the core of this video.
+How we draw a data architecture. How we
+um uh let's say how we start. Now I have
+to make sure there's something clear
+before I start. There is no best
+practices on how to do it. There is no
+one let's say someone written a book or
+or in universities you go to university
+and they start teaching you this is how
+you draw a data architecture. Each
+expert in the market they have their own
+ways on how to draw it. Like there are a
+lot of consulting companies and there
+are really many people that are for
+years at this domain and if you bring
+like 10 different architectures you're
+going to find that they are drawing
+things differently. [snorts] So that
+means I cannot teach you or I cannot
+show you the standard way on how to draw
+a data architecture but I'm going to
+show you my way that I used in
+companies. All right. So I was uh I
+don't know whether you know about me I
+was in um IBM I was in Posh I was in
+Mercedes-Benz and I tend as like at the
+start as an data engineer I tend to like
+draw few things but over the time I got
+more let's say more experience on how to
+do those stuff I met a lot of architects
+in the companies and I start let's say
+adapting and learning until I got now my
+format and this format worked on one of
+the biggest data platform at
+Mercedes-Benz. So, I'm going to of
+course I will not show you the
+architecture of Mercedes-Benz. No way.
+[snorts] I'm going to just show you my
+style on how I draw architecture that I
+used in top companies. Okay? And they
+found it one of the best um let's say um
+yeah architectures that we used a lot
+and I saw as well many architects they
+start adopting my way on how to do it.
+So again, this is my way and you're
+going to find different people with
+different ways on how to do it. But I'm
+going to take you in my questions how I
+start from the scratch and how I do it
+step by step. All right? But if you
+learn how to do this, I'm pretty sure
+you're going to be one of, let's say,
+good architects. I'm not going to like
+brag about it, but it worked for me. And
+after many years I found this is the
+best format to communicate it with
+multiple people. Now
+usually I have multiple yeah let's say
+architectures depends on the audience
+like in a company where people don't
+understand let's say technicality or
+maybe I'm working directly at the
+business side and around me the people
+the managers or maybe I'm working
+directly with the business expert with
+the process expert and no one
+understands let's say technical terms
+the IT terms I would never go and draw
+something very technical So I'm going to
+draw something that is close to the
+people. All right. But if I'm working in
+let's say the tech center or let's say a
+data team everyone is from technology
+background from IT background they all
+studied they all maybe data engineers
+and the managers as well they are tech
+people. So if I'm working in environment
+where I show my work to multiple tech
+people then I go into details. So it's
+always
+you have to adapt you have to see the
+environment you have to see the audience
+and you have as well to understand the
+requirements only after that you start
+drawing. So now I will not go and draw
+something let's say for managers and
+show you some boxes and say that's it. I
+will try to draw an architecture that is
+let's say close to a team that's
+everyone can understand it like they are
+tech people. Okay. I'm working let's say
+in a team with a lot of data engineers
+my manager as well understand tech. So
+that's why I'm going to be drawing
+things for tech people but if I'm at a
+company again with business people and I
+am the only one that knows about those
+stuff it makes no sense to go into let's
+say very technical terms inside the
+architecture and confuse everyone. All
+right. So now another thing there is as
+well not only no standards on how to
+draw a data architecture there is as
+well no standards let's say about the
+tools you could use anything you want in
+order to draw your architecture you
+could use powerpoint you could use I
+don't know yeah uh draw AO you could use
+any tool that you have but it should be
+digital PDF or something at the end yeah
+so it's not only like drawing at your I
+don't know yeah at your notebook So
+there is as well no standard tool in
+order to do it. But I'm going to say
+I've seen that
+yeah we have like two words on how to do
+it. If you are explaining an idea like
+me now you can use the Excel draw like I
+have it now here. But I'm going to say
+this kind of tooling it's only for
+explan explanation. All right. It is not
+something professional like if I got
+hired into a company I will not go and
+draw this like this here and say okay
+this is the data architecture and this
+stays like here so I'm going to use more
+professional tool like for example the
+drawo
+it is a tool that is I'm going to say uh
+free so you can download it now and use
+it and um for many companies I'm going
+to say it is getting ah I'm not sharing
+my screen this This is very good.
+[laughter]
+So, it's good that I read the Discord.
+Let's go back.
+Uh, all right. So, I was talking about
+Yeah. [snorts] about the tools.
+[clears throat]
+All right.
+So, okay. So you see my screen I'm
+sharing it everything perfect. So again
+about the tools there is no standards on
+how to do it. If you are sh if you are
+showing those diagrams here in the Excel
+draw I'm going to say it is good between
+your colleagues and something like
+bouncing ideas you are discussing few
+stuff but if you are a data architect
+and it is your main job yeah in order to
+make final drawing yeah for this big
+system I'm going to say you should be
+using draw AO let me see here draw AO
+uh you can get it for free. So it's
+something that you just can download and
+start using it now. Yeah. So it looks
+like this. I don't know whether you have
+done my data warehouse uh projects. We
+use it as well. I'm going to say this is
+the most professional tool that you
+could use in companies and you're going
+to sound like yeah professional
+architects and it is I'm going to say
+yeah my favorite tool currently on how
+to draw architectures. I'm using it as I
+used it a lot a lot in companies and um
+it was giving best perfect perfect
+results. So I'm gonna say this is um
+yeah the best tool for me but again
+there is no standards on how to do it.
+Um now in order to draw an architecture
+yeah so I should I should be like little
+bit here I have to I didn't prepare to
+be honest for this [laughter] but I'm
+going to go through this uh like step by
+step. So usually what we draw yeah we
+draw like boxes right so what do we need
+we need like boxes we need yeah we write
+a text inside it like for example here I
+don't know yeah the source
+source liar so we need boxes and not
+only that we connect boxes with arrows
+all right
+so maybe this is a data warehouse I'm
+I'm just uh showing you a few things
+about the element that we use and we
+connect boxes like this maybe and what I
+like is to have my own icons and glyphs
+maybe
+uh those going to be awesome in order to
+bring more and yeah yeah yeah to let
+people more understand about the element
+of course you can skip those I'm not
+saying that you have to use uh your
+icons but uh you can use your own icons
+uh in order to give shapes like for
+example if you are saying a database
+it's going to be nice if you go I bring
+a cylinder for it. All right. And if you
+are saying Kafka, maybe you bring the
+logo of CFKA. If you are saying about
+okay, we are speaking about PowerBI, you
+bring the PowerBI icon. So it is as well
+nice in order to add visuals and um I'm
+going to say it's not a must but it is
+nice. What is very important is how you
+draw the shapes, how you connect things,
+how you make things more clear. Now I'm
+going to say this is actually the
+element that we do but I'm not going to
+like keep speaking about the visuals.
+It's all about the thinking how we draw
+an architecture.
+Um now there is one one very important
+concept in as a data architect as you
+are building a system is that it's
+called separation of concern. This is
+something that I always keep in mind if
+I'm designing any system. separation of
+concern. All right.
+Um what this means my friends
+um and this is something that I saw a
+lot of yeah I'm going to say the reason
+of why many data warehouses why many
+data system fails if you don't follow
+this simple principle. Now a separation
+of concerns is like this.
+If you build any source system or any
+sorry any system you're going to have
+multiple layers. All right.
+Um
+so you're going to have maybe I'm just
+writing. Okay. So bronze layer you're
+going to have
+I would not give it bronze layer yet. So
+you're going to have layer one layer
+two.
+Depends on how much layers you are
+building. you're going to be end up
+making those layers. All right? And
+you're going to be defining what going
+to happen in each layer. Right? Now, if
+you don't define exactly the rules for
+each layer, let me just make this.
+So now if you don't define the rules
+this is this is very important that the
+first thing that I actually do if I'm
+designing anything if I don't design the
+rules for each layer chaos going to
+happen like for example I'll just make
+this shape to say yeah transformation
+um so let's give it a red let's have
+here business rules
+So give it another shape
+and let's have to clean
+cleanup
+and what else we can do maybe data
+moduling.
+So we do a lot of actions with the data
+right as the data flow flies from left
+to right.
+Um we do a lot of things. What else we
+can do?
+Yeah. What else we can do with the data?
+I'm going to leave it like this. Maybe
+filtering the data or something like
+that.
+Um
+so now
+what happens with that if you quickly
+run into building any system? Yeah. You
+got a requirement and you start like
+yeah building a system with that.
+Um
+yeah. So what could happen is that over
+the time if you you are not organized
+you're you're going to be doing
+different stuff
+in multiple layers. So maybe at the
+start you're going to be doing things
+cleaner, right? Uh maybe not not uh do
+it like this. So maybe at the start you
+will be clean at at your process. So you
+say okay yeah for some reason you say
+yeah the first is the cleanup the next
+one is transformation the third we do
+data modeling and the last one we do
+maybe business rules or way around or
+whatever yeah you are doing now if you
+don't make it clear for the whole team
+and you have let's say five developers
+and stuff you are working on the
+projects and you have to hurry up you
+know you have a deadlines and you start
+like okay let's go and bring one system
+let's bring the second system. Let's
+clean up the data. Now, what could
+happen if you have multiple developers
+is that one of your developers going to
+start transforming the data in the first
+layer over the time. All right? And
+another developer going to go and say
+you know what the data is already in the
+layer two. I'm going to go and apply
+just few transformation or business
+rules
+and maybe another developer as he is
+doing or she doing the data modeling he
+or she going to go and start cleaning up
+the data in the last layer. All right.
+Now this is something I found in many
+many projects. I end up as well in many
+projects at Mercedes-Benz doing uh
+something called audit where I audit
+yeah different architectures and as well
+different systems why they are slow and
+stuff like that and it's always like
+this they don't have let's say a clean d
+that architecture they don't have like
+clean rules that the whole team going to
+commit on and over the time chaos is
+going to happen because no one is
+commenting committing into a road map
+into a design so they starts really
+doing everything in everywhere. All
+right.
+And that's all because we don't have
+separation of concerns. We don't have a
+data architecture that explains the
+contract the rules and this going to
+yeah over the time maybe this system
+going to cost millions over the time and
+then the patch load at yeah at night
+takes more than 16 hours and no one
+knows why. Yeah. It's all because it's
+not clean. You don't have clean work.
+You cannot work like this. You like it's
+like building any like building a Yeah.
+a building, right? A house, an
+apartment. You cannot just go and start
+building immediately. Yeah. You have to
+commit to rules. You should each layer
+you introduce into the system should be
+dedicated for one or multiple tasks. So
+that's why our job as a data architect
+is to make sure that it is clear in
+about the activities what are the things
+that are allowed to be done inside each
+layer. So for example we say
+this is yeah we make it clear for
+everyone in the architecture as well and
+we say the layer one is only for cleanup
+activities. You are not allowed to do
+anything else. And we make it clear. We
+write it down in the architecture even
+we say here it is clean up nothing else.
+Yeah.
+And we start writing the rules. Yeah.
+So same thing for the next layer. We say
+here only data transformations. It's
+only here if you are like integrating
+the data or something like that. The
+next layer is only you do business rules
+nothing else. And the last layer you do
+data modeling with that my friends we
+have clear ruling onto what happens into
+each layer and we as a data architect we
+have to explain this of course for the
+team and the leads of this team should
+be responsible of [snorts]
+that after yeah something like this. So
+we should be clear about this in the
+architects. We should be clear like as
+well about the rules and after we hand
+this over we have to make sure that the
+team understand it and as well the
+people that are reviewing the work from
+the developers that they follow the
+rules that we define in the
+architecture. Yeah. So this is something
+that I keep in my mind once I start
+designing any data architecture that my
+layers should be clear about what we are
+doing. There is no mix of concerns. So
+this is my friends very important
+concept to keep into your mind if you
+are building any architecture that you
+make separations of concerns. So this is
+the first let's say mindset that I have.
+This is of course just an example. I'm
+just I'm not trying to say we're going
+to do it like this. I'm just trying to
+explain the concept that you have into
+your mind and we're going to follow this
+into the whole yeah maybe system.
+Now let me just remove those stuff here.
+Now usually in the yeah I'm going to say
+in any data architecture there's for
+sure two things
+let me just bring here so what do you
+have
+I haven't run like a few stuff since
+maybe a year since I left my job that's
+why
+um there is for sure always my friends
+always two layers
+We have the source layer and the consume
+layer. And whatever the project is,
+you're going to end up always having at
+least at least those two. Why I say at
+least? Because it could be, let me just
+bring here something like a database.
+This
+maybe I'm going to make it like this so
+it doesn't
+hurts. So
+now
+we have always those two layers and we
+have always a source system. Usually the
+source system going to be a database.
+Okay. Now the very basic form of a data
+architecture is actually having this
+that
+I go and access the data from the source
+system
+and actually that's it. I think this is
+one of the most [laughter] basic data
+architecture that you could do that's
+you and your PowerBI you go and access
+the database directly there is nothing
+stored and of course inside the PowerBI
+you can go and draw yeah few things like
+for example yeah in the PowerBI I do
+um yeah for example I do power query
+Yeah,
+I do here power query in order to clean
+up the data. So you might draw something
+inside PowerBI and say here, hey, I do
+data moduling.
+Yeah. And then um yeah, I do ducks
+and then comes my report, right? So you
+might you can draw something like this.
+Yeah. So then I have the reports.
+So I'm going to say you might draw
+something like this even even something
+very simple like this it it is a data
+architecture but it is a very simple
+one. Now
+what I'm going to say the next step is
+of course
+yeah so [snorts]
+of course this is the most basic one.
+Now the next one that we usually do is
+we put our system in between the consume
+and the source layer. So here it could
+be anything depends on the project that
+you do. It could be a data lake. It
+could be a data warehouse. It could be a
+delta um yeah data lakehouse. It could
+be any system. Yeah. That you are
+building. So
+I'm going to say if you do it like this
+then
+we're going to have more things of
+course to it. So we're going to have to
+go and build the layers of the data
+warehouse. So here you have layer one
+and your layers inside the warehouse.
+And let me just go and move it like
+this.
+So
+now I introduce let's say in my data
+architecture one more layer. So that's I
+have three layers. The source, the data
+warehouse and the consume. And now
+inside the data warehouse I'm going to
+call it data right now. Inside the data
+warehouse I have three layers.
+Now um what I'm going to say is that
+you're going to start like yeah naming
+things. The very famous one that people
+use is to call stage core and march. I
+don't know whether you know those
+naming but it is very famous one that we
+use in the data warehouse.
+So I'm going to make it like this. Um
+yeah, I should have maybe prepared few
+things but I'm going to draw from the
+scratch. I promise to do that on live.
+That's why we are doing things on live.
+By the way, drawing that architecture
+might take really a lot of time. Yeah.
+So I hope that I will not waste a lot of
+time of you but uh yeah we can do it
+together. [snorts] So
+um
+why we have those three layers like it
+is it is something very very classical
+that we do that stage it is we take a
+copy from the data
+we take a copy from the data and put it
+one to one into the data warehouse. Now
+a data warehouse could be my friends
+here um do we have here any icon?
+Oh we have nice icons. So this is data
+warehouse and this is those two. I'm
+going to bring them.
+So data warehouse nice icon
+and I might be be making my data
+warehouse inside an SQL post. Okay.
+So
+something like that. Now
+the stage it is just one to one copy of
+the data. So actually that's it. Nothing
+crazy. Right. So I'm going to call this
+as well
+one to one copy of the data. So this is
+the first very important rule that I
+just defined. Okay. One to one copy of
+the data.
+Now if I have multiple sources,
+yeah, if I have multiple sources,
+that means my friends, we're going to
+have here for each source one copy of
+the data. So I'm going to just give it a
+name like this. Maybe
+source one,
+source two,
+and three.
+Um we might give it a technical names
+maybe later. We will see how things
+going to go.
+So we're going to have like those
+sources and it going to be one to one
+copy of the data. Nothing else. We we
+don't do anything else. All right.
+[snorts]
+So
+uh the core
+it is we take those data into the core
+and we start doing things like you can
+define of course what do you want to do
+maybe we can go and clean up the data.
+So we do transformations, we do data
+transformations,
+we might do
+some maybe data integration. Data
+integration means
+we start combining the data into
+multiple sources.
+Yeah. Source three. So we start maybe
+let's say changing the shape of the data
+a little bit. But it is not the final
+form
+and in the mart
+it is the last layer right it is very
+close to the powerbi
+so
+usually the marts are the delivery that
+is shaped and tailored for the
+consumption this is very important one
+so here maybe we're going to make star
+schema of I don't know yeah the customer
+or the you know maybe the orders and the
+or yeah let's let's call it sales or
+something.
+So we make it's always the last layer is
+the one that is the delivery for the
+consumption and we have to tailor it
+exactly like the shape the consumer
+likes. So since we have PowerBI of
+course the consumption going to be in a
+way that is tailored for PowerBI.
+Okay. So that means in our data
+warehouse we have here two layers that
+is only for us as let's say a temporal
+or let's say yeah not tempor let's say
+it is like layers that we use in order
+to prepare the data but the last one is
+the critical one because it's going to
+be taking the shape that PowerBI likes
+so that means we have here two faces in
+order to prepare
+the data before going to the last phase
+to the start schema for example here.
+[snorts] So that means in the last layer
+whatever you call it smart or gold or
+whatever it's going to be business ready
+my friends it's going to be tailored for
+the consumption like um maybe you're
+going to say it's always star schema
+yeah you start here putting the rules
+how things kind of looks like yeah in
+the march now of course I'm just
+speaking here about like few things but
+there's way more details than that
+um but I'm just trying to say oh
+I'm just trying to say that you should
+know
+exactly why you are having those layers
+and each one have like let's say a task
+in your system
+[snorts] and you can call it whatever
+you want like for example in one project
+I called it the access layer and here um
+let Let me think about the name that I
+use before. I think I always use core.
+Yeah. And here you can find people
+calling it landing layer. Whatever the
+name. Yeah. It's not that does it
+matter. The what matters is actually the
+rules and what you are thinking of those
+layering. Now this is my friends one of
+the most I'm going to say
+uh I mean I'm used too much to the other
+tool that I forgot the shortcuts for
+this one here. So
+this one I'm just trying here to connect
+things a little bit.
+So this one I'm gonna say yeah it's not
+not that uh yeah beautiful. [laughter]
+This one of the one of the classical
+warehouses that I'm gonna say um yeah
+maybe
+most of data projects now in the yeah in
+the business that are doing this. Yeah,
+especially in Germany, I met a lot of
+Yeah, people that are working in data
+teams. They just like to build data
+warehouses and as well I was analyzing
+the job market with um yeah let's say
+what they are requesting about uh yeah
+as a data engineer a lot of people are
+requesting data warehouse experts. So
+actually this is one of the classical
+things that you might see. Now you're
+going to find in projects of course many
+different designs on how they do the
+layering the naming and stuff like that
+but this is one of the most simplest
+one.
+>> [snorts]
+>> Now
+of course you can start for example uh
+using like some coloring I'm just know
+talking about the designs you can start
+using some colors I don't know yeah the
+excess layer the core and and stuff like
+that you can yeah a little bit doing
+designing and boxing of the shapes you
+can for example put everything here
+inside one box and maybe change um yeah
+this is just luxury things. Okay, I'm
+not talking about something very
+important. I lost the color now. The
+line.
+Yeah, whatever you do
+in order to make things clear. Yeah. For
+people. So maybe you can start uh doing
+those shapes
+like containers, you know,
+in order to contain your layers.
+And yeah,
+so just to make things more clear. Um,
+now by looking at this, I'm going to say
+I don't usually go and put like this
+PowerBI. We don't do it like this. We
+usually name the use cases as well.
+So actually I don't put the tools on the
+picture. I go and name
+what are the PowerBI dashboard or let's
+say the big domains that we do in the
+consumption what are the big projects
+that we do maybe here the customer yeah
+maybe we have a big dashboard called the
+customer dashboard yeah that people
+knows and here maybe we can go like the
+sales dashboards
+so actually
+you have to name like big projects what
+are Um yeah
+how you are using this star schema you
+know so
+I usually put like PowerBI here on top
+to indicate okay we are talking about
+yeah the tool PowerBI and here we are
+using the let's say the SQL server
+so those icons should be or must be
+never ever the main of the architecture
+then again If you listen to the part
+one,
+um, we never use the vendor icons as the
+main thing inside our that architecture.
+Otherwise, you are selling the product
+and it makes no sense. It doesn't say
+anything. Look how beautiful it is.
+Like if you try to explain this, people
+are going to understand immediately. uh
+my three PowerBI projects are all
+consumed by one star schema that is
+stored inside the the layer called marks
+and this comes from another layer called
+the core and the stages and stuff like
+that. So with that you can see we have
+data flow from the left side to the
+right side. Okay, we can see okay we
+have one big layer, we have a second big
+layer and then we have a third big layer
+and everything is moving from left to
+right. We have like a data lineage but
+data lineage usually use this concepts
+or let's say this term is about to
+understand exactly one transformation or
+one col where comes from [snorts] but as
+well in the data architecture we have to
+show the lineage how the data flow from
+left to right. Of course we are not done
+yet. This is only the start. Yeah. This
+is only the basic things that we might
+do. Yeah. In our that architecture. Um,
+of course, we can go and do like deeper
+things. Now, you might find just to let
+you know another style of drawing those
+data architectures where it is not from
+left to right. It is from bottom to up.
+Let me just try to draw it very quickly.
+I don't know whether I can do it
+quickly. [snorts] So
+um go to back send back
+to back.
+So the flow going to starts from the
+bottom.
+I saw as well many professional
+consulting companies do this as well. So
+they start from bottom and they draw the
+architecture like this. So at below we
+have the sources and then they start
+yeah doing the layering on top like for
+example here they're going to say um
+yeah first thing we do is the stage
+and uh then we have the core
+so things goes
+stacking on top and then we have the
+march
+and then from the march we get our
+consumers. Yeah, like for example here
+we have dashboards.
+Yeah. And maybe we have I don't know.
+Yeah, self-service.
+This as well something yeah works as
+well. You can draw it like this. There's
+no again there's no correct or uh or
+there is no standards on how to do those
+stuff. So you can start drawing it from
+but like it's ugly now. [laughter]
+I think you get the message. Yeah. So
+you start connecting from bottom to up.
+But never guys, never do it from the way
+around.
+It's going to be very ugly. People
+understand this
+way better than the way around. So don't
+start from the top.
+Um yeah, with the sources and then you
+go down back to the dashboard. All
+right. This I think very bad idea to
+draw like this.
+So you have two options actually. Either
+you draw it like me. I like it from left
+to right. Uh I don't know. My mind is
+wired like this. Or you start drawing
+from bottom to up. Yeah. Um I will not
+keep drawing this one here, but I just
+want to show you one option on how to do
+it. And don't draw from top to bottom.
+This is bad practices.
+All right. [snorts]
+So this is my Yeah. Yeah. Let's say this
+is my way on how I draw things from left
+to right. I have enough space and I
+think it is things get nicer um with the
+shapes. Now what I'm going to say since
+we are now
+uh going through I think already 1 hour
+and a half I would like to have a break
+5 minutes around 5 minutes stay there
+don't leave because we're going to go
+deeper into exactly different source
+systems maybe streaming maybe APIs we're
+going to do some more layering on top of
+the data warehouse we're going to move
+things to the lakehouse so I'm going to
+show you a little bit more details on
+how to draw this we're going to have
+different type of consumers. So far we
+have only one PowerBI which is very old.
+So I'm going to take now 5 minutes break
+and uh yeah I'm going to rejoin in 5
+minutes. Stay there. Stay tuned and we
+continue later. So talk to you soon.
+Where is my break? It is here. I think I
+have some music for you as well.
+Be back.
+>> [snorts]
+[music]
+>> All right.
+So, I'm back.
+I hope that you have your cafe, your
+stuff
+for the next session. And I thought
+maybe before we go next is that I can
+grab from you a few questions.
+If you have in the chats, you can ask or
+we can go through few questions from the
+discord.
+there we have like an extra channel that
+we have made for the live streams so
+that I can maybe prepare for you the
+right answer let's say not quickly some
+gut feelings yeah so yeah if if you have
+questions make sure to ask uh in the
+chat I can uh read it now and answer you
+yeah um otherwise I start with the
+discord quickly Okay,
+let me see. Discord.
+Are you enjoying the stream, guys?
+Is it so far good for you?
+N I'm not going to say it looks like the
+LTP looks like a fabric architecture. Um
+there is some similarity about of course
+using the open file formats. So both of
+them are using open file formats. Um but
+uh this idea of bringing both the words
+into one. It is um I'm going to say uh
+currently datab bricks did the first uh
+let's say announcement about such
+architecture. So I'm not going to say
+it's similar to fabric but both of them
+are using the open format. Even now
+snowflake as well moved slowly as well
+to the open formats.
+At the start they were closed one. Yeah
+because they are Oracle people but after
+that uh they start using open formats.
+So what else do we have?
+All right. Um, let's go through the
+questions then from the discord.
+Um, maybe I'm going to share again my
+screen.
+All right. So, there's no music right
+now. One question from leas
+debar. I have seen a few datal jobs
+positions in which they requested data
+bricks knowledge.
+Do you think that they were kind of yeah
+overreacting to it or something like
+that? Let me see. Um, have you he
+prepared something for you
+now? I'm going to announce this in the
+next videos. Yeah, about what I'm doing.
+But one of the things that I'm doing
+now, I'm building a data machine
+that collects I'm going to say um yeah a
+lot of data from the job posting so that
+I do for you some kind of analysis like
+this that I'm showing you. Let me check
+again whether you can see it. So I'm
+collecting now massive amount of job
+descriptions.
+I'm building these data systems at my
+side and then um yeah cleaning up the
+data removing the duplicates uh some
+dead jobs and bad uh let's say dlicates
+and uh things that makes no sense
+unrelevant things. So I'm collecting so
+much job descriptions so far in my lake
+house I have around I'm going to say
+25,000 job posting and after that I'm
+doing a lot of analyzes on top of it
+because I used to give yeah a lot of
+opinions from my gut feeling from my
+experience from my work but this is only
+one guy in one country working on
+multiple projects in multiple years but
+If I got question like this or next time
+I give you a road map, I want this to be
+very precise and based on facts. You
+know
+without
+without data you are another person with
+an opinion. So that's why my friends I'm
+analyzing the data and this is one of
+the thing that's I'm going to say one of
+the results that I have is
+how often data bricks is mentioned in
+the job posting for different roles and
+you can see for data engineers I'm going
+to say 20 22% of the job posting are
+saying you should require or you should
+have data brick skills
+now compared to the others look at this
+data scientist data analyst as AI
+engineer it is very few like the
+question came about data analyst
+88
+jobs posting was requesting from a data
+analyst to have skills in data bricks
+out of 200's job posting so the
+percentage is very very low so that's
+why I would say
+it is nice to have as a data analyst to
+learn data bricks it is not required it
+is not something that is massively
+requested now even data engineers look
+at this 22% is requested from data
+engineers in the job posting that's why
+I'm going to say
+if you're data analyst and you have
+already mastered SQL PowerBI you
+mastered uh yeah some theory about
+statistics you learn how to yeah do data
+quality checks maybe learned Python only
+after all those stuff you start learning
+platforms like data bricks. So if you
+don't have data bricks skills I don't
+think that they're going to reject you.
+Okay. So no my answer based on the data
+no for data analyst it is not required
+but it is nice to have and again um if
+you want to stand out the crowd. Yeah we
+have a lot of people now going into data
+analyst role because it is really easy
+to get into data analyst. uh you just
+have to learn SQL, PowerBI and you are
+good to go. Um you have to stand out the
+crowd and if you want to do that you
+could learn data bricks, snowflake or
+dbt but it is not a big requirements.
+Um
+about the data analyst being replaced
+yeah by AI this is a big question.
+Um I think from all the roles that we
+have data analyst, data engineer, the AI
+engineer, the data scientist, I think
+the most riskiest job currently is the
+data analyst.
+Um but I think a data analyst with AI
+skills like code skills like you know
+how to use the AI in order to quickly
+answer business questions to uh to find
+amazing patterns to utilize AI. If you
+have data bricks skills, if you have um
+yeah all those yeah add-ons that you
+have, I don't think it is going to be
+very easy to replace you. Especially if
+you are at a company and you start
+building this domain knowledge about the
+processes, about the data, about those
+stuff, you're going to be gold for
+companies. So if you are inside the
+company, don't focus too much about how
+I'm going to be the best of PowerBI, how
+I'm going to be the best of SQL, I'm the
+fastest one to write SQL. No, be the one
+that understand the data processes,
+understand the business, understand the
+domain. If you do that, then it's not
+about anymore replacing you by AI. It's
+about, I don't know, giving you
+projects, making you busy because it is
+gold. if you know the domains. So get
+involved in the company as much as you
+do about their business more than the
+tools. But if you didn't enter yet the
+company, it's going to be hard for you
+because yeah, people think that it's
+going to be replaced by AI. But I can
+tell you
+there is a big hype about the AI as well
+in the market.
+>> [snorts]
+>> Um
+the thing is many companies until now
+they are building things using Excel,
+using PowerBI, using old data
+warehouses. Companies are slow. So don't
+imagine now everyone is working with AI
+and everyone is replaced and stuff like
+that. No, you have a lot of companies
+until now searching for data analysts,
+searching for people that can work with
+their data warehouse, searching for
+people that can do Excel even though we
+have now PowerBI, we have Tableau, we
+have amazing technology, we have data
+bricks and all those stuff, but
+companies still use Excel, still use old
+technologies. So yes, in the internet,
+in the media, everywhere you're going to
+hear about, yeah, AI is replacing and
+all those stuff, but the company's going
+to be very slow. we still have the
+chance to enter. You still have there's
+from the 22,000 there's 2,000 now open
+job about data analyst. So yeah, I'll
+not now bring it to AI topics but um I'm
+going to say it's going to take a long
+time until they get replaced. Yeah. Or
+even data engineers and I don't think
+they they're going to get replaced.
+Yeah. So that's why
+um I'm going to say this is my honest
+opinion. Now about the DSA and the
+algorithm for data engineers, I have as
+well for you some insights. Let me show
+you.
+Um
+so my friends
+only 19 jobs
+from around 3,000 jobs in data
+engineering is requesting DSA or
+anything about algorithms. So no as a
+data engineer don't waste your time
+learning DSA.
+All right. Unless you really want to
+target those big tech companies. Yeah.
+in in USA.
+So in the job I'm going to say in the
+job descriptions there is no mention at
+all. Yeah. About DSA in the data
+engineering and as well yeah or whether
+it's the word algorithms or anything
+like that only very relevant for data
+scientists. Okay.
+But for data engineers and data analyst
+the percentage is too low. So and we
+have a lot of things to learn. Yeah. So
+don't waste your time as as well I
+interviewed
+let me show yeah and as well I have
+interviewed and I got interviewed by
+many companies no one asked me about DSA
+yeah so um but again this is in Germany
+but those 3,000 jobs are collected that
+I collected from multiple countries yeah
+not only Germany so I collected from USA
+I think 100 countries around 100
+countries that are got collected only
+0.7%
+are asking about the essay. So no the
+facts the data says don't do that. And
+then we get a lot of things a lot of
+questions about the bachelor degree
+whether data science data engineer data
+analyst do I need a degree to enter
+those domains and again this time I'm
+going to answer from the data.
+Look at this.
+So the gray area
+it is jobs that's never mentioned that
+you should have a degree as a data
+analyst. So 45% of the jobs that I have
+collected so far says or doesn't mention
+even let's say a degree for data
+engineer it is really crazy 55% they are
+not asking for a degree and 27% for data
+scientist I totally agree that many job
+posting about data science requesting or
+requiring or prefer
+[clears throat]
+a degree ree because there is a lot of
+math in data science. So they expect
+people to have degree at least to talk
+about data science but you can see here
+you can totally enter this domain
+without a degree. All right and here it
+is preferred not even required. Yeah. So
+um and I can tell you especially about
+data analyst especially this one uh I've
+met a lot of people that actually don't
+have a degree of anything about computer
+science or I don't know math or anything
+like that. They just come from another
+domain but they love this world the data
+analyst and they start learning yeah
+those techniques and SQL Python and
+PowerBI and all those stuff. So this is
+what the data tells me and this is as
+well what I've seen in the market in the
+jobs in the projects I think
+to be honest to be honest guys in my
+team I was
+um yeah in many teams that I've seen I
+was one of the few that has master
+degree in data engineering maybe it made
+my life easy to enter jobs but it was
+not required at all so Yeah, I spent two
+years doing master degree. It was nice.
+I'm not going to regret it, but I would
+do do it differently now after seeing
+those results. So, yes, you can enter
+the job market. And with that, I
+answered most of your questions.
+Um, all right. So, that's was quickly
+about the questions and uh yeah, we're
+going to go back to our architecture.
+>> [sighs]
+>> All right.
+So now let's keep going.
+Now so far I have draw those stuff which
+is a very simple things. It was yeah
+let's say a data warehouse and it was
+I'm going to say very high level. Now, I
+might take things to the next level a
+little bit where we're going to dig
+deeper, a little bit more details into
+each layer a little bit and we're going
+to be building a different system. I'll
+just make sure that I have enough space
+and I'm going to start with the source
+systems first. Now,
+things are not that not like simple like
+this, of course. Yeah. So, we're going
+to have many I'm going to speak about
+big scale project, okay? I'm not going
+to speak about simple two databases and
+one file or something like that. We're
+going to start talking about yeah maybe
+some kind of professional um databases
+or systems. Now first of all if you
+start drawing anything about systems you
+have to understand many things about the
+sources like even if it is database
+second
+just make focus
+so we have here enough space
+all right now
+so this is the source layer I'm going to
+Just color it like this for now. Make it
+bigger.
+Now, um, first things you're going to
+make a box or let's say a section for
+each source system. Like for example,
+here I usually go and call it a name.
+Depends on the name. So sometimes we
+have like I don't know some weird names
+on the companies, but of course I'm
+going to just give you some dummy names
+of the systems. So for example, you can
+go and call it ERP and you're going to
+say this is a database.
+All right. Now
+I'm just going to make it smaller.
+You can of course go and give it an icon
+or something to indicate this is a
+database. You can go and make it smaller
+like this. I don't know. But this is not
+the most important things. So we make
+for each source system one box like
+this.
+and and then you can give some
+descriptions about these source systems
+but of course this all depends on
+your knowledge about this interf or yeah
+let's say this database now if we are
+connecting anything I'm going to just
+bring this here
+so we are building now something called
+the data lake house
+if I'm going to go and connect anything
+into my new system, I have to have some
+understanding about this source. So I
+cannot just go and say, "Oh, all right.
+We have a database and as a data
+architect, I'm going to say we're going
+to go and draw a row like this arrow and
+please [laughter]
+and please data engineers do this arrow,
+build it uh and and uh this should be
+exactly like this." No, you should do
+more than that. You should do more
+understanding about this. So sadly I
+don't have here those nice sketches
+because we are using now the boring
+Excel uh draw. So but we have some
+something here. So system owner or
+something. So first thing I'm going to
+go and make an interview with with each
+source system to understand how they
+offer the data. And this is something
+very important because
+without understanding how they offer the
+data you cannot connect anything. Now
+this is something that you call a
+contract. So
+after I interview Yeah. [laughter]
+So after I interview this source system,
+yeah, this is uh architect.
+I go and interview this source system
+and we make something called a contract
+between me and this source system. A
+contract it is just could be anything
+you know it could be I don't know
+written docs or word or something like
+that. He he prepared an example. Let me
+just show you what what this means. A
+contract.
+This could be some kind of contract that
+we could make. So we're going to ask of
+course if I yeah you know I interview
+system like who is responsible yeah for
+the source system like I I'm going to go
+and put some names on the contract so
+that if something goes wrong it's all
+about I'm getting the data from them and
+I would like to understand if something
+goes wrong who is responsible actually
+for this source system. So we have to
+put some names on it. We have as well to
+understand yeah how we contact them.
+Yeah. Do they have like supporting
+tickets? Do they have like I'm going to
+call them or emailing them and stuff
+like that? And I should understand as
+well
+um agree with them how often I'm allowed
+to go and get their data. Like for
+example, if I go as a data architect or
+data engineer of course and I say okay
+I'm going to go and load your data every
+day every hour and if something goes
+wrong I'm going to do a full load from
+your source system and start like um I
+don't know yeah start doing a lot of
+things my friends each time you do
+anything to a source system you are in
+noise all right
+so bar pricks
+>> [clears throat]
+>> So each time we do something to this
+source system, we are doing some noises
+to the source system and if they are not
+prepared, the system owners, they're
+going to be really um not happy with
+you. So that's why we have to make an
+agreement how often I am allowed to load
+your data into my system. Is it daily
+basis? Is it um
+let me just see right? Can I let it load
+it like once a day? This is the maximum
+I can do. Um can I go and do a full load
+anytime that I want to do full load? Um
+and and um any time like uh if I want to
+do full load, can I do it every day I
+want or only on the weekends? So after
+talking to the source system we come
+with an agreement between them and us
+and we write down this contract. So if I
+want to load the data I can do it at
+this hour at this day when I can do the
+full load. How is like for example
+uh if I want to do a full load should I
+do it from this source system or maybe
+from other source system and as well we
+make a contract about how we going to
+get the data this is of course very
+important
+like there is always two techniques on
+how to get the data into your warehouse
+or into your system. So either we have
+something called a push
+uh either we have a push. So that means
+we are waiting from our side in order to
+get the data.
+Wait, let me just put a text on on top
+of it. So push
+so push means
+that system owners they going to develop
+scripts or um yeah a job an ETL job or
+something from their side in order to
+push the data to us and uh let me see
+here maybe
+yeah
+so they going to be the one that is
+pushing the data from their database
+into my system. They never like for
+example they don't allow you to do it on
+your own. They say hey if you want my
+data let me know the target and I will
+be sending the data to you. I'm
+responsible for this. All right. But I'm
+going to say most of the cases they
+might allow you to pull the data on your
+own. A pull means exactly the opposite.
+Oh,
+can I switch it somehow?
+I think I have to switch back to the
+other tool. It's getting annoying. Um
+yeah. Okay. So a pull
+pull
+it is the way around. I will be
+responsible of writing the code that's
+going to go to the source system and
+grab the data and put it in the in my
+target. So again push the source system
+is pushing their data into our system.
+pull it is we are going to access their
+database. They're going to give us an
+access and we're going to grab the data
+into our warehouse. And this is as well
+very important to draw in the
+architecture so people knows how things
+going to go. Like it's okay to have it
+like this and then you write here for
+example
+um you know maybe text on top of it and
+you say
+uh push
+something like that they push it to us
+or even you can say okay this is a pull
+but at least I'm just just describing uh
+the process.
+So
+connecting a new source system needs a
+lot of let's say discussions a lot of
+yeah [snorts]
+uh um understanding how I'm going to get
+the data from the sources and then based
+on the interview based on the contracts
+only then
+we can draw the architecture yeah
+otherwise you cannot just go and throw
+let's say the errors left and right and
+say hey I'm done this is the
+architecture And we're going to do it
+like this. Of course, I'm speaking about
+a low-level like very detailed
+architecture picture. So that means
+before me drawing any of those pictures
+or let's say those um yeah
+architectures, I have to interview and
+understand those stuff. Now
+that means maybe we're going to have a
+picture like this.
+Um maybe another system
+SRM where they say
+um no you are not allowed my friends to
+grab the data on your own. We're going
+to put it somewhere.
+Uh this is something that actually is
+very interesting because somewhere in
+many cases introduces
+a between layer called landing zone.
+So we are not even inside the the
+warehouse. Yeah, the lake house.
+So the owner might say, "You know what?
+I'm going to define for you a folder.
+Do I have a folder?" No, I don't have a
+folder here. Okay. So, it's going to be
+like a folder maybe
+landing zone.
+Um, and I will push my own data into
+this folder. Now you might ask why they
+don't push it inside the lakehouse
+directly. Why why should they do this uh
+push?
+Well my friends because they cannot deal
+with the modern architecture that you
+might have like for example if you are
+building things inside datab bricks.
+Yeah you are in the cloud you are modern
+um and things are really nice there. uh
+pushing m making a script
+from the source system to connect to a
+data bricks to connect it to cloud. This
+might be very expensive thing that's uh
+the source system going to do. So it
+happens a lot of course in big companies
+where they going to say you are not
+allowed to access my database. You are
+not allowed to pull the data on my on
+your own. I'm going to push the data
+into
+like a folder, shared folder or
+something like that and there you can
+grab my data. So they're going to push
+the data somewhere outside of your
+system and then your job is my friends
+to go and collect it from this landing
+zone into your lakehouse.
+All right.
+Uh this you should be prepared for it.
+they uh you might get such a sources old
+sources that are not modern and believe
+me most of the companies they don't have
+modern databases so
+after I interview this is the whole
+thing after you interview and you talk
+to people you have to draw it exactly
+like the contract and you can start
+adding stuff you know on the left side
+let me just remove this guy oh
+[laughter]
+you can say here I don't know uh it's
+only
+2:00 a.m. it's allowed to
+yeah so I start putting few stuff from
+the contract inside my architecture
+right so I'm going to say all right this
+source system they allow only 2:00 a.m.
+and here anytime. So I start like adding
+some tags
+like this in order to let everyone knows
+about when I can uh yeah
+maybe this makes no sense way around I
+can access the data and pull it any time
+for this source system but those guys
+they going to make the data available in
+the landing zone around 2:00 a.m. And of
+course from the landing zone I can go
+and access it anytime I want but there
+will be only one fresh data from this
+source system.
+All right. So you see things are
+if you draw architecture like this
+it is high level. Yeah people can
+understand ah I have those layers and
+those stuff but what this means. Yeah.
+And if you compare it to this
+now things are more clear. Yeah. For
+everyone.
+Um what else we can do?
+Uh we can grab maybe
+uh we can discuss one thing. Yeah, maybe
+this is something that you would like to
+understand as well. It is not only about
+the pull and the push. It's about how we
+are extracting the data. Let me just
+remove those guys below and let's
+introduce a new database.
+So
+I don't know how what they going to call
+them. Yeah. Uh ACG.
+So
+now now what else we can do is to define
+how we are getting as well the data. Now
+here we maybe we are pulling the data by
+yeah accessing the database
+and as well like selecting the data that
+we need from it. Yeah. So or just like
+very normal thing you access the table
+and you find maybe the latest changes
+using a time stamp or something like
+that and you pull the data. But
+sometimes you might get an advanced
+databases that they say you know what
+we're going to provide you the data
+using the CDC.
+CDC means change data capture that means
+let me just move this here. All right.
+So that means we're going to push the
+data to you of course but we're going to
+put it in incremental way like CDC
+change data captures means they have
+some kind of in [snorts] the database
+implementations to capture in the logs
+what did change to the database and
+based on the changes that happens to the
+database and in the logs they're going
+to push the data in incremental way
+because here in the pool in the normal
+way you can decide ide whether you're
+going to do a full load
+full load or incremental load right you
+can you decide on it to to say you know
+what I'm going to go and grab everything
+that I find in the database or I'm going
+to go and only specific times stab so we
+are pulling the data as we want but with
+this change data capture things are way
+more advanced where it's going to be
+like event event based if something
+changed we're gonna push this new thing,
+this new change, this new event that we
+had inside the database to you. So,
+um I've seen like few databases that
+we're able to do this which is really
+amazing thing. Um and usually this kind
+of makes your life easier on how to grab
+the new changes from the source system.
+So this is as well something that we
+could ask about how we going to get the
+data from the sources like uh should I
+access the tables and get what I want or
+do you have a CDC implementation do you
+provide let's say the the yeah the new
+event the new changes using this
+technique and if they have it then this
+is awesome because I don't have to do a
+lot of things here and I can get always
+fresh data from the sources so this is
+way nicer
+I would not go deep dive into this then
+we're going to be talking about data
+engineering stuff but I just want to
+show you that you have to define for
+each source system what is the yeah
+inest method that we are using now what
+else we could have we could have not yet
+streaming it's going to be easy do I
+have an API API I don't have the icon of
+the API I told you I'm not that good
+prepared now we could have like here an
+API maybe
+API that is pulling I don't know yeah
+the data about the costs or something
+like that now
+um as well APIs
+it is usually
+something that hides behind a database
+so
+like this
+Now uh let's call it something I don't
+know costs or something. Now those this
+source system says yeah in order to
+access my data you go through an API.
+Now what you do is actually just then to
+interact with the API in order to build
+your load process from it. So this is as
+well something that you're going to find
+a lot in um yeah in sources that you
+cannot access their databases like we do
+in the CDC or in the first database but
+we can access it through an API and this
+is of course pain because usually APIs
+are not designed for patch loading. It
+is designed for [snorts] uh let's say
+uh transactions and only to get like the
+information about one customer. But we
+in the data leak house we would like to
+get like all the customers. So this
+going to be of course painful in order
+how to iterate, how to do the piginating
+and all those stuff. So now
+so far my friends
+everything we are doing is kind of patch
+loading and as you can see now from this
+picture
+we have now
+this layer the source system
+I will start putting things into frames
+that's why
+give me second in order to make things
+looks a little bit more Beautiful.
+So
+yeah,
+pick another color.
+No.
+Yeah, whatever. So
+I really wanted to change the color.
+We were able to do it like here, right?
+No, it's font layer. Ah, it's here.
+Uh I'm I like I spend a lot of time
+drawing on my iPad. I really forget how
+to do things in draw.
+Uh but it looks not nice. Yeah, I will
+not waste your time. So now we are we we
+are having the source system. Right. Now
+we have here something that we usually
+call the ingest layer but it is not
+let's say parts of our source system.
+Yeah. It's not like in the medallion
+architecture the bronze, silver, gold.
+It is something that's depend on the
+contract, depend on the technology,
+depends on how we are getting the data.
+So this is the ingest
+and um yeah, so it is not another copy
+of the data, right? It's only maybe here
+another copy inside the landing zone
+where you have an extra copy of the
+data. But usually those are like
+techniques in order to explain how I
+actually grab the data from the sources.
+I'm going to make it blue or let's
+switch colors like here. Blue like this.
+Yeah, looks nice. So
+as you can see we have introduced one
+more layer between the sources and the
+lakehouse. All right. Now
+what we can do actually now since this
+is all batch we can go and say maybe
+here and add a note or something. Let me
+think about it.
+Maybe I'm going to go and do something
+like this and say this is all batch
+loading.
+Now
+I don't know whether this makes sense.
+Maybe take this here.
+So we just say here patch
+sources
+because so far we have only patch
+sources even an API it is a patch I'm
+loading so much data in one patch I'm
+not streaming the data right so all
+those stuff are still patch now
+I'm going to say streaming data
+it is something that
+not all companies have it but they are
+moving in this direction.
+um
+like patch processing I'm going to say
+it's almost in every project you got to
+do batch processing most of the sources
+they are inside the database and they
+offer the data okay go get an access to
+my database go and grab it do
+incremental load whatever you want but
+you're going to find less source systems
+that they really have the time in order
+to make stream processing yeah so stream
+processing it's something that's rarely
+I'm going to say you're going to find it
+in
+yeah companies only in modern companies
+in companies that are really rich they
+have a lot of budget they have a lot of
+money and they like esource system they
+have a lot big budgets and big teams and
+they hire engineers they hire advanced
+uh people and they start turning their
+sources into
+stream sources all right
+so um you might if you that yeah um into
+some advanced companies their sources
+might be providing the data as stream.
+Now we can go and add here another box.
+Uh let me just
+um
+arrange to back. All right. So we can do
+here something I don't know
+uh UI [laughter]
+it's not anymore a database it is maybe
+stream
+in Kfka
+um I don't know whether you know the
+concept of Kafka and all those stuff but
+again we don't have only one standard
+way on how to work with Kafka as well we
+have many different ways on how to do
+Uh there are some modern ways on how to
+consume data from Kafka but I've seen as
+well strange things. Now in CFKA usually
+the source system going to be the
+producer.
+If you learn about the terms you have
+always those two terms in Kfka you have
+a producer and you have a consumer.
+uh producer is the one that is producing
+the stream the events and usually it is
+the source system is producing.
+Now what you could do you could as well
+build for your projects only for you the
+consumer
+of Kafka
+in order to consume the events. So
+that's later. Oh, so that's later. It's
+not the ue.
+remove it.
+So later you use this consumer in order
+to load the data
+into your stream. Now [snorts] there's
+as as again there's a different designs
+on how to do this. But I'm going to say
+this is one of the designs that we do.
+We add here a liar in consumer because
+those producers usually are very let's
+say not friendly yet to consume and they
+are made for other technology and other
+stuff. That's why we make a consumer for
+the data in order to read the topics
+from the yeah from the producer and a
+little bit to I'm not going to say
+transform it just to do few preparations
+to be more friendly for you to consume.
+But this is not a must. This is totally
+optional because I'm going to show you
+you actually can consume directly from
+here inside your lakehouse using data
+bricks. So it's again something that
+depends on the style on the producers.
+It's something that I'm going to say um
+you have to discuss and you have to know
+how things works. Now what I usually do
+is actually
+yeah maybe I'm thinking about it how
+I've done it before. [snorts]
+I usually make another special box for
+the streaming in the architecture. So
+we're going to bring it like this and
+say
+this is just to have some kind of
+separation. Yeah. Oops.
+So we might do things like this in order
+to have separations.
+And usually what I do I anything with
+streaming I make it red. [laughter]
+Oh, not like this.
+I just wanted the filling to be red
+because red means I'm fast, right?
+And blue means I'm slow. So I'm doing
+here batch.
+Um it's all about the language guys in
+order to communicate. So any like even
+the coloring you know it might add
+something for the understanding of the
+architecture. So here I'm going to say
+stream sources and maybe I'm going to go
+and color the whole thing
+uh um
+like this. The patch going to be the
+slow one. So yeah now look at this. It's
+very clear we are now doing here. I'm
+going to remove this one. Here
+we have here a batch processing and here
+stream processing. And of course, we
+will not put here timing because we are
+streaming all the time. If a source
+system did change, I'm going to get
+immediately the results. So, it is a
+live stream. Now
+just to maybe be more accurate about
+this picture actually behind Kfka it's
+always something like a database. Yeah.
+Yeah. Maybe a database or a system but
+usually we have like databases as well.
+Yeah. So
+the modern I'm going to say sources they
+usually do it like like this. Let me
+show you in different place.
+Maybe like this.
+Now
+the modern sources
+currently they offer the data using two
+techniques. Either they give you an
+access to the API and say hey
+if you want my data you access it using
+an API. Um and this is especially
+important if you want to access again
+one records. Yeah, something like to get
+the metadata about a customer about
+details about one order, one customer
+and one things they say go and access my
+API. But if they say if you want my data
+in a stream way then they're going to
+offer it in
+oops
+um come here.
+So
+as a CFKA producer or as a stream let's
+say. Yeah.
+So currently
+this is one of the most modern designs
+that are happening from the sources.
+They don't let you access their
+database. They offer you those two
+services and you as a data engineer or
+data architects you should be prepared
+for this to understand how I'm going to
+use data bricks or fabric or whatever in
+order to process those two different
+sources. But if you enter again not that
+modern company either they're going to
+give you a full access to their database
+or they're going to offer it through the
+CDC or they're going to say hey I'm
+going to land it into landing zone first
+and you're going to access it. So I'm
+going to say with this, yeah, maybe I've
+covered almost all the different
+possibilities that might happen to you
+in the projects. And
+the more you play with those tags, you
+know, the more you add those little
+notations you add into the architecture,
+you have a language, you know, to
+communicate. So now if I go to any
+developer and I show them this picture
+they're going to understand me after I
+explain it after like one two minutes
+they're going to understand exactly what
+I'm talking about because it is simple
+to understand. So as you can see that
+architecture it's not that standard that
+we follow it's language it's a language
+that I use in order to communicate in
+order to protocol and you have to
+understand with this I can do a lot of
+things I can show it to a developer and
+if we got audited from auditors in the
+companies I can just show them this
+picture and they can understand the
+whole source system
+without them going through thousands of
+documents or let's say a lot of
+documents in order to understand the
+source they can open I'm going to share
+them this and they can understand
+whether we are going into the right
+direction about the security aspects so
+if you have like security officer on the
+company or you got audited and like any
+people that's going to ask me things
+about my system I can grab this picture
+and start talk explaining for them for
+them how I build let's say the
+architecture for this source. So this
+going to be let's say my tool in order
+to communicate to anyone about this
+system that I'm building whether
+developers whether auditors whether yeah
+security officers whatever happens I can
+pull this and say this is how we do it
+currently. Yeah. And you have to be
+careful to not add so much things
+otherwise it can be confusing. Find the
+balance between details and high level
+architecture.
+So now with this I'm going to say we
+have covered enough about those two.
+Most of the companies guys, most of the
+companies like there are databases,
+files and that's it. Okay. But if you
+get into modern companies, tech
+companies, you should be prepared for so
+much of data streaming and APIs.
+So now
+with that we are not yet even inside the
+lake house.
+So we are still outside right but at
+least we know we know about our sources.
+Now the lakehouse
+um I'm going to say if you are building
+a data lake house we have of course to
+follow very standard uh let me just call
+this data lakehouse
+we're going to follow the medelia
+architecture for sure I will not go and
+invent something else so medallion
+architecture uh I did delete no not yet
+medelian architecture it's not something
+that's datab bricks invented okay
+medallion architecture is based on the
+classical data warehouses that we do.
+All right.
+So that means we have here three layers
+the stage the core and the m and the
+media architecture is as well adopting
+this kind of designs but they give it
+another name called bronze silver and
+gold that's why it is um yeah it is not
+something that data bricks yeah I'm
+going to say
+thoughts about it so much or something
+that is completely new they just give
+a new uh yeah analogy and the new
+naming. So yeah, we're going to have of
+course three layers. So we're going to
+call it
+bronze, silver, and gold. And of course,
+since this is middle architecture, we
+have to go and give it some coloring
+that is suitable. So that's you can see
+immediately we are talking about those
+stuff.
+Now what is important here is
+of course maybe to have one box for each
+layer.
+Now I think I have added all those
+arrows to this box. I'm just trying to
+here see arrange to pack. So now we
+start with the bronze and of course
+you're going to hear keep connecting
+things to understand how the data flows
+from left to right. So the bronze layer
+is usually one to one. So what's going
+to happen? And we're going to make I
+don't know yeah one box for each source
+just to make sure it's clear how many
+sources we have inside the bronze. So
+we're going to say here we have an yeah
+ECG
+SRM
+uh costs
+and I don't know what we call UI.
+[gasps and sighs]
+So we're going to put it here.
+So just yeah make boxes about
+um each source
+and just put them below each others
+nicely. And then we're going to put them
+into a box.
+Um
+nothing's going to get
+ugly since we have many layers.
+Um going to send to back and as well the
+whole thing to back.
+Yeah, maybe I'm going to leave it like
+this. Oh, let's leave it like this. And
+maybe we start connecting those arrows
+into exactly those boxes. So that is is
+clear how the data move
+from the sources from the you know the
+different layers into our new box.
+Now what you can do is actually as well
+to make here clear separation between
+um yeah the sources that are streaming
+and the sources that are actually
+patch. Okay.
+And we can as well color them, you know,
+the arrows if you want just to make
+things more clear. So now it's not that
+crazy things just like make boxes about
+the sources and then what is more
+important than that
+I always write down the rules the most
+important rules that we agree in the
+project about those layers. So now for
+example
+uh we're going to say
+um yeah what we said one to one copy of
+the data.
+I'm just trying to organize it a little
+bit.
+One to one copy of the data.
+Oh, let me see. Yeah, we're still
+streaming that I'm talking to myself.
+So, one copy of the data. We're going to
+say no data moduling,
+no transformations. Just to make sure
+everything is clear. Um
+and
+um maybe we're going to say okay this is
+only append.
+So those are yeah I'm going to say the
+classical rules that we could do in the
+bronze layer but we just give it here a
+place inside our architecture so that if
+someone opens or like a new person join
+the project of course we I'm not going
+to go and make here like I don't know
+hundred of rules we're going to have an
+extra document for that but
+uh what we're going to say it is the
+most important rules that you have to
+follow in the bronze layer
+and then actually we go and keep
+processing or let's say keep building
+those layers. So here we're going to say
+okay for the silver.
+Now there's like different ways on how
+to do the silver. There's as well no
+standards on how to do it.
+Each project can do their own stuff. Now
+I usually do it like this. We're going
+to have everything again one to one
+like the sources.
+Let me just bring this back.
+So now what is going on here?
+There is always a big decision about the
+layers whether you're going to break the
+data model or you're going to break the
+source system or not. So what I'm I I
+mean with the break is to say the shape
+of the data or organizing the data
+inside the silver going to stay like the
+source system we call it source system
+oriented.
+Um
+and that means I will never let's say
+change
+the basic structure of the data model.
+So if I get like from the source system
+here five tables, they're going to stay
+on the bronze five tables and they're
+going to stay on the silver as well.
+Five tables.
+So this is a big decision whether you
+break this or
+you start manipulating the shape of the
+data into a new data model.
+So
+I think from my side that in the silver
+we should not break the source system
+model and that's all because I've tried
+this before and it was a big issue
+because you're going to have a lot of
+use cases. You're going to have a lot of
+customers. This always depends of course
+on the consume that they would like to
+still access the data in the shape of
+the source system because they are doing
+AI use cases because they are doing some
+data science stuff and they are used to
+the data model from the source system.
+All right. So that's why
+we usually don't break the data model.
+we don't break the structure of the
+bronze and silver and
+because you're going to find some
+projects about this they're going to say
+hey I'm going to build here maybe data
+vault I'm going to build here even the
+star schema I'm going to start involving
+silver about it I'm going to change the
+whole shape but I think this is too
+early for this so what we're going to
+say the rules going to be here only the
+basic cleanup
+again this depends on the project and
+depends how things goes
+But I'm going to say clean up the data,
+remove the nulls, remove the bad things.
+Maybe as well rename. Yeah, introduce
+naming about uh some columns. Maybe we
+can do some enhancements.
+Maybe we're going to bring yeah some new
+columns, new columns joining the tables.
+But I'm still not breaking the original
+data model. So if I get a table called
+customers, I'm going to still have here
+a table called customers. So I'm not
+trying to break the data model. So I'm
+still going to say no data modeling. All
+right. [snorts] And here I'm it will not
+be append. We can go and agree on the
+upsert or the insert.
+So that's we just update the records
+based on uh yeah to have
+yeah how I'm going to call this for you
+to have a core table that's inside it
+the update and inserts or the changes
+that we got from the prawns is correctly
+processed into one table. So it's not an
+append anymore. Again this is that
+engineering techniques but still it
+would be nice if you define it as well
+in the architecture. Yeah. How what are
+the rules that you're going to do?
+So now by looking at this you have
+already yeah the separation of concerns
+they might looks similar but actually
+they are completely
+uh using different rules. Now what could
+be as well one very important rule that
+you have to talk about on those layers
+is about the shape of the format of the
+data. Now, what I usually do with that,
+I'm going to say
+yeah, maybe I'm going to mark it like
+this to say
+um
+front something like this and as well
+for a gold. If you don't know this logo,
+this is a Delta Lake format. This is the
+delta lake that we use in datab bricks
+or you can add any format that you want.
+So what we are seeing here is that the
+rule here is that we have to transform
+the data into the delta format
+because as you get data from the sources
+one to one here
+you might get CSV you might get JSON you
+you might get XMLs you might get I don't
+know yeah text any type of format so
+here I'm going to say any format is
+accepted because my job is to grab the
+data as fast as possible from those
+sources into the data leakhouse into
+data bricks. So I would not put so much
+stress on those arrows in order to on
+the fly to format the data. You might
+lose. You might your The thing is,
+let me just explain for you.
+As you copy the data from the left to
+the right, we try to do the minimum of
+transformations.
+We try not to add so much tasks in this
+arrow from left to right because on the
+fly things might go wrong like maybe the
+connection is is bad or maybe you didn't
+write the transformation correctly at
+the start your pipelines was correct but
+after that you found some edge cases
+from the sources that you didn't cover
+inside the pipeline and then you have to
+do another full load because your
+pipeline was bad. So what I'm trying to
+say is always retest try in the bronze
+or even in the landing zone is to not
+touch the data. I just want from you a
+copy of the data as it is and as it is
+it is big commit yeah big thing because
+it could be any format. It could be yeah
+CSV it could be again yeah from CFKA a
+lot of JSON files or from the APIs.
+I would not stress myself on those
+arrows with the data or the file
+transformation. That's why on the bronze
+I'm going to say I'm going to accept any
+format. But in the silver I would not
+accept it anymore. So anything I'm
+copying from in my data architecture
+from the bronze into the silver I have
+to do yeah transformation for the file
+format.
+So that means my friends inside the
+silver if you see a CSV then someone is
+not following the rules. Okay this is
+very important.
+Now
+as you can see
+sorry sorry for that. Now we come to the
+gold. Now
+as you can see those two steps
+everything so far until the gold as I
+told you it is something that I designed
+the way I like it because I am the
+engineer or the architect and depends
+yeah on the volume on the interfaces
+with the sources we might need some
+layers and stuff like that and I
+designed the way that I like but the
+gold it is one of the hardest things
+that you have to do because You are not
+anymore alone in the gold because my
+friends, we have now the consumers and
+this is big responsibility as I told
+you. Now we're going to go and grab I
+would not bring yeah PowerBI maybe here.
+Now this going to be the last layer.
+Yeah. The pres Yeah, they call it a lot.
+Yeah. Access layer, the MS, the
+presentation layer, uh whatever the
+consume layer, whatever you want to call
+it. here thinks going to be very clear
+for everyone. So that means
+why this is very hard one
+again the bronze silver the anist I'm
+just talking with the tech people I'm
+just talking to the source system I'm
+just talking to the data engineers I'm
+drawing this only for them but now as we
+go to the last layer of the data
+architecture
+this is as well something that I have to
+explain for the consumers
+not only for the data engineers if I get
+a new consumer that would like to
+consume my data lake house. I'm going to
+open this architecture and as well
+explain for them the different
+possibilities. So that means if you look
+to this
+where is this guy
+I have the guy where is the guy here. So
+here
+let me just break those down this as
+well.
+So that means
+on the bronze layer.
+Oh man.
+Okay.
+Oh no.
+H come on move. All right. So that means
+on the bronze on the left side of my
+data architecture I have always to be in
+contact with the source owners of those
+source systems and I have to be on
+contact with the data engineers that are
+building this architecture. But as we go
+to the right side I'm going to start
+talking to new
+new type of people. They are finally the
+business.
+So they are the business. They are the
+consumers. They are the stakeholders.
+They are the one that you are building
+the project for that's going to consume
+your data lake. So that means on the
+right side it's going to be different
+type of people that you are talking
+about and as well your data engineers
+because they have to go and build it.
+Now before I start drawing anything my
+friends we have to make another data
+contract.
+So
+maybe I'm going to make it like this.
+Data contract
+between sources
+and my lakehouse or my system, my
+platform. Yeah, my platform.
+All right.
+You have to make those contracts
+between you and between them and you.
+All right.
+You have to have those contracts. Now on
+the right side, you're going to be the
+one that is providing the data and
+you're going to be the one that is
+providing
+the data to others.
+And that's why it's
+we we might end up as well making a new
+type of contracts between
+you
+and the consumers.
+So
+something like that. And if I grab back,
+let me see whether I still have it. Yes,
+it is something that we call the
+consumer contracts. So again, you have
+to define who are you, who your team is,
+yeah, like building this I'm going to
+say data products,
+how they going to contact you, if you
+are offering the data as data products,
+how often you refresh the lakehouse, how
+um like whether it is a batch, it is a
+source. You have to define your maybe
+metadata about the gold to give some
+metadata.
+>> [snorts]
+>> You have to ask them yeah how what they
+are allowed to do with the data. So
+you're going to make as well another
+contract
+so that people that are consuming your
+data of course I'm speaking about your
+enterprise like a really big lakehouse.
+Okay? Because if you are not offering
+the data as a product you should not do
+this. It's fine because it is the
+consumer going to be your team and you
+don't have to make the contract. It's
+only if you offer it for multiple
+companies. Now I think we are almost on
+the second part of our data
+architecture. I would like to have a
+break again five minutes because here
+things going to get interesting to build
+the gold layer and what are the
+different consumers that might start
+consuming your lakehouse and as well I
+would like to go and add few more things
+like the data the metadata the pipelines
+the data governance and stuff like that.
+So, we're going to finalize the data
+architecture that I'm building. And um
+yeah, I'm really happy to be honest. I'm
+really happy about the progress. I
+didn't expect this. I thought that I'm
+going to go through yeah, a few stuff
+and that's it. But we are getting into a
+clean architecture, let's say an
+advanced one. So, I'm happy that I'm
+able to give you my thoughts about it.
+We are not done yet. Stay here. We have
+to have to add a gold of course. Post
+your questions. I see um
+less questions uh in the chat. If you
+have questions, ask me. You don't have
+to go to the Discord only. Discord is
+only for preparations. So ask questions.
+I'm going to be back in five minutes. So
+let's break and I'm going to be with you
+again.
+So where is my screen?
+It is here.
+Cafe break.
+>> [music]
+[music]
+[snorts]
+>> All right, we are back.
+So, I hope that you got here a nice
+break before we continue to the last
+part. I'm going to save from the stream.
+And I know there's like maybe a lot of
+information that you have to digest.
+Maybe you are like um yeah at the start
+of your journey of data and uh this is
+maybe something that is uh too much
+maybe at the start from you but it is
+nice to see for you let's say how we
+draw those architectures and how we like
+how I yeah I think about it how we built
+it step by step of course not everyone
+in the data job that is required to do
+to do those kind of jobs but I'm going
+to say it is really nice habit that you
+do at the starts where um um I'm going
+to say as you are building a small small
+source system or you are building small
+yeah maybe you are making PowerBI
+projects and you are connecting few
+files you are having a process at your
+work maybe just draft this it is good
+for you to understand how the data flow
+it is good for you as well to present it
+to the others if someone asks you how
+the project is like is going where are
+we what are you're building you can show
+them the process. Yeah. By showing them
+this architecture.
+So I'm going to say it is has a lot of
+benefits. It's not something that only
+you have to be a data architect in order
+to draw those stuff. It is a nice habit
+that you could add yeah to your uh to
+your work uh to show that you are
+organized that you have let's say you
+are planning you know what you are
+doing. So it's has a lot of benefits if
+you start doing basic shapes. Again, you
+don't have to do it in draw AO. You
+don't have to make things sophisticated.
+You could just grab, I don't know, yeah,
+PowerPoint or any uh any any tool that
+you like to use in order to draw even if
+you draw things at a paper or something
+like that. But it should be digital in
+order to share it with others and stuff
+like that. So I'm going to say it is a
+really nice habit that you do and it
+might open the door for you. Yeah. in
+your career.
+Now I'm going to say in your career as I
+told you at this part one you can become
+the data architect of the department or
+in your team or even over the time as
+you get older and you know everything
+about the company maybe you're going to
+be the principal or the enterprise
+architect of the whole company. So it
+really opens if you are uh if if you are
+enjoying it and you are able to
+understand the others you are able to
+understand the landscape of the company
+and you are able to suggest amazing
+things nice migrations and nice stuff
+you can really reach high things at at
+at your career so uh I'm going to say
+give it a chance even if you are new
+draw those stuff and uh for any kind of
+projects whether it's very simple one
+draw always make a sketch always draw it
+you can even present it in I don't know
+if you go to an interview if you have
+done a project like portfolio project
+like the SQL warehouse that I have done
+with you in the channel you can go and
+draw it and maybe print it you show them
+look I have done this project and you
+start explaining during the interview
+the whole project so I'm going to say it
+has a lot of benefits it's helped me a
+lots in my career. I can tell you I
+joined as well. This is something maybe
+um yeah I had a struggle at the start to
+to to speak in Germany in German um at
+companies. Yeah. Because it was at the
+early level and I'm still learning and I
+joined very early companies in uh uh
+yeah in my early years in Germany. So I
+use this as communication to others. If
+I have an idea, I sketch, I make you you
+show as well my courses, I sketch a lot.
+But this is as well way want to
+communicate to the others. Not something
+that is only for data architect. Okay.
+So gain those skills, draw stuff even if
+you are learning, draw, make sketches,
+make boxes, make arrows, connect things
+together and then everything going to
+click for you as well. You use it if you
+are talking to others. So
+now what we're going to do is to keep
+going in this I don't know yeah journey
+that we have here. I don't have like yet
+big ideas what we're going to consume.
+Uh but yeah we're going to do it in the
+fly how we can do it. Again post your
+questions in the chats and I will be uh
+answering them as much as I can. And uh
+yeah if you are asking about how does
+the data field future looks to you? It
+looks amazing. I'm going to say it is
+not something that's gonna disappear.
+Companies has data companies still yeah
+I'm gonna say struggle with their data.
+They want to become datadriven
+companies. They want to become AIdriven
+companies. They have a lot of dreams and
+yeah the data jobs is one of the I'm
+going to say most interesting jobs that
+we have now if you mix it with AI
+especially and um yeah it's it's a lot
+of jobs are open uh for data and um I'm
+going to say you can join any domain you
+can be in the healthcare you could be in
+the manufacturing you could be in the
+finance in the insurance you can do go
+wherever you want at the
+the architecture going to look similar
+and um and I'm going to say if times go
+back and I want to decide in my career
+I'm going to pick again data I might go
+immediately to data engineering because
+I love that engineering but uh I'm going
+to say it has great future so don't be
+afraid of it just mix it with AI learn
+AI topics
+and uh you're going to be you're going
+to be fine
+All right. So, now let's keep going.
+I hope this makes sense so far here. Uh,
+what I'm thinking is to move myself. One
+second. Maybe here.
+Uh, since we're going to talk about
+the right side. Yeah, I'm going to put
+myself here so that I don't cover
+anything.
+Um I have answered already this
+question. So if you go back to the
+stream about AI is replacing data
+analyst
+already answered.
+Now let's go back here. So what do you
+have? We are still
+let's say not doing anything with the
+data. We are not offering it. No one is
+using it. Yeah. Right. So no one is
+using yet our data. Now before we go to
+the goal there is one thing that I would
+like to let you know [snorts] that over
+the time
+we found out some sometimes we could
+skip bronze in some cases.
+So
+bronze sometimes becomes optional
+if you want to do it.
+If you have a really advanced way on how
+to stream your data directly to the
+bronze to the silver. So
+in some some cases if you can do it
+clean you can actually
+leave the bronze. I'm not going to say
+optional. I'm going to say only for
+batch.
+So
+we could do this as well and I think it
+is not that bad to go through directly
+from CFKA into the live delta files
+inside the silver and you don't have to
+go through the bronze. So the bronze in
+some projects can get only focused only
+on the patch.
+But if you want to say no, I would like
+everything to be you know
+straightforward. we go all the way
+through the prrawns. You can do it all
+right but in some cases we were able to
+do this very nicely without issues where
+we stream the data directly into the
+silver. So I just want to give you this
+possibility that
+some cases we can skip batch
+um skip the bronze if you are yeah
+streaming directly into silver.
+Um, now let's go to the gold.
+So this is the last layer. And now my
+friends, we have a big issue with that.
+We cannot have
+yeah the rules the way that we want. We
+have to start now offering the data as a
+products for the others. Now I'm going
+to do it in two scenarios. Okay?
+one scenario where I'm going to say we
+don't have like really
+separate consumers. We are yeah I'm
+going to put it like this. It is the
+same projects. It is the same people.
+We are building the dashboards. Okay. So
+I'm building this lakehouse for us. So
+I'm going to be the one that is
+preparing the data and as well the one
+that is um
+um
+I think I still can't put myself here.
+[gasps]
+So I am the one that is preparing the
+data and I'm going to be the one or my
+team going to be the one that is
+consuming the data. It's not someone um
+yeah outside of our projects. So what
+I'm saying here is we could have the
+consumers inside yeah our lakehouse or
+maybe part of our projects the way that
+you want but if you want to have only
+the layers three layers inside the
+lakehouse you can still put it yeah
+outside
+so now what is the gold the gold must be
+shaped so that we consume it so that's
+so that's means what I'm trying to say
+here
+you cannot just go and say I'm going to
+go and make star schema
+because everyone is making star schema.
+I read it in uh I don't know from par
+live stream he draw here star schema and
+I'm going to be here doing a star schema
+or maybe say this is the star schema of
+the consu the customers
+and this comes from yeah the gold here
+and from this source system and um yeah
+we can do it like this immediately you
+cannot decide on the gold without first
+analyzing the requirements that you have
+for the consumers. You have of course
+you should be doing this from the start
+of the project but you should know
+how to shape the data for the consume.
+So you cannot blindly like here decide
+the way that you want. No, you [snorts]
+have first to understand the consume. So
+the consume could be many different
+ways. Uh I think I have experienced all
+different ways of consuming the
+lakehouse. Maybe some some few things in
+my previous projects before I leave. We
+had 40 consumers
+and I had around we have 40 consumers of
+PowerBI
+and over 30 consumers AI projects.
+My friends all are consuming my lake
+house. I was not the one that is
+building those stuff at the ends because
+I was focusing on the lakehouse but I
+was providing the data into many many
+projects and I've seen everything let's
+say uh I went all in all those
+discussions I know exactly like how
+things goes into those stuff. So I'm
+going to say things can get crazy if you
+are making let's say clean data
+warehouse or clean data lake house or
+your data that you are getting are very
+important for the company
+and you have a lot of consu consumers
+that are
+uh requiring from you the data and of
+course the more and more you get
+projects that say I would like to go and
+consume I would like to go and consume
+the more hard time you're going to have
+how you going to shape your gold because
+you have a lot of people that have
+different demands on that gold and this
+going to makes your life really a
+nightmare on how to sh to shape the
+data. So now I'm going to go and cluster
+those into I'm going to say
+I'm yeah again I'm giving you here a big
+project. I'm not giving you here like a
+simple scenario. So I'm going to go and
+say it is the classical PowerBI
+projects.
+Um and I'm going to say it is maybe
+um
+yeah other lake houses
+projects
+and a third could be
+AI projects.
+Yeah, maybe something like this. So we
+can cluster the consume of lakehouse.
+Yeah. And big companies to into those
+three categories.
+Now PowerBI projects I think is clear
+right. Someone want to build a report.
+Someone want to build a dashboards and
+they yeah come to you and say I would
+like to consume the gold from you or
+maybe your team want to build PowerBI
+reports or Tableau of course. Yeah. So
+so I'm going to say maybe let's not give
+it PowerBI. Let's call it uh PI
+projects. Okay. So that we stay generic
+because you might get one project is
+doing PowerBI and another one is doing
+do we have Tableau? Do we have Tableau?
+Yes, we have. Oh, we have some nice
+icons that I could use.
+So
+you might have both
+projects that are consuming. Yeah. So
+that's why it's better to call it PI
+projects.
+Now why I say lake other lake houses why
+why we have this if you joined last
+uh
+if you joined last um stream you can
+understand me why I'm saying this
+because my friends
+in modern um data architectures we have
+the
+if you remember the data mesh
+um where yeah Oh,
+I think something is wrong. Yeah. No.
+No. Yes. Now we are thinking it. Oh,
+wait. It's jumping between.
+I'm going to refresh. Sorry for that.
+Yes. So slowly. One more tick. Nice.
+So now why I'm saying other lake houses
+or other systems it is because of this
+picture in companies. If the company
+starts making domain driven architecture
+where they are developing a data mesh
+where each one of us is building their
+lakeouses then we're going to offer the
+data from the gold or even from the
+silver to another lakehouse to another
+data project and that's depends of
+course on the architecture. So if things
+get advanced and you have the company
+that are developing a domain driven
+architecture my friends you one of your
+customers that means is another
+lakehouse from another domain all right
+that's why we have we could have this if
+we are having the data mesh concepts and
+of course the AI project is getting
+crazy for us and this is exactly
+why data engineers are really important
+now because
+the thing is if you apply
+I don't know yeah if you go and do AI
+use cases directly
+on those sources it's going to be really
+nightmare because again the AI project
+the people that are involved in those
+yeah activities they again they have to
+understand how to do theists yeah
+because they have to build their own
+rag. So they have again to go to those
+yeah discussions how I can get the data
+from you how I'm going to pull it full
+incremental CDC landing zone blah blah
+blah. So that's why if the company or if
+we don't have a data architecture like
+this and AI projects needs data they
+going to spend now maybe half a year
+just designing again those stuff. That's
+why if an AI project in a company sees
+that okay we have data engineers in the
+company that are preparing that are
+cleaning up the data that are doing
+stuff then my friends doing AI projects
+it going to be very simple easy because
+everything is prepared the AI projects
+that that's going to focus only on the
+use case they don't have to focus on how
+I'm going to get the data from the
+sources so that means and as well the
+result of the AI going to be way better
+if things are prepared. So that's why we
+are getting very important at companies.
+We as data engineers I can tell you
+quickly um I have done the first yeah
+maybe at Mercedes-Benz the first five
+years just offering the data to another
+BI projects and I have done as well in
+many other companies. Yeah the same
+thing we build warehouses we build
+lakeouses for BI. Yeah, business
+intelligence for dashboards, for
+reports, for ad hoc analyzes, for data
+science and all those stuff. But as we
+enter the AI area,
+we become very important for the
+companies. Suddenly really my lakeouses
+that I have built, the sink that I have
+built became the core elements of any AI
+project at their companies. That's why
+automatically become the data engineers
+at companies very important assets
+because without having a clean data
+garbage in garbage out and the AI
+projects they have always to start from
+the scratch by connecting the dirty data
+by connecting you know the AI systems
+into things that are very old that are
+things that are not prepared
+that's why many companies now understood
+how important are we for the AI that's
+why data experts like engineers like
+architects
+are becoming very important for the AI
+projects and the companies are hiring
+them in order to prepare the data for
+the AI so if you want if the company
+want to become AIdriven company they
+need clean data and yeah that's was the
+point [laughter] go back to the screen
+Um yeah so they are the new incomers
+into our yeah as a consumer
+and um yeah [clears throat]
+they became part of our consumer card.
+So now and
+what is missing is of course to add
+something like this source uh consumers
+and
+and maybe you're going to start naming
+your projects as I told you. Yeah, maybe
+you're going to make um do I have here
+container? Nice container. No, maybe I'm
+[snorts] going to go and get this
+container here. So maybe I'm going to
+start splitting the use cases depends on
+the type of the projects. So here we're
+going to say maybe uh Tableau and
+PowerBI and maybe I'm going to put this
+back go to the back and you going to be
+my
+text. So middle. So this going to be
+maybe the sales dashboard project PI
+project.
+Yeah. And then we're going to have
+another project where maybe I don't know
+give me names. [snorts]
+I don't want to use my project names
+that I [laughter]
+maybe um
+yeah maybe the customer behavior
+dashboard BI project and so on. So
+um it's going to be group of projects
+[snorts]
+that's yeah you can put an icon on it or
+something from those vendors but it's
+not that important that you want to
+consume the data and here as well you
+start doing the same thing. So you're
+going to start as well clustering your
+use cases depends on the data mesh. this
+giving the data to other lake houses.
+Again, this is something really advanced
+only if the company is really big and
+working as datadriven company. So here
+you're going to say okay
+um let's say lakehouse
+depends on how they call it. um another
+lakehouse A
+maybe you have two lake houses are
+connected
+like this
+and you can have here maybe
+two AI projects maybe shut to data AI
+projects or maybe talk to doc AI
+projects that are very famous AI
+standards I'm going to say now becoming
+to um you know to consume the data from
+you
+and here I'm going to put those nice
+icons just to make sure
+those stuff
+is clear what they are using in their
+projects.
+So, oh, now we are getting into
+the layers again. So, go back
+and maybe on the lake houses. I'm going
+to go and use another data bricks.
+Something like this. Looks nice. Now, I
+like it.
+So, now of course um we can do some I
+don't know what you have done here on
+the left side. You can go and use those
+stuff on the left side to say
+you know you are
+the PI projects or PI
+PI projects.
+You have under here maybe
+um other lake houses
+and here AI projects
+something like that. So you have to
+understand
+who going to be your consumers.
+Now I'm making this as one of the yeah
+one big lakehouse and many people are
+interested yeah with your lakehouse but
+maybe in your projects you're going to
+end up having my friends only
+BI and that's is not bad. I'm not saying
+that everything going to be uh do yeah
+data mesh and stuff like that. It could
+be your project classical you are
+building a lakehouse or you are building
+a data platform in order to yeah be
+consuming it through dashboards. Yeah.
+So I'm not saying this is going to be
+the standards now. I'm just saying that
+those are the different possibilities.
+The same thing like from the sources.
+I'm not saying that every project is
+going to have this setup. I'm just
+saying here you might have those
+possibilities. Now,
+after you interview each one of those,
+let me grab
+I'm going to bring this here.
+Architect.
+You have really you have really to deep
+dive into those projects and understand
+why they need the data and in which
+shape. So, you're going to go through
+many interviews. You're going to
+understand how they um Yeah. how they
+work, what why they need it, whether it
+makes sense. Maybe in many cases I can't
+yeah I can tell you
+I got in total maybe 200 requests in
+order to consume my data but only 70 got
+connected. So you really have to
+understand why they want to connect your
+lakehouse because you might get some
+customers you might get some people they
+are building I don't know yeah
+application
+like I don't know web web and web
+application and they join and say hey uh
+you have the data in the lakehouse you
+know what let me just go and consume it
+like all others so I would like really
+to go and consume your gold you know now
+as a data architect you're going to say
+No way my friends we are not building
+here transactional system. Yeah. You go
+directly to the sources and talk to them
+and you will build your web app directly
+on the source systems. You don't need a
+lakehouse in order to build your use
+case. So not every project and this is
+of course very important you know you
+have to you have to dig yeah dig deeper
+with people and understand why they need
+a data not each project is automatically
+accepted to get consumed by the
+lakehouse. Yeah you might get some use
+cases that has nothing to do yeah with
+the system that you are building. So as
+a data architect you have really to go
+through every single project that is
+getting connected and you have to come
+up with a design of the gold that makes
+sense to consume.
+So how I usually do it is that
+I try to offer
+there is there is like many different
+ways on how to design this
+and there's ways that I hate and there's
+way that I like. Now there is people
+that says you know what I'm going to
+tailor for each use case
+a mart data mart
+or I don't know yeah bunch of group of
+tables
+so now they go through like they do it
+like this let me just yeah maybe
+something like this they go and start
+collecting data from left and right from
+the silver or stuff like this
+and then they tailor this for only one
+use case for only one project. Ah
+doesn't want to enter.
+This is really not good tool for
+explanation.
+So they start tailoring
+one M for each customer.
+All right.
+So each new customer I get, they start
+building a new march.
+Huh? So it looks like this.
+Now
+this is a bad architecture. This is lazy
+and I hate it.
+>> [clears throat]
+>> Um thing is
+imagine now I have now here how much
+yeah six consumers what's going to
+happen if I have 40 consumers
+really what can happen so I'm going to
+go and throw 40 data marks on top of
+this by the way this is very common this
+is like many people that's really uh
+build this because They don't build that
+architecture and don't think about it.
+So they go and build start tailoring one
+M for each project and good luck good
+luck maintaining those marts if you get
+more than five I'm going to say projects
+connecting to you. You cannot I'm going
+to say this is not something that is um
+smart. You're going to need a lot of
+people. You're going to need a lot of
+engineers to just maintain this. And
+imagine the chaos
+like
+people those people going to start
+building yeah reports left and right and
+here you do something wrong on those
+marks or there is a business logic or
+you you done the joins badly or you
+forgot to do something on the filters.
+Yeah. So
+you're going to have here version one
+and version two and the numbers at the
+ends will makes no sense and believe me
+they're going to hate your lakehouse.
+They're going to hate your project and
+they're going to blame you a lot of it
+and you're going to spend a lot of time
+just fixing issues and stuff like that.
+I never do this. This is one of the
+worst things that you could do is to
+tailor for each customer, for each
+report, for each I don't know a use
+case, you tailor one table or one um
+[clears throat] data products.
+Don't do that. Instead what we're going
+to do
+we're going to try to understand exactly
+this cluster understand okay why they
+need those reports and what is the let's
+say
+I'm going to say
+like what is the common between those
+projects like what we're going to do is
+we are going to go and offer maybe one
+star schema for a domain called maybe
+sales
+and we're going to cover inside it as
+well the customers. So for for all BI
+world I'm going to build one data model
+or one product
+that could be reused by as much as
+possible from PI.
+But I'm not saying here here comes the
+yeah the confusion. I'm not saying I'm
+gonna offer one product for everything,
+but at least I'm going to do my best in
+order to let's say
+consolidates the requirements into one
+conformed or one core, I don't know, a
+data model that can serve multiple BI
+projects. But I don't expect this star
+schema that I built to be suitable for
+the AI.
+You got me? So, this will never work.
+Don't dream of this. If you have
+multiple shapes of um consumers, you're
+going to be building multiple shapes of
+um
+yeah of consumers. So, here we might go
+and build maybe big tables. maybe going
+to go and offer like 10 core big tables
+cleaned and ready that is not star
+schema but it is in format that the AI
+likes it. So I'm building like a data
+products
+by a cluster. So here it says data
+products
+and here as well data products
+products.
+So look at this with this I'm building a
+product that's
+is is of course serving multiple use
+cases at the same time. And of course
+you might find each use cases that's
+going to say you know what one use case
+might need other tables or other data or
+other shape than the other use case. You
+try to convince them or you try to shape
+it in a way that's it is reusable or
+satisfying multiple projects. If you get
+like 80% everyone happy about it then it
+is good. This is way better than having
+one product for one customer. Okay. So
+now what are the rules of the gold? if
+you hear me here is going to be useed
+driven.
+So it is not anymore source
+systemdriven. Okay. So that means if I
+make here an arrow
+we can make this actually in the data
+architecture something like this
+where you going to say from left to
+right everything is source system
+oriented
+that means the shape of the bronze and
+the silver going to be designed by the
+shape of the sources I'm not yet
+speaking a lot with the use cases. I'm
+just focusing on getting the important
+tables that are required for the
+customers, but I'm not shaping the data
+by the use cases
+and
+and here it's going to be the way
+around. So this is awesome to do in the
+data architecture. By the way, I can as
+I have done it many people understood
+everything. So
+this is really nice to draw
+and yeah sorry um you know things are
+getting out of hand now. So
+from use cases to the goals it will not
+be source system oriented.
+It's going to be business or use case.
+Um
+wait I have here something ugly. Can I
+move this? I can move it. Nice. So this
+going to be you can call it use case
+oriented or you can say business
+oriented
+development. All right. So that means
+the gold is totally depend on the yeah
+on the business on the use cases. So
+here we have to do data moduling. We
+cannot have the shape of the source
+systems. We have to add the business
+transformations.
+We have to change the shape of the data
+of course. Yeah.
+So you start adding those rules and as
+well maybe add one more rule. No um yeah
+one to one products
+that I means there is no one product for
+one customer of course. And I could go
+and add one more cool rule to say I
+would like to have everything as view. I
+don't know whether it's possible for
+some people to do it but I managed to
+make my gold completely using views and
+not tables.
+So nothing is persisted. It is
+completely virtual gold. But it is of
+course expensive. If you have the budget
+for this, you can go with the views. But
+I decided on one of my projects to go
+completely virtual gold access layer.
+Yeah. So that I don't have to deal with
+the updates, insert and all those stuff.
+And I can change the uh let's say um I
+can create new tables quickly and stuff
+like that. Now as you as you see each
+layer is getting its own rules. And now
+um what could happen with that?
+Yeah, I think I was something like this
+at the end. You can do it like this.
+So
+the lake houses usually they are as well
+doing maybe they're going to need the
+data for AI and stuff. So they can go
+and access either the big tables or they
+can access their star schemas. So I'm
+not I don't think that we have to make
+extra yeah shape for the other lakeouses
+my data products either big flat tables
+or
+big flat tables or star schema.
+So what is missing is of course we have
+to put it into container send back.
+Now I need this one here and one back.
+Nice, nice, nice, nice. I love it.
+All right, so oops. [laughter]
+Let me just remove the stuff on top.
+Go up. Go up. Go up. Now let's see.
+Yeah. So again by looking into this
+um I'm going to remove this here with
+that my friends
+that means
+you have to always understand the
+requirements and try to offer data as a
+product and of course this is only if
+you are working in data mesh concepts.
+If you don't have all those stuff then
+you just need star schemas and the gold
+and you offer those star schemas for
+your colleagues in the projects. All
+right. Um
+and avoid the onetoone thing.
+Now I'm going to say I'm really happy
+about this. Now we come to few rules
+that you could break or let's say you
+could add to your uh data architecture.
+Um
+let me think
+now you might say
+one more rule that you have to be very
+careful is about to define is where
+people can access your data. So here you
+have to make a decision as an architect
+to say through the projects it's only
+the gold layer going to be the access
+layer. No one is allowed to access those
+two. All right. So you can make some
+rules about the access. Yeah, you can
+see here no access or whatever you can
+write here and this is only internally
+for our data engineers and only here
+this is allowed to get access
+for the others. Yeah, if someone comes
+and say hey I would like to get your I
+don't know tables from the silver.
+Now um if you are very strict architect
+you're going to say no we give data only
+through the gold. All right or if you
+are more flexible and say hey I'm going
+to go and offer both silver and gold as
+a product. So that means if really an AI
+use case needs the raw data from the
+silver they are welcomed to go and
+access it like this. So this is getting
+ugly a little bit but you might allow as
+well
+to access the data directly from silver.
+I was not allowing this because it's
+yeah it's going to run into chaos and I
+lose flexibility. You have to understand
+once you allow access to any layer you
+lose the flexibility of changing things.
+So imagine both of the gold and silver
+are accessible yeah from the consumers.
+That means I have the nightmare of as a
+data engineer or data architect that I
+cannot change a lot of things here
+before I talk to the people here because
+I'm going to make contract with people.
+So my contracting can start from here.
+So I'm going to start contracting people
+from the silver and gold.
+So it is responsibility
+[laughter]
+like I I don't know if you are an
+architect and say yeah you are allowed
+to access bronze, silver, gold and then
+you go to next project because you don't
+care and then data engineers going to
+suffer with this. You see it's small
+decision that you make in the data
+architecture might make the life hell
+for the data engineers. So be you have
+to be really careful with the design. I
+decided to not allow the silver to get
+access from people. If you need
+something from silver, I'm going to make
+my best to bring them into the data
+product or maybe to make an extra
+product especially for that. But leave
+me alone with the silver and the bronze.
+I'm I need a full hidden flexibility
+doing stuff. Yeah. on the on uh on the
+changes so that if something happen from
+the left side I can adapt fast and I
+know that's no one going to get
+affected. Changing a gold it is one of
+the hardest things you have to do each
+time you introd one new column that you
+introduce you change the data type you I
+don't know yeah you rename a column
+something something going to break here
+if you don't communicate it correctly
+yeah or maybe the data contract is not
+allowed at all to change it so that's
+why yeah you have to be very careful
+with this now I'm going to say I'm
+really really happy with this picture. I
+guide you through my thoughts and my
+decisions. Now, what we could add on top
+of this, there's a lot of things that's
+I'm going to say add-ons
+with this.
+We have the core of the data
+architecture. Okay? If you can't draw
+those stuff, then you have it. You you
+don't have to add so much many other
+things. But if you want to stay like
+adding few few small things, you could
+go and say hey you know what not only
+the layers we have here below like for
+example we have the meta data layer on
+top of the data this is little bit show
+off things as we do the so I'm going to
+say here meta data liar to know that say
+my data my data leak house is so modern
+that I have an extra layer in order to
+explain the data or have uh everything
+protocols. We might have data quality
+layer. Yeah. So we start adding those
+little
+boxes below the data architecture.
+You're going to find it in many people
+that do this that architecture maybe the
+data pipelines.
+I don't know. Yeah. I can keep here
+adding boxes uh until this is not
+anymore nice. Yeah. So maybe here um
+semantic layer.
+[laughter]
+So but I really don't care about this
+because they don't really add a lot of
+things. Uh it is just nice boxing. What
+is more important is the rules, the flow
+of the data, the clarity. So you can add
+those stuff below your warehouse and
+explain it
+that we do not only pipelining and
+moving data from left to right but we as
+well have multiple layers in order uh
+yeah to build this lakehouse. So you can
+add those stuff. But I really love doing
+this
+the uh top down architecture the bottom
+up. And by the way, this is really nice
+picture in order to um let me just make
+it bigger because this is nice product
+as we have done now. [snorts]
+Now look at this my friends. Look at
+this.
+Um I can take this and explain it for
+data engineers. I can take this and
+explain it for my managers if they know
+tech. I can if I talk to my customers, I
+go into a meeting and I show them
+exactly this picture and I tell them hey
+look I have in the gold two products one
+as a star schema and another one is big
+flat tables. We usually give the data
+for AI like this and if you want to
+access my data I can offer you only
+those two products and you can consume
+it but sadly I cannot give you access to
+other stuff. There are only engineers
+and by the way the gold it is a bro like
+I have a new data model so you will not
+find the source systems yeah inside my
+um yeah my product. So you could use it
+in order to talk to your customers about
+your data. I could use it in order to
+talk to the source systems about the
+data how to connect and I can show them
+this picture or I can use it in order to
+explain it for a new data engineer that
+is joining my team. Hey, look at this.
+We do the project exactly like this that
+they can understand immediately during
+the importing process. If I got audited,
+yeah, in big companies and um happens to
+me twice, [laughter] it's not nice. But
+I learned a lot about data security and
+a lot of uh yeah bad designs that I have
+done. So I can show them this and say
+hey look the data flow like this. Yeah,
+we grab the data from the sources. We
+ingest we do it in lakeouses into those
+layers. the access gonna happen only the
+goals on the right sides those are the
+projects so I'm going to make my life
+easy during the audit I'm gonna my life
+easy as well if I want to get this
+approved from the security officer of
+the company if the company says and the
+project will not start until you draw
+the data architecture then I'm going to
+draw it like this and go to the this
+yeah security officer and say hey look
+at this this is our plans and this they
+are going to agree on it or not or maybe
+if my issues and I'm going to use as
+well this as maybe planning tool. Yeah,
+I used it a lot as planning. So I I say
+hey um you know what the bronze is still
+is built the silver is built but gold is
+still under building. So we can show
+progress of our projects using the data
+architecture. You can add some comment
+on top of it. So it is more than just
+I'm drawing a plan. And I'm just
+communicating with others and
+don't draw so much different pictures.
+This is more than enough in order to
+communicate for many different people. I
+had as I told you maybe one through five
+years that I keep growing over the time.
+So at the start we had only uh yeah PI
+project then after that we start
+connecting this we are adding more data.
+So it going to grow over the time. Yeah.
+But
+if uh I still look at this, I should not
+be confusing anyone if I'm explaining
+it. So my friends
+um I'm going to say
+yeah withdraw the data architecture that
+I would do now in some big projects in
+big companies. This is the process that
+I might do and depends of course on the
+size on the sources on the requirements.
+the shape going to be differently but
+it's going to be having the same soul to
+the others take things from left to
+right use it in order to explain
+[snorts] the plan and stuff like that we
+can go of course with more details where
+we can start adding the notebooks the
+scripts that is moving the data from
+left to right but I would not do that
+because then it will not be looking um
+clean so
+let me check again.
+So yeah, uh I'm going to say this is
+could be full detailed architecture that
+you could use at companies. this as
+well. It's not a bad yeah it's a little
+bit high level where you have only a
+data warehouse and again it could be
+your architecture only I don't know I
+still have it now it could be only like
+I don't know PowerBI consuming directly
+from tables
+now I could go through this little bit
+more and add more items but I think you
+got the picture I just want to to have
+the feeling about um
+uh let's say how we build that
+architecture how I go through my process
+and uh I hope that you with that you
+combined the first part where we had the
+theory we have explained the different
+concepts and now I showed you hands on
+how I would start and add those stuff it
+is a great habit if you add it of course
+this thing can take me more than one
+yeah maybe two three months until I come
+up with the final so I it's something
+that grow as you go through all meetings
+and you start building it step by step
+but it is uh I'm going to say if you if
+you show this habit in your project in
+your company people going to love it and
+people going to get start promoting you
+and start you become very important
+let's say the brain of the data projects
+[snorts] um I have a lot of stories of
+course to explain for you what we have
+done and how this uh went through but
+just by sketching few things made me
+yeah let's say one of the famous data
+guys at Mercedes-Benz and as well at
+Porsche
+Uh so
+start drawing don't be afraid even if if
+if even if the company has already one
+old data architecture draw your own
+projects show it as well if you are now
+data engineer you are learning data
+engineering you are doing portfolio
+projects draw this it's simple I just
+spend like I don't know two hours and I
+come up with this if you saw those
+pictures then you show that you are like
+let's say you could be a leader at yeah
+the project you could the the brain of
+it. you give a lot of indicators and um
+I'm going to say
+um yeah this is one of the data roles
+that I uh enjoyed a lot doing but I'm
+going to tell you I was not only a data
+architect I was um doing let's say
+multiple as they say we put multiple
+hats so you could be uh I was project
+leading the project leading the whole
+implementations at the same time the
+architects um and as well I was helping
+helping other teams in order to organize
+their work in order to build for them
+this architecture. So I was supporting
+other projects not only leading my
+project as well supporting the other
+projects in different um departments not
+only my department but as well cross
+departments and stuff like that but I um
+I'm going to say uh it was for me I
+think few years and I'm going to be
+maybe principal architect at the company
+but uh of course u yeah I enjoyed more
+that I'm doing both architect and the
+project so I'm going to say don't expect
+that once you start drawing those stuff
+you're going to be automatically only
+the one that is drawing. So you might be
+the data engineer and as well the data
+architect. You could be the project
+leading the project and as well or the
+senior data engineer and as well the
+data architect. You might be the
+dedicated one. So there is no one like
+let's say tailored role for this. Um I'm
+going to say I'm totally happy satisfied
+about the progress. We done the theory.
+We done some practice. And so yeah, this
+is the role. I hope that you enjoyed it.
+That's brought you some um let's say
+some perspective on how to add this to
+your skills to enhance your skills. Um
+I'm not sure whether I'm going to make a
+course about this, but we might do that.
+Uh where I'm going to go through more
+into details about the concepts, maybe
+do different uh architectures for
+different scenarios for different
+companies. We're going to see about
+this. If you have questions, you can
+post now and I can maybe uh read from
+from from it and answer. Yeah. A few.
+Otherwise, I really enjoyed this live
+stream. I don't know. How about you? Did
+you enjoy it? And um I'm going to say I
+would not make part three of this.
+I'm going to make one more part or not
+part. I'm going to make one more live
+stream, but it will not be next uh
+Tuesday. I'm going to prepare one to be
+a personal live stream. So, it's going
+to be something not about the tick. I'm
+going to explain my journey. Who is
+Barra? Who is Barra behind the SQL
+course that you know and you loved and
+uh this guy in the YouTube? Yeah. What
+is his story? So, I would like to give
+my story because I think it was dramatic
+uh life that I had how I transitioned
+from country to another country. I have
+how things went with me. I have low
+light, I have highlights. So I think
+it's not that standard story that you
+know and I might give you uh yeah maybe
+live stream about my life if you are
+interested. Of course this will not be
+maybe adding and skills for you but if
+you want to hear stories I think the
+next stream going to be about who am I
+what are yeah my mindset how I think and
+what was yeah the story that happened in
+my life. If you are interested, [snorts]
+it's going to be the next one. But I
+have to prepare it because I think I
+have so much things that I don't want to
+forget.
+All right. Now, I think that's it. Uh,
+one more thing that I would like to
+celebrate with you guys. This is the
+first month that I got 2 million views
+in one month. This is the highest record
+that we have in the channel and this is
+all because of you. So, I going to say
+thank you. Thank you so much. for all
+the love, for all the comments, for all
+the sharing, the likes. I read all your
+comments. Like uh every day before I
+sleep, I open my mobile and start
+scrolling
+into your comments. I really don't use a
+lot social media. I don't use
+Instagrams. I don't do this dome
+scrolling and stuff like that. I work. I
+enjoy my life. But if I want to go into
+social media, I read your comments and
+it is lovely. I I I cannot imagine I
+really cannot imagine your support. It
+is impossible. I cannot imagine this.
+But thank thank you so much for
+supporting the channel. If you are not
+yet, do that. Subscribe and like. I have
+a lot of content for you. I really can
+spend 10 years just making content. I
+didn't even start. I have so much things
+about the AI, about the cloud, about the
+data and code and AI, about Yeah. the
+data bricks. I haven't started yet. I
+have so much that energy uh energy for
+this channel but only with your support.
+Don't let me go back to the companies. I
+like making content. So if you don't
+support, if you don't show, I don't
+know. Yeah, I still we have only 30%
+subscribing to the channel. But I think
+we can increase that because we have
+half million visitor regular visitor.
+Half million regular visitor to the
+channel. So, I think if people really
+subscribe, you can make me at least 3
+million subscribers, but I will not now
+keep talking about this. I'm really
+happy about this journey that I have.
+It's It's not yet one year away from
+Mercedes-Benz, but I'm enjoying it so
+much. I didn't expect this. It is being
+an amazing journey making the content.
+I'm going to keep doing this and you see
+guys how I'm growing with you through
+the content. Uh I have my now Harold's
+doing the editing of the content
+and uh yeah and I have so much new ideas
+for you. I have so much projects and uh
+yeah very excited. So if you keep
+supporting and you keep enjoying the
+content I will keep doing this otherwise
+I go back and shut down the camera and
+start I don't know you know um doing
+that architect for some companies. So
+now I'm going to say stay motivated.
+Don't read so much about that. There is
+no jobs and there is no stuff. If you
+love your job, if you like to be a data
+engineer, if you like to be data
+analyst, for sure you're going to find
+job. All right. But if you are doing it
+only for the money and you are not
+skilled. Yeah. So and you don't like
+programming as data engineer, you are
+just doing it for the money, you Yeah.
+You will not you will not succeed. So
+only make it because you love it. The
+data has so much I'm going to say to
+offer and they going to stay in needing
+us especially data engineers. I'm going
+to say keep it up, keep learning, keep
+pushing and you can meet any dream that
+you want. All right. I am just a guy
+from Syria and I became one of the let's
+say most of the famous data guy at
+Mercedes-Benz leading projects and
+building all those stuff. You can reach
+whatever you want. I hope this helps.
+Thank you so much for watching this live
+stream. I enjoyed it so much and I'm
+going to see you in the next videos.
+Ducks going to be in the next. So stay
+tuned. There will be so much content.
+Thank you so much for being here and I
+love you all. Bye-bye.
+All
+right.

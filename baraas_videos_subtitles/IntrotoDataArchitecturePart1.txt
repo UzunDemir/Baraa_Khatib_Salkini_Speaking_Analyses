@@ -1,0 +1,4887 @@
+[snorts] Hello everyone.
+So get yourself ready.
+And I have already my coffee.
+So we are going soon live.
+Ah, nice to see Black Soul is here as
+well.
+and we are live. Hi everyone.
+So first of all I would like to say
+welcome and I need to hear from you
+whether you can hear me good because now
+I have here completely new setup. I'm
+using Mac after a long time. So I hope
+that you hear me because I didn't test
+to be honest. This is first time going
+with this setup live. So let me know
+whether you can hear me or not.
+And I hear myself which is a good thing.
+So let me just check where this come
+from.
+All right.
+So, everyone can hear me. This is
+perfect. Perfect starts.
+Now, what I'm going to say, we going to
+start with our live stream. Everything
+is ready.
+So, yeah, welcome everyone. I'm really
+happy to go live again with you. It was
+like a while, right, from last time. I
+think we have done some interviews, some
+data break stuff and finally I'm now
+back to live. I have few topics that I
+would like to discuss with you. Not only
+about the data architecture, there are
+some topics that I think it's only
+suitable for live. So first of all, I
+would like to say welcome. We're going
+to talk about one topic which is the
+data architects and the data
+architectures. As I said, maybe if you
+saw from the shorts that this is my
+favorite role that I have done and yeah,
+and it is something that is not that
+easy to explain, but I'm going to try my
+best to talk about it. So today, it will
+not be a podcast. It will not be a
+course. It's going to be, let's say,
+just a talk. I might give you some
+advices. I might sketch. Depends on,
+let's say, how we're going to uh go
+through the the agenda that I have for
+you. So, I'm going to say I miss so
+much. Going live with you. Thank you
+first of all for everything, for the
+support, for the nice comments. The
+channel is going crazy, let me tell you.
+I got I think this month the first time
+we are getting around 2 million views in
+a month, which is I think one of the
+highest records in the data channels.
+So, I'm really happy about it. I think
+we are from top three channels now about
+the data and that's all because of your
+support. So, thank you so much for that.
+I'm really happy about it and of course
+I will keep pushing on that. Now, uh one
+thing that I'm going to ask you just
+make sure to not spam the chat make uh
+our job easier as like for everyone to
+ask questions and always stick with the
+topic. So, we're going to speak about
+today data architectures and architects.
+Please don't ask about let's say h when
+you going to be doing the DAX and the
+PowerBI or other topics. Let's just
+focus on the data architecture. So don't
+spam the chat just ask questions that's
+so that I can read it and answer you and
+yeah what I'm going to say we have one
+moderator. So thank you so much black
+stole for joining us today and yeah
+today going to be as as I said it is
+about the data architect and
+architectures. Um I would like to see
+first of all in the chats how many we
+have here data engineers and data
+analysts because it really depends on
+the audience whether I'm going to go
+deep dive into let's say data architect
+stuff or I have to be careful with the
+data analyst that we have today. So, uh,
+let me see how many data engineers and
+data analysts that we have today here.
+And, um, other than that, I'm going to
+say
+yeah. Um, I'm hearing myself. Let me
+just
+remove this here. All right. So, we have
+here few data engineers, few data
+analysts, we have students, uh, we have
+freshers. Oh, we have a lot of data
+analysts, which is going to be
+interesting. Oh, let me see.
+He did engineer data analyst.
+Oh, yeah. Okay. We have a lot of data
+analyst here as well. Now, [snorts] it
+is not a big problem. Uh I'm going to be
+like uh let's say giving you fundamental
+things because there will be some data
+engineering topics that I will be uh
+yeah covering as well. So, it is
+relevant for you whether you are data
+analyst or data engineer. Don't worry
+about it. I just want to have let's say
+feeling about the audience. I got I got
+the big picture. It is a mix and I I
+know a little little bit from my channel
+because I have a lot of PowerBI and
+Tableau let's say viewers. Now we're
+going to speak about the data architects
+and what is the agenda about today. I
+will give you today just an
+introduction. Okay, this is something
+not like we going to learn SQL or
+PowerBI where we sit together like two
+hours and now you are a data architect.
+Okay, it is something that you're going
+to learn over the time. All right. And
+it is something that um um let's say
+uh you cannot take a course and become a
+data architect. It's like becoming a
+manager. You know, you need experience.
+You need to do a lot of projects. And
+once you have a lot of let's say enough
+experience, you can become let's say
+data architect. But today what I'm
+trying to do is I want to make your life
+easier. Maybe to give you tips so that I
+give you the mindset of how to think
+like a data architects because it is one
+of the highest paid let's say data roles
+that you might have in a job. But we're
+going to go in details about everything
+about the job about the role about the
+mindset about the skills and after that
+we switch um let's say in the middle of
+the stream where we going to talk about
+data arch architectures topic like for
+example what is a data warehouse what is
+a data lakehouse what is a very
+important to to understand what is a
+data products what are the data mesh and
+how we design data architectures okay so
+we're going to speak about the concept
+in the second half but in the first half
+I want to introduce you to the job
+itself so that you have good
+understanding about it and you think
+whether this going to be your career in
+the future because you have always
+different path but we're going to deep
+dive into all those stuff now I would
+like to let's say share my screen and
+start like talk about this role but I
+still here myself let me just find out
+from where
+let me just see here. Just second
+thing from the studio here.
+So,
+okay. So, I'm going to make this like
+this and then we're going to switch to
+my screen and we start talking.
+So, yes, perfect. You can see this right
+now. Um where are we going to start?
+Yeah. So who is the data architect? Just
+a very simple definition or let's say
+let's talk about it a little bit. It is
+someone that actually plans. It is
+someone that is before like doing any
+implementations any like building
+anything big at companies we need
+someone that puts the plan for the
+execution. And it is like you are
+building uh I'm going to say you are
+building a house right you have always
+adapt you have an architect in order to
+make the plan to build the house. So now
+the process is very similar between
+those two. So before you start planning
+anything you have to hear the
+requirements and this is exactly what a
+data architect do. We sit together with
+the stakeholders we hear the
+requirements and start noting down what
+they need what they want. So it's
+exactly like you are planning to build a
+house. You have the architect that is
+collecting your requirements asking you
+some questions understanding exactly
+what do you need. Now after that what's
+going to happen to that he or she going
+to take the requirement and start making
+a blueprint start making the plan to
+build the house. Right? Same thing with
+the data architects. You're going to go
+or she going to go and start making the
+plan to build the data system. This is
+very important to understand this
+because after that actually the data
+architect going to hand over the plan.
+Well, I'm this is very simplified but
+they going to hand it over to the
+builders. So the builders that's going
+to build let's say uh the the house or
+the data engineers or the data expert
+that going to starts building the data
+system. So it is un it is the core of
+the data architects. They understand the
+requirements. They
+going to go and make a plan and then
+hand it over to someone else. Well, this
+is in a perfect word, but I'm going to
+say this is the core of a data
+architect. So that means if you like see
+those three pictures, you have to have
+communication skills. You have to have
+skills on how to build the blueprint.
+And you have to have the skills to hand
+over the blueprints. Now I can tell you
+again this is in a perfect world but in
+reality things goes in different
+directions. Now for me for example I
+started at Mercedes-Benz as a solution
+architects. So we have different bigger
+terms on on how we define this. Um I'm
+going to say I was end up doing multiple
+roles. So we're going to be maybe the
+data architect and at the same time we
+might be developing and at the same time
+maybe leading a project. So it is not
+like let's say in the data world
+something clear separation between roles
+but in the perfect let's say on the
+papers it is exactly like this. This is
+what the data architect do. Now um the
+next thing that I would like to show you
+is I have done some analyzes about the
+technical skills that is required
+actually from a data analyst. Now
+recently I've been doing a lot of work
+at with AI where I was collecting a lot
+of jobs. I was uh analyzing the data. I
+collected around 20k jobs around about
+the data. So uh jobs about the data
+analyst, the data engineers, the data
+architects. So different roles and I
+start doing analyzes about what are the
+skills that are required in the job
+posting currently. Now I know from here
+in Germany what are the requirements but
+I would like to have like always up
+todate image what is really requested
+for a data architect for the data
+engineer for the data analyst. So now
+what I'm showing you now those are the
+top skills that are required from a data
+architect. Okay this is not about the
+data engineers or data analyst. Now I'm
+going to say about the technicality we
+have of course technical skills and we
+have soft skills. technical skills
+almost every job posting is asking for
+SQL data moduling we have the Azure data
+bricks python data governance AWS and
+snowflake so those are let's say the
+skills that are mostly required from you
+as a data architect but this is not the
+most important thing because usually
+data architect should not let's say
+develop anything they just put a plan
+right that's why what is way more
+important is to understand what are the
+let's say soft skills or let's say what
+are the tasks that are requested from
+you. So here I can say yeah
+83% they ask the data architect of
+course to design the data platform
+architectures. This is our main job.
+Then the other task is about the data
+governance the catalog the contracts
+designing a data model. This is really
+interesting because to be honest I
+didn't expect this that is requested so
+much from the data architect. I expect
+this from data analysts from data
+engineers but actually they are many
+expecting you as a data architect to do
+data modeling. Now comes something very
+important the mentoring and coaching
+others. they expect from you as a data
+architect to mentor the others to help
+the others in order to implement the
+plan and as well collaborating with
+different departments gathering
+requirements and so on. So those are
+let's say I'm going to say the top
+requirements
+or this is what company expect from you
+to do at the job as a data architect.
+Now comes something very interesting
+that I have done analyszis on it which
+is how many years they expect from you
+to be a data analyst and here the
+average I've got seven years [laughter]
+so you're going to see five years you're
+going to see like 10 years 15 years but
+the average um yeah it's going to be
+between five to seven years and this is
+totally expected this role it is not
+like a data engineer or data analyst
+where you go I don't am do some courses,
+collect informations, uh learn SQL,
+Python and those stuff and then you
+enter a job with it. This is not an
+entry job. This is a job that where you
+grow with your skills during yeah
+working as a data analyst or data
+engineer. So that's why they requires
+years and too many years in order to
+enter it and this is of course the
+picture is totally different if you are
+data analyst or data engineer. So the
+requirement is around 7 years and I
+totally expect this because otherwise I
+cannot expect a data architect that can
+start working without any experience.
+This will not work because again this is
+something that you cannot learn from
+courses and stuff like that. Now here
+comes as well um what are the data
+concepts that they mentioned from you to
+become a data analyst. What are the top
+topics? Like the thing is if you open
+any job posting uh about data architect,
+you're going to find a lot of terms,
+right? They're going to say data
+modeling, data architect, data
+governance, quality and all those stuff.
+So here I have a full listing of all
+like let's say terms that are mentioned
+in the job posting. Of course the number
+one going to be the data architects or
+architectures. Then it is the data
+modeling. You have to have understanding
+about the data platform governance
+quality management data warehouses. You
+see it's still one of the top requested
+let's say skills or understanding uh
+topic. You have the ATL data and
+gestation integration lakehouse data
+lake lineage. So um I'm going to say it
+is not like all of them are requested.
+This is just a collection of all let's
+say data concept that you have to
+understand. And now what I'm going to
+try to to do today is try to explain
+some of those concepts for you. And by
+the way those concept it is not only
+requested from a data architect I have
+done here the analysis as well for an
+engineer. So it is as well similar
+things but with different priority like
+for example data engineer the request
+number one skill is the data pipelines
+then ETL's data modeling and so on. So
+there is like not a big difference
+between architect and engineer. You have
+to understand those concepts. And of
+course, you can understand those concept
+either by doing the job or reading about
+it. Now, as I said, I'm going to give my
+best today to walk you through some of
+those concepts uh using sketches. And by
+the way, we will not do coding today.
+Yeah, we will just sit talk and sketch.
+There's no coding. There's no project
+that I'm going to do. It is just I want
+to bring you the understanding about
+this role. So with this you can
+understand uh let's say they going to
+require a lot of data concepts they're
+going to request from you let's say a
+lot of years and as well they're going
+to like yeah request from you that you
+have knowledge about how to build a data
+architecture you have knowledge about
+the governance how to design data model
+and how to mentor the others so now I
+just wanted to show you those numbers
+before we dive in because I would like
+you to understand let's say what is
+currently uh requested and I have here
+like some job posting about the thing
+you can see here for example from aliens
+here I think in Germany right no this is
+in Barcelona so in Spain so this is one
+of job posting about uh a data architect
+and um you know if I zoom in a little
+bit
+you're going to see that they going to
+request from you a long list of things.
+So you have for example here to define
+the data archite architecture the
+blueprints
+uh you have to translate uh let's say um
+I'm going to say here the requirements
+yeah to build the data architecture you
+have to define the end toend data flows
+um
+so support the implementations this is
+important yeah support the
+implementations they don't request you
+to do the implementation on yourself and
+yeah uh what they going to request a lot
+of things you can see understanding of
+the data mesh the data lakehouse yeah
+between 5 to 8 years uh data bricks
+understanding or fabric you can see here
+there is or yeah this is always
+interesting to to see that none of the
+companies going to request from you two
+things at the same time not data bricks
+and fabric you have to have only one of
+them um yeah so you're going to see here
+a long list of things that you they
+expect from you and of course you can
+understand all post stuff. I'm going to
+say only by doing projects or by joining
+today. [laughter]
+I hope that I can give you as much as I
+can today. And yeah, to be honest, I
+don't have like um uh let's say this
+first time I'm talking about this topic
+uh in stream or in a video. That's why I
+don't know how long this going to take
+us today. So, it's going to take us
+until my cafe is done or yeah, until I'm
+um yeah, I'm tired. So now um I'm going
+to now deep dive into
+uh by the way I'm still not that good
+using my Mac after 17 years working with
+Mac with Windows I switched few month
+ago. So that means now switching between
+things it's always like a pain. Now
+let's start. So how how I'm going to
+explain for you because now data
+architects we [snorts] have different
+types. So let's start like this. I'm
+going to grab this guy. By the way,
+those are figure minifigures
+that's uh adopted from my sketches. So,
+uh I think you you if you watch my
+sketches, you're going to understand
+that some of them are from my my figures
+here. And uh by the way, if you want me,
+I could switch it to black uh dark uh
+background, but I think for explanation,
+it's always nice to have a white board.
+Now, uh let's start with the first one.
+You are a data engineer.
+So,
+and you join a team. We have a project
+team. We have here the data analyst.
+And what else do we have? Maybe we have
+a manager. Do I have a manager here? I
+should have a manager. Yeah, I have a
+manager. So you have here a manager and
+maybe team lead, you know, team lead.
+Yeah. Now something like this. So I'm
+just building a project team. All right.
+So here we have like
+uh a project team
+like this. Uh this is project team.
+Maybe I'm going to switch the font a
+little bit.
+Mhm. [clears throat]
+All right.
+So, this is one project team. Now, those
+people are building something, right?
+So, they are the builders. They are
+building maybe a data warehouse. They
+are building something. Now, as well,
+we're going to have another team that is
+doing something else. Okay? So, usually
+we don't have only one team in a
+company. And by the way, as I speak to
+you about those stuff, I always think
+about big companies, okay? Because I
+have done um uh let's say my last three
+uh let's say companies were big
+companies. So I'm going to give you
+always the big picture of big companies,
+not mediumsiz or smallsized. Now it
+start always like this where you join a
+team, you have a team lead maybe you
+have as well uh depends yeah on your
+company you have a project lead.
+So project lead
+and you build something with this team.
+Now the thing is during yeah building
+the the project and stuff like that
+you're going to find yourself that some
+of those builders of so those data
+engineers start doing activities like a
+data architects like one of those
+engineers starts drafting I don't know
+whether I have here blueprint no so
+starts like building yeah a data
+architect so this is what I call a
+casual
+data architect.
+So you're gonna find as I said yeah one
+data engineer is sketching or she is
+sketching like a picture saying ah we're
+going to build it like this and um this
+person is yeah let's say going in this
+direction going in direction as a data
+architect but it is not dedicated data
+architect okay so this is someone in the
+team building and at the same time
+building architecture we cannot say this
+is a dedicated one now over the time
+what going happen that um
+um that this person get promoted or the
+department going to go and hire another
+data architect.
+Now this data architect going to be a
+dedicated one. It is going will not be
+like uh let's say the casual one. Okay.
+So this is the dedicated data architect.
+Now you can see I have made this person
+outside of the teams because the data
+architect now is not anymore
+responsible for building one project.
+He's not anymore part of a team. He is
+like something in between. And uh to be
+honest, I would like to go and switch
+this to maybe dark mode. Let me just
+check this
+cuz this is too
+Yeah. Let me know if you like this dark
+mode. But uh I would like to turn it to
+dark mode like this. Maybe it's better
+for you to to see.
+Now this data architect now is a
+dedicated one. So this is situation
+either going to be part of the team and
+you are casual one like me at the start.
+I was casual data architect. I was
+building things or you get promoted over
+the time and you become a data
+architect. Now since you are not anymore
+part of a team your job will not be
+anymore building things. Your job is to
+work between teams and starts building
+the data architect for multiple
+projects. So again this one is dedicated
+the data engineer is dedicated only for
+one team for one project but the data
+architect once get promoted and once
+start to be a dedicated data architect
+like the job that I showed you you will
+not be part anymore of a team you will
+be building architectures for different
+people or for different let's say
+projects. So this I'm going to say we
+are not done yet because there are like
+multiple data architect types. So this
+is the level of let's say the team
+levels. Let me just make it like this.
+So we are still talking about the level
+of yeah building projects or doing
+projects.
+We are not speaking about the yeah the
+top end of data architects. Now what
+happened is that you're going to find as
+well in the companies as you go up in
+the hierarchy you're going to find that
+you have let me see here do I have other
+icons
+yes you will start as you go on top you
+will find those top managers okay the
+companies so top managers
+and you will start seeing new roles like
+for example the shift data officer.
+So this is as well elite jobs. Okay.
+[snorts] So you have here the data
+officer or the shift data officer and
+then you're going to find people on top
+like for example the shift security
+officer
+and yeah the roles yeah let's say those
+people at the top they will be the
+people that are actually putting the
+strategy for the whole company they are
+the planners the people that do um yeah
+[clears throat]
+so let me see here So planning strategy
+um and with that I mean of course the
+data strategy. So those people on top
+they don't usually build they just make
+strategy planning for the whole company
+and and the word below they are the
+builders. So that means if you are a
+data architect, you still are working
+between like two three teams or two or
+three departments until if you decide to
+go really up to join those elites.
+You're going to be the principal data
+architects. This is the le last level
+for you. This is the principal
+data architect. So once you get promoted
+to the top, you're going to be with
+those elites where you might be let's
+say working as well with another
+architect which is the enterprise
+architect. This is not the data
+architect. This is the enterprise
+architect. And
+and um again you will not find like 10
+enterprise architects. You will not find
+like 10 principal architects. You're
+going to find like only few. So that
+means if you see this picture it's going
+to work like this. If you are data
+engineer or data analyst, you start as a
+casual
+um architect and after that you get
+promoted to become the dedicated
+architects in the department in the
+teams and the last level is you're going
+to go as principal data architect which
+is I'm going to say um one of yeah one
+of the highest paid roles that you might
+reach because if you look to
+What are your options right as a data
+engineer what are your options is either
+um you're going to go my friends as a
+manager right like team lead a
+department lead whatever you go to the
+management and you start getting
+promoted promoted until I don't know
+yeah you reach some high top management
+role so this is the management
+or The other option that you have is
+actually is to go as an expert, right?
+So you're going to be I don't know.
+Yeah, the highest going to be senior
+senior data engineer. Yeah, senior data
+engineer, which I'm going to say, yeah,
+it is good paid. You going to get some
+good money about it, but it you cannot
+reach an elite level, okay, with this.
+you're going to be okay an expert that
+can yeah work and do project and stuff
+like that but you cannot be yeah high
+paid at a companies um and the next one
+is actually the career
+whether you're going to go as an
+architect and the architect role
+it is something that can open the door
+for you to reach let's say the elite
+level at companies but still enjoying
+your job because to be honest I don't
+like the management roles. It is
+something that you still let's say um
+taking your knowledge yeah with the tech
+knowledge with your experience and still
+having fun in the job without like uh
+being a manager. So what I'm trying to
+say is that
+the data architect role it is amazing
+opportunity for you to reach high level
+at companies but without
+yeah going as a manager if you don't
+enjoy managing people if you don't enjoy
+I don't know yeah having conflict
+between uh in your teams and the
+politics behind management and all those
+stuff then the architect it is like an
+amazing role that you can reach really
+high at companies and you get as well
+equally paid. Yeah. Like other people
+like data officer or security officer or
+even a top manager. So it is an amazing
+role and uh with that you're going to
+find those yeah I'm going to say those
+are the three roles that you can reach
+as a data
+uh architect and now I'm going to be
+honest with you. I was something in
+between.
+I was here. I Yeah, I was leading
+projects in my last two jobs and um
+yeah, I'm still living in Germany by the
+way. [laughter]
+You want me to go back to the whites? Um
+yeah, if you guys want me to do that, I
+can do it.
+But I think the font is not that that
+good.
+So now I think I burn all your eyes
+[laughter]
+now. Yeah, I think the font I hope that
+you can see it well. So
+all right. So um I keep going. I'm going
+to keep switching. Yeah, if you keep
+asking me. No. So no where I was. Yeah.
+So what I was trying to say is there is
+not one type of data architect. uh there
+are like different levels and I was in
+between I was like this and um I was
+trying to become let's say manager at
+Mercedes-Benz but then I decided no I'm
+I would like to stay in the technical
+aspects I like to do projects I like to
+build I'm builder I'm not let's say
+manager and I was targeting one of those
+roles at the top so before I leave
+Marcus Spence I was targeting this one
+here
+And uh I know a lot of uh let's say
+principles data architects I know their
+mindset and I know their stuff. So I was
+trying to jump to here and uh then I
+left to do content. [laughter]
+So I was this guy here and that's why I
+will be explaining for you stuff that
+you can do and as a data architect. So I
+hope with this it is clear for you the
+uh let's say the levels and that what
+are the different types um and uh yeah
+which one you are responsible for what.
+So again the data architects between
+departments you have to look between
+different uh let's say projects. If you
+are a data architect inside the team you
+decide only for your small scope and if
+you go on the top then you are deciding
+for the whole company for the whole
+thing. Now this is about the rules.
+Let me check what we're going to do
+next.
+Yes. Um
+okay. So now we're going to go and I'm
+going to show you a few things about how
+a data architects looks like.
+Some might sit.
+Don't know where I have put it.
+Just trying to find the sketch that I
+have prepared for you.
+that architecture
+house three times. I think I lost it.
+Let me find.
+Give me a second. I'm going to find you
+here something.
+So,
+do I have it here?
+Okay. Until I find it, I'm going to jump
+to another thing.
+Oh, I have it. Wait, wait, wait, wait. I
+have it. I have it here. So, let me grab
+this over here. Now, we spicked about a
+little bit. Yeah. About the data
+architect and um yeah, what he or
+I hope you are seeing. Let me check
+whether you are seeing my screen. Yes,
+you are seeing my screen. Let me make
+myself a little bit smaller. All right.
+So, now look at this. Now the thing is
+uh if you are new, if you are data
+analyst or engineer, you are student,
+you are still learning um and you start
+like searching about the architect
+architectures and the different types
+and stuff you might get confused very
+very fast my friends because there are a
+lot of different types a lot of
+different diagrams on how people draw
+architectures and there is a lot of
+let's say misunderstanding what is
+really that architecture okay because uh
+if you Google and go to images and and
+you search for I don't know Azure
+architecture or data architecture you're
+going to find different pictures and I I
+want you here to have some awareness
+about what is really data architecture
+now here we have some random image I'm
+going to say that looks like data
+architecture from Azure from Microsoft
+but my friends this is not a data
+architecture yes we have here yeah
+sources on the left sides we have
+pipelines we have storage we have I
+don't know yeah streaming ing events,
+uh, consumers and stuff like that. This
+is not a dict architect architecture,
+sorry. If you draw something like this
+at companies, they're going to throw it
+at your face because my friends, this is
+not something that's uh, yeah, going to
+explain anything for the company. This
+is only a vendor architecture.
+This is a vendor trying to sell their
+products for for you for the companies.
+So here Microsoft is explaining for you
+use my tools to do all those stuff. So
+if someone asks you uh draw for us a
+data architecture and you draw this this
+then this is of course wrong. Okay. So
+this is not a data architecture. This is
+just a vendor architecture.
+Now if I go to the next one. No
+let me just zoom out.
+I told you I still have problem with my
+Mac. [laughter]
+I'm zooming out like crazy. Now, let me
+just refresh here.
+[snorts]
+Yeah. Okay.
+I I because I clicked. Okay. Okay. So,
+this is not a data architecture. Now,
+let's move to the next one. Same thing
+here. You might see this picture and
+say, "Wow, this is perfect. Look, look
+at this. We have uh bronze, silver,
+gold, we have delta lake, we have I
+don't know Unity catalog, PowerBI
+fabric. Perfect. If I am becoming data
+architecture, I'm going to draw this
+one, right? This is my reference to
+become data architecture. Again, this is
+wrong.
+This is not a data architecture, my
+friends. This is again vendor
+architecture. Once you start seeing a
+lot of let's say um yeah icons about
+platforms and tools then this is this is
+not a dirt architecture this is
+something someone trying to sell
+platforms try to sell tools. So um I saw
+a lot by the way I saw a lot a lot of
+people at companies they yeah they say
+yeah I am an architect and they start
+drawing stuff and they come up with this
+picture. Yeah this is really bad. So
+this is not something that's you should
+let's say provide as a solution for
+companies then you are just uh trying to
+sell the company tools. Okay, this is
+bad. Now we come to the data bricks. You
+see here as well data bricks have a lot
+of pictures and they say yeah this is an
+architecture and stuff like that. Well
+again this is a vendor thing. So once
+I'm going to say once you see a lot of
+just icons like Spark uh logos yeah
+PowerBI event hub and blah blah blah
+this is a vendor architecture this is
+not a data architecture and this is the
+worst this is one of the worst that I've
+seen in Google
+someone as well is saying this is a
+architecture you can see here it's just
+random boxes and random uh uh let's say
+um uh tools that they throw go around
+and they say this is a data
+architecture. This makes no sense. You
+of course you can add of course you can
+add yeah icons and logos and stuff but
+you cannot call this that architecture.
+Yeah, they're going to throw it at your
+face. Um now we come here. This is
+something that we I'm going to say
+getting closer to become data
+architecture. Yeah. So I'm going to say
+I like this one. Yeah. It is very high
+level of course but at least I know the
+flow of data. I know all right there is
+like data sources they go to data
+storage there is streaming processing we
+are doing in between machine learning we
+have analytical data store and
+analytical reporting and we have to do
+orchestration. So you can see this image
+from Microsoft Azure they don't have
+here any let's say logos. Yeah, they are
+not trying to sell their products but at
+least I'm going to say I understand the
+flow of data. I'm not this is like a
+marketplace of tools like I'm not
+understanding what is going on here.
+What happens in Spark? What happens? I
+don't know. Yeah, in DBT and like are we
+storing that like it's very confusing.
+Yeah, that's why you cannot sell this as
+a data architecture. Yeah, this one is
+close and we get closer. Yeah, this as
+well. I like it because it is as well
+listing out what are the different
+sources that you have in the company. We
+are here speaking about the engions. We
+are speaking about the processing. We
+have here data cleaning, data
+transformation. And then it says we have
+here three layers. The role, clean and
+created. And we have here data
+governance and stuff like that. Yeah.
+And how to consume it. So my friends
+this is closer yeah to data
+architecture. I just want to bring you
+the awareness that not everyone that go
+and throw through you uh yeah some logos
+and boxes and say now I have a data
+architecture from company or you can go
+and take a reference architecture from
+data bricks or Azure and say hey look I
+know now how to do it in the company and
+we can do it like this right you are
+just another guy selling Microsoft
+products for a company you are not
+selling any solution you are not Like
+yeah this is not something that you can
+do my friends. Of course if you are
+discussing tools yeah in the companies
+and you are discussing what which yeah
+which service we're going to use which
+service stuff but this is something that
+a cloud cloud architect going to do not
+you not a data architect. So again I
+just want to bring this awareness for
+you because I saw many people do that
+and of course I'm not saying it should
+be boring like this. Yeah, this is
+totally boring. Yeah. To have u to have
+only boxes and stuff like you can mix
+you can start mixing a little bit to say
+yeah in the analytical you could use for
+example PowerBI. Yeah. But uh it would
+be nicer if you speak more about uh
+let's say what is exactly the use cases
+how the data stored how the data move
+and stuff like that. And here for
+example I don't know whether you have
+done with me the uh the SQL warehouse.
+It is as well here I tried to draw for
+you something like close to a data
+architecture. So you can see uh we went
+through okay we have bronze silver gold
+we have two source systems and we have
+put here some contracts data contracts
+on the data architects where we explain
+you know we are storing here tables uh
+we are doing here patch processing we
+are doing full load we are doing
+truncate and insert the data model going
+to stay as it is. So we are adding some
+descriptions about what's going to
+happen inside each of those boxes. This
+is what we have to understand. Yeah.
+From data architecture. We have to
+understand what going to happen with my
+data inside this one big picture and not
+what tools I have to buy for the
+company. This Yeah. So I hope that it is
+clear for you. Now uh have here drafted
+something little bit complicated but we
+will not go in details but it is
+something as well like an enterprise
+data architect but I'm not going to go
+through it now we can stay with this. So
+with this I hope you understand what do
+you mean with the data architecture
+and um yeah this is just a way on how to
+explain how the data yeah move around.
+Now, of course, we're going to deep dive
+into how to do those stuff. It depends
+on the time, of course. Um, so this is
+something that I want to raise an
+awareness about it so that you know what
+do we mean with those stuff. Now,
+um,
+what I would like to give you now, I
+would like to go through the mindset a
+little bit. Let me just have a drink of
+water. I hope you are enjoying
+[laughter] what I'm trying to say.
+So now um
+of course uh the question is why we are
+drawing those stuff? Why do we draw
+those pictures? Is it like just because
+it is a nice thing to see or like yeah
+you want to show off
+how how uh the architecture looks like?
+So why we draw those stuff? It's just
+you have to understand
+um maybe I I want to go maybe switch
+because I don't have anything now to say
+to show you
+now of course the question is why we
+draw those architectures right um the
+thing is we draw those stuff not to show
+off we are not trying to here uh to show
+the company yeah I can draw you stuff we
+are using visuals in order to bring
+understanding
+It's like a data analyst, right? If a
+data analyst want to explain the story
+behind the data, they make visuals, they
+use data visualizations, right? They
+make like those charts, they make um
+yeah some aggregated data and they make
+like bar chart and all those stuff
+because they want to use the visuals to
+explain it. It is the same thing. We
+draw those diagrams
+for us in order to explain something
+through the visuals. It is first of all
+helping us. Um yeah, I have by the way
+coffee. [laughter] I have it here.
+Uh so yes it's going to help us to
+understand what we are planning to build
+because
+think about it like if you want to build
+a house and you don't have any plan you
+don't have any visual you sit with
+someone and and going to say okay trust
+me I'm going to make for you four rooms
+I'm going to make for you a kitchen like
+imagine it with me the kitchen going to
+be left right and the guy talking to you
+about your house without a picture right
+without a visual So you're going to
+start imagining something in your head.
+He going to imagine something in your
+head and at the end you're going to get
+something that is not meet maybe meeting
+your expectations. So that's why before
+we build anything we have to draw we
+have to build those diagrams in order
+that we communicate a plan for everyone.
+First of all for you yourself like if
+you want for example to make plan like
+maybe you create a big documents about
+it but you have to uh let's say in order
+to bring this document for you to
+understand it to draw the visuals to
+draw the diagrams. So it is helping you
+to understand what is your plan and is
+as well helping others like if you are
+meeting managers stakeholders or let's
+say nontechnical people you want to show
+them the plan. Yeah, you cannot just
+explain. You want to show them the
+pictures and as well it going to help
+everyone let's say in the developers or
+let's say data engineers and stuff like
+that. It's going to help them to
+understand what is what are you talking
+about. So the visuals it is just a tool
+to communicate your plan with the
+others. That's why we draw those
+diagrams and there are no rules on how
+to do it. You can make it boxes, you can
+make it from left to right, from up to
+bottom. You can make it the way that you
+want. There is no like how to uh I'm
+going to say standards how to draw those
+stuff. It is just instrument for you in
+order to communicate your plan. So there
+is no wrong and right. But don't try to
+draw only tools because it is not
+helping anyone. And uh I'm going to say
+it is just a tool that's um yeah it is
+just a tool in order to communicate your
+plan. So that's why uh it's going to be
+our main tool in order to communicate uh
+let's say things. Now there are some
+mistakes I'm going to say here listed
+few mistakes that I would like to tell
+you about it. Uh I met a lot of
+architects around uh that say yeah I'm
+an architect I'm making now the
+architecture for the department and they
+start like yeah doing um yeah strange
+things let's say at the company. So
+there are few patterns that I have seen
+that I [snorts] would like to tell you
+about. Like for example, you're going to
+see a guy yeah that is just discussing
+tools. They never discuss let's say
+the problem itself. So this is one of
+the biggest mistakes. If you start to
+think like an architect but you end up
+just talking about tools. If I talk to
+you, you only speak with me about
+PowerBI, Tableau. You speak about
+Snowflake and data bricks. You just
+speak about Azure and AWS. You just
+speak about tools. And this is one of
+the biggest mistake I'm going to say as
+a data architect. You should speak about
+the problems. You should speak about the
+data, the flow, the company uh let's say
+uh pains. You have to speak about how to
+build an architecture that going to
+serve multiple use cases. So I saw this
+pattern when you have a tool guy that is
+just talking about tools. Now another
+thing that's a big let's say yeah issue
+you're going to find some architects
+that know only theory but never do any
+projects and this is a big problem. So
+um if you find yourself let's say
+somehow you became a data architect at
+the company and you haven't done any
+project yourself believe me you will not
+succeed. In order to become a data
+architect, first you have to be someone
+doing projects. So first don't jump to
+this role without doing project at
+yourself. You should be first a data
+analyst. You should be first a data
+engineer. You cannot be a data architect
+that have never done projects and then
+just jump from the theory watching I
+don't know maybe stream like this and
+jump immediately to become data
+architect because uh this is something
+that I've seen a lot as well. data
+architects that have no idea how things
+works but they have a lot of theory.
+They know what is data warehouse, what
+is data lakehouse and they start
+discussing things but they are always uh
+let's say have no idea whether this is
+going to work. So they only know knew
+the theory.
+Um another mistake that you could do as
+a data architect is that you don't think
+about the budget.
+um you go and let's say yeah you see
+data bricks architecture you see
+snowflake architecture you start
+thinking about building I don't know
+yeah lake houses warehouses and stuff
+like that a lot of tools platforms but
+you are not taking into account whether
+you have a budget for it whether the
+company not you whether the company
+gonna have a budget for it so [snorts]
+this is as well a big issue that I'm
+gonna see a lot of yeah architects that
+they think they have endless amount of
+money in the company and they are ready
+to do whatever he says. Uh this is a big
+issue because if you don't know the
+budget that the company has at the end
+to spend in order to do your plans
+you're going to make some unrealistic
+plans for the companies and other ends
+no one going to implement it for you.
+Yeah. So that's why as an architect
+always think if I'm bringing this
+concepts is like do we have enough money
+for it? Does the company gonna be
+willing to pay for it? Like for example,
+if I join smallsized company, I would
+never ever try to speak about oh let's
+go and build data products, let's go and
+make data mesh concept and they start
+like dreaming big and at the end the
+company has like few databases and
+that's it. They just want to do few
+reporting. So this is as well a big big
+issue that I've seen um data architects
+um not thinking about the budget that
+they have not thinking about the
+limitations that the companies have. So
+this is something uh that as well a big
+mistake that you could do as an
+architect. Another one is
+um you make overgineered or let's say
+overkill con. It's like similar a little
+bit about the budget that
+the company don't need too much. Yeah.
+And you start bringing Yeah. Again the
+company just needs some reporting and
+that's it. And you start bringing like
+big crazy idea to make a data mesh to
+make lakeouses. So again you are not
+making uh let's say concept that are
+unrealistic.
+So um always be realistic. I'm going to
+say understand the limits of the
+company. understand what they need and
+then design of course the architecture
+for it. Um, another like let's say
+mistakes that I've seen that you're
+going to find some architects that they
+they draw a lot. They make a lot of
+diagrams like crazy. Like for example,
+you ask okay what is the plan and then
+he or she of course open the I don't
+know their folder or stuff like that and
+they have like 10 or hundred of images
+and visuals and they start like showing
+you multiple architectures and say ah we
+could go this direction and then they
+show you ah this is last year this is
+this year so he keep drawing like crazy
+all time he has like I don't know 10 or
+20 diagrams that keeps switching between
+as he's talking to you. This is one of
+the biggest mistake I'm going to say for
+me. I worked I think in a project for
+five years at Mercedes-Benz. I used only
+one diagram only one and it was more
+than enough. It was very famous even in
+the company because I always stick with
+the same images with the same picture
+and everyone can remember it. So it gets
+bigger and bigger over the time, but I'm
+using the same fonts, the same logos,
+the same icons, the same shapes. I had
+only one. So my advice for you, don't go
+and draw like I don't know. Yeah, more
+than two or one. Just stick with with
+that and that's it. But um yeah, this is
+as well one big issue. You see architect
+that they get overwhelmed. they like if
+you talk to them they start immediately
+making a new sketch a new visuals a new
+charts and new diagrams and yeah they
+get lost and they lose the others as
+well. Um there is another thing is that
+as a data architect especially if you
+are a data architect let's say dedicated
+one for multiple projects
+uh try to you you yeah you should not be
+pious to specific projects like for
+example let's say in a department we
+have three data warehouses
+and um yeah because you build one of
+them that doesn't mean that you as a
+data architect that you always try to
+merge the other warehouses to this one.
+So what I'm trying to say is you have to
+be unbiased about your solutions, your
+discussions and try to not have a baby,
+not have like one uh let's say system
+yet try to defend it all time just
+because you like it. Okay.
+Um this as well yeah goes to the second
+second point that I saw as well many
+mistakes like you get a data architect
+that yeah make a diagram make yeah some
+diagrams some stuff and then uh over the
+time things changed okay so at the start
+maybe it was working for yeah PowerBI
+reporting and stuff and then suddenly we
+are getting AI use cases and you're
+going to find this yeah the architect is
+not trying to adapt
+So they try to be very defensive with
+their architecture and they try to let's
+say even if it goes wrong yeah over the
+time they still try to defend it and try
+let's say storn yeah and not try to
+adapt with a new word. So this as well
+I've seen I've seen some people they
+make one picture and never change over
+the time they don't add to it anything
+new. If it's not working he going to
+defend it until the end. this as well
+something uh bad and uh this bring me to
+the next thing is that I've seen
+architects that they just draw a picture
+they make some presentations PowerPoint
+and stuff and then they let's say leave
+to something else so they just draw
+things and then leave draw things and
+leave so they jump between projects and
+they don't track what is going on
+afterward is my plan is working it's not
+only you make a plan and you leave you
+have to keep mentoring the others. You
+have to bring the others in order to
+implement the plan. So it is not
+something else. You take the
+requirements as I showed you in the
+pictures. Take requirement, draw a
+picture and then hand it over and say
+okay bye. I have to go to um somewhere
+else. You have to stick with the plan.
+You have to make sure whether your plan
+is working. This is an initial plan. So
+this as well something that I've seen
+people make plans and disappear and
+that's it. No, if you are the architect
+of my house, I want to still discuss
+with you things until the whole house is
+built. You are responsible for the plan,
+right?
+So those are some let's say bad things
+that you might do. Again, don't be the
+tool guy. Don't only talk about theory.
+You have to do your own projects. Don't
+be the overspender. Yeah, you have to
+know the limits of the companies before
+uh making a picture. And uh don't make
+things over yeah killed um
+and as well um yeah if things change you
+have to change as well your architecture
+you cannot stick with it. Now
+um I'm going to say
+we're going to go to the next point
+where um I'm going to tell you a little
+bit
+maybe I'm going to do it with a sketch
+show that it is not that boring for you.
+I think with the visuals it's going to
+be more interesting for you right. So
+let me just see how we going to do this
+now. I think I'm going to go and sketch
+things.
+So
+we have those no skies but we are done
+with this. Let's go and grab something
+else.
+Yeah.
+Now
+let's go back. So I'm I'm going to give
+you maybe a story on what I'm going to
+do if I join a company as a data
+architect. Let's say I got
+uh hired at a company. Now again I
+stopped making YouTube videos and
+YouTube stuff and I said you know what I
+would like to become a data architect in
+a company. how I'm going to do this like
+like what are the my main activities
+like what I'm going to do right so I'm
+going to take in this story I I'm not
+really prepared for those stuff but I
+think it's better to make sketch about
+it
+um is a data architect a boring job um I
+don't think so my friends
+data architect it is I'm I'm going to
+say a manager it is a boring job But a
+data architect it is fun because there
+is a lot of communications.
+Um what is the primary
+roles and responsibility of data
+architect? Um this is what I'm trying to
+explain now. [laughter]
+So uh if you go through through this
+with me you're going to understand what
+is exactly uh what we do now.
+Okay. This is Bar. [laughter]
+I joined a new company. Okay. Uh let me
+just see whether you can see my screen.
+Yes, I can see you can see it, right? Um
+so now I joined a new company, right?
+This is me. Now the first thing that I
+would do is that I would not
+Yeah, I'm speaking now about an
+architect
+trying to put the scenario. I am not a
+data engineer. Okay. Now I'm joining as
+a data architect here maybe in a
+department something like this or maybe
+principal I don't know like in between.
+Yeah. So I'm not I'm not implementing
+anything. I'm just um
+I'm just principal data architect or or
+um dedicated one. Right. So now the
+first thing that I would do is that I
+would never start
+doing anything at the start. So at the
+start it's all about
+so this is the phase one uh I would not
+go and start um yeah building anything
+or drawing anything I would just
+talk to people. So this is the first
+thing that I would do and we have many
+different people right in companies. So
+uh let me just grab something like this
+guy here. This person let's say those
+are the technical people. All right. So
+uh sorry this is the business.
+Business uh means with the stakeholders
+maybe the ex yeah process experts maybe
+yeah people that are doing the business
+right now. What else do we have? We have
+we have the tech guys. Uh let me just
+grab
+a girl. [laughter]
+So uh this is let's say it. All right.
+Or uh no not not it data engineers.
+So those are the data engineers.
+Um and let's get a manager or something
+like that.
+So uh this is a manager
+and oh yeah so this is IT tech whatever
+you want to call it data engineer
+whatever yeah those people build things
+now
+in phase one what I'm going to do um
+depend of course in the scenario I would
+not go immediately and start talking to
+the data engineers as a data architect I
+would leave it for before so in the
+phase one I just want to understand what
+is going on. So I have no idea what is
+going on in the company. So first of all
+I'm going to decide to talk to the
+business.
+So I would like to talk to the business
+understand what they do actually uh
+understand their processes understand um
+why do they need data what they do with
+the data like if I give them an excel of
+data or maybe access to database what
+they do with it how they work with the
+data do they have like PowerBI reports
+are they doing some I don't know yeah
+are they using some yeah maybe AI tools
+uh or just using Excel so I would like
+to understand how they are working with
+the data and understand the business
+process like how the business is
+running. So I'm going to pick those guys
+first. Yeah. So talk to the business.
+Now after that um what I missed is
+actually
+way more important than talking to a
+manager or to data engineer. I'm going
+to speak with the source of the data. So
+data source owners. Okay. So
+first I understand the business. I
+understand the processes and after that
+I go to the data sources. Those people
+are responsible of generating uh the
+data. So I'm going to speak uh yeah with
+them about yeah how do you store the
+data? How do you give the data? What are
+um
+uh like what are the different
+possibilities to get data from you the
+size of the data? How do you store it?
+Do you have some documentations and
+stuff like that? So I talked to the
+sources of the data that is needed for
+the company. This is very important in
+order to understand how the data is
+generated, how the data is stored and
+how they can give me the data. Now after
+that I might go to the tech people and
+start asking what do we have already in
+the company? How do you manage?
+Oh, I look at this. I have here really
+nice [laughter]
+images. Maybe I'm going to put this
+instead of this business user. So those
+are the business users. No. So um
+I'm going to go to the data engineers to
+the IT to the tech and start asking them
+how they manage their data. Uh do they
+have data warehouse? Do do they have
+data lakehouse lakeouses data lake? What
+are the pains? Uh how long it takes to
+load the data or maybe they don't have
+anything. So it depends really on the
+situation what they have really at the
+company and after that I'm going to
+start talking to the manager understand
+things like
+um yeah maybe the size of the teams what
+is the budget that we have um how much
+money we have to for the projects the
+limitations and stuff like that so as
+you can see I'm jumping between
+different teams and try to understand
+from them the current situation I want
+to understand
+the current situation of the company as
+a data architect without this I have no
+idea I cannot suggest anything I cannot
+make any pictures or or stuff like that
+so I need to talk I need to like
+interview and ask questions and each of
+group of course needs different set of
+questions again the business what they
+do with the data why they need it what
+are the pains data sources how they
+generate the data uh the managers it's
+about the timelines the budget and the
+data engineers what they have currently
+now once I have the big picture I will
+start drawing the first architecture but
+this is my friends not
+the architecture of uh let's say the
+yeah the goal architecture I'm just
+going to draw the current architecture
+as a picture to say hey we have data
+warehouse house. Uh then we have here
+PowerBI reports whatever. Yeah. And here
+we have another data warehouse data
+warehouse 2. Uh this is on the cloud.
+The first data warehouse maybe on the
+onrem.
+So I start drawing let's say um yeah the
+current architecture
+as it is
+and here maybe the sources whatever like
+I'm I'm not just going to draw something
+I just want to let you know that uh I
+just want to understand the current big
+picture. Now this is the first delivery
+that I'm going to do as a data architect
+is to make it clear for everyone
+how the world looks like and I'm going
+to make a list of pain points.
+So I'm just going to say okay we have
+this and that and I'm I'll just make a
+list of all bad things that I think
+um we should fix. And here you have to
+be very very very careful because if you
+are a new guy I would not go and do
+fingerpointing to others. Okay.
+I would not go and start talking ah you
+know what you have done bad job and to
+the others everything is bad and start
+criticizing yeah people you should not
+you should not do that because everyone
+going to hate you and no one going to
+listen to you afterward. you just be to
+be um very careful how do you criticize
+people or let's say how do you show the
+current painoint don't criticize don't
+do fingerpointing
+just show the current yeah picture about
+yeah the company and then say
+this is maybe yeah not good because and
+always you have to say because why yeah
+to have two data warehouses maybe makes
+no sense and stuff like
+So this is a big face where I show them
+the current situation of the company and
+a list of all pain points and with that
+I gain let's say some trust yeah from
+the companies that actually I know what
+I'm talking about and as well I know
+yeah what what are the next steps. Now
+what I could do afterwards is that
+um
+I would start let's say checking the
+painoint and check what we can do quick
+wins from this.
+So I will make like suggestions but not
+big sug suggestions it's going to be
+like the big wins for example I don't
+know yeah maybe as I'm analyzing the
+data one of those platforms here the
+maybe onrem data warehouse I found
+something really bad about the pipelines
+and I just say hey you know what if you
+add indexes or I don't know yeah if you
+change this and that you will be
+optimizing your data warehouse so I
+would not think about the full big
+picture I'm going to go and grab some
+quick wins. Now at the same time
+um after that I have to make
+this is what expected from me to make
+something called the target
+architecture.
+So
+and this is the biggest uh biggest task
+that's yeah I will be doing is to build
+the goal the target the suggestions okay
+so um I'm going to start first with the
+quick wins and with the quick wins why I
+like to do quick wins the data architect
+because I gain trust I'm going to gain
+trust from yeah from the managers from
+the engineers and I'm going to spend
+some times on it yeah but I will not
+spend let's say years just doing quick
+on wins just just since I have done a
+big review I would like to get some yeah
+some stuff that are sorted now a target
+architecture this is going to be a big
+one
+now I'm going to start building a second
+uh architecture but again it will not be
+super detailed one it's going to be uh
+let me just here add picture here maybe
+targets
+and this is here the current.
+Now after I have understood of course
+the current situation of the company and
+stuff like that the tools the money and
+all those stuff I start maybe drawing
+completely a new picture about how we
+going to solve all those pain points. So
+what we're going to do is that I'm going
+to draw something new but not super
+detailed. Okay. So I'm going to say okay
+we have here um maybe uh source one
+uh source two let me just say here
+source two and how about to make I don't
+know I just like how to make a lakehouse
+data lake house yeah and with that we
+are consolidating those two data
+warehouses inside a new one and we like
+save some monies and stuff like that and
+we put I don't know a PowerBI on top of
+it. So I don't try to build the whole
+thing. Yeah, I build the whole
+architecture in one go. I would like to
+make small thing. Now what I do after
+once I have like something I start
+discussing this target architecture
+um with the others.
+So I'm going to take this and start
+talking to people about it. Hey, look at
+this. I have here target architecture.
+uh what do you think about it? Yeah. So
+maybe start with the sources I'm going
+to say. So I'm going to start with so
+say I'm I'm having this idea about uh
+building this architecture. What do you
+think about it? They're going to start
+correcting me say hey Barry look um yeah
+our source is not uh yeah not like you
+think you should make yeah you should go
+and do incremental load. Maybe you have
+to go and use our APIs and uh you start
+uh saying okay maybe um yeah once a day
+so one day load and it's not like you
+think yeah so I start adding more things
+on top of the picture okay it is an API
+it is only one day and after I go to the
+second team they say hey we have
+actually CFKA do you know that you can
+get my data through CFKA and we have a
+real stream
+and if you want to go and get our full
+uh let's say uh yeah old data we have
+some cold storage. So we have here like
+for example
+um yeah some cold data storage impl
+I'm I'm not trying I'm just showing you
+here story okay so it's not super
+detailed now so with this I have more
+informations and my picture is growing
+over the time right so
+I know I know about the sources after
+that as I start speaking working with
+the business they say hey bar you know
+what only PowerBI is not enough we
+actually really need to add AI use cases
+how about to go and add AI how about we
+would like to get some I don't know yeah
+some self-service
+self service yeah uh stuff like BI so
+with that after I show them this picture
+I can refine my plan yeah so I can
+understand exactly what is going on.
+Now, after I go maybe to the manager,
+yeah, or maybe to the engineers,
+whatever, yeah, they say, you know what,
+we could gain get you an access to data
+bricks. So, we can go and add
+uh we could yeah, we can have a have a
+budget to work with the data bricks. So,
+I start like maybe um understanding the
+budget and start bringing uh some
+solutions like maybe snowflake here. Do
+I have snowflake? Yeah. So we have a
+money in order to go to the cloud and to
+pay as we go.
+So with that I start like adding more
+options. Yeah. And here as I take talk
+to the data engineers and they say you
+know what um we could speak about having
+streaming or let's say we could have
+like pi spark and we're working with pi
+spark and over the time my friends my
+picture gets bigger and bigger and
+bigger and it's always the same picture
+but it's just like getting bigger over
+the time as I talk to people and
+understand now
+my target picture is getting more here.
+And now of course depends on the
+company. Yeah. Um
+depend on the managers and the levels
+and stuff like that. I start showing
+maybe version one version two of this
+like um yeah just just for fun. Okay. So
+I'm going to say how about to build the
+lakehouse using data bricks. And here
+other option we could really build SQL
+warehouse.
+And I start saying uh you know what we
+don't have in the company like a lot of
+engineers. We have a lot of people that
+actually have uh only SQL skills going
+to uh let's say spark engines and stuff
+like that. It is an overkill. So I start
+like making different versions of my
+target picture
+and depends now who would like to
+discuss this with me.
+we start making decision for the for the
+company. Huh. So this is me the data
+architect. Now it could yeah could be
+like over the time join uh the data
+officers of course.
+So data officer
+and join people like uh the security
+officers
+and all those people would like to hear
+from me why I am suggesting those
+architectures. So they are all people
+that I need to justify my solution and
+why I recommend this. Okay.
+So there is a lot of communications now
+going to be with managers with all those
+people explaining those stuff and once I
+have the feeling okay this is not
+working. Yeah. One of them I'm going to
+like remove one of those solutions and
+just stick with one. Yeah. And once I
+get approval,
+do we have here? Yes or something.
+Okay. I don't have like something for
+this or this one here.
+Okay. [laughter]
+So, once they all say maybe I I'm going
+to make them green. Oh, no. All right.
+So once they all say okay I'm okay with
+your plan I'm okay with your plan I get
+approved by all those people what's
+going to happen that
+um the architecture going to be decided
+right so this is the target architecture
+that we will be implementing in the
+company for maybe specific department
+for the specific team. So now once
+everyone accepted yeah the target
+architecture what going to happen that
+it is time for implementations right so
+now my next step is that once everyone
+approves
+I have to go and hand this over to the
+developers right so I'm going to say
+this is the old word and now our job is
+to migrate great to do data migrations
+from the old world to the new world. So
+now all what I have to do is
+to mentor the data engineers to mentor
+the developers on how to do this
+migration.
+So
+um as I said this could be a bad thing
+if I just like for example um yeah tell
+them okay you know what I got it this is
+the plan we are doing it exactly like
+this and now it is your job to yeah
+implement and then I disappear right
+so this is the worst that I could do
+that I just disappear from the picture
+and the data engineers have to do this
+okay
+So usually we don't do that. The data
+architect should stay and mentor
+especially in the initial phase on how
+to do the migration. You have to help
+them in order to do the whole yeah at
+least the first big steps and you have
+to make sure that actually your plan is
+working and you have to mentor them.
+Okay. And if you see something is not
+working my friends
+you really have to change things. Like
+for example, I don't know yeah the team
+is not able to do I don't know spark
+development or let's say things are
+getting very expensive you have to keep
+reporting
+yeah to the teams to the managers that
+actually things are not working and we
+have to change things okay so maybe the
+self-service is not working maybe you
+are not able to connect the storage so
+you keep adjusting your target plan your
+target architecture until it works So
+it's something living and my friends
+this one here it's going to live for
+really long time. So this target
+architecture it will be yeah as as I
+told you mine lived for around five
+years at the company and it was always
+the same picture that got grows and we
+added each year more more things to it.
+At the start my architecture was with
+data factory and um we have done only uh
+a modern or let's say a cloud data
+warehouse. This is the first things I
+have done and then over the time I found
+myself I'm building a data lakehouse
+and over the time I found myself I am
+building a data product. So this
+architecture keep evolving my friends
+and keep changing with the demands and
+it's not something that you do and you
+just leave. So um this is I'm going to
+say comes of course the question is what
+is the next step? Should I stay with the
+engineer? Should I develop this with
+them? Well, it's going to be perfect if
+you don't develop it in yourself. you
+leave it for the data engineers or the
+next thing you go I'm going to go to the
+managers and find maybe
+other departments or other teams that
+are let's say struggling with maybe the
+architecture or maybe I'm going to go
+with the yeah with the company and say
+you know what I would like to roll this
+to another department yeah maybe another
+domains in the company in order uh yeah
+to help them as well so your job will
+not be end up with making only one let's
+say something one for one team you will
+be jumping between teams let me just
+show you here
+yeah so you'll be working with multiple
+teams with multiple managers and you
+will be developing this target
+architecture for different people yeah
+and over the time you might get the
+inter lab the principal data architects
+where you're going to really sit down
+with the top managers and top people and
+start building the enterprise data
+architecture for the whole company. So
+this is my mindset my friends. This is
+how I would do it if I get hired now or
+I got like u I go back to uh doing data
+jobs. This is exactly what how I'm going
+to do it. Those are the steps as a data
+architect. I hope this makes a little
+bit sense for you. I hope that um uh
+yeah you have some understanding what
+this role means. And I totally agree
+with you that we can take break because
+next we're going to switch about I
+believe we're going to speak about
+theory and yeah some data concepts. So
+we're going to start again what is a
+data warehouse lakehouse and all those
+stuff. But I would like to focus with
+you next about now the best trends. What
+is a data products? What is a data mesh?
+And this is exactly what each company is
+requesting from data architect. But not
+only that as well from data engineers.
+So next going to be very relevant.
+We're going to go through the concepts.
+So all those data stuff. But I would
+like yeah I would like to take a little
+break maybe refresh water and I will be
+back in yeah 5 minutes or something like
+that. I hope you're enjoying the stream
+and the stories make sense for you. But
+yeah, I will be back in five. I don't
+have music, so if you have music, you
+can put it in your own. Uh yeah, we are
+going a break, my friends.
+So I hope that you refreshed
+for the next phase.
+Yeah,
+I am back.
+We have some questions like let me see
+the most difficult things that I have
+met during data learning data skills or
+building projects.
+Um,
+learning data skills
+I think the most confusing part for me
+was uh learning the data modeling at the
+start. I really didn't understand why
+exactly
+like um yeah especially the data vaults
+and the data yeah the third norm form
+and stuff like that. So was data
+modeling for me really struggling at the
+start building the projects
+um big struggle is of course I'm going
+to say
+for me as maybe project lead yeah or as
+a developer I don't know from which
+perspective I had like many roles
+but um I'm going to say the biggest
+thing is try to explain your ideas for
+business nontechnical people this going
+to be your hardest things in your
+projects because to be honest as a data
+engineers we are always behind the
+scenes and people don't understand why
+why are we there you know so they if I
+am data analyst everyone understand um
+I'm making powerbi I am uh getting some
+highlights but as a data engineer if I
+met nontechnical people it going to be
+like I don't know yeah it can be really
+hard to explain for them what I do
+exactly in the projects, why we are
+building data warehouse, why we are
+building those stuff, especially if you
+have managers that don't have technical
+background and they are funding your
+projects. Ah, it's going to be really
+hard to explain why we are building
+those stuff. Maybe they are now in the
+session here and they understand now.
+But I'm going to say communications with
+nontechnical people, especially if you
+are a data engineer. Uh, let me just
+bring some questions here.
+Do the data architects [snorts]
+uh design the schema, the data relations
+and stuff like that? Yes, my friends. As
+you can see, I showed you uh in the
+statistics actually many of them are
+asking for data moduling skills. Now,
+I'm going to say they will not module
+the physical world. They might module at
+very high level the business objects and
+stuff like that. So yes, we might design
+data modeling as a data architects. Uh
+but at very very high level we will not
+go into details. Um I have the feeling
+that I am a data engineer, analytical
+engineer, a data architect, data
+scientist and this and that like
+um give me to improve. Okay. Um this is
+the thing is that yeah
+uh once you enter a company as a data
+engineer, you might end up doing I don't
+know. Yeah. as a PI developer building
+PowerBI reports the job description is
+about yeah building pipelines but you
+are doing PowerBI reports or you are
+doing as a data scientist you are doing
+data engineering stuff the thing is it's
+still in many companies it is not clear
+definitions about those roles people
+some yeah maybe some I don't know yeah
+uh companies want to make datadriven
+things but they still struggling
+understanding those roles and how they
+hunt for people and how they what they
+need exactly. So you're going to find a
+lot of confusion. They're going to make
+data teams and at the ends the yeah the
+business people just need few PowerBI
+reports and that's it. So yeah it is
+confusing. I saw at least three data
+scientists they learned everything about
+data science. Yeah they have
+certificates they went to the university
+and at the end they do data engineering
+stuff. So yes, you're going to learn all
+those stuff, but you have to adapt. Even
+if you are data architect like even if I
+got hired now as a data architect
+[snorts] and the job is requesting from
+me to do some data engineering stuff, I
+don't mind. Yeah, I'm going to do those
+stuff. I might do the first project then
+hand over and those stuff. So um yeah,
+this is about the data world. It is not
+there is no clear separations. There's
+yeah people just do some yeah some job
+descriptions they hire people and then
+at the end they request you to do other
+things uh but I think over the time
+things going to be more yeah there will
+be more understanding as I got hired I
+was doing everything really everything
+project leads data engineering data
+analyst data architect all those stuff
+but yeah over the time people uh yeah
+get more mature and they start
+understanding uh those roles but you we
+need still some time Um
+I explained what are the differences
+between a data architect and principle
+one you can go back in the recording now
+I will go back to the topics I'm going
+to say so with that you have now some
+understanding right what is a data
+architect it is about communications it
+is about understanding the requirements
+it is about making a plan and you can do
+all those stuff only after you have some
+experience you cannot Not as an entry
+job just learn data ar architects and
+architectures those concept and enter a
+company you need some experience and
+it's all about communications understand
+requirements making a plan communicating
+pack uh convincing people about your
+plan you have to make tra understand the
+tradeoff between what is the data lake
+what is the data warehouse and what is
+the trade-off understand the business
+and what could be the best fit so it is
+yeah it is a lot of skills I'm going to
+say and um if you master it and if you
+learn it or let's say start as a data
+engineer and you start thinking like an
+architect you're going to get an amazing
+career believe me this is going to be um
+companies are hungry yeah for those
+stuff. So if you if you start bringing
+this mindset as a data engineer or
+analyst and you start drawing pictures
+and you start uh building those stuff
+and start having a plan discussing trade
+off understand the requirements and
+stuff like that um yeah then you are
+good architects but it needs years
+um yes the record is going to be alive
+now with this you have understanding
+about the mindset I gave you let's say
+uh what are the mistakes and how I think
+if I got now hired, what could be the
+phases, the steps and all those stuff.
+Now next what we can do is I'm going to
+show you again those statistics
+and there is like two options that you
+could do. I'm thinking about it
+actually.
+Um again those are the data concepts
+that are requested from you to have
+knowledge about it. what is data
+modeling, data governance, data uh
+management, data warehouse, ETL, data
+integration and those stuff, right? So
+those are all concepts and to be honest
+all of those stuff are very relevant for
+you whether you are an architect or an
+engineer. I could maybe next time I
+should brought here the data analyst as
+well but believe me they're going to ask
+you to have some of those skills. So now
+what I could do is to deep dive into the
+core concepts that we could have like
+for example
+the data warehouse lakehouse lake and
+the data lake and then start talking
+about I think there is something very
+important is the data products
+uh it's over here the data products and
+the data mesh
+let me go back to the platforms yeah the
+data mesh I think this is something
+that's we don't have a lot of content
+about it right I think many of you knows
+what is a data lake house what is a data
+warehouse but you have some yeah maybe
+there's like some content about the
+those two things I would like to maybe
+deep dive into them so now I'm going to
+go through few concepts and we're going
+to start talking about yeah a few of
+those stuff of course sketching
+understanding I will not develop
+anything now on live and those are basic
+understanding theory for you in order to
+work maybe as a data architect or
+engineering and maybe at the end I'm
+going to bring like one big picture
+about how to draw a data architecture.
+Okay. So
+um I'm going to say we're going to go
+through those stuff. Let's go. Let me go
+through again here. Now I would like you
+first to understand maybe quickly. am um
+let me see whether you can see my screen
+you can see it all right so now the
+first concept that you have to
+understand my friends everyone you
+should understand what is an ETL I know
+many of you knows this but
+maybe I'm going to open your eyes on it
+better so now the whole thing is we have
+a source and we have a target this is
+always like this a data architect our
+architecture
+you have sources you have your target
+and you have consumers now of course we
+have to understand how to bring this
+data from the sources to the target now
+the first thing we're going to write a
+script my friends that we're going to
+call it extraction
+uh where it could be yeah by the way it
+could be in SQL as well it could be in
+Python whatever the language all what we
+have to do is first we have to write
+scripts to extract the data that we
+have. So we are just extracting the data
+from the source but it's not yet loaded
+right. So it's just extraction.
+Now after we extract the data now here
+you have two options either you're going
+to load it in the target or you say wait
+I would like to change few things on the
+fly. So we're going to say I would like
+to do transformation.
+So the extraction did this. Now the
+transformation going to pick few
+informations and manipulate it. So for
+example here
+uh I don't know instead of the couple
+case we're going to have lower case.
+This is the transformation. So now the
+data looks different than the source
+right I have done data manipulation. I
+have done transformation.
+Now after that the data is ready right?
+So what we're going to do is we're going
+to write another script and we're going
+to call it
+loading
+and it has one job is to take this data
+and load it to the target. I'm loading
+the data.
+This is just the basic concept, right?
+So this is exactly what do we mean with
+the ETL.
+I extract, I transform and then load to
+my target. The target could be again,
+yeah, it could be data warehouse, a
+lakehouse, a lake, whatever. Yeah, it
+could be anything. Even another database
+and those scripts, it could be anything.
+Yeah, it could be SQL, even PowerBI. By
+the way, if you go to PowerBI and do
+Power Query, you might do an ETL. So,
+this is just a process, a concept and it
+is not like only thing that you can do
+in SQL, Python or data bricks. It is
+generic concept. Now this I'm going to
+say that was the first way we have done
+things. Then over the time we got
+customers
+where they said you know what uh let me
+just say bring
+so data or let's say to be more modern
+AI engineers
+and they said hey what are you doing
+actually this is not what I need this
+transformation that you have done to the
+data is not good for my AI
+My AI want to understand exactly how how
+was the original data from the source.
+Now I cannot go and run the AI in the
+source. I would like really to see in
+the target the original data. Don't do
+your transformations on top of my data.
+So that's why over the time we found out
+actually ETL it is something not that
+good because on the target in many
+scenarios data scientists AI engineers
+we would like to have the raw data
+that's why we stop doing the ATL and now
+we do something called ELT
+I think you understand what I mean but
+it's only for people that's yeah first
+time here
+so ELT
+we
+We're going to do the same thing but a
+little bit differently.
+We will remove
+the transformation in the middle and we
+will just postpone it and do it later.
+So we're going to do extraction.
+Let me just remove this as well. So I
+would like to extract the data load it.
+Yeah. And then directly load it in the
+source. Don't do any transformations.
+So with that the AI engineer is going to
+be happy right?
+So they can say, "Ah, right. I have my
+data." But of course, ah, we need, let
+me check where is our data scientist.
+Do we have I'm going to bring her. She's
+our data scientist.
+Uh, no data analyst. Sorry. Data
+analyst.
+But of course, data analyst going to
+say, "Hey, um, yeah, I would like to
+have the data transformed. It's not
+prepared. I cannot use it for my
+PowerBI. That's why we data engineers
+we're going to go and build
+transformation. Let me just get this
+copy.
+Um after
+we load the data one to one. So with
+that we have two copy of the data.
+So after it lands I make the
+transformations. And this is my friends
+what we call ELT extraction loading and
+transformation. And that's all because
+in our target architecture we going to
+need different versions of the data for
+different type of people. And this is
+the whole story to be honest. [laughter]
+Once we go to the data m the data
+product it's always like this over the
+time things gets more complicated. Now
+this is again um let's say a concept.
+Okay this is a process. Now in reality
+things looks like this. If I take uh
+maybe this one here, in reality, if you
+build the architecture, you're going to
+end up seeing this picture that you have
+multiple layers. So they have the source
+and then you have layer one
+and you have then layer two, layer
+three, layer four depends on on what
+what you are doing. So you're going to
+have a lot of layers and between each
+layers you will be end up doing
+again where is yeah here you'll be doing
+this process. So at the start you might
+do e I extract and load then after that
+I do TL
+I transform and load it somewhere else
+and then over the time you can find
+yourself doing this.
+Yeah. So you're going to end up
+making ELTL whatever. Yeah. And maybe
+another system going to come to you back
+to you and say I'm going to do an ETL
+from you
+or EL from you and then they continue.
+So this is in real world things get
+crazy. Yeah. So this is exactly what we
+mean with the ETL. But to be honest, I
+don't use it a lot. I don't uh like in
+the architecture I don't have to say uh
+now I'm doing TL or ETL it is just the
+process name people say uh we are doing
+ETL process that's means I'm extracting
+the data transforming it and loading it
+now with this you understand yeah what
+those words means and how the real words
+looks like so this is the basic concept
+that you have to understand about yeah
+how we move data and what we do with the
+data between different
+Now um
+now we're going to go to the real data
+architectures. Now um what do we have
+here? So in the strategy you can see or
+where was it platforms. Now you can see
+they are asking for things like um data
+warehouse lakehouse data lake. they
+expect you to have those understanding
+and as you can see still dominating the
+data warehouse
+um and that's because my friends many
+companies need just the data warehouse
+they don't need extra stuff I know lake
+houses is more advanced and stuff like
+that but we have many middlesiz
+companies or small companies they don't
+need this big lakeous it's very dramatic
+of course so that's why if you can that
+do data warehousing then you're going to
+cover let's say many many companies with
+us but now I would like to take you
+through those three and then extend it
+to the data mesh and the data products
+because it is like the next levels now
+let's go through it one by one so with
+this we covered the as I said the
+now let me see where I'm start so things
+don't get crazy
+uh I'm going to take this frame again.
+So I'm going to start again here on
+white paper.
+So what is the issue my friends? Why do
+we have those systems?
+So we have always
+source layer.
+Let's always start with the sources.
+Source. Yeah, you're going to find a lot
+of typo.
+Um so we're going to have like source
+one, source two and usually they have
+databases. Okay, this is the classical
+things. Most of the sources are
+databases.
+Um and now what happens at that? So
+things start like this. Maybe you have I
+don't know three databases.
+Now we get those people where are they?
+they are the data analysts
+and
+they like to do reports using PowerBI or
+whatever. Okay.
+Now the thing is those sources their
+main job is to do to um to build
+applications
+they store the data behind uh I'm just
+searching whether I have here an icon of
+application.
+Do I have something?
+I don't have really an icon for
+application.
+Application. No app.
+[snorts] Oh, whatever. So, I'm going to
+take random thing. An app.
+Now, those are transactional systems
+that they just focus on the apps. Okay?
+They just store the data. They have
+transactions left and right. They are uh
+OTP systems.
+Now that was the main idea. You have a
+website and you have a database behind
+it. And this is what the companies do.
+Yeah. Now suddenly over the time we have
+those analysts they say you know what
+the business they have questions about I
+don't know they are asking how much uh
+sales do we have what are the pain point
+what are like how much money we made
+like compare the last year with this
+year. So they hire this data analyst and
+they have to yeah analyze the data
+and they go to the same database and
+they start doing that. Now this might be
+okay if you have like one but over the
+time if you start having a lot of
+analysts and a lot of people doing big
+SQL queries on top of those my friends
+those database is going to be very slow
+and if you have a slow database then
+you're going to have a slow application.
+So
+uh this going to be a big issue if you
+let let those analyst go to the
+databases and start doing big SQL
+queries. They going to make everything
+slow. And by the way those analysts
+since they access the row data they
+going to have as well bad numbers to the
+business. So your business uh let me see
+I had like some business people here.
+Where are they?
+Where are they? uh those so those are
+the business people and they're going to
+get wrong numbers from those three
+analysts. So this is the old word. Okay,
+this is something that um yeah works
+maybe if you have one analyst and one
+Excel but if the company gets a little
+bit bigger this will not work. That's
+why we say stop. We don't do this. We
+have to build a data platform. Now
+uh a data platform it's like this.
+Usually we say
+let me just prepare those stuff.
+[snorts] We say okay go away you and
+your PowerBI reports and leave us alone.
+Now we're going to get this engineer ah
+this engineer
+ideally with a data architect
+that has some data architect skills and
+we say you know what we're going to go
+and extract one copy of the data and
+build the data warehouse.
+Now we're going to extract all those
+stuff once using the ETL. Again we have
+this ETL process
+and we build something like a pipeline.
+Yeah, we put here pipeline and
+how I'm going to do the ATL ATL. So let
+me just make this
+E.
+Uh is it big enough? Yeah. Okay. So E T
+L.
+So ETL
+I do the ETL into a warehouse. Let me
+just add data warehouse.
+And um yeah, there going to be like
+three layers inside the warehouse and
+stuff like that.
+Uh you know what? Let's just do it
+correctly.
+I'm going to do it correctly. So data
+warehouse usually have something called
+stage.
+then a car
+and then march. Yeah.
+So we're going to have like three three
+steps
+and we do the ATL and the mart going to
+be my friends. So the whole thing is the
+data warehouse system and from the mart
+after we do the ATL and stuff like that
+only then join our data analysts.
+So,
+so the data analyst going to start using
+the marts. Usually in the marts we have
+star schema. Star schema.
+Data model. Yeah.
+Um usually we have here inside like a
+data model like this and they access it
+and start building the PowerBI reports
+or whatever analyszis they have. And now
+since we have done the ETL only once the
+numbers going to be better from those
+reports.
+Now the whole thing as I said this is
+something we call a data warehouse. Now
+data warehouse there are like two ways
+or let's say two names for it either if
+you build it inside I don't know yeah
+the onrem
+onrem. Yeah, this is onrem. Uh on-prem
+means
+uh the company has their own um servers,
+their own data center. They buy the
+servers, they buy I don't know yeah
+those big super machines and they
+connected with the networks in the
+company and it belongs to the company.
+So that means the data engineer going to
+go and yeah maybe buy server or uh
+request for a server from the from the
+company and starts installing let's say
+the warehouse inside it. This is what we
+call classical warehouse,
+classical data warehouse. I'm going to
+say most of the projects they do this
+and usually we do this inside Yeah. Do
+we have a skill warehouse here? SQL
+Server.
+No, we don't have SQL server. And
+usually we do it like um Yeah, in SQL
+Server or in Oracle.
+Uh let me just close the door. Just a
+second. [laughter] Okay,
+there are some noises outside.
+So
+um so yeah so they do it inside SQL
+server. By the way, I have we have done
+projects in the channel about how to
+build such a um yeah classical or yeah
+SQL data warehouse and um usually you
+can do it completely in SQL
+um you could use other tools like I
+don't know for the ATL like talent or
+Informatica and those classical things
+but this is usually the classical things
+that you have done for 30 years now
+over the time you might say let's go
+modern more modern
+and this is what I've done uh one
+project at Mercedes-Benz I transformed
+their warehouse from the SQL server to
+the cloud so now we put it in the cloud
+and we use tools I don't know yeah like
+data factory or uh Azure if you are
+doing it in Azure and stuff like that so
+you move your SQL warehouse from the
+on-prem to the cloud and this is what we
+call like in the theory a modern data
+warehouse and that's all because you are
+using the cloud. So if you hear about
+okay now we are doing a modern data
+warehouse that means this company is
+just moving their warehouse from the
+on-prem to the cloud. Of course, you can
+do it. Yeah. Uh you can even do it in in
+data bricks. Yeah. Or fabric or
+snowflake, whatever the tool. Yeah. But
+the main idea is just um moving the data
+from the sources to the consumers and I
+put it like into three layers. Now I
+will explain more about those three
+layers because I would not not now focus
+on the warehouse itself.
+Um
+now once the company gets a little bit
+bigger that means they get more
+sophisticated they get more advanced
+systems and stuff like that.
+If you go to the sources let me just
+group this
+group. Now if you go to the sources they
+will start saying you know what I will
+not give you an access to my SQL
+database because now we offer the data
+only through Kafka. We are doing data
+streaming. Okay. So,
+so they're going to uh tell you
+let me just remove those stuff. In order
+to access my data, you have to go to
+stream to real KFKA and this is of
+course a big issue for you or they start
+offering their data through APIs and
+they say hey I no one access my
+database.
+We offer you only APIs.
+Yeah. And they start you're going to
+start seeing uh sophisticated Yeah.
+Let's say sources or maybe they going to
+start giving you those unstructured data
+or semiructured data like in JSON. Yeah.
+Or Yeah. Maybe you're going to start
+like maybe loading some images. That
+means as the companies Yeah. get more
+sophisticated, you're going to get more
+advanced source systems. So your source
+layer getting really hard for you as a
+data engineer. Now if you just stick
+with a warehouse where you have only
+database this going to be nightmare to
+connect
+and at the same time not only your
+sources are changes
+your consumers as well I'm I'm going to
+call them consumers here.
+So consumers,
+your consumers as well becoming more
+advanced. So the com the company is
+going to start hiring maybe an AI
+engineer
+or let me see here whether I have
+another
+crazy figures. Yeah, maybe bring this
+one back.
+or they going to bring a data scientist.
+So you're going to start having
+different type of consumers and even
+guess what even the business users going
+to come to you and start saying hey I'm
+really interested as well in the data
+warehouse. So those people if they start
+joining the consumers your data
+warehouse concept going to fail. So that
+means over the time if the company grows
+your
+sources are getting more complicated and
+um the consumers are getting more
+complicated. That's why
+um
+yeah by the way why the data engineers
+and data scientists cannot work with
+this because my friends you offer only
+star schema at the end. you offer only
+this star schema where you have the fact
+and dimensions and no one can consume
+this. So the data scientist cannot work
+with this. The AI engineer the same
+thing cannot consume your um your marks.
+So they going to say I need the data as
+it is and this is all because you are my
+friends are doing those transformations.
+It's all because of the transformations.
+So it's all because the engineer is
+deciding how to change the data. Yeah.
+And we changed the data because of the
+analysts. We would like to clean up the
+data. We would like to prepare it in a
+shape where the data analyst can
+immediately start doing their analysis
+on top of data. But this transformation
+that we are doing inside our pipelines
+in the warehouse,
+it is destroying the data for other
+roles. Okay. So the other roles are not
+able to consume it because of this.
+So that's why data warehouse cannot work
+for data scientists, AI engineers, for
+yeah let's say advanced uh source
+systems that are not structured in the
+tables and and databases.
+That's why um we moved to another
+concept which is
+now this is the big movement to
+something called um the data lake.
+So in data lake what we have done. So
+this is the data lake.
+In data league the data engineers gave
+up and say you know what since you
+really need the row data I would not do
+it I would not do the t I would not
+transfer anything
+and you have to do it in your own so
+that means the data engineers
+starts yeah let me just make it like
+this uh I think I have like shape for
+data lake just second
+uh something like this and they said you
+know what
+I'm going to bring everything
+extract it from the sources
+store it in uh let's say uh sheep
+storage
+like this so I will start throwing
+everything I can touch here
+and put it inside a data lake but I
+would never change
+So I would not transfer anything. I just
+do this. By the way, I've done this in
+uh push one of my projects. Of course,
+it requires uh more skills. You have to
+start coding. Not SQL is not enough. You
+have to do Python. You have to learn
+about how to do things in Hadoop, maybe
+Spark. So you going to get let's say
+more advanced on how to do this e alone
+the eel but the storage going to be very
+very cheap because you are not storing
+in databases you are just making the
+lake now what happens that AI engineers
+were happy about it
+data scientists as well happy
+but what happened is that
+those analysts
+they have to do the T they have to go
+and build their own transformations.
+They have only
+let's say
+like this.
+So those analysts now have the task to
+do the T.
+All right. So and guess what? This is
+one of the worst things that you could
+do. [laughter]
+That's why data lake concept did die.
+And I'm going to say still the data
+warehouse is is more stable than
+building a data leak. It's all because
+we said
+um yeah I'm going to give you the road
+data as it is very fast very cheap but
+you have to do the rest. So and uh this
+is very expensive because sometimes if
+you have sophisticated source systems
+this might takes a lot of time. This
+might takes I don't know I I've seen one
+source to transform it. It took around 3
+months. So, so this can take really long
+time until you prepare the data.
+Preparing the data going to be
+nightmare. And every single new
+data analyst join the data lake. They
+have to do the transformation from the
+scratch.
+So this is deadly for data analysts. And
+I'm speaking about transforming not like
+for example cleaning up the nulls,
+removing things like simple things. I'm
+speaking about sophisticated things.
+They have to learn how to go with the
+JSON formats. They have to learn how to
+transform the format that you are
+getting from Kfka from APIs. Yeah. So it
+is highly yeah complicated formats that
+you are saying for the analyst you have
+to take care of doing yeah the consuming
+of the cafka topics I'm just going to
+take the data as it is and put it inside
+the data lake that's why for those
+people they were happy about it the data
+scientists engineer the data analysts it
+was catastrophic and to be honest it was
+not working I I've seen this After
+building the lake,
+after building the lake, we trans yeah
+we I don't know we spent maybe few
+months and then we have seen the
+struggle that happens to the data
+analyst and we went back to the data
+warehouse. I don't believe really that
+you could do data lake in uh big
+companies. You should do something else.
+either build a normal data warehouse or
+I'm going to of course take you to the
+next solution which is the lake house
+but um you know
+I I still think really the data lake is
+amazing for AI
+because AI I'm I'm yeah I'm doing a lot
+of projects now like on my own the the
+more row the data is the better the
+result is so since we do the human the
+transformations
+I see that yeah we are restricting so
+much AI use cases so that's why since
+now we are transitioning yeah to AI
+maybe the data league going to get yeah
+bigger and more important but for now
+most of companies they want reports most
+of companies they want to know what is
+the status they want to do powerbi
+projects they want to analyze the data
+and you cannot go and build a data lake
+and this is of course again we come back
+to the architect role All you have to
+understand as an architect
+you have to understand your sources and
+your consumers.
+If you see you have a lot of data
+analyst and you have only like I don't
+know one small use case about AI and you
+suggest data leak you're going to like
+destroy the whole I don't know setup.
+Yeah. That's why you have to understand
+as a data architect the level of
+complexity of the sources, the level of
+complexity of the consumers and suggest
+an architecture. So you cannot go with
+this setup. We have a lot of analysts
+and say hey I know we can build a data
+lake which is modern and cool. Who
+builds data warehouse right? Yeah I
+don't know it's only old style things.
+[laughter]
+So uh and then you destroy all the
+consumers. Yeah. So that's why you have
+to understand. Now my belief in big
+companies it is little bit getting
+straightforwards where we are merging
+those two together. This is uh something
+um that's a um data. Yeah. Let let me
+let me just tell you something. Now
+the warehouse it's like theory came
+maybe from universities and from people
+that do concepts and stuff like that. It
+was not a vendor. A vendor comes and say
+hey let's uh let's go and build a
+warehouse. Same thing for data lake. It
+was theory first. People discussed it.
+People wrote books about it. [snorts] So
+people as well discussed it in the
+universities and stuff. But now this is
+the first time a vendor is like uh
+suggesting
+uh let's say the next phase which is one
+of them is data bricks.
+Data bricks came and say you know what
+uh let's go and merge those two together
+into one system called the data lake
+house. So, what you're going to do, let
+me just grab this image.
+Just prepare it a little bit.
+Uh, we're going to get there warehouse.
+So,
+so now they said okay we have modern
+data warehouses and we have the data
+links and the idea is very simple.
+Let me just remove.
+So the idea is very simple
+is to convert the data warehouse into
+yeah into a data lake but we still
+maintain those organization of the
+stages. So that means
+yeah the data is still cheap to store
+but still you have to do the layering
+you still have to do the ETL.
+So the data engineers sadly
+[laughter]
+got back this big T again. So
+the data engine should should do again
+the transformation
+but they do the E first. So E L and then
+T. Yeah.
+So now
+they have again this task where they
+have to do the T again.
+Uh but they do it like afterwards and
+data brick says or let's say in the
+medallion architecture they said okay
+this is going to be a bronze
+silver
+and gold
+and they gave it a name called
+data lakehouse
+of course everything in the cloud you
+can put it in either in Azure or AWS and
+let me just bring few
+this.
+[snorts] So they said you can do both.
+You can still organize your data and you
+can still do the transformation
+and
+then you offer the data for different
+people from your lakehouse. Like for
+example your consumers the data analyst
+going to be happy again because finally
+they are getting
+the transformed data. So the T is back
+to the engineers and the analysts can be
+faster and the data scientists as well
+are happy with this because they still
+can access the bronze and silver.
+Same thing for the AI engineers.
+So So that means my friends
+now
+Let me just move this
+now. Um,
+with this we have like different I'm
+going to say data products. Yeah. Or
+different qualities. This is what you
+call the medallion architecture where
+your data going to be offered into
+different qualities and depend on the
+user they can access it. And of course
+since this is a lake behind the scenes
+there's still very cheap storage you can
+can you can always go through through
+like yeah images you can throw JSON you
+can throw CFKA streams inside it and uh
+still the row data exist inside and uh
+yeah we still have the gold which is
+very simple for data analyst. So with
+that we fulfilled let's say all
+requirements for different type of
+consumers and um yeah I'm going to say
+this is since 3 years ago now that we
+have something called the lakehouse
+and this is the first time that I'm
+going to say offered by a vendor. Yeah.
+And um I see it for now yeah one of the
+best architects that architectctors
+sorry that you could offer for big
+companies because for sure in big
+companies you you need you have a lot of
+data scientists you have a lot of data
+engineers AI engineers data analyst and
+uh since as well now data bricks are
+bringing more SQL you can offer as well
+some access yeah for the business users
+in order to consume the gold layer in
+very simple way. So they can like uh
+yeah consume the gold, consume the
+report in PowerBI getting from analyst
+and um yeah with that you are combining
+the data lake with data warehouse but of
+course again the same thing as a data
+architect not because data yeah data
+lakehouse is the latest concepts it is
+the latest let's say yeah modern things
+to do you can offer this by default like
+you join a company and say, "Hey, you
+don't have yet that a lakehouse. This is
+all crap. Let's go and
+uh let's go and uh yeah, let's go and
+build a lakehouse." And at the end, the
+company is very small. You know, they
+have only one two databases and this
+going to be an overkill. This you're
+going to do only if you have a lot of
+sophisticated sources and I'm going to
+say different type of consumers and um
+and only if the company can pay for it
+of course because to make this yeah you
+have to pay a lot of yeah setups and uh
+you have to pay as you go you are in the
+cloud and you have to understand that is
+as well comes with a price building a
+ware data warehouse house. Yeah, with
+your own servers or maybe Yeah. within
+with a small clusters and stuff like
+that. Still way cheaper than building a
+lakehouse. So now by looking to this I'm
+going to say yeah most of yeah um big
+companies they going to yeah they're
+going to yeah move to this picture.
+Yeah. Where they are building a data
+lakehouse. midsize companies and small
+companies I'm going to say building a
+data warehouse modern one or even on the
+onrem it is more than enough okay
+more than enough because they will they
+might not have all those stuff they
+might not have all those big
+requirements they have only one two
+analyst and uh yeah the word is easy
+that's why I'm going to say it's always
+yeah the job of an architect to
+understand what is going on the company
+and offer the right solution. I would
+say
+I would rarely see someone offering a
+data leak like I would if I join a
+company I would not do this again
+[laughter]
+after I've done it once I would I would
+like just skip it like only to make a
+lake for data scientists or a engineers
+it is too much maybe
+data links comes back once AI gets
+stronger and now if you are data analyst
+don't hear me Close your eyes and close
+your ears. Um, if
+over the time this got replaced with AI
+and we have pack only AI engineers
+and analytics is done completely by AI,
+we might go back to data league but I
+don't see this yet.
+So I still think
+uh we need to prepare the data in a
+clean way. we have to prepare it in real
+ones and um I still think we have to do
+the tea. Now, of course, the story
+didn't end here.
+I'm going to introduce a next level of
+complication where this is not more
+enough where we're going to speak about
+little bit about the data strategy on a
+company which is something that you
+might hear a lot or it's required from
+you to have understanding about the data
+strategy of companies as an architect.
+Now um I hope that you are enjoying so
+far the stream. I'm going to need
+another break like maybe five minutes
+break and then we're going to speak
+about the next levels what comes later
+going to be the strategy of the company
+and how things going to get out of hand
+out control if you just make like lake
+houses. Uh but uh for that I'm going to
+need a break. So we going to get uh
+first of all I hope that you're enjoying
+the stream. I don't know I'm not seeing
+a lot of chats or interaction from you.
+Uh I hope that it is this is not that
+boring topic from you. I know this is
+not yeah we are not talking about SQL
+and stuff like that but um
+it is a very relevant topic for you to
+hear at least uh even if you are uh new
+in data world just a line alone hearing
+about those terms if you join a company
+you're going to hear about those terms
+people are speaking about ETLs data
+leakous data leaks and they are start
+discussing things with that you
+understand those terms and even if you
+got interviewed you can answer what is
+ETL, what is ELT, what is now we can
+speak about the data mesh, the data
+products. So you get as a data expert
+more into the data strategy of companies
+and maybe you start thinking bigger,
+right? That's why um it is very relevant
+for you.
+um it's going to yeah maybe open your
+eyes about your career and if you are
+planning to become a data architect or
+you are already data engineer those
+stuff are essential to understand
+because if you don't know how to think
+like a data architect I yeah you might
+do bad job you know uh that's why I
+think those all those stuff are relevant
+for anyone that is here and we're going
+to have five minutes break sadly I don't
+have music next time if I uh yeah make
+another live stream I'm going to bring
+music. That's We're going to have 5
+minute break. Be right back.
+All right,
+I've seen that it is getting late for my
+friends from India, right?
+I'm really sorry for that. Well, it's
+going to be hard to find the perfect
+time.
+um
+like
+if I after like I've done some uh some
+checks, I think this is the best time
+for me to start 5:00 p.m. Otherwise,
+it's going to be very early for many
+people. So, I hope this is not too late
+for some of you or maybe you can do it
+in the weekends. Uh but yeah, if you are
+going to sleep and you are from India,
+then uh sleep well and the record of
+course going to stay in YouTube. But if
+you're still here, uh you are welcome,
+of course, to ask your questions, to um
+yeah, to
+to stay in the live uh stream. And I'm
+going to I'm checking your by the way
+your chats. So um I have now
+teleprompter and I can read everything.
+[laughter] So if you have questions,
+feel free to do that. And uh yeah, if
+you like this content, don't forget to
+support the channel, right?
+and yeah to like and share and to uh
+show some support. Um let me check few
+questions.
+Uh yes it's going to be available so I
+will not delete anything. It's going to
+be in the live section in my channel.
+Uh we want data engineering course.
+Okay.
+So back to data architect and data
+architecture. Are you guys enjoying this
+so far?
+So I keep sketching or do you want me to
+give stories? [laughter]
+I think sketching is fun, right? So it's
+not that uh boring. Now
+the thing is um maybe
+how I'm going to transition to the next
+step because it's going to be big one.
+Now the next step is
+I'm going to be honest with you. We data
+engineers, data analyst, whatever the
+name was before we were not that famous
+at companies. Okay, the famous people
+are the people that are building I don't
+know apps they are uh building they are
+the software engineers those are the
+people that are really famous database
+administrations and all those stuff we
+were let's say people that are for the
+luxury stuff or nice to have topics
+and we had like the least uh focus from
+budgets and all those stuff because they
+think many companies is I don't know the
+situation of course in other countries
+but I went to many companies here in
+Germany but we were always something
+nice to have but something happened in
+the last four years which is AI of
+course um the companies understood that
+data is very important to
+not only yeah for the analyst in order
+to make datadriven decisions but as well
+it is very important for the AI and over
+the time
+they are like let's say more budget for
+the data workers like us and more focus
+about now we need data engineers we need
+to get our data out from the sources and
+put it somewhere in order to do more
+analyzes more AI stuff on top of it and
+let's say there is like yeah the
+companies are wake up and understood how
+important are we data engineers data
+analysts and all those people and We
+start getting more attention. Yeah. And
+more budget.
+That means we had we start getting a lot
+of projects. Yeah. I remember this phase
+of course as I was a Mercedes-Benz. I
+start getting Yeah. my like I had a
+warehouse. Yeah. Maybe lakehouse, few
+sources, few customers and we are living
+our life. [laughter] But over the time
+we start getting more and more use
+cases. is we are start getting more
+budget more focused because the company
+want to become data driven and AIdriven
+that's [snorts] why suddenly we start
+getting a lot of requirements as a data
+engineers and a lot of requirements on
+the data lakehouse not only me of course
+everyone else of course the platforms
+was not prepared yet because data bricks
+was only offering like yeah the pispark
+things um they had some yeah meta stores
+and uh they had not yet like even SQL
+engine. So it was like let's say it was
+enough at that time but over the time we
+have understood we are getting a lot of
+requirements and a lot of attentions
+and as well platforms like snowflake
+fabric yeah um data bricks they start as
+well understanding this this this issue
+and the companies understood as well
+that they need a data strategy like it's
+not enough to have one very good data
+engineer or few data architects and they
+until like um uh let's say uh they are
+like building some lake houses left and
+right they start
+discussing at the top level at
+management not not only in Germany in
+many countries they start discussing how
+to make a data strategy for us how to
+make uh let's say what is the best
+platform that is suitable for us so the
+data discussions moved from the lowest
+level which is us start moving to the
+top and moving to the top That means
+there will be more organizations. There
+will be more let's say um yeah uh
+standards there will be more regulations
+there will be more focus from the
+security from auditors from different
+aspects. That's why our data projects
+whatever that you had start getting more
+attention and this is a big transition
+for our projects to the next levels that
+you might hear if you enter any company
+that they are discussing things like
+we're going to offer the data as a
+products we're going to offer the data
+as um let's say in the data mesh
+ecosystem
+we need like I don't know marketplace
+for the data and a lot of like let's a
+uh terms the new terms that's why now
+I'm going to take you into this world
+about what is going on now in companies
+where they have like data strategy and
+how things get is getting bigger that's
+why um now next we're going to speak
+about more yeah about the governance
+about the yeah uh the different designs
+that companies are going through and
+yeah we're going to go back to the
+skitches of course so I'm going to share
+again my screen.
+Let's go back.
+Uh just to check, is the voice clear
+right? Are you hearing me or should I
+move the mic a little bit away? Let me
+know.
+So,
+let me just get few things before
+we start the tunnel.
+Okay,
+voice very clear which makes me happy.
+Now what happens?
+Now we have to make chaos so that you
+understand me
+now.
+Okay, this group of people are funny. So
+over the time what happens at that more
+people start consuming
+and this is getting
+very chaotic.
+You know, you are getting a lot of
+sources, you're getting a lot of
+customers, a lot of requirements, a lot
+of wishes, and
+your lakehouse is getting bigger and
+bigger and bigger. And the whole tea,
+don't know why the size is not getting
+bigger.
+Um,
+maybe like this. Yeah, the whole system
+is getting bigger and chaotic and many
+people want things from you. And my
+friends it is almost an impossible job
+for data engineers to understand all
+those new systems that are joining and
+as well to talk to all those people. So
+you as a data architect or a data
+engineer going to be jumping between
+those people understand the requirements
+extending the lakehouse building more
+things and it's going to be nightmare
+and this is all because of the strategy
+of the company that's uh we call it here
+if you leave it like this this is the
+centralized strategy which is
+very one of the worst things that you
+might do. So what is going on here that
+you have centralized solution.
+So and what is happening is we having
+just grab this here. So we are having um
+a lot of consumers. Okay.
+And that's all because you decided to
+say
+um I will do the whole thing alone.
+I'm going to make the central lake house
+for the whole company.
+So
+um and and and let me get this guy
+those guys.
+So yeah, I think with this I can explain
+it. It's all because you said I'm going
+to build the whole thing for [snorts]
+the whole company and your consumers are
+just consumers. They are not doing
+anything. They are just consuming the
+central. Yeah. And you are taking all
+domains like the company has a lot of
+domains, right? the sales, the
+manufacturing, the after sales, the
+finance, everything. You are like vacuum
+machine that are that is bringing
+everything to the center. So what's
+going to happen? You're going to
+explode. You will not be able to
+maintain this team and you will not be
+able to do the work.
+So what you could do is that you start
+giving up few of your lakehouse to the
+others. Uh [snorts] this is what we call
+uh let me just take you. So this is I'll
+just put the title on it
+center.
+I don't know why I'm not able to make
+the text bigger or something. So this is
+the centralized solution. Now another
+solution if you say you know what
+we're going to be the hub
+for only the bronze and silver
+we will build for you. We I'm like
+I'm going to bring where is the lake
+house? So I will be bringing the bronze
+and silver but the gold come on it is
+something really hard for me to do as a
+data engineer. So what I'm going to say
+I'm going to clean up the data for you.
+I'm going to make it in a shape which is
+easy to consume. I'm going to make it
+not anymore files. I'm going to make it
+as a table. You can consume it by SQL.
+But the final one the gold this data
+model you have to do it on your own. So
+what we can do is that we can go to the
+strategy that says we are hop and
+spokes.
+Now
+you say
+okay we're going to give you some
+engineers or a data analyst or whatever
+and you do your own thing. Uh let me
+hope that I can copy this. Yeah. So we
+will not do any more gold. We're going
+to do only the silver and bronze.
+So and as well the reporting thing it's
+going to something happen at your side.
+So at the end it's going to looks like
+this. Each team each spoke
+have people that are just doing the gold
+and everyone else is consuming the
+silver.
+So,
+so this is little bit better, right?
+This is little bit better than the
+centralized. It looks like centralized,
+but
+things are little bit more moderated. We
+in order to make this looks nicer.
+Should I do it like this?
+Uh, I think I should do it like this
+better. So
+just to looks like hab and spoke.
+So
+sorry for that but um
+just to for you to have the shape of hub
+spoke if you saw it
+somewhere.
+So we can have centralized team my
+friends. I've seen this by the way. I
+have um I've seen this in one company
+but
+this died as well very fast. [laughter]
+Uh they said we're gonna make
+centralized team. They going to bring
+all the data of the company the whole
+data into one place
+and they going to bring the data in a
+good shape. So they can do small TE's
+they will do
+the the cleanup process for the
+companies. Okay.
+But making a data model out of it. Do we
+have a data model? Do I still have a
+data model? Ah, yes. Here.
+So, but building your reports, building
+the final data model that you need. It's
+something that you can do it on your
+own. All right friends. So, those
+engineers, they will not in the center.
+They will not talk about your use cases.
+They will never meet those. I don't
+know. Yeah. Uh the business users, they
+will not they will never meet anyone
+outside of their central team. They just
+get Yeah. Maybe the spokes. So, let me
+just move this guy here. The spokes come
+to the central team and say, "Hey, you
+know what? Uh I would like to have more
+five new sources." And they say, "For
+sure, we're going to do it for you." And
+they extend the bronze and silver. All
+right? But they never speak with the
+business. The central team, the central
+team has nothing to do with the business
+because those engineers they will not
+develop the final products.
+They are just doing let's say the middle
+things. Yeah, I hope you understand what
+I mean. So this data strategy my friends
+is called
+hub and sports.
+So let me just get this one here
+up and spokes
+all right and I've seen this maybe some
+company can adopt this. This really
+depends like it is not a bad solution.
+um they have a central team. They're
+going to do the the the um middle steps,
+intermediate steps and then everyone
+else going to do the last steps.
+Um now the thing is
+still still still this going to explode.
+I've seen
+uh company hiring army of data engineers
+because here they have army of source
+systems they have over thousand I don't
+know yeah databases
+so this central hub is getting really
+really uh a bubble yeah and that
+explodes so it is still not working
+that's Why the last option for them h
+not the last option but another option
+is that to say you know what
+no central team at all everyone has to
+do his own job without a central team.
+So the central team dies
+we don't do it anymore
+and each team going to build their own
+data leak
+or data warehouse or whatever. Yeah. So,
+oh oops, sorry.
+No.
+So, every
+team
+going to make their own stuff. And by
+the way, it should not be always the
+same thing. Yeah, it's not always the
+lakehouse or maybe one team doing that
+lakehouse, the other team is doing it
+data warehouse.
+and how how we split those team. By the
+way, maybe I didn't spoke about this
+which is very important. We split those
+teams by domains. So this is domain A.
+This is uh domain B.
+By the way, those discussions that I'm
+now discussing with you, it's something
+that can happen at a top tier. Okay?
+like don't expect that uh if you got
+hired as uh I don't know yeah as a data
+architect in small team that you will be
+discussing those big concepts it's only
+if you get to the upper layer because
+those people has to put the data
+strategy now I'm just trying to explain
+for you the data strategy but still it's
+something that you have to understand as
+a data expert right I just want to say
+those discussions and those designs it's
+not something that's going to happen at
+the lowest
+Yeah.
+Um,
+so all right, I'm just checking the chat
+if there's like questions or maybe I I
+lost you guys. I don't know. [laughter]
+So, uh, let's continue the story. So, we
+have here uh, domain B, domain C and so
+on. Do you know what is domains guide?
+Because this is very important words.
+Domain
+A B C D. All right.
+So a domain it could be as I told you
+maybe big se yeah yeah section in a
+company sector like as I said the HR
+could be a domain the um the yeah the
+sales could be a domain or it could be
+like a process at the company specific
+process they call it a domain like the
+process of engineering the cars the
+process of manufacturing the cars and
+stuff like that.
+we could split the domains by processes
+or by the organization of the company
+because usually the company is already
+splitted into those domains. So that
+means now this is awesome. This is
+really awesome if you split it by
+domains because we engineers
+uh and data architect or like any data
+experts we going to get a lot of domain
+knowledge about only one thing. Now in
+the old picture here
+we have to have a knowledge about all
+the domains of the company like getting
+the domain knowledge it takes really
+years of one domain guess like how this
+can be really hard if you have to
+understand all domains of the whole
+company you will never be able to do
+that maybe after retirement or something
+like that. So that means by splitting by
+domains it is a perfect thing because
+finally the data workers data analysts
+engineers whatever they can focus into
+one domain and can and they can learn it
+very well once you know the domains you
+can understand the pains you can
+understand how they work what are the
+questions that you get so splitting the
+data world into domains it is one of the
+best things that now companies are
+It makes everything better, everything
+more clear, no more chaos and we are at
+the end human. Yeah, we are not able to
+understand everything about old company
+like I spent
+yeah eight years at Mercedes-Benz and I
+have learned only two processes in one
+one domain. I was not able to to learn
+the whole thing. It's it's almost
+impossible. So that's why no way the
+central going to work or even a hub
+could work in big companies. So
+um now this is something we called
+federated
+that means everyone going to do their
+own work
+and uh again as I said they don't
+um yeah they make lake houses they make
+lakes they make warehouse and stuff. Now
+the thing is
+the story is not at the end because we
+still going to need stuff from each
+others.
+Now if you are making a report about the
+sales you might need few data from the
+other domain but you would not need
+everything. Okay. So you might need
+subset of data from other domain. That's
+why we might start connecting the
+lakeouses together in order to just load
+enhancement data. So that means there
+will be some movement between those
+domains and some interactions where we
+exchange data between those lake lake
+houses. But again the domain here if it
+says sales it's going to be the
+dominating domain that makes reports
+about the sales but they start they
+might start need data from other
+departments like the manufacturing.
+That's why my friends what's going to
+happen with the federated is
+we start exchanging data left and right.
+All right.
+So, and this is something that is not
+really cool
+[laughter]
+because
+it's going to bring again the chaos. And
+what happens is that I don't know
+whether I have here some auditors or
+something like that. Let me just check.
+Uh oh. I I really need like a new
+figures for the auditors because they
+are they they will not be happy with
+this. I don't have one. But now let's
+bring an auditor. Now an auditor going
+to come for here and say hey what are
+you doing? How how are you like how you
+are managing the security of your data
+and where this data come from? So the
+auditors of the company they can start
+questioning. Maybe I'm going to add here
+a text so you understand what is this.
+Oh,
+so
+or security officer or whatever. Yeah.
+So someone that is uh check the
+compliance of your data.
+So bring forward
+uh group. Yeah. All right. So you got
+you might start get audited and say hey
+let me know what which data you have
+inside and uh how do you do the
+transformations? So they're going to
+start like auditing the solution and if
+you don't know and over the time things
+might get out of hand where uh you have
+the sales data you have the
+manufacturing and everything gets like
+mixed up and the numbers here start
+getting different from the numbers on
+the left side because here as well you
+start doing sales data sales data
+analysis. Yeah, let me just say sales
+and as well here we have sales. So we
+don't know anymore where is the truth if
+you exchange data without having a clear
+yeah let's say documentations.
+So the same editor going to go as well
+to the other team and start asking a lot
+of questions about the data and stuff.
+Not only that the consumers you might
+have start like cross consumers. They're
+going to say but your data is something
+different than the data from the other
+domain. both of them are showing the
+same data. So it's going to get lost if
+we start sharing data between uh cross
+domains. Now
+what's going to happen is that um there
+going to be need for the big question to
+say who is actually the owner of the
+sales data. So we're going to they going
+to ask question who is the owner of of
+the sales. Um that's why
+they each domain going to start
+promoting someone says ah you know what
+I am that pay oh the product owner
+we call it data products owner
+we can permit someone from this domain
+it could be from the business it could
+be from anything and say hey you know
+what I am the owner
+can I make this smaller
+so we're going permit someone from the
+domain and say hey I am the owner of the
+sales and only me going to accept
+anything about my datam. So it's not
+anymore because before if we go back to
+those pictures you're going to feel who
+is the owner of this like house the
+owner going to be the engineers
+they going to say uh yeah if you want my
+data I going to allow you to go to gold
+to silver and stuff. So usually the
+[laughter] engineers going to decide who
+gets what. But in modern companies it's
+not anymore the engineers.
+It is the responsible of the data or the
+data product owner the data owner of the
+domain. So if someone comes
+and says hey I would like to get your
+data. I'm from domain B. The engineers
+will not go and say um yeah for sure why
+not [laughter] go and get the access to
+the gold. No the engineers say you know
+what I'm just a technical guy you have
+to go and speak with my product owner
+data product owner. So we're going to
+have like an owner for the data that
+understands why do you need the data and
+what are you doing in the reports. So
+we're going to get start getting some
+new responsibilities.
+Um um I hope this makes sense because I
+[laughter]
+now it feels like I'm playing games.
+All right. Um yeah. So I'm just
+explaining the story why why we have
+like um yeah we are getting those new
+crazy roles. So that means we start
+making for each domain for each data
+the owners. Yeah this is new rule.
+usually promoted from the business okay
+from one of those here consumers or
+something and they going to be
+responsible of giving the final okay or
+not
+now
+there's another issue there is another
+big issue with this with the federated
+I'm trying to give you step by step how
+we go to the last phase okay now imagine
+you are a data analyst or a data
+scientist or whatever you get hired
+you get hired ired to the company. You
+are new. You are
+excited about your job, your role and
+yeah
+someone came to you and say hey I would
+like to have a report about
+about specific topic. Yeah. Um, now if
+you are not assigned to those domains
+and you come to this picture here in the
+middle and you're going to get totally
+confused like where I'm going to find
+the data to build this new dashboard,
+this new report. Now you might start
+like exploration phase journey and start
+talking to those people. Okay, which
+data you have, which data you have and
+start jumping between those domains
+until you understand where are your data
+to make your use case. Again, not
+everyone is assigned to domains. Yeah.
+So, you will start like asking people
+around where should I find the data and
+stuff like that which is really bad. Now
+the idea is to say to make every to make
+everything is clean and uh let's say
+yeah it's clear who is offering what
+we're going to do we're going to make
+centralized
+we are back yeah to the hub a little bit
+but this time this hub is a marketplace
+marketplace.
+Yeah. So what do you have in the
+marketplace is the following.
+Everyone going to announce let's say
+their products.
+Uh okay.
+Everyone going to announce their
+products into central place.
+Say hey I offer the sales data. Hey I
+offers the HR data. Hey I offer the
+finance data.
+Maybe not not arrows. Sorry for that.
+Yeah, arrows. Okay. So the dotted arrow
+means not the data going to move to
+central place. This is very important to
+understand
+the data going to stay at their places.
+Yeah. So it stays at domain A, it stays
+at domain B, it stays at domain D and so
+on. Is just we're going to make one
+gigantic catalog about the data into
+central place. This is what you call
+um Do we have a catalog? Let me see. Oh,
+it's bad.
+Sorry, I just um Yeah, I would like to
+bring a shape or something
+again. Sorry, I'm not that prepared. But
+um yeah, I think I hope Look, I I even
+have my cup. Look, data wizbar as a
+shape. So, let's put it here. One of
+those engineers is data bar.
+It's my brand now for some for some
+reason. Um, so do we have a catalog
+shape? My friends, I don't have one. So,
+I'm going to leave it as it is.
+Um, so it is a marketplace where
+everyone announcing their data. I have
+the sales. I have five tables. I have 10
+tables. So it's like bizarre. [laughter]
+Um now it is very very cool because the
+data analyst
+they just go to the marketplace and read
+it and they can understand okay the
+whole company how many data do we have
+uh how many tables how many domains how
+the sizes without doing this
+journey by visiting visiting each of
+those domains. So without running around
+in circles to find the data they going
+to go to one place and my friends she
+going to find the data fast and she
+going to understand ahu in order to make
+my reports
+I need
+uh I need the sales data I need some we
+need another arrow
+make green ah I need this I need that I
+need from this and I'm going to be able
+to work and this is not only for the
+analysts as well for the AI engineer for
+any new projects happen in the company
+we know where the data is. So,
+um,
+so yeah. So, this is why
+we're going to need a central
+marketplace. Central place. By the way,
+this is not anymore federated.
+I just introduced you to the data mesh.
+This is the data mesh. It's not anymore
+federated things are going to the
+middle. So a data mesh is
+um
+no more central team doing the whole
+thing. Yeah, this is very clear because
+we have federated. We split the data by
+domains. Each domain they're they going
+to do the whole thing alone.
+We going to have
+data as a products. That means we're
+going to have documentations. I'm I'm
+going to explain more what is that as a
+product because it's way more than that.
+But we're going to have each domain they
+going to make a catalog about their data
+into central place the marketplace.
+They're going to document it. They have
+a product owners and um and everything
+is like systemized and yeah documented
+with high quality and all those stuff.
+So the data mesh concept says again
+physically each domain going to have
+that data. They're going to own the data
+at their own place. They never go to the
+central place. They never go to the hub.
+They never go to the central lakehouse.
+They going to stay at the department at
+the domain physically. Okay. Physically
+going to stay at the domains. But we're
+going to make a virtual place where the
+whole metadata of the whole company
+going to be described so that if auditor
+comes
+they can read the marketplace. If a new
+developers comes to the company they
+going to go to the marketplace. If any
+new data use case happen to the company
+we start from the marketplace and
+understand it.
+Is this clear so far?
+Nice.
+Uh, can you please All right. And my
+friends,
+this is not uh only the Okay, I'm going
+to make my cup bigger. [laughter]
+And uh this this picture, it is not only
+the companies that understood it who
+understood this as well.
+It's always the data bricks. They are
+very very
+up to date with all pains of companies.
+This is amazing. Really,
+I'm not trying here to sell anything,
+okay? I'm I'm not sponsored or something
+from data bricks. I'm just trying to say
+here data bricks came and understood.
+Oh,
+um companies are moving to this
+and how about I'm going to
+offer something similar to this.
+I would like like because that data
+brick stopped us here. Uh let me just
+take the icon.
+Now I'm breaking a little bit the
+vendor. Okay, but it is not that
+important. Now data bricks start stops
+at here and said hey you can make spark
+you can make like houses. It's the best
+thing and they start selling this like
+crazy
+but they saw this is happening.
+companies are making multiple lakehouses
+left and right and they're going to need
+something of called marketplace
+and now if you are learning data bricks
+you're going to understand the origins
+of the unity catalog
+unity catalog is made for this is made
+in order to make data mesh concepts in
+order to make domain driven
+architectures this is what we call
+domain dri you're going to hear a lot if
+you go as an architect
+people are making domain oriented or
+domain um driven architecture and this
+is exactly what we mean at the data
+world we say data mesh and now the
+vendor data bricks join this picture
+now this is exactly what they are trying
+to sell for the companies
+which is yeah I have some doubts about
+it but it's working but not for big
+companies
+Like let me just explain where's that's
+why they
+two years ago
+I was yeah I was making my projects and
+then suddenly I've I've seen something
+called catalog.
+Yeah the catalog. Yeah the unity
+catalog. They introduced the Unity
+catalog. Who knows Unity catalog?
+You know what is unit? Yeah. Let's see
+anyone here is learning data bricks
+or everyone now sleeping. [laughter]
+Uh let me to be honest I'm not checking
+how much viewers do we have or did I
+make the chat very slow? I have no idea.
+So how much we have? Oh we have 300
+people are watching. Wow. I didn't
+expect this. I think we reached like 400
+or something. Now we have 300 are here.
+Um yeah, yeah, I'm going to share those
+sketches if you want. I don't mind at
+all. Oh man. So,
+so now,
+so now, okay, now data bricks had
+something similar like um marketplace,
+but it was not a marketplace. It was
+just like
+a yeah
+um how can I explain it for you? It was
+just
+a database catalog for your project.
+just only for you for your project.
+Okay? And they called it the hive meta
+meta store. This is legacy name. You
+will not find it but I'm just telling
+you the story about it. They have like
+some kind Yeah, it looks like a
+database. Okay. You are you you are
+looking at the UN catalog but it was
+only for you for your projects. Okay.
+And they switched the whole thing to a
+marketplace.
+So you see here it's called my
+organization. Well maybe in big
+companies it's going to be like yeah the
+company's name and you will be able to
+browse not only your projects but you're
+going to find as well all the cataloges
+of the whole company. Now I cannot show
+you the example because I have here only
+one example. So imagine here I'm going
+to see inside my organization maybe
+30 cataloges the sales the after sales
+the manufacturing and all those stuff.
+So that means they made this local
+catalog that is available only for a
+project. They made it only visible for
+the whole company. And this is what
+suddenly I was like working twice as
+this happens to my project. I was
+working at my project and I saw only one
+catalog. This is my catalog and I'm
+doing the silver bronze gold and I'm
+building the warehouse.
+And then in the next day I was not
+following the the news. I opened my
+catalog and I saw 200 cataloges. That's
+all because suddenly I'm able to see the
+whole company catalog. They turned
+the each local instance or each local
+project into into like a global catalog
+that is available for everyone. So
+everyone was able to see my projects and
+I am able to see everyone else projects.
+So that means
+here
+if you are working in data bricks this
+is the unity catalog my friends
+and with that we just I I don't know I
+think they did cost a lot of work they
+just turned the local cataloges
+that each projects have into a global
+one and they solved this issue with the
+data mesh
+Um, and that's exactly why we have now
+something called Unity catalog. This is
+exactly the reason behind it. They want
+everyone to be able to access everyone
+or let's say everything should be
+visible for everyone else. Um, all
+right. So
+now there's still issue.
+The thing is the vendor they are trying
+to yeah to sell us this idea which is
+amazing I think but this going to work
+yeah I'm going to say only if everyone
+is working in data bricks
+right
+so if if everyone is in data bricks this
+going to work because they going to
+share their stuff to the middle right
+now if a company gets I don't know
+sophisticated and they do things outside
+of catalog. This going to be challenging
+to make the unity catalog as a central
+place. They try like there's some work
+around and stuff but they it could work
+of course but
+if the company have like onrem solutions
+if one domain is not working at all in
+the cloud if other is using I don't know
+yeah Azure uh we have aure stuff fabric
+yeah if the company is not clean about
+that platform strategy and they allow
+multiple platforms
+then sadly this will not work. That's
+why in some companies if they are big
+enough to say data bricks is not enough
+for them they have to make their own
+catalog like at the end I'm going to
+show you a few examples I have made some
+with clothes I'm just prepared few yeah
+visuals for you uh yeah I don't have
+here catalog icon let's bring this here
+so the company should then develop their
+own marketplace for this okay
+Um yeah so my friends this is very cool
+to understand
+what is a data mesh and how our data is
+turning into something called products.
+Okay. So it is not anymore this picture
+where you have central data engineers
+just prepare the data and give it. The
+world is is getting bigger. We are
+getting a lot of new things. We are
+focusing on only on domains. We have
+yeah the product owners we have a
+marketplace for data and um yeah we are
+transitioning to this domain driven
+architecture which I believe it is it is
+like I'm really happy with this. Yeah
+it's like one of the best I'm going to
+say so far best practices on how to do
+it. I love to have the idea of having
+the metadata into Oops.
+Oh wait I lost everything. No here I
+thought I've lost everything. I love Oh
+man. Yes. Okay. I think my PC or my Mac
+is giving up.
+Uh one hard refresh solve the day.
+[laughter]
+Okay. So slowly.
+So
+yeah. Okay. So I uh again I love this
+idea to have the metadata into stored
+into one place and as well to have the
+domains spread it around. Don't store
+anything centrally for big companies it
+will not work and yeah those discussions
+again happens at the elite level of the
+architect the principal architects and
+the let's say the big managers the data
+officers and stuff like that. So it's
+not something that we decide at our
+level but if you hear about it if you
+join a company or something that they
+are doing domain you should know about
+this structure and it is relevant for
+you as a data analyst and stuff like
+that. Now I have built some
+fake
+fake marketplace for you to see it at
+least to have some feeling what this
+means.
+Uh yeah again thanks for
+cla I can make a lot of fake things now
+uh where I have prepared it
+marketplace
+oh the marketplace
+so let me show you just I don't want to
+show you only sketches come on
+now
+welcome to my fake
+my fake uh marketplace.
+So, um I've made this not me. AI made
+this for me. So, uh it looks like this.
+It is a shop. You enter as a data
+analyst. You enter as a data scientist,
+whatever. And you would like to know um
+how your data looks like. By the way,
+I'm not bragging or something. My data
+products at Mercedes-Benz was number
+one, the highest consumed data product
+in the whole company. It was all because
+the quality that we added and uh yeah, I
+was really proud of it because um
+uh we had like really huge team 20 data
+engineers in my team. I was the project
+lead for that and as well leading the
+projects and we got like it's really
+competition at the end. you have
+prepared data products and you make
+really like it's gonna be your baby. You
+gonna feel I want to push on the
+numbers. I want to be the best data that
+I'm going to provide in the company. I
+want to make sure that all the customers
+are happy and I was lucky as well to be
+in very important domain. That's why uh
+yeah my data product at Mercedes-Benz
+was number one. And uh yeah, of course,
+if the company implemented looks like
+this, they're going to have like it's
+similar to the Unity catalog but fake
+one.
+So you're going to see the numbers of
+how many uh who are the highest like
+consumers and then you're going to say
+okay this is the vehicle data those are
+the other uh domains and the other data
+products that are offered the HR and all
+those stuff and you as a data analyst
+you have the luxury to sit back and say
+I I would like to get the vehicle sales.
+So you enter this data product.
+Now, usually you have to see a lot of uh
+descriptions about the data product.
+Okay.
+Um
+I'm now explaining for you what is a
+data product. Okay. So, um I know that
+the question you don't know what what is
+exactly data product. So, a data product
+it is something
+first of all described.
+So, now you can see okay this data
+product has five tables. It's all about
+description. Okay. And it has an owner.
+So for example here I see the owner the
+business owner of this data and I know
+how to request it and I know which team
+did build this data products. So I can
+contact the technical team and um yeah I
+can see some other metadata. Usually we
+see as well the contract about the data
+contract. This as well you might hear
+about the data contracts. It is like for
+example me as a data engineer um I'm
+going to commit to something. I'm going
+to say every day my data going to get
+refreshed at 2:00 a.m. and I'm going to
+put it as a contract. So that means if I
+bring my data into a marketplace
+I have to write down the data contract
+or maybe to fill the requirements that I
+say my data get refreshed every day. my
+data going to be stream data. My data
+going to be I don't know once a week and
+something like that. So that means
+developing data it's not finished by
+just cleaning up the data and that's it.
+You have to have a data owner for it.
+You have to have a data contract for it.
+And now once you say okay this looks
+good I go and request the data. Now of
+course the request of the data will not
+go to the technical team. is going to go
+to the owner of the data, the product
+owner. Yeah. And the and they decide
+whether you're going to get the data or
+not. You have to explain why you want to
+access their data. After that, uh you
+can drill down of course in the data
+product like for example going over here
+and start saying uh like more details
+about the data. You can see okay how
+many rows, how many like what is the
+size, where it's located, when last time
+refresh. a lot of meta data and um and
+you can see now
+that maybe I'm going to of course we are
+moving now to the data products thing
+that the data on the left side right
+everyone knows that in Excel and table
+and stuff like that but on the right
+side there's like I don't know yeah
+add-ons owns like ex you are explaining
+the data you are adding more flavors to
+it you are um giving more context to the
+data Like for example the very very
+obvious thing that we could add to the
+data is the meta data. Do you know what
+is metadata? It is the data about the
+data. So on the left side it is our data
+right. So I have the customer ID, the
+name, the email, this country. Yeah this
+is your data. But on the right side that
+metadata it is just a description. So
+the customer ID has the data type
+integer. It is not n not null and it
+means customer has an ID that never
+reused. The full name is the first name
+and the last name. So here I cannot see
+like for example my name or any other
+customer name. I'm just saying
+description metadata describes my data
+describe the structure. Okay.
+So
+and it could be anything not only the
+table name not only the column name um
+it could describe like the size of the
+data the format the location yeah when
+it's last time updated now those
+informations
+now yeah we are getting to the metadata
+concept now those informations that we
+have it is not only important anymore
+for the human of course if you are data
+analyst if you are data engineer
+um
+you're going um you're going to need
+those informations because now you have
+more understanding about the data. Now
+without a metadata what could happen
+with that you're going to see the data
+and you have to explore it to understand
+the content but as a data analyst if you
+look to the metadata you're going to
+understand immediately what is going on
+what is the content so it's always nice
+to have descriptions yeah for the tables
+it's always nice to have descriptions
+for the columns and stuff like those so
+that's why metadata
+is very important for humans and now I
+just go back to the talking head to
+explain for you metadata. It was before
+a luxury thing that we do. If I am data
+engineer and I have enough time, I'm
+going to go and make a metadata in order
+to let you understand my data. But now
+it's becoming even more important than
+the data itself
+because
+um
+we have AI. [laughter]
+If we don't have metadata AI going to go
+to your data like this is one of the
+hardest things that is now happening
+data and AI it's some I have my opinion
+about it but it is something that is not
+working very well because if I send an
+AI to my data without any context and
+you understand in AI context is very
+important what can happen that the AI
+might target wrong tables they might do
+wrong joins they might I don't know
+select different tables that has nothing
+to do with your prompts and that's all
+because if you are giving uh let's say
+no context at all about your data that's
+why my friends
+we data engineers now one of our main
+jobs not only to transfer prepare the
+data but as well to add the context
+which is the met at least the bare
+minimum is the meta data now the
+metadata going to help the AI agents and
+the AI to be more accurate with your
+data. So that means if now AI
+uh let me just make my smaller. Now if
+the AI have the data on the left side
+and as well the metadata on the right
+side, it going to be more accurate and
+going to understand the context of the
+company's data. That's why if I now I'm
+back to projects my focus on generating
+metadata for my data products going to
+be again way more important maybe even
+doing data quality
+because most of the use cases that I'm
+going to get as a data engineer over the
+time going to be AI use cases and if I
+don't provide the metadata the AI use
+case is going to fail. So it's going to
+be central job for us to add in our
+pipelines to add a perfect metadata. And
+I can tell you something.
+You don't have to add it manually
+yourself. You could work with the AI in
+order to automatically generate those
+metadata. But we cannot go completely
+out of the pictures.
+This is different discussion but I'm
+just
+saying saying that we're going to use
+engineers as well the AI to generate the
+metadata using the company's
+documentations and PDFs and stuff and
+the AI going to reuse those stuff in
+order to answer questions okay
+accurately. Not only that now you're
+going to hear about the data products or
+people are building something called
+semantic layer.
+Um, how I'm going to explain this? I
+have like a picture for this
+now. It's getting interesting. Right.
+I'm prepared. I'm not that I came with
+few stuff. I have to find this out.
+Uh,
+I had an really good example to explain
+this
+marketplace. We had a marketplace.
+Give me a second. I'm going to find this
+example for you. [snorts]
+Are you enjoying so far the session? Is
+this something new that you didn't know
+before? By the way, if I Yeah, I made
+nice application here. Maybe I can sell
+it. Make new data platform
+concurrent for data bricks. I'm going to
+call it
+I don't know what's to suggest for a new
+platform name
+data bricks data
+I think we can build easily data
+platforms now.
+Okay. Now, uh, do you see this? Uh, I
+think I have to maybe move myself.
+Maybe here.
+Here.
+Yeah, be like this. I'm not important.
+Let me just make me smaller. Fire
+pricks. [laughter]
+[snorts]
+Um, okay. So, now
+the thing is look to the left side.
+If we prompt the AI and say okay how
+much revenue that we have now the AI
+going to have the metadata okay going to
+read it going to understand it and then
+make some kind of SQL query and give you
+a number so it's very simple this is
+just aggregating the sales right
+so it's going to go and said okay how
+much revenue this looks like a revenue
+and I'm going to use it in order to
+aggregate the data and get the numbers.
+Now the thing is this is maybe
+buyer bricks. Yeah, [laughter]
+brick by brick. Now
+I don't know whether you heard about the
+logo scandal in in USA brick by brick.
+Now
+uh if the AI don't have any like
+have only the metadata
+it's going to go and make the
+aggregation correct and then we're going
+to get the numbers but now things are
+not that simple at companies right
+because we have a logic if you are a
+data analyst you understand exactly it
+is rarely that you're going to do such
+um um such like very simple aggregations
+There is always so much context to the
+numbers. There is always some filters.
+There are some big SQL queries and stuff
+like that. Now,
+how we going to tell the AI about it?
+That if you want to calculate the
+revenue, you have to use other formula
+and this is by my friends adding a
+semantic layer on top of our data.
+Semantic layer is very simple. It's just
+I don't know whether you learned code or
+not.
+Um, semantic layer it is like you are
+giving a skill or you are giving like
+you are explaining for the AI how to
+calculate the revenue correctly by
+adding a filter because it makes no
+sense to find the revenue for all the
+orders in the table. You should always
+filter by the delivered only this
+status. We have status like cancelled.
+We have status that is I don't know yeah
+that is not yet approved stuff like
+that. We at a company we say some we say
+the revenue can happen only for the
+orders where the status delivered. Now
+we have to put this information
+somewhere for our data products. So that
+if we talk to the AI by the way not only
+AI for the human as well for the the
+PowerBI ducks calculations for anything
+if we add this nice information to our
+data products now if any kind of
+consumer comes to my data they know
+exactly how to calculate their revenue.
+So it is just a calculation I'm just
+describing how to use my products. Got
+it?
+So metadata alone it is not enough.
+Metadata alone it's not enough. We have
+as well to add semantics and semantics
+if you hear it I know that's like sounds
+yeah very confusing or something like I
+don't know
+um rocket science but it's very simple.
+I'm just adding how to calculate things
+on my data products. Once you add this
+piece of informations now my friends AI
+going to be happy going to calculate the
+numbers correctly. If a data analyst
+comes to you and say hey how I'm going
+to calculate the revenue you don't have
+to go and explain for them how to
+calculate it. You say everything is
+described in my data products.
+So that means if you have a data product
+it's not enough to describe the data
+product itself. You have as well to
+describe how to calculate the numbers of
+my data products, how to do calculations
+like what is the total customers. Yeah,
+you have to count the distinct of the
+customer ID, how to find the new
+customers and so on. So you add
+formulas, you add, you add calculations,
+very simple calculations.
+Now if you do this then AI can do this
+correctly. If a data analyst comes to
+you and say how to calculate things, you
+don't have to say anything. You say go
+and read the semantic layer of my data
+products and once they read it the data
+analyst they can go and do the
+aggregation correctly. With this we are
+protecting our confusion. If we like
+guys, if we
+if we start exchanging data between each
+others, right,
+and we put the semantic in the middle,
+then if we make two reports about the
+sales, the numbers
+going to look nice because both of teams
+are using the same calculation type. If
+we don't put this information in the
+marketplace or in my data products,
+one team going to calculate it without a
+distinct and another team going to
+calculate it with a distinct and a third
+AI tool will calculate it totally
+different. So it going to be chaos.
+That's why if you are developing data
+products, you have to add the semantic.
+And I'm not saying here for each small
+thing you have to go and add the
+measures or the metrics. I'm going to
+say only for the major most important
+things that you think people going to
+keep calculating this all my time like
+if I have a customers table what people
+going to calculate on my my data product
+they're going to find the total number
+of customers right
+so this is very simple so that means if
+you are offering data you have to give
+metadata
+this is the bare minimum now you have to
+add some semantic on top of
+And now it comes data lineage. Now data
+lineage it is as well I'm going to say a
+third level of giving context to your
+data. This is especially important for
+the auditors
+and like I'm going to say even for me as
+an engineer. So now the auditor where is
+it? Here the auditor. Now they're going
+to ask you where the data come from,
+where the data goes and how you do this,
+how you do that, where like show me the
+flow and stuff like that. Now, if you
+tell them, you know what, go to the
+marketplace or go to my data products
+and you're going to find it.
+Now, instead of asking you all those
+questions, you're going to say, my data
+product has a data lineage. Data
+lineage, it's all about saying say where
+the data come from and where the data
+goes. Okay? who like where I get the
+data from, what are the sources and who
+consumes me. So for the table customers,
+it's very simple. Look like look at
+this.
+I have a product called dimension
+customer. This is my gold. I have two
+consumers consuming my product. Someone
+is building a dashboard called sales
+dashboard. And there is an AI agent
+that is consuming as well my dimension
+customer. The information customer in
+gold comes from the silver customer. The
+silver comes from the bronze table
+called customer rows and the bronze
+comes from the source system called CRM
+and they call it like this CRM.
+customers. So now the auditor going to
+come and see the whole knowledge uh the
+the whole lineage and they going to
+understand exactly where the data comes
+from and who consumes it and that's
+they going to prevent having data leaks.
+They're going to prevent having bad
+issues and yeah I will I will be fair.
+Data lineage is not only for the
+auditors.
+It's going to be as well good for
+everyone actually even for you as a
+developer. If you know how the data
+flows inside your tables, you can find
+weird things. You can find bad um yeah
+maybe strange things inside your your
+ETL. You say yeah why this table
+customer comes from different table. So
+you can use it in order as well for you
+to discover issues in your data flow or
+the data architect can as well use it.
+So I'm going to say data lage it is
+really useful for everyone and to be
+fair
+to be fair with you I think we have all
+those stuff as well in data bricks. Um
+let me just go to gold.
+So, uh, if I go to any table
+and then go to the lineage,
+um, oh, I have a lot of things. I've
+been experimenting so much things.
+Um, so yeah, you're going to see the
+lineage as well in data bricks. Ah, look
+at this. I think it's better than what
+I've shown you. Little bit more
+complicated. So it shows you in the data
+lineage how the data flows from the
+sources to the next tables. Okay. So you
+can see it in data bricks and as well
+you can add those semantic layer. I have
+add here some semantic layer as well on
+top it's called measures. So if you go
+to the tables and data bricks and you
+create something called metric views.
+Yeah. So it is the metric view. This is
+the semantic layer that you could add on
+top of your tables. you can find here
+details, permissions. Oh, sorry. Yeah.
+So, this is exactly what I'm talking
+about. Those are um measures or let's
+say semantics on top of your data
+products. Uh but again, this is only if
+your company working in data bricks. If
+things get mixed, you need my product
+which is bar pricks.
+You'll need my central. I have to I have
+to sell this.
+I have to sell this. So if you have
+multiple data platforms, you're going to
+need like some third party stuff.
+And um of course comes the last thing
+which is the data contracts for your
+data products. This is again I think
+this is too little. You have to say who
+is the data owner, how you refresh the
+data and as well very important data
+contracts. You're going to explain as
+well how often your schema going to
+change like is it the schema frozen like
+is it like is the schema changes over
+the time all time? Do you have like new
+columns? Are you renaming things? Uh how
+stable is your schema? How stable is
+your stuff? So a data contract you could
+have like it's contract between let me
+just go back to this picture you
+understand me
+um so
+um this image is getting crazy so let me
+just clean up a little bit go out
+um
+now
+so what is a contract
+[cough]
+[clears throat]
+If
+uh so if one engineer says I need data
+from lift and this is the other engineer
+okay so they say I need your gold data
+for some customers that I have in my
+domain so they're going to ask for data
+of course they have to get approved from
+data products and stuff like that
+but this engineer going to say I'm
+making the whole system depending on you
+on on your system as well. So if
+something breaks by the way this is
+something that not only in data mesh
+it's like between system and system you
+make a contract where you just explain
+this is the contract
+uh you just explain stuff about what is
+the expectations of your data products.
+So you say, you know what, if you want
+to consume my data, um, you're going to
+understand my schema changes a lot.
+You're going to understand I refresh my
+data once a week. You're going to
+understand if them if data goes down for
+a week, I don't have enough team, let's
+say, to repair it so fast. So you have
+to pair with me maybe two weeks, three
+weeks until I repair the data. So it's
+just a contract where you fill it with
+all let's say things that you can commit
+on. Now if you see the contract and say
+okay this looks good I don't mind then
+you uh you consume the data or you say
+ah the contract is really bad I cannot
+make my lake house depending on this
+lakehouse that's why you say okay this
+is bad I will not connect anything. So a
+contract is very important is commitment
+between two source systems or two
+systems sorry
+and they kind of use it as well to make
+for you problems like if you say my
+commitment in my contract I'm going to
+load the data once a day and they
+noticed the domain B that you refresh
+the data once a week they're going to
+come to you with the contract say hey
+you said that you refresh the data once
+a day why you are doing it once a week
+so if you write down things inside the
+contract. You should be yeah responsible
+of it. So it is amazing to put a
+contract and as well it is something
+that we do by the way not only in the
+data mesh we do all time. If I go to to
+to yeah the original source here if I
+want to connect a new source as well I
+try to get from them like you going to
+have here the source system
+source system responsible
+um you're going to ask for a data
+contract from them in order to connect
+that data you say okay I'm going to
+access your data in order to build my
+data warehouse and I need to have a
+contract with
+This is very important by the way and as
+well this is something that data
+architects as well have to check the
+contracts between the systems. Yeah. So
+it's written
+commitment contract between two systems.
+It could be source system to data leak
+house source system to data warehouse
+lakehouse with lake house whatever
+but you have to add it to your data
+products.
+So that leaves us with this my friends.
+Now in the modern days
+um let me just check whether everything
+is working. Yeah. Now in a modern day my
+friends
+you don't just offer the data. Let me
+just hear talking head kid.
+Now that seems my friends offering the
+data now in the modern days it's not
+only you're just going to give someone
+access to a table. You have to add on
+top of it a lot of things. the metadata,
+the semantics, the data lineage, the
+data contracts and who is the data owner
+and all those stuff, who can who can
+speak about who can access what and all
+those stuff. So things getting more and
+more complicated in enterprise companies
+and that's all because we are getting
+more attention over the time. We are
+getting more use cases. We are getting
+the AI. So we are not anymore those
+casual
+data experts that runs only for nice to
+have project at companies. Things are
+getting serious about data and that's
+why
+as well things are getting serious about
+how we offer data. This is exactly what
+we mean with data products. Data
+products this works in the data mesh
+yeah ecosystem.
+Um
+so I hope this makes sense for you. I
+hope you if you understood I know we
+went to a level of enterprise about it's
+not something that each data analyst
+must know but if you enter the serious
+op you're going to start hearing about
+this and now I give you some back uh
+back stories about the data architects
+um now if we go back because I think we
+have to wrap up a little bit
+um if we go back to this I think we have
+covered many topics But
+one of the topics that I wanted to cover
+is the data modeling. I'm sorry for that
+but I I think I'm getting tired. It's
+better to continue other day.
+Um
+so now if you will look to the
+requirements. Yeah.
+Now we have some understanding about
+just let me switch.
+So what is a [clears throat] data
+strategy? Yeah. What is the data
+architecture? What is data products?
+What is the data mesh? What is medallion
+architecture? You have heard all those
+stuff today.
+Data fabric [clears throat] is not
+um those stuff we didn't cover. Data
+governance. What is the data lineage?
+Right?
+Let me just zoom in a little bit. I
+don't know whether you can see those
+stuff. [snorts]
+All right. So what is data loage
+lineage? What is emit data management?
+This is exactly what I showed you. What
+is a data catalog? What are the data
+contracts?
+Now if we go to the platforms, we
+covered everything right my friends. So
+data warehouse the lakehouse the data
+lake future store partitioning
+partitioning it is like for um uh
+performance optimizations for data
+engineers future stores it is something
+for data analysts a scientist for AI as
+well
+the modeling sadly sadly I didn't cover
+anything for you
+now but we have covered the first one
+the semantic layer so we know what is
+semantic layer I would like to explain
+for you data vaults all those stuff I
+job in another session uh in the
+integration now you know what is ETL
+data integration maybe if you heard this
+it is part of data moduling but it's all
+about you are getting many source
+systems
+it's all about you are getting many
+different source systems many tables and
+since you are bringing everything into
+one central data warehouse or data
+lakehouse you want to learn or let's say
+you have to do data integrations, how
+I'm going to bring those different
+tables from different sources into one
+table, maybe into one source of truth.
+So that's why it's all about how I'm
+going to connect those different shapes
+of tables into one integrated table that
+could be used for analytics. Like if I
+have I don't know yeah uh two sources
+one source is giving me the customer
+information another one as well giving
+me the customer information they use
+different shape of customer ID or
+customer keys and if I bring them
+together into one flat table they will
+not work I have to do a lot of work in
+order to make them fit I'm hitting the
+mic but this is type of data modeling
+but uh yeah I just wanted to explain for
+you oh
+what this means now
+data modeling as I said it's not covered
+so data integration data pipelines I
+think everyone knows this is yeah the
+things that we do streaming data
+ingestion yeah I think those stuff we
+didn't talked about it the ELT so you
+know what is ELT
+uh event driven data migrations you have
+heard about it a little bit about how we
+migrate from one system to another but
+uh yeah so with that I think I'm happy
+that we covered or just at least we I
+gave you some sounding about all those
+terms that are requested in the ad jobs
+or or the posting uh from a data
+architect or a data engineer but I
+believe if I extend it to a data analyst
+same topics is going to uh join
+um so
+I'm going to think about maybe extending
+this not Now maybe in another stream I
+would like to show you how I draw live
+like I would like to show you one
+requirement and then how I go from the
+requirement into data architecture but I
+felt that this is very relevant for you
+to understand those yeah buzzwords that
+we have and um yeah so I think we need
+another live stream it will not be
+tomorrow I'm sorry I would like to have
+it tomorrow but um um I have some plans
+but what I'm going I say I enjoyed it so
+much explaining for you those stuff. I
+hope that you enjoyed it. Um, and if you
+have of course any questions, make sure
+to leave it in the comments. And I'm
+going to say if you like those stuff,
+support the channel. Don't forget about
+that. I still have seen in my channel
+like more than yeah around 30% only
+supporting and consuming my content. So
+make sure to support the channel and all
+those stuff. I would like to give you
+some stuff maybe if you're still here
+I'm gonna let you know a few stuff that
+I'm doing now. Um I'm going full in into
+AI.
+Uh what I mean with AI um I have a lot
+of experience about data engineering and
+all those stuff the data architects and
+I'm still seeing the AI is not suitable
+at all for data. It is full of garbage
+currently and I'm trying to push now the
+limits and I'm learning as well how to
+use code how to use different AIs in
+order to help you as a data analyst and
+data engineer to do high-end level
+projects. I'm not speak about toy
+project and toy AI. I don't know
+download here those skills and you're
+going to be the best I don't know data
+analyst and those stuff. Um I'm doing
+I've done like more than 12 projects. I
+bought more than 10 accounts from cloud
+full push full farming let's say of um
+yeah uh pushing the limit about data and
+AI. I'm going to be publishing a lot of
+things about data and AI but it's not
+going to be the garbage let's say
+content about uh yeah uh the top 10
+prompts or install this and you're going
+to get those stuff. I want to do it
+serious. I want really to give the right
+let's say uh answers or let's say the
+right skills the right things so that
+you could use include as a data engineer
+as a data analyst but I have some
+standards so if I don't reach it I would
+not give you crap that's why I'm doing a
+lot of things but I cannot yet publish
+it for you first of all there are some
+people stealing the content and as well
+uh I don't want to give you things that
+are half true um So that means there
+will be a lot of content that's going to
+come how to use AI truly for data and uh
+how to uh to make it secure and all
+those stuff but I need some time about
+it in order to prepare for you but is
+something that's going to happen this
+year. I'm not saying next year or
+something like that. So that means I
+will continue with the PowerBI ducks and
+all those stuff. There's going to be
+weekly videos about it. And um about
+Python, a lot of you are asking about
+Python. I'm going to come after
+September. I think I'm going to do a
+quick vacation and then starting from
+September I'm going to go with the
+advanced topics of Python. So this is as
+well something that I would like to
+announce about data bricks. I might
+bring from time to time some data bricks
+projects but I I'm really focusing now
+to bring you this topic cloud AI and
+data and honest one and the real one.
+I'm not gonna be another one talking
+about AI. So if you are willing to join
+this journey with me about yeah this
+channel and stuff make sure to support
+guys. This is really important. Only 30
+are supporting uh with those likes and
+stuff. Uh my videos takes time until to
+produce. I have to sketch everything.
+Everything happens manually by the way.
+All the sketches
+that I do everything happens manually. I
+have to do all those stuff. I I spend
+hours sketching those stuff. I could
+make everything paid, but thanks god I
+have sponsor like uh data camp. They
+sponsored my videos and they allow you
+this allows me to make free content for
+you. Uh [snorts] but um other otherwise
+I have big announcement that going to
+come this year. I cannot say what which
+is exactly it's not about cloud and AI
+cloud or AI but there will be going to
+be a big announcement about the channel
+and uh but I'm going to wait a little
+bit for it. So there will be a lot of
+excitement yeah that I'm going to bring
+to the channel. That's why I'm little
+bit now yeah slow on making content but
+for sure there will be some I'm going to
+say epic things that's going to come. Uh
+so I hope that you are excited about it.
+I enjoy so much this live session. I'm
+going to make the second live session
+about data architects. It's going to be
+quicker one not like this. And uh I'm
+going to make one live session. It's all
+about my story. So it will not be a
+technical one. I want to explain for you
+my story. Who am I? How did this works?
+As I was yeah someone in Syria and how I
+moved to Germany, how I studied, how I
+climbed in the company, my maybe as well
+about some private things, how my
+mindset, how I think. So I would like to
+make one live session about me, let's
+say to to understand who is Barra, who
+did make this SQL and stuff like that.
+maybe inspires you because I came from
+situation that is [snorts] yeah not that
+easy. Yeah, I had a lot of struggle
+until I reached what I have now which is
+I'm really happy about it. So I'm going
+to make another live stream called who
+is bar and it's going to be stories
+about my life. uh if you are interested
+of course you can join but for the data
+architecture I promise you another
+session to focus more about taking your
+requirements build uh data architecture
+from it live stream and as well to talk
+about few data modeling techniques what
+is data vault and why do we need data
+vault yeah so
+I'm really happy about this session I
+hope you enjoyed it did you like it you
+have any questions before we wrap up. Do
+you enjoy this session? Did make sense
+for you.
+If
+yes, then I'm really happy. I'm going to
+say
+thank you so much for joining this live
+session. I really enjoyed it. It was
+long one. I don't know how long are we,
+but I'm going to check afterward. And um
+yeah,
+maybe I'm going to make bar breaks. Who
+knows? So, have a nice evening and good
+sleep at India and thank you so much for
+joining and see you next time. Bye-bye.
+And next time I bring some music.
+Three hours. Crazy. Three hours.
+>> [clears throat]

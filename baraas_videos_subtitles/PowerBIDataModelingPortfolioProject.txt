@@ -1,0 +1,4471 @@
+Hey friends. So now we're going to do
+something amazing. We're going to go and
+build data model projects in PowerBI
+exactly like I do in my real projects.
+The thing is I have been involved in
+many PowerBI projects at my work that
+had bad struggle with the performance
+and as well delivering wrong numbers.
+But after investigating it was not the
+dashboard was bad or ducks almost each
+time it was the bad model underneath the
+reports. So that's why I have prepared
+for you for this project a nightmare
+data set that looks exactly like the one
+that I have seen in companies. Full
+chaos, bad shapes, bad data models, and
+as well bad relationships. So now what
+I'm going to do, I'm going to walk you
+through this data model step by step
+exactly like I do in my real project. So
+that at the end we're going to get a
+healthy data model that is ready for
+reporting. And yes, this is the best way
+to learn data modeling by doing
+projects, not just like watching
+disconnected videos. So that at the end
+you develop like a feeling for the whole
+process end to end. And very important
+you don't just watch me doing the things
+you always work with me. So for each
+step you pause the video you do it at
+your end and then you continue. All
+right my friends. So this is going to be
+fun project to do and now let's get
+started.
+>> Battle stations everybody. Let's go go
+go.
+>> Okay. So now before we jump in I'm going
+to show you the project faces for the
+data moduling. So first we have to
+prepare. We're going to open the mess.
+So we're going to set up the workspaces
+in power query and then we're going to
+start investigating. So we're going to
+start exploring and have basic
+understanding of the tables. What is the
+business? What are the entities? Which
+one are good candidates for dimensions?
+Which are for facts. So we're going to
+develop like a big picture in our head.
+The second phase we start building. So
+we start building the dimensions. We're
+going to find like a group of tables
+that relate to each others and turn them
+into clean dimension. So we keep
+iterating until we build all the
+dimensions for the data model. Then the
+third step we're going to start building
+the facts and connect the dimensions to
+them. So we take all those event tables
+and start building the fact. And after
+that we connect all the dimensions to
+our new facts and start testing of
+course so that the numbers never break
+silently in our data model. And then the
+last phase is going to be the polishing
+phase. We're going to go and add
+security to our data model. And then we
+do like final test to validate the whole
+data model. So this is the whole
+project. So those are the faces that
+we're going to go through and as well
+before we start like building anything
+we have to keep in our mind those rules
+we're going to follow them from the
+start to the end no matter which step we
+are in. So the first rule or goal is to
+build star schema fact table in the
+middle surrounded by dimensions and we
+never connect facts table together. The
+second rule we have always to understand
+before do any changes specially we have
+to understand always first the grain of
+each table. We have always to say it
+loud in order to understand the grain.
+Otherwise, we're going to build wrong
+dimensions and facts. Now, the third
+rule, every info, every column inside
+our data model must earn its place. So,
+that means if we find any column that is
+not really needed for analytics and
+reporting, we have to go and drop it.
+And that's because of two reasons. First
+of all, they are wasting space inside
+our PowerBI file. If you have a lot of
+unnecessary columns, your PowerBI file
+going to be really heavy and hard to
+refresh and hard to move. So that's why
+we remove them to have some space. And
+the second and more important, they
+going to confuse you during building the
+visuals and reports. So if we find
+anything unnecessary, we just go and
+drop it. We can always go and bring it
+back if we need it. Rule number four, we
+always have to protect the numbers, we
+must know by heart the totals of our
+data model. So that each time we do like
+a change or we connect something new, we
+go and check those numbers to make sure
+that they don't break. And now we come
+to the final rule or let's say big step.
+We have to make sure that we are
+following standards that we have to
+define before starting the projects. And
+of course those standards we can define
+them from one project to another depends
+on the requirements. But for this
+project the standards going to be like
+this. First of all we have to define the
+language. Yes, this sounds like simple
+but I saw a lot of projects where they
+are mixing languages in the data model.
+So yes the language going to be here
+English. Then we have to follow the same
+naming convention for the table and the
+columns. And of course there are a lot
+of naming conventions but for these
+projects we're going to follow the snake
+case. All letters all characters are
+lowered and they are separated with
+underscore. Now as well you have to
+define the prefixes and the suffixes
+like for example in the table names. If
+we have a fact table we can have the
+prefix fact score like for example fact
+underscore sales. And if it is dimension
+it's going to be dim shortcut for
+dimension like only three letters
+underscore then the dimension name like
+for example dim customer. This is really
+important because I saw a lot of
+confusion if a lot of people are working
+on the same PowerBI project. One going
+to call it D customer and another
+developer going to call it dimension
+customer. So we have to set up the
+standard for our projects before we
+start building. Now about the columns we
+as well could bring some standards like
+for example the surrogate keys anything
+that we create inside the data model
+going to ends with the suffix underscore
+key like for example customer key
+product key. So once you see in the data
+model okay it ends with underscore key
+that means we created that it is not a
+natural key that cames from the source
+like for example the customer underscore
+id this is something comes from the
+source file and the customer underscore
+key it is a surrogate key that we just
+created in the model so that you have
+understand the different types of your
+keys in the model. Now the last rule we
+have to make everything friendly. So
+that means we have to give for
+everything the table name the column
+name even some values inside our tables
+friendly meaningful name so that once
+you start building the reports the
+values can be friendly and everyone can
+follow the reports we don't bring any
+cryptical shortcut technical names that
+we inherited from the source systems so
+this is the setup those are the faces
+the rules the mindsets that we're going
+to follow through the whole project now
+let's get started with our PowerBI
+project all right friends so now I'm
+really glad to present you the nightmare
+data set that you're going to use for
+this project. Have a look to this
+beautiful chaos because my friends there
+is high chance if you join a company
+join PowerBI projects that their data
+model looks exactly like this. I have
+seen this in many projects where the
+data model makes no sense. You cannot
+see like star schema here many to many
+relationships between tables. The filter
+direction is like everywhere and that's
+all because people skip the data
+modeling step. They just connect the
+source systems to PowerBI and jump
+immediately to the visuals to the report
+dashboards. They just want to build
+fancy reports for the end users. But of
+course, after a while once they start
+sharing the dashboards, the users can
+understand all the numbers makes no
+sense. They usually come back to this
+model and start fixing the data model in
+order to bring better numbers. So my
+friends what I have done for the
+preparations I brought all the scenarios
+from my projects and build this
+nightmare data set in order to cover all
+the scenarios that you might face in the
+projects. So our goal is to turn this
+into a healthy star schema bring correct
+numbers and as well has good
+performance.
+Okay. So now we're going to start with
+the phase number one the preparation.
+That means first we have to have good
+understanding about the content of those
+tables. So what is the business? What
+are the entities? which tables are good
+candidates for dimensions which are for
+facts. So basic understanding about what
+we have and we don't have like to deep
+dive into each small detail just to
+develop a feeling about the business
+about the data and after that we're
+going to do like few setups in the power
+query as a preparation for the project.
+So now let's start let's understand what
+we have here and I will not go through
+all the relationships because we're
+going to break the data model and anyway
+we have like to build the relationships
+again. So just basic understanding of
+the tables and we can do that by going
+to the table view. So we're going to
+start from the top to the addresses. So
+what do we have here? We have an address
+ID, street, city name. So it's all about
+the geographic, the addresses, and maybe
+for the customers or something. So this
+is for the first table. Let's go to the
+second one, the campaign log. Okay, this
+one is a little bit bigger. So here we
+have the campaign name, the channel,
+start date, end date, a budget,
+impressions, click and spend. So it's
+all about our marketing campaign day by
+day. So this looks like an event and
+this is really good candidate for a
+fact. So we have numbers, we have dates.
+Now let's go to the third one. We have
+the campaign SKUs. This one looks
+compacted. So we have the campaign name
+again and for each campaign we have like
+a list and I think those are the
+products that we have in the business.
+So that means this table shows us what
+are the products that were involved in
+the campaign. And of course this is not
+easy one to consume because the list is
+usually bad for reporting. And we can
+see as well the column names are not
+correct and we can find them in the
+first row inside our table. Of course we
+have to clean those up. Now let's go to
+another table the cities. So what do you
+have here? We have again the cities and
+as well the regions. So this is again a
+part of the informations about the
+geography, the locations, the addresses.
+This is of course descriptive
+informations and we're going to need
+those stuff as a dimensions. Now let's
+go to the next one. We have the custom
+master. So it looks like this is our
+customer table. So we have customer ID,
+customer name, segments, the address ID.
+So this is the first connection to our
+addresses. Then we have like people, the
+account manager, payment terms, some
+hash keys and source ids. Those stuff
+comes from the sources. But now look at
+this. The customer name is not actually
+like a person. They are companies. Like
+here for example, we have the Atlas
+industries. So that means this is a very
+important table for the customers and
+our business is B2B. So that's all for
+this one. Let's go to the next one. We
+have the customer contacts. So what do
+we have here? We have again the customer
+ID, the contact name, the emails is
+primary. Now you can see for each
+customer like for each company we have
+multiple contacts which makes sense of
+course because our customers are
+companies and usually we have to deal
+with multiple people in the same
+company. So this is all about who we
+talk inside each company. Let's go to
+the next one. We have a dimension order.
+So this one looks really garbage. We
+have only one column and no context to
+it. So we have some kind of ids that
+actually we cannot relate to anything so
+far. So I think this is junk. This is
+something that we could drop. So we just
+faced our first garbage inside the data
+model. Let's go to the next one. We have
+the exchange rate. So what do we have
+here? We have the currency, the rate and
+as well the dates. So this is as well
+information about our business. Let's
+keep going to the inventory. So now what
+do we see here? We see the product names
+and for each month we have like numbers.
+So this is all about the inventory. So
+that means how much stock we are holding
+month by month. And here we have like a
+whole year. So for each month we have
+one column. All right. Let's move to the
+next one. we have the invoice lines. So
+here we have like an invoice line, an
+invoice ID, product and amount. So that
+means we have invoices in our system and
+those are the details about each
+invoice. And that brings us to the next
+table, the invoices. And here we see
+like the master table for the invoices.
+So we have the invoice ID, the order ID,
+the customer name, the invoice date and
+the amount as well. So this looks an
+event a good candidate for a fact table.
+So it is connecting to other things like
+the invoice ID, the order ID, the
+customer name to the customer table. We
+have a date and numbers. And if we need
+more details about the invoices, we have
+the other table that we just checked the
+invoice lines. So we just spotted
+another fact. Now let's move to the next
+one. We have the order line items. So
+again sounds similar to the invoices. We
+have the details about each order. So
+for each order we have like lines and
+order ID and this time we are connecting
+to the product names. So finally we see
+here the products and then we have here
+some numbers like the quantity, the
+price, the costs, discount and total
+sales. So those are the details for each
+line. Now we're going to go to the
+orders. So we have here two orders where
+the orders are splitted by the year. So
+for 2025 we have here a lot of things.
+So here we have an order ID, a legacy
+reference, customer name, customer city,
+region. So again we have like some
+repetitions inside our data set to which
+city we're going to ship, to which city
+we're going to pill. So we have here
+different cities. Then we have the date,
+the order date, the order channel and a
+lot of columns in this table. So again
+this looks like a big table for a fact
+because here we have an events. Each
+line is about an order but as well at
+the same time we have a lot of context
+inside these facts. So this is a
+gigantic one for the 2025 and I think
+the 2026 looks exactly the same. So they
+are just getting splitted. All right. So
+this is our third fact I believe but
+inside it we have a lot of dimensions
+that we could extract. Now let's go to
+the next one. We have the payments. So
+this one is small one. We have the
+payment ID, the invoice ID, customer
+name, date and amount. Again looks like
+transactions events. So this sounds like
+a fact table as well. And now to the
+next one which is really important the
+products. Finally we have a dimension.
+So what do you have over here? We have
+the product code, the name, the brand,
+the subcategory, the price and many
+other descriptions for the products. So
+this table holds the context for the
+business products which is a classical
+one for a dimension. Let's go to the
+next one. We have the regions. Well,
+again we have informations about the
+region and as you can see we are
+operating globally, North America,
+Europe, Asia. So our business is
+everywhere. Now let's go to the next
+one. We have the sales targets. So we
+have a row for each month and as well
+the target revenue. So it looks like
+someone planned the budget the revenue
+for each month. And this is a classical
+use case where we're going to compare
+the target to the actual sales that we
+have in the transactions. So for sure
+we're going to need this. Now let's go
+to the next one. We have the security.
+This is really important one. So here we
+can see the user email and the region.
+So we can see each employee which region
+they are responsible to. And of course,
+this is a perfect table that we're going
+to use in order to build the role level
+security. So, we have to keep our eyes
+on it. Now, let's go to the next one. We
+have the sheet one. Weird name, right? I
+think this is like something wrong here.
+So, we have the shipment ID, order ID,
+mode, ship day, delivery date. So, all
+informations about the delivery. So, we
+can see for each step how and when
+orders get out. Okay, interesting one.
+But we have to rename the table. Now,
+let's go to the next one. We have the
+shipments. Well, those two tables are
+identical. And yes, I think the sheet
+one is an import problem. And this is a
+classical thing that happens inside the
+data model that you have like two tables
+that are identical and you have to get
+rid one of them. So this is not really
+good. Now let's go to the subcategories.
+So very simple one. We have here like
+mapping between the category and the
+subcategory. Of course, this is going to
+help us in order to organize our
+products later. Now let's go to the last
+table, the user details. So we can see
+here for each user we have like credit
+limits and a phone number. Well, of
+course, this is confusing which user we
+are talking about. I think this going to
+be for the customers. If you go and
+check the customer master. Well, yes, we
+have like the same patterns in the ID.
+So, those are more details for the
+customers. So, that means in the data
+sets we are using like two names.
+Sometimes users, sometimes like
+customers. Of course, we have to deal
+with that. All right, my friends. So,
+that's it. We just visited all the
+tables. We developed like a feeling
+about the business. What are the
+entities? What are good candidate for
+dimensions? Of course here the big
+dimension is going to be the customers
+and the products and as well we have a
+lot of events happening in the business.
+So we have a lot of facts. We have
+invoices, we have orders, we have
+payments and as well we have shipments.
+So campaign. So a lot of events are
+happening in the business and this going
+to be really interesting on how to make
+a data model out of this and how to
+connect things together. So as you can
+see my friends this is really important
+step. We have to get a feeling about the
+data before we change anything. The more
+you explore, the more you analyze, you
+build this understanding about the data,
+about the domain, and it's going to be
+easier for you later to understand the
+grain and how to build the dimensions
+and facts. The more you invest in this
+phase, the less errors and mistakes
+you're going to do in the data moduling.
+Now, of course, I have done this quickly
+because I have built this data sets. But
+I really recommend you to pause the
+video and go through them one by one.
+Understand its contents. If you have
+done this already, now we're going to go
+and do a last step in this phase where
+we're going to prepare the power query
+because we're going to work a lot with
+the power query in order to shape the
+data model. Not everything going to be
+like connected. We have sometimes to
+merge, append, and as well clear some
+quality issues. So now let's go to power
+query. As usual, we go to transform
+data. Now, of course, in this phase, we
+will not go now and transform or change
+any table. All what we want is to just
+organize it because the thing is as you
+start like building the data model you
+will be creating new tables references
+and quickly the queries over here going
+to go in chaos. So you will not remember
+which tables are the source table which
+tables are the new one that you just
+created. So this going to get out of
+hand quickly especially if you have like
+big model like this. Now of course there
+is like no best practices how to
+organize your projects but I'm going to
+show you how I usually do it. So
+everyone does it in their own way on
+their own style but this is how I like
+to do it. So I start by creating a new
+group. So new one and we're going to
+give it a name. So I like like numbering
+the folders just to sort it on the left
+side. So the first one going to be the
+stage. So the stage going to be the
+folder that going to contain all the row
+queries as it is from the source
+systems. So that means my friends all
+those queries that we see now on the
+left side going to be inside this
+folder. So that I know okay all the row
+stuff are living inside this folder.
+with that we don't mix it with new
+tables that we generate. So let's go and
+create it. Now you can see PowerBI put
+everything under other queries which is
+a good thing. Now I'm going to go and
+select everything and drag and drop them
+on the new folder. So this my new folder
+the stage contains all the row sources.
+So this is the first folder. We're going
+to go and create another one and we're
+going to call it two dimensions. Now,
+this is going to be an empty folder for
+now because we're going to put inside it
+the new dimensions that we create from
+the stage like the customers, the
+products and so on. So, that means if I
+want to go and do something for the
+dimensions, I go immediately inside this
+folder and I'm going to see it. Now,
+usually after I build the dimensions,
+I'm going to go and build the facts.
+That's why the third one going to be the
+fact folder. So, same thing any fact
+that I build from the stage, it's going
+to land inside the folder facts. Of
+course, you can go and put them together
+like maybe call it the data model where
+the prefix is going to decide for you
+whether it's fact or dimension. But I
+like to split it like this in order to
+have like a quick access. Now we're
+going to go and create a last one. So a
+new group, we're going to call this for
+support. Now in our data model, we're
+going to have some tables that don't
+belong to dimensions and facts. Like for
+example, the security stuff or maybe
+some like data that we insert. So
+anything that don't belong to dimensions
+and facts going to go to this folder,
+the supports. Now you might ask okay why
+do we have the support if we have like
+another folder called others right we
+could use it as well but the other
+queries has different job so in case we
+connected any new tables any new sources
+to our data model it going to land
+inside the other queries they are like
+tables that are in my to-do list that I
+have to work on so my friends this is
+how I usually organize my power query in
+order to build the data model out of the
+row tables now look at this we have 23
+tables inside the stage and nothing
+inside other tables of Of course, as we
+progress in the project, we're going to
+take all those tables and put them
+inside the different folders. We have to
+grab all those stuff and start building
+the data model. All right, friends. So,
+that's what for the phase one. We have
+now basic understanding about the
+content, the tables, and we have
+prepared our projects to start building.
+Finally, we're going to kick off the
+phase two where we start building the
+[music] dimensions.
+This is how we're [music] going to do
+it. So, we're going to have like a loop.
+We're going to go through each dimension
+where we're going to grab a group of
+tables that describes the same thing. So
+the same entity. So all tables that have
+the same context for something like a
+customer. So what we're going to do,
+we're going to go and pull them
+together, reshape them into one clean
+dimension if it's possible. And we're
+going to do whatever it takes. So we're
+going to split, merge, append, fix, drop
+until we get the shape of a dimension.
+And of course before we move on to the
+next one we have to polish the dimension
+to make sure that we are following the
+standards that we agreed on the starts.
+So the snake case names the table names
+the prefixes the suffixes everything.
+Once it is polished then we go to the
+next dimension. So my friends this is
+the whole loop. We pick tables build
+clean it to the standards and then we
+move to the next one. But I'm going to
+warn you from now you might find
+yourself that you are repeating the same
+steps over and over for each dimension.
+And guess what? This is the part of the
+job. This is the nature of things how we
+build data modules. And with each
+iterations, of course, you're going to
+be faster. So now let's start building
+our dimensions.
+>> Let's go build an airport.
+>> Okay. So now let's start with the first
+dimension. And here we have to go and
+pick like one topic or entity. And I'm
+going to start with the big elephant in
+the data model. We have the dimension
+customer. So we're going to go and build
+it. Now how we're going to do it? We go
+and pick all the tables that are related
+to the customers and turn it into one
+dimension. So now based on what we have
+learned we have a lot of tables but
+obviously the biggest table that's going
+to gives us context about the customers
+is the customer master. So now what I
+usually do is that in this scenario
+since we have like a lot of chaos over
+here it's like a basel game. I'm going
+to go and grab all those tables that are
+related to the same topic and move them
+to one section in the model. So for
+example here the table customer master
+I'm going to go and grab it over here
+just in order to get like feeling of
+progress over the time. Now what is the
+other table that actually gives us more
+context about the customers? We had the
+contacts. So it is over here the
+customer contacts and at the end we
+found like a table the user details
+where we get like phones and emails as
+well. This one gives us some context
+about the customers. Now there is a
+topic that actually could be relevant
+that the addresses. Each customer has an
+address. Of course here the question is
+whether we make like an extra dimension
+for the addresses or we merge everything
+inside the customer. So I'm going to say
+let's go and group them as well together
+with the customers. So this is the
+addresses over here and for the
+addresses we saw as well some other
+related tables for the locations. So we
+had like the cities it is over here and
+as well we had the regions. So this
+could be as well interesting. So now by
+looking to this we have like three
+tables about the customers and three
+tables about the addresses. So now I
+know okay on the top right I have the
+dimension customers and my goal is to go
+and turn all those tables into one
+single dimension. So as you can see our
+data model is getting like maybe slowly
+less chaotic but we are not there yet we
+didn't start. So now in order to change
+the shape of the tables of course we
+have to go to the power query. Now in
+this scenario where we have a lot of
+tables I usually start with the
+foundations with the biggest table
+that's going to gives us a lot of
+context about the customer and the one
+table that let's say has a completeness
+like has all the customer and I'm going
+to say this is very obvious it's going
+to be our customer master here we have a
+lot of columns about the customers and
+this is very good starting point so now
+before we do anything we will not go and
+change now directly the shape of this
+table we have to go and make a reference
+out of it so that I can work on a copy
+let's say and leave the row data as it
+is. Maybe later we're going to need as
+well this table for something else.
+That's why I usually go and say okay
+let's go and build a reference out of
+this. So we have it over here and then
+drag and drop it to the dimensions. All
+right. So now let's minimize this. The
+next step we have to go and rename it.
+And here we have to be really careful
+with our rules. So we said we have a
+prefix for each dimension called dimim.
+And we are using the snake case. So
+everything should be lowered. Actually
+that's it. This is our first dimension.
+Now let's have a look. What do we have
+here? We have a lot of context about the
+customers. And how many customers do we
+have? We have 61 customers. And this is
+really interesting. The last row is 999.
+And it sounds like a test customer. So
+this is like a dummy information that
+came from the source system. And I'm
+going to say we have to get rid of it.
+So I'm going to go and filter this data
+out. And we can do that very simply by
+going to the filter over here and search
+for the ID. And then all what you have
+to do is to just unmark it. That's it.
+So now by looking to this we have 60
+customers inside this table. This is the
+foundations. We have to keep this in our
+mind because as we start adding more and
+more things to this table we have to
+make sure that everything stay unique
+and we stay with the 60 customers. So
+now we have the foundations. Now let's
+go and look to the other tables. So we
+have the customer contacts. Over here we
+have the ID, the name, the email and is
+primary. So we have here more context
+about the customers. And of course it
+makes sense to go and put those
+informations side by side with the other
+context. So with the dimension customer
+and how we do that we go and merge the
+two tables. So it is very simple. We're
+going to go to the dimension customers
+and say okay let's merge the queries
+together. So dimension customer and the
+next one it's going to be the customer
+contacts. The ID going to be the
+customer ID and the left join. Make sure
+it is always left. If you use inner you
+might lose data from the main dimension.
+We don't want that. So okay. Now we get
+it like a new column over here. we have
+to expand and select exactly what do we
+need. So we need the name, the email and
+is primary. So with this we got our
+three columns side by side with the
+other context. Now it is very important
+once you add once you merge new data
+inside your table you have to make sure
+that everything stay correct. That means
+the data is not fanning out or let's say
+getting duplicated. Now if you go and
+check here we had 60 customers but now
+as I scroll down we have way more than
+60 customers and that's because the same
+ID is keep repeating over and over and
+of course that's all because the new
+merge table that we have attached to
+this table. So that was a really bad
+merge between those two tables and this
+is exactly what you have to be careful
+but merging is not destroying your
+dimension or maybe your facts. Now of
+course the question is why did this
+happen? Because my friends we are
+merging two tables with different
+grains. So again the customer contacts
+each row doesn't represent one customer.
+Each row is representing one contact for
+the customer. So here for example for
+the second customer we have four
+contacts. So the grain is different from
+the customer master. Here each row is
+really representing only one customer.
+And once you merge different grains you
+get this bad effect. So now of course
+the question is how we going to solve
+this? Well there is like different ways
+on how to do it. You can say you know
+what we can go and convert this table
+into the grain of customer. So that
+means each row represent one customer
+and what do we do with the contacts? We
+make like a list of contacts. It's like
+we are grouping up or let's say
+aggregating this table to the level of
+the customer. And of course we can do
+that if you go to the transform and then
+group by the columns by the customer ID.
+Another solution that you might say, you
+know what, this is the contact of the
+customers and we can make another
+dimension out of it and then make a
+relationship between this new dimension
+and the customer. Or a third solution
+that you might say, you know what, let's
+not go and add all the contacts inside
+the customer dimension. Let's just add
+the primary contacts. So for example,
+for the second customer, we have here
+like four people only one of them Sara
+is actually the primary contact for this
+customer. And if that is okay for the
+analyzes and the reports then we can go
+and merge actually this table to the
+customers again. But of course we have
+to make sure that we really have like
+one primary contact for each customer.
+We can do that by filtering the data.
+For example over here and say show me
+only the primary contact. So of course
+this dimension is very small. You can go
+and check like by eyes and see with this
+I have exactly 60 customers and I don't
+have like any duplicates in the primary
+key. So now again my grain over here is
+one row is one customer and the
+relationship between the customer
+contacts and the dimension customer is
+again one one and this is very safe in
+order to do a merge. So now since we
+filter the data like this let's go and
+check our dimension customer. Now let's
+see again we have here a clean dimension
+where we have only 60 customers and on
+the right side of course we have our
+primary contacts for each customer. So
+with this finally it is safe to merge
+those two tables into one. Now of course
+we are just checking by looking right
+whether there's duplicates or not. There
+is like smarter way on how to do it that
+you go to the primary key the customer
+ID and you group up the data by the
+rows. So you say here group by and you
+just say okay count and here the
+operation going to be count rows. So if
+you go and say okay of course the data
+going to get grouped up by the rows and
+if you see it like this where the count
+is everywhere is one then my friend you
+don't have any duplicates and you are
+okay. Of course you can go and check for
+here and you can see okay we have only
+one value the one. So this is something
+that I do each time I merge two tables
+together to check quickly whether we
+have duplicates or not but of course
+this is only for checking. So I'm going
+to go and remove it. All right so that's
+what the first lesson be careful for the
+grains if you are merging things
+together. Now let's go and check the
+third table. We had the user details
+right now again we have more context to
+the dimension customer. We have the
+limits and the phone. That's we have to
+go and merge those informations to our
+new dimension. But this time we have to
+be careful. Do we have here the same
+grain? Well, by looking to this, I'm
+going to say we don't have here any
+duplicates. Each row representing one
+customer. So this one going to be really
+easy. I'm going to go to the table
+customers. Same thing. We're going to go
+home and then merge find our table was
+at the end. So user details. Now things
+here getting interesting about the
+entity. We have here the user ID. But in
+other table they call it user ID. We
+have of course to talk about this
+because we have now like two different
+names for the same entity right but
+first let's go and merge things together
+and of course we have to expand so we
+just need the new informations credit
+limit and the phone and again before we
+celebrate having more data inside our
+dimension we have to go and check
+whether everything is unique and we
+don't have duplicates so looks really
+good now before we continue with the
+other tables and building the dimension
+I still don't like it that we found out
+inside our data we have like two names
+for the same entity we had the customer
+and as well the user. So of course what
+is the true? How we going to call this
+dimension customer or dimension user?
+This happens a lot of course by the way
+in the companies where you have
+different departments calling the same
+entity different names. In one
+department they call all the customers
+as users and other is customer. So of
+course this is always a dilemma as you
+are building a data model especially if
+you are connecting like multiple sources
+inside one model inside your project.
+Now of course one idea could be let's go
+and ask the business users who are using
+the report which name they want to use.
+Now the thing is if you are asking a
+business user from specific department
+they might say you know what we use
+customers then I want to see it in the
+report as well as customers. But if you
+go and ask another department another
+business they might say use the user. So
+still it is dilemma and they will not
+really help you in order to decide for
+your data model. You cannot go and use
+both of them. That's why you have to
+have like feeling about the data model.
+If you have a lot of tables are using
+the customer as an info, then go with
+the customer. Like here in our example,
+most of our tables are using this term
+customer and only like one table is
+using the user. That's why I'm going to
+decide for our data model to go with the
+customer as an entity name and let's say
+ignore the user as a term. So now let's
+go back. So that means we're going to
+stick with the name dimension customer.
+We will not rename anything. Now let's
+go back to the other three tables. Now
+the next batch of tables, they are all
+to do with the addresses. Look at this.
+We have here the address ID. And now
+here my friend, you have two options.
+Either you're going to go and build a
+new dimension called addresses and then
+connected to the dimension customer. And
+with that you are actually building
+remember the snowflake schema one
+dimension connect and branch to another
+dimension or we're going to stick with
+our goal where we are building the star
+schema. So we always try to fit
+everything together into one dimension
+and only in extreme cases we might go
+and branch. So of course I'm going to
+stick with the goal. We are building
+star schema. That means all the address
+informations going to go inside the
+dimension customer. And don't worry, we
+can always go and split if things goes
+wrong. So that means we have now to go
+and merge more and more things to the
+dimension customer. And I would like to
+show you one trick that I usually use in
+order to feel safe before merging things
+together. Yes, you can go and count
+things after merging, but usually I go
+to the module layer. So, first save.
+Yeah. Okay. Close and apply before going
+to the model view. Now, look at this.
+This is our new dimension that we are
+actually building all the time. And you
+can see that PowerBI is always trying to
+connect a new table to the whole data
+model. Of course, we have to remove all
+those stuff and start from a scratch,
+but don't worry about it. Now, now the
+thing is if I have like a new table that
+I would like to merge it to the table
+customers, I go and check the cardality.
+Like for example, we want to merge the
+addresses with the dimension customer.
+Right? Now you can see we have already
+like a relationship between those two.
+Now if I see the cardality is one to one
+relationship between those two tables.
+Then this is really safe to merge those
+two tables together because PowerBI
+automatically check the values inside
+those two tables and detect the
+cardinality. And of course this is a
+great indicator for me to say nothing
+going to go wrong if I go and like merge
+those two tables together. So this is a
+good thing. And by the way about the
+cardality if the relationship is one to
+many so from the addresses is one and in
+the dimension customer is many it is
+still safe. So there's another way to
+check before let's say merging two
+tables together. Let's go back to power
+query. So now same thing let's go to the
+dimension customer. We're going to go
+and merge and here we're going to search
+for the addresses. This time the ID
+going to be the address ID as well. Here
+address ID always left join never inner
+join. If you have one missing address
+then you are removing a whole customer.
+So this is not safe. We always use lift
+join and same things. So we're going to
+go ahead and expand. We just need the
+street and the city name. So look at
+this. Looks nice. Now of course we have
+to go and test. So do we have 60
+customers? Well yes. So merging the
+addresses didn't cause any harm any
+issues. Now what else do we have? We
+have the cities right? So let's go over
+here. Now what do we have here? We have
+the city name and the region name. But
+here we have equality issue. You can see
+that the first row is actually the
+column names and not the column one and
+column two. Now in order to fix this,
+this is very simple. We have here in the
+repon use first row as headers. So
+probably are going to go and promote the
+first header as the column name for the
+table. So this is very simple. Look at
+this. We have now the city name and the
+region name. Now again what we're going
+to do, we're going to go and merge this
+inside our dimension customer. Again as
+I told you, you can go and check whether
+we have a one relationship at this
+table. So we have it over here the
+cities. Let's go and grab it. I'm going
+to go and remove this relationship and
+then try to connect it to the dimension
+customer. This of course only for test.
+So I'm going to take the city name to
+the city name. All right. Look at this
+one to many relationship. So at the side
+of the cities we have one. So I'm going
+to get good feeling about it in order to
+merge those two tables together. We
+don't have many. This will not duplicate
+my customers. So that means we're going
+to go back to transform data. So again
+we merge. And as you can see I'm merging
+all the time and I will keep doing that.
+So let's go and connect our cities. So
+city name and the city name is somewhere
+over here. So let's go and connect left
+join. Now what do we need from this
+table is actually only the region name.
+We have already city name. So we
+actually don't need it twice inside our
+dimension. And we're going to go and
+check we have 60 customers. All right.
+Now to the last table. We have the
+regions. Well here we have only one
+column. We don't have like a lot of
+context that's going to help us for the
+dimension customer. And the region
+information we have it already. So it
+makes no sense to merge this table to
+the dimension customers. This
+information is already in our dimension.
+So as you can see we have here the
+regions. So actually this makes no sense
+to merge inside our dimension customer.
+It will not add any value or add any
+context. And this is of course one of
+the things that happens all the time
+inside the data models. You're going to
+find the same piece of information
+multiple times in multiple tables. So
+the region exists here and as well in
+the cities and maybe in another table
+that we didn't discover yet. So here we
+have to be very careful. We are not like
+repeating the same data over and over
+otherwise we are confusing the data
+model. So my friends we went through the
+six tables and we have now one gigantic
+table that holds all the context about
+the customers. And so that was big step.
+We have compiled now six tables into one
+dimension customers. But we are not done
+yet. We will not go to the second
+dimension until we do my favorite step.
+We have to do the housekeeping. So we
+have to clean up, organize and make sure
+that we are following the standards. So
+we polish everything in order to make
+the dimension is ready to get used in
+the data model. So let's do that. All
+right. So now the first step that we
+have to do is that we have to get rid of
+unnecessary informations unnecessary
+columns inside the dimension. Remember
+the rule each info each data should earn
+its place. So that means if there is
+something unnecessary we have to remove
+it otherwise it's going to take space.
+It's going to lead to bad performance
+and as well it's going to lead to
+confusion as you start building the
+reports. So that means my friends now
+we're going to go through all the
+columns inside our new dimension and
+think about it should we leave it or
+should we drop it. So the customer ID
+for sure it's going to stay the customer
+name the segments all those informations
+are important for filtering and slicing
+and building visuals. Now to the address
+ID well my friends I believe we don't
+need it. I can't imagine that this going
+to be necessary for reporting only for
+connecting things. And we have decided
+to put everything together into one
+dimension. We are not making snowflake.
+That's why I'm going to go and drop it.
+So remove the account manager. Okay. The
+payment terms going to stay. Now the
+hash keys. Well my friends, those stuff
+comes from the source system. And I will
+never imagine that we're going to need
+this for reporting. That's why we're
+going to go and remove. By the way, this
+takes a lot of space inside the data
+model. I remember in one project we had
+like for each table one hash key where
+the refresh time for the data model was
+really horrible. It took a lot of time
+and all because those hash keys they are
+string values and they are really big
+and if you have millions of rows imagine
+how much space this takes. So the fix
+was very simple to just go and drop all
+those hash keys and suddenly we saved
+around I think 20% of the data set. So
+now let's go and remove the hash key.
+Then we have source ID. This is as well
+some garbage from the source system. We
+would never use this. Now here we have
+the primary contacts. Okay we have their
+email. Now whether it is primary well
+this can be always true right we use
+this as a filter so that means actually
+this is like totally useless information
+and we would never use this so let's go
+and remove it limits going to stay the
+phone the street the city name and the
+region so not that bad right we just
+dropped like around four columns all
+right so this is the first step that
+we're going to do in order to clean up
+our dimension now comes the naming
+convention as you can see we are not
+following the standards only the table
+name is actually using the camel case
+but all the columns are actually
+following another case. This we call it
+the Pascal case where we don't have any
+separations and the first letter is
+capitalized. Now of course since we have
+committed to the snake case we have to
+go and rename all the columns or you can
+say you know what since everything is
+like Pascal case I'm going to go and
+change the rules but of course you have
+to stick to it and we're going to follow
+the Pascal case. Well, this is something
+that you decide. But I have decided for
+the snake case and I'm going to go and
+now rename everything to the standards.
+But of course, I'm going to speed up. So
+I'll just do it for the first column for
+you. So this going to be the customer ID
+and this going to be customer name,
+right? Like this. So now see you soon.
+All right. So now to the last column. As
+you can see here, we have the cities dot
+region name. We don't need the cities
+dot because this is just comes from the
+original table, the cities. We're just
+going to go and call it region. That's
+it. So I'm going to say everything is
+clean inside our dimensions. The names
+are friendly. So the table name, the
+column names and as well the values
+inside the table. This is really
+important. If you see something critical
+technical, we have to do something about
+it. Now I'm going to say our dimension
+customer is ready to use. But now of
+course before we close and go to the
+second dimension, we have the last last
+step where we're going to go and hide
+all the original tables so that we don't
+see them anymore inside the model. So
+we're going to go through them one by
+one. the addresses we don't need it
+anymore. So we will deactivate the
+enable load. So yes, same thing for the
+customer master. So we have to do the
+whole thing for all six tables. The
+cities. So deactivated the contract as
+well here. The regions. Well, actually
+we didn't merge it, but we don't need
+it. We have this information already in
+the dimension customer. And the last
+one, the user details. So right click
+and disable. Okay. So with this, we have
+consolidated a lot of things into one
+dimension. Let's go and close and apply.
+Well, look at this. Everything gone and
+I have only the dimension customer. Now,
+I'm going to go and clean up those
+relationships. I don't need them. So,
+remove, remove, and last remove. So, now
+comes the most satisfying like thing
+that I'm going to do. We're going to
+zoom out and look at this. Our data
+model get reduced little bit. And now we
+have here one good solid dimension. So,
+my friends, this is the first dimension.
+And I'm going to say this is the biggest
+dimension that we have inside this row
+data model. We have of course to keep
+iterating on this. And the next big
+dimension of course in our business the
+products. And now again the same
+iteration we start by collecting all the
+tables that has to do with the products.
+We had very big table called products
+where we have a lot of context about it.
+So I'm going to drag it over here. And
+the second table that actually has to do
+with the products that was the
+subcategories. I don't find it. Well
+yeah it's over here. So this one going
+to organize the product. And I think by
+looking to this actually that's it. So
+we have only two table to do with the
+product. We're going to go and try to
+merge everything into new dimension
+called them product. So let's go and do
+that. We're going to go again to the
+power query. All right. So now our two
+tables are again the products and the
+subcategories. Now of course we have to
+start one of them as the foundations.
+It's going to be the products of course
+because here we have a lot of context.
+This is the master table for our
+dimension. So as usual. So what you
+going to do? Same thing. We're going to
+go and create a reference out of it.
+Drag and drop it to the dimensions. Let
+me just make this smaller. And we're
+going to go and rename it. Same thing.
+The prefix is dimension and the name is
+product. Okay. So now let's have a quick
+look to our dimension products. As you
+can see, we have a lot of columns
+describing as well. We have a lot of
+things that we're going to clean up at
+the end. But of course, we have to
+understand how many products do we have.
+Well, same thing. We have 60 products.
+And the last one we have as well a dummy
+data. So it says don't use test blah
+blah blah. But that means this is
+something from the source. We're going
+to go and remove it quickly. So uncheck
+it. And other thing that let's make sure
+that we don't have duplicate inside the
+product. So we can do a quick group I
+group by. So count rows. Okay. Now we
+check this. Do we have any twos? Well,
+only one. So this is clean. We don't
+have any duplicates inside our products.
+But now you might notice that we don't
+have actually a product ID. We have a
+product code. So that means the source
+table is not providing like a unique
+identifier in order to connect it to the
+data model. It is using the code as like
+a business key. This is of course a
+tricky thing. So now we will not clean
+anything yet. Let's go and check the
+subcategories. So the subcategories is
+over here. Now the first issue with that
+we don't have the column name. So what
+we're going to do we're going to use the
+first row as headers. And the second
+issue actually here we are merging two
+informations in one column. We have the
+category and the subcategory side by
+side and they are separated with a pipe.
+Now of course we have the subcategories
+already in the dimension products. So we
+have it over here. But what is missing
+which is very important is the category.
+So that means we need the category in
+order to add more context to this
+dimension and we have somehow to grab it
+from this column. Now of course we
+cannot go and merge this directly to the
+product because we don't have keys. The
+keys are actually like piece of
+information inside each value. That's
+why we have to go and split this into
+two columns. One category and another
+one subcategory. So let's go and do
+that. So here we have a nice function
+called split columns by delimiter. So
+here PowerBI get it correctly. We are
+splitting by custom and the separator is
+the pipe. So actually everything is
+ready. Let's go and hit okay. Look at
+this. Now we have the categories and the
+subcategories. I'm going to go and
+rename things because here it says one
+and two. PowerBI has no idea about the
+content. So this going to be the
+category and the other one going to be
+the subcategory. Now we are not there
+yet because if you look at this you see
+that all the subcategories all the
+values are lowered. But if you check our
+dimension over here you see the key is
+not ready yet. We have it capitalized.
+So the first letter is actually an
+uppercase and this will not work. So if
+I go and merge now things together
+PowerBI will not find any match. So as
+you can see we have always like to
+prepare the data before merging. The
+keys must work otherwise you're going to
+get only nulls after merging. So now
+either we're going to make this lowerase
+or we go over there and we make the key
+as a capitalize. I'm going to change it
+over here in the reports. It looks way
+nicer if you have things capitalized. So
+how we going to do it? We're going to go
+to transform and here we have a nice
+function called capitalize each word. So
+let's do it. Now our key is ready for
+the merge. So everything now is simple.
+We're going to go to the dimension
+products. As usual we merge. We go and
+pick our table. So it is the
+subcategories over here. And now all
+what we have to do is to just select
+things. So subcategory with the
+subcategory and let's join. So let's go
+and set okay. All right. We have it here
+as a table. We have to expand. Well, we
+don't need the subcategory. We have it
+already. We just need the category. So
+okay, now it is working. As you can see,
+we have now the categories inside our
+table. All right. So now with this, I'm
+going to say that our dimension now hold
+all the context about the products in
+one table. We don't have anything else
+from the other tables. Now we're going
+to come back to this topic where I said
+we don't have like an ID from the source
+system. We just have like a code and a
+name. So it's not like the dimension
+customer we had here like an ID. Now
+here we have like two options. Either
+we're going to leave it as it is or
+we're going to go and create a surrogate
+key something that we create inside the
+model not from the business. And we're
+going to use this ID in order to connect
+it to the facts in the future. So I'm
+going to say for now I'm going to go and
+add it. So we're going to go and add
+column and we just go and add an index
+column and we start from one. So we have
+it over here. I'm going to go and rename
+it. So this going to be not the product
+ID. This going to be the product
+underscore key. We agreed in the rules
+if you are creating any keys from us. We
+always have the suffix underscore key
+for it. So that I know which ids come
+from the source and which one that I
+created. So it looks like this. And we
+have like 60 products. Now I'm going to
+say we are done with merging and
+creating things. Let's go to the last
+step where we start like cleaning up and
+bringing standards to this dimension. So
+that means again we're going to go
+through all the columns one by one and
+say whether they going to stay or leave.
+So the code of course going to stay the
+name, the brand, the subcategory, the
+prices, the supplier. We could use it
+for slicer. Now comes something that I
+saw a lot in data models where people
+just leave such information here. So
+those are the big text, the
+descriptions. Now this is of course a
+huge text. It is describing each
+product. And of course, we have to ask
+ourselves, do we really going to go and
+[clears throat] use such a description
+inside our reports? In most cases, no.
+We are not building like an operative
+system. We are not building an interface
+in order to show the descriptions of the
+products. We are building analytics and
+reports. And in most cases, we don't go
+and use product descriptions and long
+text in the visuals. But of course in
+the other hand I saw a lot of people
+that are using PowerBI in order to build
+some kind of application let's say to
+see all the data. Well there's like some
+projects that are misusing PowerBI in
+order to build interfaces but not BI
+right so in most cases I refuse to have
+such informations inside the data model
+that means we go and drop it. So remove
+now same thing we have here hash key the
+source ID all those informations came as
+garbage let's say from the source system
+and we don't need it here. Of course,
+there are maybe very important
+informations in the source systems, but
+here we don't need it. So, let's go and
+remove it. Now, here we have our
+category and the product ID. Now, before
+we start like renaming everything, I
+would like to go and sort the columns.
+So, I would like to see the product key
+at the start as like primary key and the
+category. I would like to have it side
+by side with the subcategory. Well, I'm
+going to say subcategory and then
+category. So, that like we have
+hierarchy, right? The product then
+subcategory and then category. I like to
+have things ordered so it makes sense as
+you are building visuals and reports.
+And now I'm going to say we have all
+useful informations and we can go now
+and start renaming things. Again I'm
+going to do it now offline in order not
+to waste time. So see you soon.
+All right. So this is the last column
+and with that we are following now the
+same naming convention. Sometimes I
+remove few things like for example the
+subcategory name. I call it now
+subcategory. So there is no need for the
+name inside the column name. Now there
+is one more thing by looking to the
+values you can see that the subcategory
+is actually capitalized. Same thing for
+the product name only the category is
+everything here lowercased and this of
+course because it comes from another
+table where everything is lowered. So
+now in order to like to bring standards
+to the values I'm going to go and apply
+the same function. So transform and
+capitalize each word. So now things
+looks like more harmonized everything
+capitalized and maybe we can add it as a
+rule inside our project where we say all
+the text values inside our data model is
+capitalized so that people once they
+start building reports they don't have
+to go back to the data model and start
+like adding more functions and
+transformations. All right so now we
+have really nice dimension as well. The
+last step that we're going to do we will
+just go and deactivate the row tables.
+So the products we will go and
+deactivate it. Yes. Same thing for the
+subcategory as well. It is deactivated.
+All right. So, we are done. Let's go and
+make sure that we save and apply. All
+right. Now, this is our new dimension
+over here. Let me just zoom in. We're
+going to go and remove the
+relationships. We don't need them. And
+for this as well. So now look at this.
+Now we have clean two dimensions are
+waiting here on the side. And our
+original data model is getting cleaned
+up step [music] by step.
+Okay. So now what is next? What we going
+to do? Do we have like a third dimension
+that we're going to go and build? Of
+course, there will be a lot of
+dimensions, but here we have like
+something that we have to decide on.
+Now, the products and the customers,
+they were like standalone and very
+obvious dimensions where we had like a
+master table for them. So, we have like
+table products and another table called
+the customer master. That's why it was
+really easy to make those dimensions out
+of those row tables. But now the thing
+is in all other tables that are
+remaining in the data model, most of
+them are events. So we don't have like a
+master table for the third dimension.
+Actually most of the dimensions going to
+get like extracted out of the event. As
+we said before in many facts there are
+always like hidden sneaky dimensions
+that we extract out of it. This is
+exactly now the scenario because of this
+now we have like two ways on how to
+continue. Either you're going to go
+through all the events one by one and
+start like extracting all the dimensions
+and once you are done once you have all
+the dimensions then you start building
+the facts or the other way that I prefer
+that at the same time we take like one
+event table and we split it into fact
+and dimensions. So at the same time we
+are building the fact and the dimensions
+out of the row tables and we don't have
+like to redisuss it and brainstorm it
+again. So either you go all the way by
+extracting all the dimensions and only
+after that you build the facts or at the
+same time you are building the
+dimensions and facts. Well I tend to the
+second option. So now let's go and do
+that. All right. So now by looking back
+to our data model we have actually a lot
+of events. So we have the orders and
+sales, we have the invoices, the
+payments, the campaigns and of course
+it's going to be really hard to think of
+everything at the same time. That's why
+we have to go and pick one event, go
+deep inside it and start splitting it
+into facts and dimensions. So that means
+we have to go and pick an event. I'm
+going to say we're going to start with
+the orders and sales. This is the most
+important one and I think this is a
+little bit complicated. So now let's go
+and collect all the related tables like
+we have done in the dimensions together
+in one place. So we have the orders 2026
+and as well we have the same table for
+the 2025. What else do we have? We have
+as well the lines for the orders. So
+this one over here the sales target it's
+going to be the budget. So I'm going to
+say it's not really same event. It is
+like the planned budget for each month.
+We're going to think about it. Maybe
+we're going to consider it. So I'm going
+to say this is more than enough. We have
+a lot of things. We have the orders and
+the lines. And here we have to have full
+focus because we start talking about
+facts. Facts are very sensitive topic.
+So again we're going to go to the power
+query. Let's go inside. Now the first
+thing before we start touching anything,
+let's have some understanding more about
+our tables. So let's start with those
+two orders. So 2025 and 2026. Now again
+I'm going to ask the question of the
+grain what each row is representing.
+Well you can see over here each row is
+actually one complete order. So we have
+all the informations about the orders.
+We have the customer name, city, region
+looks like dimension, right? But of
+course we have here the events, the
+order date, the channel of the order,
+the status, priority, total sales for
+the order and some big notes. Now let's
+go to the other table. The orders 2025.
+This is very identical table. So
+actually here we have a split from the
+source system. Here as well we have the
+same grain. Each row is actually one
+order but again the source system is
+splitting the data maybe for some
+reasons like archive and so on. And of
+course we have to do something about it.
+We cannot leave it splitted like this.
+It just confused the data model. Now
+let's go to the third one the order line
+items. So now again the same question.
+What each row here is representing? Well
+I'm going to say each row is actually a
+line of order. So one line is not the
+whole order like we had it in the other
+tables. It is one position about the
+order and of course we can go and check
+that by aggregating the order ID. So
+let's just group by and say okay this is
+the count of rows. Well by looking at
+this you can see here we have a lot of
+duplicates. That means for each order we
+might have like multiple lines like here
+for the first order we have three lines.
+All right. So I will just go and remove
+it. We are just testing here. So that
+means this has like more details another
+grain than the orders. Now my friends
+here we have like a very classical
+scenario with the order lines and the
+orders. This is something that recall
+from the transactional systems from the
+sources the headers and the details. All
+right friends now I can say we come to
+the most complicated and confusing part
+in the whole data modeling project
+that's why if you don't have cavettes go
+and grab one.
+Okay so now we're going to talk about
+the header and the details. This is very
+tricky and confusing part where a lot of
+people make mistakes in the data
+modeling for reporting and analytics but
+yet one of the best practices and the
+common way on how to store transactions
+in OLTB sources. So it is a very common
+way on how to module the sources and
+you're going to find it a lot in many
+companies. So my friends, if you
+understand this concept and you know how
+to deal with it in the data modeling for
+business intelligence and analytics,
+then my friends, your life going to be
+really easy working at companies because
+you're going to face this data model
+over and over. So now in order to
+understand this, let's start with very
+simple example. I don't know, look
+around you. Maybe you find an order or
+an invoice.
+>> I found it. If not, go and check online
+your stuff. So now here I have an order
+and if I look at this, this is one
+business event. I have done an order and
+this business event actually has like
+two sections a header and details. The
+header it is like the top level
+informations in the order like for
+example I have the address, the
+customer, the company, the order number,
+the order state, the order dates. So all
+those informations we have it like only
+once for each order right and those are
+my friends the header. Now if you look
+below it depends if you ordered multiple
+things you're going to find like a table
+with more details like for example
+you're going to find the list of all
+products that you have ordered in this
+one order and other things like the
+quantity the price and as well the final
+costs and my friends this setup the
+header and the details you're going to
+find it in many events in many
+companies. So you're going to find it in
+orders, in invoices, in shipment, in
+delivery. Even in manufacturing, you're
+going to have the bill of materials, the
+production order, or if you have like
+ticketing system, you're going to find
+it as well in tickets. All those
+transactions and many systems going to
+store those informations into header and
+details. Now, of course, the big
+question is how we going to deal with
+those stuff inside our data model for
+business intelligence. Now, one of the
+biggest mistake that people do is that
+they look at the header and details as
+two different things. So they say okay
+the header looks like a fact. So they go
+and make like for example fact orders
+and they see okay the details as well
+looks as fact but this is like different
+grains. That's why they're going to go
+and make another fact for that the fact
+order line. So they make out of this
+like two facts. And now of course in
+reporting you're going to need those two
+tables in one visual in one report. So
+that means they need two data from the
+facts. And here people come in this trap
+where they're going to say, "Okay, well
+actually we have the order key in the
+header and the details." This is
+actually what happens in transactional
+systems. They link the order with the
+header using the key. And they're going
+to say, "Okay, this is a perfect match.
+This is the common column. I'm going to
+go and connect those two facts
+together." Well, yes, this might work,
+but this can introduce only issues in
+the reporting. This has first of all bad
+performance, can lead to bad numbers,
+and as well this is very confusing once
+you are building the reports. So this is
+one of the biggest mistakes that people
+do in data modeling. And now of course
+the question is how we going to do it?
+How we going to model this? Well, the
+rule is always the same. The fact table
+going to sit always at the level of
+things that you are measuring. So ask
+yourself where the numbers come from. So
+if you look to the header and the
+details, you're going to see that
+actually all the numbers are stored in
+the details. The header is just like
+giving us some context and maybe like
+maximum one or two numbers, but the core
+numbers, the core measures are in the
+details. So that means it is always
+better to build a fact table that comes
+from the finest details from the lowest
+level because my friend you can always
+roll up and aggregate the data back to
+the header. So that means in most cases
+we're going to go and create the core
+fact table from the details and we're
+going to the header in order to get more
+context for our new facts. So either
+we're going to use it in order to
+generate a new dimensions from the
+header or we're going to use it as well
+to connect the data model to our new
+fact from the details. So this is the
+very common pattern. We make fact from
+the details and we use the help of the
+headers in order to generate dimensions
+and to connect it to our fact. And I can
+say this can work like 90% of the time.
+Sometimes you have some edge cases where
+people are storing a lot of numbers in
+the headers but in most cases this is
+going to work if you follow this
+pattern. Okay. Okay. So now with this I
+have prepared you with the foundations.
+Now let's go to PowerBI and try this
+out. All right. So now what we're going
+to do with those three tables I'm going
+to say let's start with the easy and
+obvious thing. We have to go and combine
+those two orders into one single table.
+So again if you have two tables have the
+same grain and as well they are
+identical. They have the same shape. We
+go and append them. So how we going to
+do it? It's going to be very simple.
+We're going to go over here and say
+append queries. And I'm going to go and
+create a new one so that we don't lose
+let's say the row tables. So now here it
+says two tables and the first table I'm
+going to start with the oldest. So first
+2025 and then 2026. All right let's hit
+okay. So now we have a new table over
+here. Let's go and rename it. So this
+going to be the orders. Now of course
+this going to be like an intermediate
+table. We don't have like fact and
+dimension. We are just like merging
+things. Of course if you want you can go
+and make another order for all the
+temporary things. But I'm going to leave
+it now in the stage. Now of course we
+are not done. Let's have a look to the
+append whether we have any strange
+things. Here we have some nulls and if I
+go over here the source file has as well
+some nulls. So actually there is like
+something wrong and as well the legacy
+reference. So that means they are not
+completely identical. Let's have a look
+again. We have here the legacy reference
+and in 2026 we don't have it. So
+actually with the new orders we don't
+have this legacy column. So let's go and
+remove it. It says as well legacy. So I
+think we don't need it for reporting.
+And let's go and check the resource
+file. So over here we have it in 2025
+but we don't have it I think for 2026.
+So again it is a legacy thing. We go and
+remove it from our new table. So you go
+out remove. Now here we have a lot of
+nulls. The gift message. If I go over
+here you can see actually we don't have
+any value. This is garbage column. So it
+is just taking space. Let's go and
+remove it as well. So as you can see we
+are cleaning up. And since we are
+talking about cleaning we have here the
+order notes as well those big text. Come
+on. We don't need those stuff in
+analytics and reporting. So I'm going to
+go and remove it as well. So I think now
+we have like complete match between
+those two tables. We don't have any more
+nulls. So they are completely identical.
+Of course you might say but we lost an
+information which record come from which
+table. So the 2025 and 2026. Well
+actually we don't need this information.
+We have it already in the order dates.
+So it will be just like an extra
+information that we have already. But if
+it was like another information like the
+country or something, I would go and add
+the source. All right. So now again our
+orders is the header information. As you
+can see we have here a lot of context
+for each order. So very good candidates
+for dimensions and the order line items.
+Here we have all the numbers. So this is
+the detail table for the orders. And
+this means my friends this going to be
+our core fact table for the topic sales
+and orders. So now where we're going to
+start either we create the fact table
+now or we start extracting the
+dimensions from the orders. I'm going to
+say let's go to the orders and start
+like creating new dimensions. So what do
+we have here? We have the customer name,
+the customer city. Well, we don't create
+now another dimension called customers.
+So we're going to leave it like here.
+Same thing for the region. Those cities
+going to stay over here. The date as
+well. Now here we have something
+interesting. We have the order channel
+where we have like some numbers. Those
+are technical IDs. They are not
+something that we're going to use in
+order to aggregate. We have as well
+status and priority. All three
+informations are actually good
+candidates for dimensions because we can
+use them in order like to filter and
+slice. Now, of course, the question is
+what is the topic? Are they like related
+to each others? Could we make like one
+dimensions out of this? Well, they are
+actually not related to each other. As
+you can see here, the order channel, the
+status, the priority, they are just like
+confirmations for the order, but they
+are not like connected together in order
+to make like good dimension. And of
+course, we will not go and make like one
+dimensions for each column. This is not
+good. In this scenario, what we're going
+to do, my friends, we're going to build
+the junk dimension. We're going to put
+them all together in one and then
+reference it back in the fact table
+later. So, how we going to build a junk
+dimension? We're going to go and make
+another reference out of this. So, we're
+going to say reference. And this going
+to be a dimension. So, I'm going to drag
+and drop it to the dimensions. Let me
+just minimize this. All right. So, right
+click on it, rename. Well, I'm not going
+to call it again junk. So, this going to
+be the order flags. Maybe you're going
+to have another junk from another event.
+That's why we will not make it like a
+super generic. Now, how we build this?
+It's very simple. We're going to go and
+remove all the unnecessary stuff and say
+okay remove. We don't need the order
+total. This is a number. We don't need
+it for dimension. Now, the last thing
+what we're going to do, we're going to
+go and remove all the duplicates from
+all three. So, select all and say remove
+duplicates. Very nice. We have only 14
+rows. Now, of course, what is missing?
+We need like a key for this dimension.
+So, we're going to go and add a column,
+an index column that starts from one.
+Then, we're going to call it. So rename
+the flag key because this is a surrogate
+key. We just created this in our model
+and go to the top. Okay. So this looks
+already good. Now we are not done yet.
+There is something that I really don't
+like those order channels. So as you can
+see those numbers. Now this can confuse
+a lot if you just bring it to the
+reporting. People might go and aggregate
+or find an average of this. Those are ID
+for something that we don't know and we
+cannot leave it like this. We have to
+make something meaningful of this. So
+now at work in order to understand what
+those numbers are we actually go and
+read documentations or ask the people
+responsible for the source system maybe
+ask an expert from the business or from
+the processes. So at the end you have to
+find the mapping between those numbers
+and the real values so that we can show
+it in the reports. Now let's say that I
+got it from somewhere those
+informations. Now the question is how we
+going to add it to this data model
+because those informations are not
+coming from the source. From the source
+we are getting only those ids. So that
+means this is new information that I'm
+adding to this data model and it doesn't
+exist from the sources. And how we can
+do that my friends we go and add a data
+inside our data model by going to the
+home rippon and say enter data. So this
+is going to be very simple. We are just
+creating a table from scratch like an
+Excel. So the first column going to be
+the channel code and we need another one
+where we have the full name. So the
+channel name.
+Okay. So it is just like mapping between
+code and the name. So we make sure that
+we cover everything from our data. We
+have the 10 and this stands for online
+store. Then we have 20. This is the
+retail partner. Then the 30. This is the
+channel wholesale and 40 is a field
+sale. So we make sure that we have
+covered everything. So we have here
+actually only four. Okay. So this is the
+translation the mapping between the
+cryptical code and the friendly name.
+All right. So now let's go and hit okay.
+Well, now I have it here as a table. So
+I'm going to go and rename it channels
+and then maybe bring it back to the
+stage because this is something like
+intermediate, right? So now what we're
+going to do, we're going to go back to
+our order flags and we have to replace
+those numbers with the new values and we
+can do that by merging queries. So let's
+go and find our new table channels. All
+right, this is the key and left join. So
+let's hit okay. All right. Okay. So
+let's go and expand. Remove the code. We
+just need the name and I'm going to move
+it over here. Of course, you can now
+decide whether you're going to leave the
+code together with the name but I'm
+going to say actually the codes are just
+like confusing. So I'm going to go and
+remove it. So now my friends this is
+what we call data enhancement, data
+enrichment and this is very typical
+things that we do in data modeling
+because in source systems we're going to
+get a lot of critical things that we
+cannot just go and present it in the
+reports. So we have to add from our side
+something new to the data model and with
+this comes a really great responsibility
+because this is very typical what could
+happen that initially going to go and
+start mapping everything manually so
+everything looks perfect but now
+suddenly the source systems are
+generating let's say new ids new values
+that we didn't map yet so a typical
+problem happens that initially we do
+things correct but afterward we forget
+about it or maybe we just go and switch
+to another project and your reports can
+show only nulls over the time because we
+don't have values for that. So adding
+data manually from us the humans to the
+data model it is something critical and
+we have to be careful for it. So if you
+go to another project and you hand this
+data model to someone else make sure to
+inform them that they have to check from
+the source systems. If there is
+something new they have to go and extend
+this manual data that we added to the
+data model or what is way better and
+perfect if you say you know what this
+mapping should happen in the source
+system and you are responsible for it
+and provide it with all other files.
+This is of course the best option
+because then we don't have any more the
+responsibility to touch the data inside
+the data model. Everything going to be
+like fully automated. Okay. So now back
+to our junk dimension. The last step is
+just to polish. So that means we will
+just rename things the channel and here
+we have a status. So only the S and the
+priority.
+Okay. So our junk dimension is ready to
+go. Now let's go back to our orders.
+Let's see. Okay. Again we say those
+information is going to stay and that
+means we just extracted one dimension
+out of the order which is totally okay.
+Now let's start with our fact. This is
+going to be really interesting. Let's go
+to the order line. This has the lowest
+details. It makes sense. So let's go
+first and make a reference out of it.
+This is going to be our first fact
+inside the data model. Let me just uh
+minimize all those stuff and then let's
+go and give it a name. I'm going to call
+it the fact sales. All right. So this is
+the foundations for our fact. We have
+enough numbers inside it. But now the
+thing is we need the dimensions. So we
+have already here the product name but
+we need the customers. We need the junk
+dimension. We need the order date. So we
+need all those stuff from the header to
+be included as well in our new facts. So
+that means now we're going to start like
+combining things to our new fact and
+here you have to be very very careful.
+If you do one wrong merge you're going
+to destroy the whole facts. So now we
+come to the rule that we have to protect
+our numbers. So that means any changes
+that we do to the fact table we still
+have to see the same numbers and if we
+see something else we have of course to
+fix before merging it to our facts. So
+now let's try this out and I'm going to
+show you how I usually do it. Now, of
+course, I will not go and start like
+scrolling down because usually the event
+tables are really big. So, instead, I'm
+going to go and close and apply. So,
+just save it. All right. So, I think
+somewhere is our new fact. But we don't
+deal now with the data model. Let's go
+to the report view. And now, we're going
+to go and pick like one important
+measure from our fact in order to keep
+tracking it for each change. So, if I go
+to the fact sales over here, we have
+here some options like for example the
+line total, the quantity, the cost, the
+price. I'm going to go with the main
+measure. This going to be the line
+total. So let's drag and drop it to our
+card. So my friends, this is the number
+and we have to protect this. Anything
+that we combine, we add to this fact
+table. It always should result exactly
+to this same number. If something
+changed, then we have an issue. So we
+have to know this number by heart until
+the end of the project. This number
+should be correct. Okay. So now we have
+the number. Now let's go back to Power
+Query and start adding things. So back
+to the fact sales. Now what we're going
+to do in order to bring the other
+dimensions to our facts, we're going to
+go and add the header. So we do that by
+doing a merge query. We're going to go
+to the orders that we have prepared. It
+is over here. And how we going to
+combine it? By the order ID and of
+course very important the left outer
+join. Okay. Now of course we have to
+expand and here we have a lot of things.
+I will not now judge everything. I'm
+just going to go and remove the order ID
+that we just used because we have it
+already. And let's go and add all the
+things we can always remove later. So
+now we have everything from the header
+the order and of course now the big
+question is do we have any changes for
+the numbers. So let's go and close and
+apply and wait second until it's loaded.
+So keep focusing on the number any
+changes. Well nothing changed. This is
+perfect. We still have the total sales.
+Of course there are like different
+methods on how to test like for example
+you can go and build the relationship
+between them and see whether it is one
+to many. So you can do like different
+ways of testing before merging. This is
+one of them. So that was successful. Now
+let's go back to the power query. Let's
+go back to the fact sales. Okay. So with
+this we have done the big merge between
+the details and the sales safely and now
+we can go to the next steps like for
+example we have to go and build the keys
+inside the fact. You know each fact has
+a lot of keys in order to connect things
+to the dimensions. And our fact is not
+ready yet. So now instead of having the
+product names we're going to go and have
+the product key. Same thing for the
+customer. So let's do that. Let's bring
+the ids and the keys and we can start
+with the customer. Now what we going to
+do? We call it something like lookup. So
+that means I'm going to go and merge
+this to the dimension only to get the
+ids. And again since we are merging we
+have to be very careful. So we're going
+to go and merge a query again. But this
+time we are merging with the dimensions.
+So we're going to go over here and find
+the dimension customer. So now this is
+our target to get the customer ID. But
+of course we cannot now connect using
+ids. We have to do something scary.
+We're going to go and use the text the
+customer name. And this can open the
+door for many mistakes. So we have
+really to check after that. So customer
+name, customer name, left join. This is
+my friends a lookup. So let's go and hit
+okay. Now what we going to do? How we
+going to expand? Of course we will not
+go and bring now all the columns from
+the dimension. We just want one thing
+the customer ID. So this one we need and
+hit okay. So now what I like to do next
+is to just bring the ID on the starts so
+that we have a real fact table. So it's
+going to be somewhere here. Now of
+course before we do anything else we
+have to go and test. So I'm going to go
+and close and apply and keep my eye on
+this number.
+Well, nothing changed. That was a
+successful merge between those two
+tables and there is no risk about it.
+Now let's go and do the same thing for
+the products. So let's go back to the
+fact sales. Same thing. We have here the
+product name. We need the product ID or
+key. So merge. And now same thing. We're
+going to go to the dimension product
+over here. We join my friends using the
+product name. Oh, it's not the product
+code, which is really scary. So, let's
+go and hit okay. And we just need a
+lookup. So, that means we need the
+product key. Perfect. Now, let's go as
+well bring it to the starts side by side
+with the other keys somewhere here. Now,
+before we touch anything, we have to go
+and test. Let's close and apply. Keep
+our eye on the numbers. Did the numbers
+just changed? Now, we have way more
+total sales than before. Oh no, that was
+not successful merge with the products.
+we have something wrong and we have to
+protect the original number. So yeah, we
+have to do something. So let's go back
+to power query and see what is going on.
+So let's go back to the fact sales.
+Well, what we can do, we can go and
+check up actually which order have an
+issue. So if you select those two and
+say okay, let's go and group. I imagine
+those two should be unique. So let's go
+and count the rows for that. So now we
+see a lot of ones, but we see two,
+right? So here we have an issue. You can
+see those orders are fanning out. So we
+are getting like duplicates and let's go
+and check something like for example the
+order number 25 and then go and remove
+this test. So now what we're going to do
+we're going to go and search for this
+order. It was the 25. All right look at
+this. We have the same order. The
+product name is identical but they have
+different keys which is really bad. Of
+course the rest going to be like
+identical. It is getting like fanning
+out. So this product has an issue. The
+same product name but different keys.
+And this is a typical issue if we are
+joining using like names and text things
+can go quickly wrong. So that means we
+have to go and check the dimension
+products. So it was the kitchen
+something right. So let's just search
+for it. This is the first one. And look
+at this. We have duplicates actually
+inside the Dian products. So we have
+different codes for the same product.
+And if you scroll to the right side you
+can see one of them is actually have
+more data than the other. So here we
+have like brand and the other row
+doesn't have brand. Same thing for the
+price and the supplier. Of course, this
+is a data quality issue that came from
+the source system. And here we have like
+two options. Either we're going to go to
+the source system and tell them, hey
+guys, you have like wrong stuff. You
+have the same product twice. Go and
+clean up the data and then everything
+going to be fine here. Or you're going
+to go and manually start removing
+things. But of course, this is no
+guarantee that later we will not get any
+like quality issues. Now if the source
+system don't want to clean the data and
+they going to leave it as it is then
+either you're going to go and now like
+clean things manually or what is way
+better we usually build like a data
+warehouse where we build pipelines and
+quality gates in order to detect and fix
+those issues. But now for this project
+since we don't have like a lot of
+products we're going to go and manually
+remove those bad rows. So here we have
+to decide which version should stay and
+of course it's going to be the one with
+more infos. So that means with the nulls
+should be dropped out of our dimension.
+Now of course we have to detect how many
+other like scenarios like this. So I
+will just remove this filter. Select
+all. Now how we going to do it? We're
+going to go and just group by the
+product names. So we're going to go and
+say based on the product name go and
+count the rows and change the filter to
+two. You can see we have the issue with
+two products the kitchen and the audio.
+So it is not that a big deal. What we're
+going to do we're going to go remove
+this test. Of course, now the question
+is how we're going to remove those two
+rows. I will not do it like as the last
+step inside our dimension. I'm going to
+go way back maybe at this step filtering
+the rows as we removed the one bad row
+where the product key is equal to Z zed.
+Now, of course, the question is where
+are those stuff? Well, it is the last
+two rows. You can see here we don't have
+brands for them. We don't have a unit
+price. And now I remember we had like a
+really nice column for the source ID.
+So, you can see here we have like a
+source ID, a row identifier for each one
+of them. and we can use it in order to
+filter the data out. So this is one bad
+ID. I'm going to go and copy the value
+and then use it in order to filter the
+data. So I will check this out. Same
+thing for the last row. So I'm going to
+go and copy this as well and as well use
+it in order to filter the data out. All
+right. So as you can see now in our
+filter we have three things. We are
+filtering the data based on the product
+code and based on the source ID. So now
+let's go and check again. We have to
+group up the data by the product name.
+So group by insert and product name. Now
+let's check the filter. Yes, we have
+only one. So that means my friends, our
+product names are actually unique. But
+be careful now to just remove the test.
+All right. Now we go to the last step to
+make sure that everything is working
+correctly. Nice. So now let's go and
+save and check again our numbers. So
+come on. Come on. Yes, we got back our
+number. With that we protected the
+number and the fact and it was
+successful merge to the product. So we
+can now go and continue. Let's go back
+to the power query. So where is our fact
+table. So with this now we got the two
+big dimensions the product key the
+customer ID. Now what is left is
+actually the junk right? So we have
+those three columns and we have to
+connect the junk to it. Now I see
+already that we have an issue for the
+lookup. We need all those three in order
+to join it with the dimension. But we
+just removed the order channel, right?
+So if I go now and merge, it will not
+work. That means I'm going to take it
+back and going to go to the junk and I'm
+going to go and bring the ID back. So I
+believe this was the step. So let's go
+and bring it back. Yes. So we need those
+stuff. I'm going to go and rename it.
+This is the channel code. Now let's go
+back to the fact sales and let's do the
+merge with the junk dimension. So we
+need it. It is over here the order
+flags. Now we're going to go and mark
+all those stuff but not the channel
+itself because it has no idea about it.
+It is something that we added. Then
+we're going to go to the right side and
+select those three. So now things should
+work and in the correct order by the
+way. So the order channel, the status
+and the priority. Same thing from the
+dimension. Left join. Okay. Now the next
+step we're going to go and expand. Since
+it is only a lookup, we just need the
+key. So okay. Yes, we got the junk flag.
+Uh let's go and do it side by side with
+the others. And of course the big
+question, do we have issues with our
+number? So I'm going to go and close and
+apply. Well, look at this. It is safe.
+So our number is protected. Let's go
+back. I know we are jumping between but
+this is part of the job. We have to do
+things like carefully. All right. So
+with this now we got all the keys, all
+the ids inside our fact and it is ready
+to get connected to the dimensions. And
+now we're going to go to the next phase
+where I like to go and drop things and
+polish the facts in order to follow the
+standards and the rules that we have
+added at the beginning. So now we're
+going to start with the first thing. Do
+we really need all those columns inside
+our facts? So let's do it step by step.
+The line ID, we need the order ID as
+well in order to count how many orders
+inside the fact. The product name, we
+don't need it anymore. We just used it
+in order to build the keys. So we're
+going to go and remove it. Then we have
+the keys. That's of course what you
+need. And then we have the numbers. We
+need all the stuff in the facts. Now we
+come to something that is really
+important to understand. Now the thing
+is in transactional source systems they
+usually store the same informations over
+and over in different tables just in
+order to optimize the performance of
+their UI and applications. And this is
+of course a big issue for us because
+then we're going to have like the same
+information everywhere inside our data
+model. And this is going to make a big
+confusion on how to build the reports.
+So that means my friends you have to
+protect the data model by having like
+one single point of truth for each info.
+So that means if I have the customer
+city inside the dimension customer I
+don't need it somewhere else. This going
+to be the dimension customer is the
+single point of truth for the cities of
+the customers. So I don't have to leave
+it in like another dimension or to leave
+it in the facts. So always try to reduce
+the noise that we inherited from the
+source systems and make a decision where
+you going to store what but only once. I
+said I was only going to say it once.
+>> So that means my friends, we will not
+leave the customer city inside our
+facts. We have it already inside our
+dimension. Look at this. We have here
+the city of our customers. So that means
+we don't need this extra noise that we
+have in the facts. We will just go and
+remove it. By the way, this is one of
+the things that I have noticed a lot.
+People going to say, you know what, we
+might need it. So you really have to
+take a hard decision and start removing
+things that you don't need and keep it
+only in one place. Same thing as well
+for the region name. It as well belongs
+to the customer dimension. So let's go
+remove. And now here's something
+interesting to what we said. We have
+here the ship to city and pill to city.
+This is different information than we
+had in the dimension customer. This
+belongs to the transaction to the order.
+So for each order we have the city where
+it is shipped to. And here the customers
+might change from one order to another
+to which city or to which location the
+order should be delivered. So the city
+here belongs to the transaction to the
+event. It is not like master data of the
+customer. So that means this has
+different meaning than the cities that
+we have inside the dimension. It is
+something here transactional and could
+change from one order to another. So
+that's why I will not go and remove
+those informations because this belongs
+to the event to the transaction. So it's
+always really important to understand
+the business to understand the domain
+how things works. So let's keep going.
+The order date of course we need it. Now
+we have a lot of things that we don't
+need anymore because they were only here
+in order to do a lookup. So I'm going to
+go and remove those stuff that were
+belonging to the junk. And now we come
+to something really interesting. The
+total sales in the header. So as well we
+have to decide because now we have two
+things. Look at this. We have the total
+sales for the whole order. And here we
+have like the sales for each item each
+line in the order. Now of course if
+everything is clean the sum of the line
+of totals should be exactly the same
+value that we have here from the header.
+So that means the grain between those
+two are different. And now here usually
+I decide on the following where I say we
+go and remove any pre-agregated values
+because to be honest I don't trust it.
+If I need the total sales for each order
+actually I just go and summarize those
+values. So I have the data already
+available. I don't want to have like
+pre-agregated things inside the data
+model that's maybe outdated or maybe the
+calculation is not anymore correct.
+That's why I tend to remove any
+pre-agregated things that I inherit from
+the source system. Especially if I have
+the same information from another
+detailed measure. So that's why the
+order total that we got from the header,
+it is something unnecessary and I'm
+going to go and remove it. I can always
+get it back if it's needed. All right,
+my friends. So with this we have removed
+a lot of things from our fact table and
+now things looks really good. Now I
+would like always to order my fact like
+this. We have always at the start all
+the ids and then all the dates and at
+the end all the measures all the
+numbers. It is not something that's very
+important but I like to order it like
+this. So that's why I'm going to go and
+grab all the context to the starts and
+just leave the numbers at the end. So
+now look at this. We have ids
+everywhere. Then we have the cities. We
+have to do something about it. After
+that we have the dates. We have only one
+and at the end we have the bundle of all
+measures and numbers that we have in the
+fact. So we are almost there but to be
+honest I'm still not happy about those
+two. So we have the ship to city and the
+pill to city. Now of course I can leave
+those informations like this. But we
+could build a dimension for it. So
+that's we have like IDs instead of text
+here which can reduce of course the size
+of the fact table. And at the same time
+maybe I need more context to those
+cities like for example the region or
+the country and so on. So it's always
+better to convert those contextes to
+dimensions. So that means we have
+actually to construct a new dimension
+called dimension geo or locations or
+whatever you want to call it. Of course
+the question is what is the source for
+this new dimension? Should we get it
+from the fact or do we have like some
+row tables that can help us with that?
+Well remember we had really nice row
+table called cities. This is perfect.
+This is already like waiting for us to
+build a dimension for it. We just
+skipped it. As you can see, we cannot
+like think of everything at the start.
+As we progress in the data model, we're
+going to understand, okay, we need more
+things and we always can go back to the
+row data and make new dimensions. So
+now, how we're going to do it? This is
+going to be very simple. We're going to
+go and create a reference and we're
+going to drag this reference to the
+dimensions. We're going to go and give
+it a name dem go. Now, we have to make
+sure that this has no duplicates. I'm
+not really sure whether it has or not.
+So, I'm going to go and remove
+duplicates. Well, nothing changed, but
+I'm going to leave it as step. Maybe
+things changed, of course. What is
+missing in this dimension? We need an
+ID, right? So, we're going to go and add
+a new index that starts from one and
+bring it to the top. So, let's go and
+rename it. This going to be geo key sur.
+And the last thing that I'm going to do
+just rename things. So, this is the city
+and this is the region.
+Perfect. Now, we have new dimension of
+course. What is the next step? We're
+going to go and connect it to our fact
+sales. So over here using the city name
+but my friends we're going to go and
+connect it twice because here we have
+like two cities right they are different
+the city for the shipment and another
+one for the build. So let's go and do
+that. We're going to do it quickly.
+We're going to go and merge and then
+grab our new dimension. It's going to be
+of course the city. So and then hit
+okay. Expand. We need only the key. All
+right. And then we're going to merge
+again for the other column. So same
+dimension we need the city but this time
+for the pill. All right. expand as well.
+We need the key. Now, before we forget,
+we're going to go and rename things. So,
+we're going to call it ship to city key.
+And the other one, bill to city key. All
+right. So, now let's go and grab them to
+the other keys. So, we can put it over
+here. And now we're going to go and
+remove those two cities. We have ids.
+So, remove. Perfect. Now, let's have a
+final look. Look at this. We just have
+numbers. Now the last step that I'm
+going to do is that I'm going to go and
+just rename all the columns to follow
+our standards, the snake case. All
+right. So now I just went through all
+the columns and everything is renamed.
+Look at this. Everything looks perfect.
+We have only numbers and dates. And this
+is exactly how the fact table supposed
+to be. If you get it my friend, like
+this, then congrats. We just built a
+perfect core fact table for our data
+model out of this complicated setup. The
+header and the details. Now I'm going to
+say the fact is ready. And now we're
+going to go to the satisfying part where
+we're going to go and deactivate some
+row tables. And then we're going to go
+ahead and connect the dimensions to our
+facts. Let's go and do that. I'm just go
+and deactivate now the orders, both of
+them. And as well the order line. And
+then close and apply. All right. So now
+what we going to do? Let's go and make
+like two words. On the left side, it's
+going to be this chaos. But on the right
+side, we're going to have our new clean
+data model, the star schema. So this is
+our fact. And now let's go and bring our
+dimensions. So product the geo customers
+and the junk dimension. So let's form
+the star and make sure we don't have any
+garbage like in our model. So now let's
+go and zoom in. We still have to do it
+carefully how we connect the dimensions
+to the facts. But the pattern it's
+always the same. So we're going to grab
+the customer ID and put it on the fact
+here. It's very important that you see
+one to many relationship and the filter
+is single. So never both. Okay. So
+that's it. Let's save. This looks good.
+One to many. And the arrow going to the
+fact. Same thing for the product key.
+So, drag and drop. One to many single.
+Save. And for the junk. So, we need flag
+key is over here. One to many single.
+And now comes something of course really
+interesting. We have only one dimension.
+But we have to connect it twice to our
+fact table. One for the billing and
+another one for the shipment. Well,
+we're going to do that. So, the geo key
+goes to the shipment. One to many money
+single. This going to be the active one
+and the second one going to be the
+billing. So drag and drop one to many
+and single. So save. So with us my
+friends, our dimension go is actually a
+roleplaying dimension. We have two
+relationships to the fact table. One is
+active that's going to be used all the
+time and another one is inactive. Thus
+we have to use ducks in order to use
+this relationship of course. But now you
+might say okay this is like way too more
+complicated than before. If we had like
+both of them inside the fact table, I
+can just go and use them inside my
+reports. Well, this is a fair point. If
+you never need like more geo
+informations, but if you start like
+needing the regions, the countries, and
+this geo is like getting bigger and
+bigger, then it makes no sense to leave
+it inside the fact. And as well, it
+makes no sense to go and duplicate the
+dimension twice. Those are all bad
+designs. So now, my friends, look at
+this. If I zoom out, you can see clearly
+the two words. On the left side we have
+the full chaos and on the right side we
+start having the shape of our star
+schema our goal and things looks way
+more better than before. So this exactly
+my friends how we migrate from bad data
+model to a new better model that's going
+to deliver only correct numbers good
+performance and as well reduce any
+confusion.
+Okay. So now we have to keep going but
+this time I'm going to go and pick
+something that is little bit easy. So
+that we have break. I will not pick
+something complicated. We're going to go
+this time with the inventories. This is
+an easy one. So, let's go and do
+something about it. We're going to go
+and enter the power query. So, what do
+we have here? The inventories. Oh, yes.
+We have here the product names. And for
+each month, we have the total amount of
+items that is planned. Well, of course,
+the first question is, is it a fact or
+dimension? Well, since we have numbers,
+we have dates. This is going to be a
+fact. So, before we do anything, we're
+going to go and make a reference, then
+move it to our facts. This is our second
+fact. I'm going to go and call it fact
+inventory. And now we can start
+preparing the fact. Now the first easy
+issue with that the first column is not
+promoted as a header. So the column
+names are weird. That's why we're going
+to go and say use first row as header.
+Easy win. Now by looking to this you can
+see it is really nice table for us for
+humans to read. But this is very bad for
+data moduling because the date
+information is stored as a column name.
+We cannot use this of course in
+reporting. That's why we have to convert
+this from human ready to data module and
+reporting. And how we can do that using
+unpivot by turning the columns into
+rows. It is very simple what we can do.
+We can go to transform then select all
+the columns. And here we have this nice
+function unpivot. Look at this. Like
+magic. Now all the column names are
+values inside my table. And this looks
+already like a fact table. And now after
+that I think this is the data type text,
+right? So we can see here text. We have
+to go and convert this to a real date.
+then it can be easier to use in the
+reporting and same thing that we have
+done before we have to go and get the
+product key. So we need a lookup and how
+we going to do it as usual we go and
+merge with the dimension. So dimension
+products connect the names and say okay.
+Now after that we're going to go and get
+only the key bring it to the start and
+remove the product name. We don't need
+it anymore. So remove and of course my
+friends you have to go and check things
+and now I'm doing things quickly but
+still we have to go to the report make a
+card go and calculate all the values
+after merging are we getting like any
+duplicates but now in order to make
+things quicker I will not do that but
+you have to do it at your side. I would
+never trust that everything is okay now.
+So now the last step in our new fact I'm
+going to go and rename things. So this
+is the product key and this going to be
+I'm going to call it for now month and
+instead of value I'm going to call it
+units. All right friends. So actually
+that's it. With this we got our second
+fact and it is perfect. It has an ID, it
+has a date and as well a measure. Now
+before we go and start connecting
+things, I'm just going to go and like
+deactivate. So the inventory could not
+be loaded and actually we have here few
+things that we didn't deactivate before.
+So we have here the orders and as well
+the channels. So you we don't need you.
+Okay. So now let's close and apply. You
+can see the chaos is getting reduced by
+the time. And here we got our new fact
+table. Let me just zoom in and have a
+look. Probably I done it correctly. I
+wanted to do that but as you can see we
+never connect the fact tables together.
+So there's no direct lines using the
+product key. We connect the fact tables
+always using the shared dimension. And
+this can be the dimension products. Of
+course a quick look. It is one to many
+relationship and the direction is
+correct. As you can see, if you do
+things correctly, PowerBI going to love
+it and it's going to build it for you
+correctly. So my friends, look at this.
+We are moving from star schema and now
+we are like building the galaxy, right?
+Which is of course still star schema. So
+my friends, that was a quick win. All
+right friends, so that was the
+inventory. It was a little break. Now
+let's go back to something more
+advanced. Now we have to go and pick
+something from our data model. So we
+have invoices and stuff. I'm going to
+say let's go and solve the campaign. So
+we have the campaign log and another one
+the campaign is cues. So it's time to
+solve this puzzle. As usual, we're going
+to go inside Power Query. So let's go
+and do that. Okay. So let's go to the
+campaign log. So again, what do you have
+here? The campaign name, the channel,
+the start date, and the end date of the
+campaign, the budget date, and some nice
+numbers. So clearly this looks like a
+nice fact table, but still inside it, we
+have some context about these facts. So
+the context is my friend the campaign
+itself. So it looks like a clear split
+between one dimension and one fact,
+right? And let's have a quick look to
+the other one. The campaign is cues. We
+have here the campaign name and the
+product names as a list. So this sounds
+like the connection to the rest of our
+star schema, the products, the product
+codes. So I think I got the full big
+picture. Now let's go and start building
+the dimension, the new one. All right.
+So as usual, we're going to go and
+create a reference out of the row table.
+Now we're going to start with the
+dimension. So that's why we're going to
+bring it to the dimension folder and
+rename it. So this is going to be the
+dimension campaign. All right. So now
+which columns going to stay and which
+going to leave? Well my friends we have
+here clear split. So all those columns
+are actually transactional columns that
+belongs to the fact and the rest going
+to be the dimension. So let's get rid of
+those. Now of course as usual we're
+going to go and remove all the
+duplicates from those columns. So remove
+with this we got our six campaign that
+we have inside our data model. And now
+by looking to this you might say but
+wait a second what is going on here
+actually the facts always contains like
+dates and numbers and this dimension
+looks like a fact. So why we are calling
+this a dimension campaign? Well totally
+fair point at the start I was as well
+confused about this topic but my friend
+the dimensions and facts are not defined
+by the data type of the columns. Think
+about it a dimension is just a context a
+description for an event and a fact
+table it is the event itself. It is
+transaction. It is something that keep
+happening every day. So something that
+grows fast, right? So now by looking to
+this my friends, this is not
+transactional. This is not an event.
+Yes, it has a start date and end date.
+But this is actually describing the
+campaign. It is more context, more info
+for the campaign itself. And the number
+budget over here, it is a fixed value
+that as well describe how big is our
+budget for this campaign. So yes, it
+looks like an event, but this is not
+transactional. Those are just describing
+the campaign. Now, in order to
+understand what is a real transaction,
+just go back to the original table. Look
+at this what each row here is
+representing. So, for the first row, for
+example, we have the campaign name, the
+channel, the start and ends, the budget.
+But here we have a real transaction with
+the dates. So, we can see every day what
+is happening. So, in the first day, what
+happens? We spent so much, we got so
+much clicks and impressions. What
+happens in the next day for the same
+campaign? We spent less but we got more
+clicks and so on. So my friends all
+those columns are actually transactional
+columns. Every day we are like getting
+something new about the campaign. And if
+you go to the left side you're going to
+see those informations are really
+static. So the budget will not change
+the start and end will not change as
+well. And because my friends those
+informations are describing the event
+itself. So the left side is not changing
+so much that's why it is a dimension but
+on the right side there is a lot of
+transactions and movement and that's why
+my friends those four columns are
+effects I hope this makes sense but this
+is how we define a dimension and effect
+not only based on the data types but as
+well what is going on how the
+transaction is happening and by
+understanding the business itself so
+that's why I decided on the split based
+actually on the data now let's go back
+to our dimension we are not done yet of
+course what is missing we need an ID. So
+start from one, move it to the left
+side. And actually that's it. The last
+thing that we have to do is to just go
+and rename things. So I will just do it
+quickly.
+This is the key. This is the name.
+This is the channel
+start date.
+All right. So I can say our dimension is
+ready. Now let's go and create our fact
+table. So same thing we're going to go
+and create a reference. As you can see
+now our work is repetitive, right? This
+is exactly how things works. So this
+going to be the fact campaign but I'm
+going to call it spend since we have the
+spending there. All right. So now what
+we're going to do actually we don't need
+all those affirmations. We have them
+already in the dimension. That means we
+need now to do a lookup in order to get
+the campaign key. So as usual we go and
+merge queries with our new dimension the
+campaign. We join with the campaign
+name. It is unique in our dimension and
+then say okay. Now since this is a
+lookup, we just need the key. We don't
+need all other informations. Drag it to
+the start because we have always the
+keys at the start and get rid of all
+those things. Those are in our
+dimension. So now what is left? We have
+the date impression. Click spent. Looks
+nice. The last step we're going to go
+and just rename things. So I'm going to
+do it quickly. Campaign key. And I'm
+going to make everything lowered.
+All right, my friends. So with this now
+we got our third fact inside our data
+model. Now let's go to the last table.
+We have here still the campaign SKUs.
+Now before we start working on this
+we're going to go and create a reference
+out of it. So reference. Now I'm going
+to go and put it in the facts but I'm
+going to explain myself later. Okay just
+stay with me. Now the first issue with
+that we have here we don't have a column
+names. So that's why I'm going to go and
+promote it as a header. Now what do we
+have here? We have like a list of
+product codes. Uh this is of course a
+nice thing but I cannot use it in
+reporting right I cannot go and connect
+it now to our model. So that's why we
+have to do something about it and we
+call moving a list into rows and
+explode. So we have to explode it into
+multiple rows and we can do that easily
+by going to the column and say split
+columns by delimiter because we have
+here a comma. Let me just move it a
+little bit. So the delimiter is actually
+a comma. Now the thing is I will not go
+and split by columns. I don't want each
+value to go in separate columns. This
+makes no sense. This time we are
+splitting by a row. So if you go to the
+advanced settings, you can see here we
+split by columns or rows. I'm going to
+go with the rows. All right. So actually
+that's it. Let's go and hit okay. Look
+at this. Now each product code is now a
+new row. But now before we celebrate
+this, we have equality issue. If you see
+like some values are shifted little bit
+to the right side. You can understand
+this. If you go back to the original
+steps at the start, you can see the
+values are yes splitted by comma but
+there's like after that space. This is
+just like a cosmetic thing for us in
+order to read the list easier. But of
+course, this is causing an issue after
+we explode. So you see the first value
+has no space, but all other values are
+like moving to the right side because of
+the white space at the start. So how to
+solve this? It is very simple. We're
+going to right click on it and then go
+to transform. And here we have the nice
+trim. Look at this. Everything moved to
+the left side. And we don't have any
+more empty space because my friends, we
+have always to take care of the values
+that are used for the merge later. All
+right. So now what we going to do with
+this, my friends? Well, this is not like
+a dimension because it is like two
+different entities, right? The campaign
+and the products. And as well, you can
+see it in our dimensions. We have a
+dimension for the product. We have
+dimension for the campaign. And this is
+like just mapping between them. So, I
+cannot go and put it in the dimension
+product or in the dimension campaign.
+And of course, it makes no sense to
+create like a third dimension called
+campaign product mapping because this is
+not one entity. So, now in order to
+understand more what is this, let's go
+and convert those values to keys. as we
+have done like in the facts. So now
+instead of the campaign name, I'm going
+to go and make a lookup and grab it from
+the dimension. So campaign and we
+connect by the campaign name. All right.
+Now let's go and grab the key. We're
+going to do the same thing as well for
+the products. So let's go and merge
+dimension product. This time we are
+connecting using the product code, not
+the product name. All right. Now let's
+go and get the key, put them side by
+side and get rid of those two
+informations. So remove columns. Now the
+last thing I'm just going to go and
+replace the names. So this is the
+campaign name and the other one is the
+product key. Now look at this my
+friends. If you have table that contains
+a lot of keys and you have the feeling
+this is like mapping or a bridge between
+multiple dimensions. This table has no
+numbers just like collection of keys.
+Then my friend welcome to a new type of
+facts. We call it the factless fact. A
+factless fact it is like a classical
+fact table. It has a lot of ids in order
+to connect multiple dimensions. It has
+as well dates. But the only difference
+is that it doesn't contain any numbers.
+So no measures. So that means with the
+factless facts we are not measuring
+anything. So we are not interested about
+the how much. We are only tracking
+whether something happened or not. So it
+is very simple. If your fact has no
+measures no numbers then this is a
+factless fact. Though in this example it
+is little bit weird. Okay. It is not
+that like perfect fact that we usually
+have. We don't have a date only the
+keys. And as well, we cannot turn this
+into dimension because this is not
+describing actually anything. If this
+keeps like really weird inside your data
+model, you can go and just get rid of
+it. But for now, we just build it.
+That's why I'm going to go and call it
+the fact promotion coverage. Okay. So,
+this is our weird fact. But of course,
+we have way better fact here that we can
+do a lot of analyszis using it. And we
+have our new dimension. So now next what
+we're going to do with that we're going
+to go and deactivate things. We don't
+need them anymore. So disable load. Yes.
+Same thing for the campaign SKUs.
+All right. So now let's go and close and
+apply. All right. So now we have here
+less things on the chaos word. We are
+moving to the right side. And here we
+have our new stuff. So this is our
+factless facts. Let me zoom in. This is
+our new facts. The campaign spend. It is
+connected correctly to the dimension
+campaign. So one to many relationship
+and the arrow is correct and the
+dimension campaign it is a shared
+dimension to the factless facts which is
+just playing the role as a bridge
+between the product and the campaign.
+Look at this things are getting
+connected. Yeah slowly. So I will just
+move things a little bit closer. So now
+by looking at this you can see our
+shared dimension the product is shared
+now by three facts. So it is really very
+important one of course and this is of
+course a typical thing because in each
+business the products are the most
+important things. So we are
+transitioning right? All right. Now my
+friends, we come as well to a point
+where it's going to get a little bit
+heavy. But I'm going to explain it step
+by step. So that means if you are
+watching and you didn't take break, go
+take fresh air, make a cafe, and then we
+continue. This is going to be a little
+bit tricky, but we're going to see.
+[snorts]
+Okay, let's go. So now, as I said, we
+have now some events that we're going to
+tackle in one go. Of course, as usual,
+we're going to go back to the Power
+Query in order to understand the content
+and reshape things later. So now what
+else that we have inside our table? We
+have the invoices. So you can see we
+have an invoice ID, an order ID, the
+customer name, invoice date, amount. So
+this is as well transactional. This is
+an event. Now if you go to the payments,
+you're going to have the same feeling.
+We have the payment ID, the invoice ID,
+customer payment day, and the amount.
+Now if you go to the shipments, again,
+very close shipment ID or the ID and so
+on. So my friends, all of those things
+are events and somehow they are all
+connected together. Now in order to
+understand how to deal with this, we
+have first to understand the process. So
+the process is very simple like any
+order. We have a customer which is the
+company. They go and place an order. So
+this is the first step. After that we're
+going to go and ship the products to the
+customer. So this is the second step.
+And of course it going to follow up with
+a delivery. So this going to be the
+third step. So we're going to deliver.
+And after that we're going to issue an
+invoice. So this is number four. And the
+last step my friends the payment is
+going to happen. So pay this is step
+number five. So actually this is the
+whole process of ordering something from
+our business. Now of course each step in
+our process is actually a transaction.
+So it has like a date. It has a number.
+So how much the total sales for this
+order. Same thing for the shipment. The
+delivery had as well date invoice and as
+well we have like some numbers on top of
+it and how much the customer did pay. So
+each one of them has their own table and
+transactions but everything is actually
+my friends are connected back to the
+order. This is the main trigger for the
+whole event. Now of course what are our
+options in order to build this process
+inside our data model. Either we're
+going to go like the source system where
+we're going to go and build a table for
+each step. So that means we're going to
+go and build like one fact table for
+each step. With that we're going to get
+like five fact tables. We have already
+one for the orders but for the rest we
+have to go and build them. Well, this
+sounds smart and reasonable things to
+do. But now, if you have like a deeper
+look to each of those steps, you're
+going to find that we are talking about
+the same money over and over. So, the
+same number should be in the orders and
+as well in the invoice and I hope in the
+payments. Now, of course, the big
+question is, do the business users
+really want all those numbers in our
+reports? Are there many use cases for
+all those numbers? Well, I'm going to
+say no. Usually the business users going
+to ask us, okay, find me the total
+number of sales for the whole business
+or maybe by the region or by the
+products. And for this my friends, we
+have one single point of truth for that.
+It going to be the orders. So I'm going
+to go and grab the number the money from
+the order. So I would not go and start
+like showing all the numbers from each
+steps because at the end it is the same
+money. So that means we will not get
+like a lot of use cases for those
+numbers that we're going to have inside
+those facts. But actually by looking to
+this we're going to get better questions
+from the business. They're going to ask
+questions about the whole process
+itself. So they're going to start asking
+questions actually not about the numbers
+but about the dates. So those
+informations are way more interesting
+than the numbers like for example how
+long it takes from an order to delivery
+or how long it takes from an order to
+the payment. So there will be a lot of
+questions how long from the delivery to
+invoice or invoice payment. So that
+means usually the business and
+especially the process expert they going
+to ask a lot of questions about the
+dates. So that means what is actually
+interesting from all those tables are
+actually the dates for the business
+intelligence. And now what we could do
+instead of having like a fact for each
+step we're going to go and make like one
+fact table that's going to put side by
+side all those dates inside this fact
+table. And once we have everything in
+one fact table then we can answer many
+questions about the process. And of
+course I'm not inventing here something
+in business intelligence in data
+modeling. This has a famous name. This
+is my friend a type of fact table called
+accumulating snapshot. So each row going
+to represent like one event one order
+that going to hold all the milestone
+dates of the steps in our process. So
+this is the accumulating snapshot fact
+that we're going to go now and build.
+Okay. So now since we have now special
+type of fact, it's going to be as well
+special how to build it. It will not be
+like the others. Now since we're going
+to have like the whole process in one
+row, a lot of tables going to be
+involved in building this fact. So this
+going to be something special. Now how
+to build it? We usually start with the
+spine and usually it is the first step
+in the process. It is the order. So that
+means my friends this orders that we
+build at the start where we combine
+things together. This going to be the
+starting point for our new facts. That
+means I'm going to go and create a
+reference out of it. Then we're going to
+go and drop it in the facts. So we can
+go and call it for example fact order
+process or fulfillment whatever. All
+right. So with this we have now good
+starting point. This is the spine of our
+fact. Each row is one order. And now the
+question is which columns going to stay
+and which going to leave. Now again what
+is our purpose? We want to show for each
+order for each customer all the steps
+dates for the whole process. So that
+means I don't actually need a lot of
+things over here. I just need the order
+dates. So that means I'm going to go and
+remove all those stuff. Same thing for
+the junks over here. So let's just and
+go and remove. Actually that's all what
+I need. So order ID, customer name, and
+order date. This is the first step in
+the process. Now of course instead of
+having the customer name in order to
+connect it to our data model, we're
+going to go and make a lookup. So we're
+going to go and join it with the
+dimension customer. Customer name
+customer name. And then we're going to
+go and get our key.
+Perfect. go to the left side and remove
+the customer name. Perfect. Now we have
+the first step. Now we have to go and
+get the other steps of our process. What
+is the next one? We have the shipment.
+So we have the shipment ID, the order
+ID, the mode, the date and the delivery
+date. So actually we have here two dates
+of the process which is exactly what do
+we need. Now about the mode, we can
+include it or not. But for now I will
+not include those stuff inside our fact.
+So I'm going to go back to that order
+process and then merge the shipment with
+our table. So it is somewhere over here
+shipments. We join by the order ID and
+hit okay. Now we have to go and expand.
+We don't need the ids. We have it
+already. We don't need the mode. I just
+need the dates. Perfect. Look at this.
+We have the shipment date and the
+delivery. Now what is the next step? We
+need actually the invoice. So let's have
+a look to the invoices. So the invoice
+ID again the order ID. This is our key.
+We have again the customer name. We
+don't need it. We have it already. We
+just need the invoice dates. The amount
+is going to be like the total sales. So
+I'm just collecting the dates. Let's go
+back to our process. And same thing, we
+can go and merge invoices. Order ID.
+Order ID. Okay. Then we have to expand.
+So just give me the date. So now we are
+getting closer. Now the last step in our
+process going to be the payment, right?
+So over here, well, we don't have the
+order ID, we have an invoice ID. So
+we're going to join using the invoice
+ID. We have it. We don't need the
+customer name. Just give me the date. So
+let's go back to the process. Now of
+course I need the invoice ID. That's why
+I'm going to go some steps back in order
+to expand correctly. So I need the
+invoice and as well the dates otherwise
+I cannot join it. So actually now we
+have the ID and now we can do the merge.
+So we need the payments over here. This
+time the invoice ID with the invoice ID.
+Let's hit okay. Then the last expansion
+we need the payment date. Now I can go
+and get rid of the invoice ID. I don't
+need it anymore. So remove. So now do we
+have everything for our process? We have
+the order, the shipment, delivery,
+invoice, and payment. And this looks
+exactly like our business process. So
+this is my friends, the fact that called
+accumulating snapshots for one event.
+You're going to get all the dates of the
+process. Of course, I'm doing things
+very quickly. I'd usually do and test a
+lot. Each merge, I check whether we have
+duplicates or the numbers are correct.
+But now in order to make things a little
+bit quicker, I'm just merging like
+crazy. So this looks really good. Now
+what we going to do actually with the
+other tables? I'm going to say we're
+going to go and deactivate them because
+we have now the most important aspect of
+all those tables. And of course if in
+the future we got like more specific
+things and more specific questions about
+for example the invoices then we might
+go activate it again and build like
+special purpose fact for it. But
+actually we got the best of this table.
+So we connected is with the order we
+have already the customers the invoice
+dates and the amount is not that
+important we have it in the fact sales.
+So that's why my friends I'm going to go
+and deactivate it from the model. Same
+things for the others. So let's go to
+the payments. The same money is just
+repeating over and over. So deactivate.
+Same thing for the shipment over here.
+Well we can go and include the mode if
+it's really that important. But again if
+we get like some specific use case for
+the shipment we can go and activate it
+and add this column. will not be now
+necessary for our data model. So we are
+deactivating a lot of things. Now by
+looking to this we still have the
+invoice lines. This is exactly the same
+setup like we had at the start. The
+invoice line is the details of the
+invoice and the invoices is the header.
+Again if there is like special needs,
+special use case in order to analyze the
+invoices we can go and always build a
+fact tables out of those stuff. But for
+now I don't see it as a core thing
+inside our data model because again the
+same money is repeating. So I'm going to
+go and deactivate this as well. All
+right. Now we have deactivated almost
+like everything. So let's go and save
+and see what do we have and look to our
+data model. So this should get really
+empty.
+Oh wow. Look, we still have like four
+tables out of the chaos. And of course
+everything went to the new data model.
+Now of course you might think now I'm
+trying to rush up the project in order
+to close things. But to be honest, this
+is exactly the way how I work. I don't
+go and push everything inside the data
+model in order to have everything just
+in case someone ask for something. I try
+to push really hard on the data model
+only to leave what is necessary. And I
+can tell you after working in many
+projects, this exactly the process. I
+understand the business and try to bring
+the core facts and the core dimensions
+to the data model. And if there is like
+one or two customers are asking very
+specific questions about like some weird
+tables, I would not go and destroy the
+data model to be honest. I'm going to go
+and build another PowerBI model just for
+their purposes. So it's going to be
+something quick just to make their
+analysis and that's it and try to
+protect the core data model from those
+age use cases. So this is my style on
+how I do data modeling. But there are a
+lot of people that go and include
+everything inside the data model just in
+case. Well, if you do it like this, then
+you are including a lot of things that
+will never be used in reporting and this
+is really waste of space performance and
+as well confused a lot in reporting. All
+right, so now back to our data model.
+Now we have like a new things. We have
+to be as well careful that the new core
+data model is not getting like full of
+chaos. So we have the order process.
+This is the accumulating snapshot type
+and yes it is connected with the
+customers and that's it. So yes, we are
+getting a lot of facts but we are making
+sure none of the facts are connecting to
+each others. They always go through a
+shared dimension. Our shared dimension
+now is the customers and the products
+and always the relationships are
+healthy. So we have here one to many
+relationship and the direction is from
+the dimension to the facts. So this is
+not chaotic. This is very healthy. Okay.
+So now we are getting very close to end
+the migration. Look at this sneaky table
+at the end. Let's go and put it here. So
+what do we have here? We have five
+tables yet to go. Now let's go to power
+query and start like investigating those
+stuff. Now I'm going to start with the
+very obvious one. Remember the sheet
+one. It is a complete duplicate of the
+shipment. So they are like identical
+tables. Think this is an import problem
+that happens maybe from the source
+system or in the Excel. Of course
+happens a lot in real projects where you
+import stuff that are actually not
+necessary inside the model. So what you
+going to do? We're going to go and just
+delete it. Not enable. So we remove it
+completely physically from our model. it
+is not something that we're going to
+need later. Okay, so let's keep going.
+We have the exchange rates. Well, I'm
+thinking about this. We don't have like
+any relevance for this inside our data
+model. It is something transactional
+maybe important for the interfaces in
+the source system. But for reporting,
+why do we need those informations? And
+actually, I cannot go and connect it to
+our data model. That's why I'm going to
+say this is a standalone table that
+actually will not help us at all. So,
+I'm going to go actually and deactivate
+it. I will not like physically remove
+it. Maybe there is like use case for it.
+We cannot connect this anywhere. So
+deactivate. Now what else we have here?
+The sales target. So here we have the
+target revenue and the period. So
+someone is like actually planning the
+target for each month. Well, this is
+like mini transactional table. This is
+not a dimension. That's why I'm going to
+say let's go and make small fact out of
+this. It will not hurt. So we're going
+to go and bring it to the facts. Rename
+it of course. So rename fact. I'm going
+to stay call it the sales targets. And
+what else we could do? We just go and
+maybe rename things to follow our
+standards. So the date and the target
+revenue. So actually that's it. It is a
+mini one that don't have really any like
+ids to customers or dimensions. Only has
+a date and a measure. So that's it.
+Let's go and deactivate this one.
+Disable load. Now what else do we have?
+We have the security. And as well we
+have a dimension order. This is of
+course completely garbage table. So here
+we have just like a list of all orders.
+And this makes no sense. We have already
+better tables for this. So I'm going to
+say I'm going to go and remove this
+completely physically from our data
+model. So delete we will not deactivate.
+Perfect. Now the last thing that is left
+is the security. Of course my friends we
+cannot leave the data model as it is. We
+have to make it secure following the
+standards. And here we have a very
+helpful table to let us know which user
+is allowed to see which region. But of
+course we're going to do this in the
+last phase. So now what I'm going to say
+actually we have covered everything. So
+let's go and close and apply and have a
+look. Yes, it is empty. I know we have
+the security. We can do this later. I'm
+going to bring it near to our data model
+here. And my friends, I can say the
+nightmare data set just got cleaned up.
+So, we have here a healthy star schema.
+Just enjoy this view. Have a look to
+this. We have a healthy data model. I
+think my camera gave up. So, back now.
+Look at this my friends. We don't have
+anything anymore from the old spider
+web, the nightmare data set. Everything
+is migrated to a clean star schema of
+course a Galaxy one. So everything is
+connected using the best practices and
+we have here only one fact table that
+stands alone and the security table. So
+just sit back and look at this. This is
+really satisfying. But of course we are
+not done yet. We still have the last
+phase.
+All right [music] friends. Now the next
+phase it's all about polishing the data
+model. So we're going to finalize our
+data model. We're going to make it
+trustworthy before handing it over for
+the next phases. So we're going to do
+things like for example we're going to
+go and check again our standards our
+rules and check whether all the tables
+and the columns are following it like
+the snake case like the prefixes
+suffixes the keys and so on. The second
+step that I usually do is that I go and
+create the dimension date. It is a
+special dimension that actually going to
+be needed almost in all our facts. So we
+have to create it and connect it in the
+data model. This is one of the things
+that I do at the end. And after that
+we're going to build like a collection
+of measures. So we're going to make like
+set of very obvious measures that's
+going to be needed on top of this model.
+And after that we're going to make sure
+that our data model is secure. That
+means we're going to apply on this model
+the role level security is like almost
+standards in any project. And after that
+we do the final testing. So we go to the
+report level and we go and check only
+the big numbers and whether the
+dimensions are working correctly to make
+sure that everything is correct before
+handing over this data model for the
+others. Usually the last step is I go
+and make a meeting and talk to the
+others, draw them the star schema and
+make a guide on how to use it for
+reporting. All right, my friends. Now
+let's deep dive in this phase.
+>> Okay, let's do it.
+>> Okay, so now let's start with the first
+step where we're going to go and check
+whether our data model is following the
+standards and rules. I'm pretty sure
+that I have forgotten something during
+the building phase. We are at the end
+human and we might forget things. So how
+I usually do it is that I go to the
+table view over here and have a quick
+check on the right side. So I can see
+that everything is sorted correctly
+using the prefix. So we have the
+dimensions and the facts and the last
+one is the security. So by looking to
+this I can say all the names of our
+tables are following the standards. Then
+we go just quickly through all the
+tables one by one just to have a quick
+look. Well everything looks so far fine.
+Well seems that I have followed all the
+rules. Well not everywhere.
+So I have to fix here the naming
+conventions for this fact table. So we
+have to do it quickly to go to the power
+query. Okay, the fact order. So
+customer ID, order dates,
+ship date.
+Okay, looks good. So I'm going to go and
+close and apply. All right, so we are
+following the standards over here. Let's
+go and keep going. Looks good as well.
+Good. The security going to be at the
+end. Okay, so that means we are
+following all the rules for the table
+names and as well for the columns. Now
+there is another thing that I do that I
+go and check the date format. Well, you
+can see here that in our dates we are
+using the full name, the full month.
+This looks really weird in reporting. If
+you have a lot of dates, it's going to
+take a lot of space in the report level.
+So what I usually do is that I decide on
+one like smaller format and I stick to
+it for the whole data model. So now what
+I'm going to do, I'm going to go and
+first decide on the format. So if you go
+over here to the column tools, you can
+see that we have format for the dates
+and in PowerBI we have a lot of formats.
+I'm going to say the standards is going
+to be this one. So the year, then the
+month and day depend of course on the
+region. But this one is compacted and
+small. Look at this. It is not taking so
+much space. So that means this is going
+to be the standards on how to show the
+format inside the data model. Now we're
+going to do very annoying task where I'm
+going to go through the whole data model
+and make sure that all the dates are
+using this format. Now of course you can
+pause the video and do it. I'm going to
+now fast forward just to make sure this
+video don't explode. So, I'm going to do
+this pretty fast. So, let's go.
+So, that was the last fact in our data
+model and with that we have now the same
+format for the whole data model. Now,
+there is another thing that I usually do
+in this phase as well since we are now
+going through all tables. When PowerBI
+sees a column as a number, it going to
+make it automatically like aggregable.
+So that means if you use it inside your
+report, PowerBI going to automatically
+like summarize all the values. This is
+of course nice thing but sometimes we
+have numbers where it makes no sense to
+summarize. So it's really nice if you
+clean this in the data model before
+going to the next phase so that people
+don't make any mistakes. So now what
+we're going to do, we're going to go
+through all the tables one by one and
+always keep your eye on this icon. That
+means this column could be aggregated.
+For example, here the budget can see
+here the summarizations it is sum. If
+you don't want it to get summarized,
+you're going to go over here and say
+don't summarize. So now we have to make
+decisions almost for all your numbers.
+I'm going to say for the budget it makes
+sense of course to make maybe an
+average. So I'm going to leave it as it
+is. For the customers, well I'm going to
+say maybe makes sense to make an average
+out of this. So this is okay. So let's
+go through all the dimensions. Same
+things for the products. So that was the
+last table, the last column. And with
+that all dates inside my data model is
+following the same format. All right. So
+that's what the first step. We made sure
+that we are following the rules and the
+standards on the format and everything.
+Now we're going to go to the next step
+that I usually do with that. I go and
+create the dimension date. There are
+many different ways on how to create
+this. I usually do that in the back end.
+So if I have a database or data bricks,
+I go and create the dimension there. But
+since now we are just doing PowerBI, I'm
+going to show you a way on how to create
+it directly in your data model. Uh there
+is a really nice way, I'm going to say
+very smart way actually from PowerBI.
+Now I will not go and give you like a
+CSV file or text with all dates inside
+it and say hey this is your dimension
+but this time we're going to go and
+create it by getting inspired from the
+data model. So how we going to do it?
+You're going to go over here to the home
+and here in the ripon we have something
+called new table. So what we are doing
+here we are like creating a new table
+inside the data model and we're going to
+go and call it since this is the
+dimension dimension date. Now there is
+very cool function in PowerBI called
+calendar auto. So read this. It returns
+a table with one column of dates
+calculated from the model automatically.
+And this exactly what it does. It go and
+scan the whole data model. Understand
+the range of our business. So understand
+what is the earliest date and what is
+the latest date and just create one
+column based on that. Very very cool. So
+actually that's it. We don't have to
+give it any arguments and hit enter.
+Amazing things. So look at this. The
+earliest date is the 1st of January 2025
+and the latest date is the end of 2026.
+And of course this my friends going to
+expand automatically as the business
+grow. So that means if the data sets
+like grow over the time and you have
+2027 you don't have to deal with the
+dimension date because it going to grow
+automatically. So suddenly you can have
+as well in the dimension date 2027. I
+can tell you this is magic really. In my
+old days as I done business intelligence
+with other tools that was one of the
+biggest struggles where I had like a
+manual table and I have to always add in
+new years and stuff like that and I can
+tell you many people forget to update
+their dimension date and of course this
+cause a lot of problems in the report
+because almost on each report you are
+doing like analyzes over the time and
+you will be using this dimension. So
+this is one of the most important
+dimension compared to the others. And if
+you don't make sure it is always up to
+date, it's going to be catastrophic. But
+now we don't have to deal with all this
+chaos. PowerBI did solve this and
+everything now is automatic. Just some
+trauma from my old days. All right. So
+now what do we have? We have only like
+one column. Right? Now what you can do?
+You can go of course and change the
+format to our format. So we need only
+the date. We don't need the hours and
+time. And of course in the next step if
+you want to go and expand this dimension
+to add more columns like for example the
+year, the month, the day, the full name
+of the day, the full name of the month.
+So you can add a lot of things to this
+dimension by just going and adding like
+a new column. Like for example, if I
+would like to get only the year, I'm
+going to do something like this year
+equal and then use the function year and
+specify here the column. So this going
+to be our dimension date and that's it.
+So with that we have the column called
+year and I can do the same thing. So I'm
+going to go and duplicate it. So that we
+have the years. We can go and create
+another one for the month. Same story.
+So month equal the function month in
+order to extract this part our column.
+So my friends we have a lot of date
+functions that we could add in order to
+expand this dimension. But I'm going to
+leave it like this. Now of course the
+big question is how we going to connect
+this new dimension to our data model. So
+we have it over here and there are like
+many places where we could connect this.
+Almost all our facts has dates right
+now. The thing is we have a lot of fact
+tables inside our data model that have a
+lot of date fields. And this dimension
+date can play a very important role in
+order to make the bridge between all
+those facts. This going to be shared
+dimension that going to help us in order
+to compare all those numbers from
+different facts. So this is going to be
+our biggest shared dimension in the
+whole model. So how we do it? It's very
+simple. We're going to go through the
+facts one by one and start connecting it
+to our dimension. So here we have the
+fact sales target. We grab the date and
+connected to our dimension date. Okay.
+Same thing we go to the next one. We
+have as well date. So we connect it our
+dimension. All right. So now we have
+like a shared dimension between those
+two and we can go and compare now the
+numbers between those two facts. Now we
+have here this factless fact. It is a
+little bit weird. We don't have a date.
+So that's why we will not connect
+anything here. Let's go to the next one.
+Here we have a month as well. We can go
+and connect it to our dimension. Let's
+go. And of course, the most important
+one over here. We have the fact sales.
+So, we have the order date. We go and
+connect it and say save. And the last
+fact table here, we have a lot of dates.
+So, for example, I'm going to go and
+grab the order date to the dimension.
+So, now look at this. Our dimension date
+is actually a big shared dimension
+between a lot of facts. Now this is
+amazing because now we can do a lot of
+analyszis side by side from all those
+facts. Let me just show you an example.
+Let's go to the report view. Don't know
+how we're going to do it. Now very
+important as usual in order to build the
+visual we start first from the
+dimension. So the dimension dates this
+going to build the access for our visual
+and then after that we start picking the
+measures from the different facts like
+for example the fact sales. We can go
+and now grab the total sales and put it
+in the view. Perfect. Now we can go to
+another one. For example, the fact sales
+targets. This one going to be on the
+month level. So the visual going to
+looks weird. But we can fix it if we
+just remove the day from our date. So
+that everything is on the month level.
+Now we can go to a third fact like for
+example the inventories. So let's go and
+drop the stocks or the units. This is
+exactly my friends the power of the
+dimension dates. We can go now and visit
+all the facts and compare things side by
+side very easily without losing the
+numbers. Like you can see here the total
+sales is always protected and you can do
+now a lot of correlations and
+comparison. So this is the main job of
+the dimension date inside our data
+model. Now of course what else we can do
+with the dimension date? We can use it
+in order to do role- playinging
+dimension. Like for example we have here
+huge fact table with a lot of dates.
+Right? So we have the order date, the
+invoice date, the pay date. Now we can
+go and connect our new dimension
+multiple times to this fact. Let me show
+you how to do it. So let me just bring
+this fact here. And now we just grab the
+date to the different columns. Like for
+example here the pay date of course this
+going to be inactive. Then one more time
+for the ship date and another one for
+the invoice date. And I think the last
+one going to be the delivery date. So
+look at this. Our dimension date is
+playing five different roles for these
+facts. But of course you're going to do
+this only if you really need it.
+Otherwise this going to looks really
+ugly. So don't go randomly like
+connecting the date for every column.
+Sometimes we don't really need it like
+for example if I'm just like analyzing
+the sales I don't really always to go
+and get the dimension date so actually I
+can go and build the visual completely
+based on the fact sales I have there the
+order date I have everything so if your
+analysis is based only on one fact table
+then we don't really need the dimension
+date but only if you are like comparing
+multiple fact then we go to the
+dimension of course and with that my
+friends means we don't have to go crazy
+and connect the dimension date every
+single date column that you have in the
+data model only if it's needed and if
+you create something like this then you
+have to go and start like building DAX
+calculations for each inactive
+relationship so that you can use it
+actually in your reports but if it is
+not needed then don't go and create all
+those relations now our dimension date
+looks crazy and this is usually how this
+dimension looks like at the end so my
+friends this is the topic of the
+dimension date I usually do it at the
+end just to have a big picture first
+about all my fact tables and only then
+at the end I go and connect the
+dimension date. Okay. So now we come to
+very important step in data moduling
+that a lot of people actually skip at
+this phase. We have to go and create the
+measures. Now the thing is yes we have a
+good star schema we have good structure
+everything is connected correctly the
+filter direction and all those stuff.
+But now if you go and hand this over to
+your project team and everyone start
+like building on top of it reports and
+visuals. Now what could happen is that
+multiple people going to go and start
+creating multiple versions of
+calculations that actually are
+calculating the same thing over and over
+and nobody going to know which one is
+the right one for the data model. Now
+another thing that might happen is that
+people that are working with the data
+model they might not yet develop like
+understanding of the grains of your
+facts. So for example they might go to
+the fact sales and say you know what I
+have to go and calculate the total
+number of orders. So they go and create
+calculation where they're going to count
+the order ids which is totally wrong.
+The green there is the line of order. So
+in order to do it correctly they have to
+do count distinct on the order ID. That
+means this going to lead to wrong number
+even if the data model is perfect. So
+that means in this phase our job is not
+only to structure and build a perfect
+star schema but as well we have to go
+and prepare the measures side by side
+with our data model just to make sure
+that we reduce the confusion. And of
+course I'm not saying here we have to go
+and now create all the measures for
+everything that we have in the data
+model. We just have to go and create the
+core measurements. But think that we are
+sure it going to be reused over and over
+in many reports. And by the way not
+everyone is working in teams. If you are
+solo data analyst this is as well good
+for you. I'm pretty sure over the time
+you're going to have like multiple
+PowerBI projects and you're going to
+forget about the grains and the data
+model. So you protect yourself making
+different versions of calculations and
+as well making wrong calculations. So my
+friends this is exactly what we have to
+do now. We have to go and create a
+bundle of measures. All right. So now
+how we going to do it? There's like two
+ways. Either you're going to go to each
+fact and inside them you're going to
+start create the individual measures. Or
+there is like another way that I like to
+do and many others as well is to go and
+bundle let's say the major measurements
+inside one fake table. Let me show you
+how to do it. So we're going to go over
+here and say okay new table. Now I'm
+going to call it underscore in order to
+have it at the top. then measures equal
+nothing. With this we got like an empty
+table here on the top. And now inside it
+we're going to go and start creating all
+the measures of the data model. So
+that's during creating the reports
+you're going to have it all in one place
+and it's going to be easy to go and drag
+and drop stuff. And if you want to
+update your measures, you go directly
+here and start updating. So now this is
+our new measure that we have. Of course,
+we will not connect it to anything. I'm
+just going to go and move it here side
+by side with the security so that we can
+see okay this is my star schema and
+those are the let's say the add-ons on
+top of it. Now let's go to the maybe
+report view and create a new tab. I'll
+just start now and create like few major
+measures inside our data model. So let's
+start with the fact sales like for
+example here it's very obvious that's
+one of the major measures it is the
+total sales right. So how we going to do
+it? We're going to go to the measures
+over here and right click on it and say
+new measure. Then we just create like
+very simple DAX calculations. So for
+example, total sales equal to the sum of
+the fact table sales. And now you pick
+the column. So line total and actually
+that's it. Now what we do actually after
+that we decide like on the format of
+this measure like for example I'm going
+to have the thousand like separator.
+Actually I don't want it as a decimal
+number. So I just want it always to be a
+whole number. So that everything is
+formatted and is ready in order to be
+used in my reports. So now by just drag
+and drop from this measure I'm going to
+get the total sales without worrying
+about how this is calculated. So that
+was an obvious thing. Then we have to
+keep thinking okay what could we
+measure? Well very important the total
+number of orders. So we're going to go
+and create a new measure total orders
+equal. Now we want to count how many
+orders that we have in the business. So
+we're going to say okay count but again
+since the grain is line of total we're
+going to go and use the distinct count
+and we're going to say okay fact sales
+the order id. So actually that's it. Now
+of course you can think about how we're
+going to format it. So it's going to be
+as well the thousand's going to be
+separated and it is a whole number which
+is correct. So if I go drag and drop
+same thing I got that total number of
+orders which is correct. So as you can
+see this is the whole job. We're going
+to go through all the facts one by one
+and we start creating those measures.
+But we have just to focus on the main
+things that we are sure that's going to
+be used in many reports. Like for
+example, we can go and count the total
+number of active customers. So there is
+like a difference between all the
+customers that we have inside the data
+model. For that we can go and count it
+from the dimension customer. But if you
+want to know how many customers are
+actually ordering things, then you have
+to go to the fact sales. So we can go
+over here and say okay new measure total
+active customers equal as well distinct
+count because we're going to go to the
+fact table. So fact sales and here we
+need the customer ID. So this is the
+count from the fact. Now we can go and
+create another one that is actually
+counting from the dimension. So base
+maybe total customers equal. This time
+we can just go and use the count for the
+dimension because we don't have
+duplicates. dimension customer and here
+we pick as well the ID over here same
+thing if you have a lot of customers you
+can go and start like separating things
+with a th00and now what else we can do
+we can go to another fact like for
+example here we have the fact order
+process we can go and calculate the
+average number of days from the first
+step to the last step so now how we
+going to do this measure first we have
+to go and create maybe a column let me
+just go back over here to the table view
+so look at this we have all the steps
+and I would like to go and calculate how
+many days that we have between the first
+step the order date and the last step
+the pay date and with that we're going
+to get like a new measure for this fact
+and in top of it we're going to go and
+create a new calculation. So let's go
+and do that. First of all we need a new
+column because we need calculation on
+the row level. So for example this going
+to be order to pay. Now we just want to
+find the differences between two dates.
+So there is a function called date diff.
+The first date is the order date. The
+second one is the last one. So it's
+going to be the pay date. And what is
+the difference? we are calculating how
+many days not month or year. So this is
+the part that we are interesting in and
+actually that's it. So look at this. Now
+we are getting the total number of days
+that it took from the order to the
+payment. Now the next step is very
+simple. We're going to go and create a
+new measure in our collection where
+we're going to say like for example
+average order to pay equal average. Then
+we just go and pick our new measure. So
+it is the order to pay. So look at this.
+Now we have another measure based on
+another fact. But everything now
+together. So now if you are building a
+report, all what you have to do is to
+just go and open this one and start
+browsing all the measures of this data
+model. But of course again you don't
+have to go and sit and think about each
+single detail. Just create the obvious
+one. Okay. Now I'm going to say for now
+I'm going to stick with this. This is a
+good collection of measures that we can
+hand over together with the data model.
+All right friends, now we are getting
+very close. We have now the last step in
+the last phase. We have to make sure
+that our data model is secure. So that
+means we have to go and apply the role
+level security mechanism on top of our
+data model. Let's go and do that. Okay.
+So now again we have our star schema. We
+have those measures and the last add-on
+that we have to add is the security. Now
+first of all to make sure that the
+security is ready we have to go back to
+the power query and make sure that
+everything there is ready and clean.
+Okay. So this going to be our last table
+inside the stage the security. Now
+quickly by looking to this you can see
+the header informations are not correct.
+So this should be the columns and just
+we still have to follow the naming
+convention. So I'm going to go and
+rename things. This is the user email
+and this is my friend the region. All
+right. Now the last step is that I'm
+going to go and grab it actually to the
+other supports. So with that I don't
+have anything more in the stage that I
+have to work on. Look at this. We have
+here the dimensions. We have the facts
+and the support going to be the security
+table since it doesn't belong to those
+two. All right, let's close and apply.
+All right, now look at this. It start
+connects to our data model. But I have
+to make sure that it is correct. So
+let's go and just remove it. So we don't
+need this relationship. And about this
+one is actually correct. So now again
+let's first understand the security that
+we have here. So let's just talk about
+it. This is the security. Look at this.
+Here we have the user email addresses.
+Those are the employees of our business.
+and it looks like they are assigned to
+specific regions. Now, of course, in
+order to build this, we have to talk to
+the security officers of our company and
+understand how the security works. They
+might say, you know what, each employee
+in our company is allowed to see only
+specific region. Like for example, Nora
+can see only the North America. She is
+not allowed to see the sales that are
+happening in Europe or Middle East. Same
+thing for hands. Hans can see only
+Europe sales. So, we have to understand
+the security requirements before we
+start like connecting things. So we
+cannot go blindly like making a security
+concept for the data model and only
+after understanding then we can start
+connecting things together and then of
+course the next step is to think okay
+where are the region informations in
+which facts in which dimensions we can
+see that now of course it is very
+obvious if you go to the dimension
+customers you're going to find over here
+the region information. So this is a
+very good starting point. Of course the
+question is how we going to connect this
+security to our data model and we
+usually do it on top of dimensions
+because dimensions anyway go and filter
+the fact tables and the security table
+going to be filtering this dimension.
+Now it's very obvious that we have the
+dimension customer where we have the
+region over here. So this is a perfect
+candidate where we're going to connect
+our security on top of this so that the
+user can see only specific customers and
+this will be filtering as well our
+facts. So this is one way on how to
+create the security. There is another
+way on how to do it is to go to the
+geographic dimension as well. Here we
+have regions and this one is connecting
+as well directly to our fact which is
+really as well good candidate that we
+could use in order to filter our data
+model based on the security. Now how we
+going to decide on this? Usually I do it
+like this. I go back to the data model
+and look to those two dimensions. So I
+can see here for example, let me zoom
+in. This is the go dimension and you can
+see it is connected to the fact sales.
+So now if I put the security on top of
+this, it going to go and filter only one
+fact table. But now the other one the
+dimension customer it is actually
+connected to two facts the fact sales
+and the fact order process. So if I
+connect the security on top of this, I'm
+going to benefit in order to secure
+actually two facts which is of course a
+nice thing. So I'm going to go and
+decide actually on connecting the
+security on top of the dimension
+customers just because it secures more
+facts for me. But again based on the
+requirements we have to do those stuff
+and now I saw like some weird scenarios
+where people go and say you know what I
+want to secure the whole data model
+without any reason. So they start like
+forcing somehow the data model to use
+the security table on top of each facts.
+So they start like doing crazy things
+like by merging the facts just in order
+to get the region column inside each
+fact and they destroy the grain because
+of this just to add the security at the
+end. Maybe this is totally unnecessary.
+So always understand the security
+requirements and only apply it when it's
+needed. You don't have to secure every
+single dimension and fact. Like for
+example, is it really bad to show the
+dimension products for all our
+employees? I think it is no harm if they
+see the whole data. So that means for
+our project, let's say that we're going
+to apply the security on top of those
+two facts, the sales and the orders. So
+now how we going to do it? It's going to
+be very simple. We're going to go and
+build a relationship between the
+security and the dimension. So we're
+going to go over here and say okay
+region by region one to many
+relationship and the filter is single
+direction. We have to make sure it is
+going in the right direction. Of course.
+Well, yes. Look at this. The filter
+direction of the security is going to
+the dimension and the filter direction
+of the customers is going to both the
+fact sales and the fact order process.
+So, this looks perfect for security. Of
+course, the next step is that we're
+going to go and start creating the
+manage roles. Otherwise, this will not
+work. So, it's going to be very simple.
+We're going to go and create a new role.
+Let's go and call it regional access.
+And of course in which table we are
+building the security. It's going to be
+on the dimension customer and we're
+going to write a DAX calculation in
+order to secure it. So we're going to go
+and switch to DAX. Okay. So this going
+to be very simple. We are just writing
+the DAX filter expression where we're
+going to say okay I want to show only
+the rows where the region is matching
+the user region. So that means it has to
+go and find up what is the region for
+our current user. So it is inside the
+security table the region. then it
+should match the email address that we
+have in the security with the user
+whoever is opening the PowerBI reports
+and for that we have a nice function the
+user principle name. So very simple
+thing so it is not that hard we are
+saying just check each row and ask this
+question does the region belong to the
+person that is looking at the report if
+yes then keep the row otherwise go and
+drop it. So it is just a filter
+expression that going to help us to
+filter the rows based on the region of
+course. Actually that's it. Let's go and
+save it. Very important that we are
+getting green. Now let's go and close
+it. All right. So with this we have
+applied the role of the security on top
+of our data model. But of course we
+don't trust until we test. So how we
+going to test it? I need one email like
+one of the employees. So for example
+Nora. I'm going to go and copy its
+value. Then go back to the model. And
+now we're going to try to view the model
+as Nora is opening the report and seeing
+it. How to do it? We're going to go over
+here and say view as then we have to
+specify the rule that we just created.
+So the regional access and we want to
+see it as another user not as par
+because otherwise it's going to take the
+informations of my users but we want to
+see it as Nura. Okay. So let's hit okay.
+Then you can see we're going to get like
+a warning. The original access is
+activated and we are viewing the object
+as Nora email. So now let's go and test.
+Look at this. We are already seeing like
+less details than before. So the total
+sales is not anymore the total number of
+sales of the whole data model and we are
+seeing only the total sales that is
+based on their Nora's region. Of course
+we can test this as well by going to the
+dimension customer and let's go and grab
+the region. So you can see we are seeing
+only the North America. So my friends
+that means the dimension is working. The
+fact table is as well working and of
+course the last test. Let's go and
+remove this effect. So if I stop
+viewing, look at this. Suddenly I'm
+going to see the total sale for
+everything and as well I'm going to see
+all the regions. Of course, now you can
+go and pick another email and test that.
+But for me it is already working and we
+have applied the role security on top of
+our data model. All right friends, oh my
+god I can say that we are done. We made
+it. Just sit back, look at this and
+enjoy it because this is awesome. And
+remember at the very beginning I showed
+you this beautiful chaos and the
+nightmare data model where we had the
+many to many relationships everywhere.
+The filters are going from one table to
+another just in all directions. No star
+schema. Nothing makes sense. Full chaos.
+But now look back to this. We have clean
+healthy star schema or let's say galaxy
+where we have fact tables and surrounded
+with dimensions. Every relationship and
+every filter is going to the right
+direction. The numbers are protected and
+everything is friendly and easy to read.
+And I can tell you this one was not an
+easy one. That was a really hard project
+and complicated. And if you stayed until
+the end and you build exactly this data
+model with me, then my friend, you
+should be proud of yourself. And I can
+say welcome to the club with this, you
+went with me through the journey exactly
+like I do in my projects in my
+companies. And I can tell you over all
+projects I just met like only a few
+people that have this kind of skills
+where they can turn a chaos data model
+into a clean one because most people
+actually don't know how to do data
+modeling and they skip it. But my
+friends, we are not one of them. We are
+the experts that can build a real data
+model and this is really a rare skill
+that many companies need. So what I
+really recommend you is to go and make
+this project as your portfolio project.
+Of course feel free to use it as your
+project. So go and share it as well with
+the others in LinkedIn and you can tag
+me if you want. But what is way more
+important than this, if you are
+searching for job and you got
+interviewed, make sure to talk about
+this project because this is really
+rare. It going to makes you quickly
+stand up the crowd. And if you got hired
+or you are already at the company and
+you joined a new project where they have
+exactly the data model, the chaos that I
+showed you at the start, what going to
+happen this time? You will not panic.
+You're going to look at it and smile
+because you're going to remember exactly
+this project and you know what to do. So
+now before we close this project I would
+like to go through all the most
+important points that you have learned
+during the data modeling. So let's recap
+the first point before you build
+anything always take time to analyze
+explore and understand you have to
+understand the business the processes
+the data the more you invest in
+exploring the data and understanding the
+business the easier things going to be
+during building the data model. Then the
+second point, always understand the
+grain of your tables, dimensions and
+facts and say it loudly what each row is
+representing. Once you know that you
+will not make mistakes as you are
+connecting tables. Third point, always
+set rules and standards before you start
+the projects and always follow them
+until the end. All the naming
+conventions, the prefixes and so on.
+Rule number four, always remove the
+unnecessary data from the data model.
+This is very important. Always ask, do
+we really need those informations for
+reporting? Is it really necessary? Never
+be the person that's going to leave
+things just in case. And the next one,
+our goal is always to build the star
+schema. All BI projects love that.
+You're just going to make your life
+easier with the calculations. And of
+course, always avoid connecting fact
+tables together. Just use a shared
+dimension in between. And the filter
+directions are always from the
+dimensions to the facts. So my friends,
+that's it. Yes, this is the whole
+project. I really enjoyed making this
+project. For a while, I thought that I'm
+working at a company. I am not recording
+a video and I'm talking to a colleague.
+I really had a lot of fun making this
+project. I really enjoyed it. Now it's
+time for you. So you have to go and
+practice on your own. Maybe go and grab
+any data model or your own data. Try to
+make a healthy data model out of it. So
+that's it my friends. I hope you enjoyed
+this project with me. If yes, then
+support the channel by subscribing,
+liking, and commenting. Share it with
+others in order to reach nice people
+like you. And I'm going to say thank you
+so much for watching and I'm going to
+see you in the next project. Bye-bye. At
+you later, warehouse. See you on the
+flippity flip.
+[music]

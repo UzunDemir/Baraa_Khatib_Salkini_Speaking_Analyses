@@ -1,0 +1,6239 @@
+About now.
+Let's see whether you can see me or hear
+me.
+Oh.
+You can see me, right? And hear me.
+Check. Test. Test.
+Nice. Nice. Nice.
+Ah, finally. Finally.
+I don't know why,
+but it works. So, I just have to
+restart, right?
+Um yeah. Um
+pretty happy about
+everyone here. So, welcome to the second
+day of uh boot camp for Databricks. Um
+I'm really excited about the second day
+because it's going to be heavy day, to
+be honest.
+Um I prepared a few stuff for you, but
+to be honest, I thought
+uh the longer I prepare, the longer I'm
+going to like forget.
+That's why. It's going to be open
+session. I will explain everything, try
+to explain everything that I know about
+data engineering in Databricks. I saw
+that uh most of you did enjoy yesterday.
+Uh I saw a small engagement yesterday on
+the chat and uh the questions. And in
+Discord as well, we have a lot of new
+visitors to Discord, so I'm really happy
+about it.
+So, yeah.
+Welcome
+to day number two. And I'm going to ask
+maybe first question, do we have here
+any new people join today and you were
+not um yesterday in our session. Is it
+your first day now in the data camp?
+Let me see in the chat chats.
+There is always like a 5-minute delay or
+something. Uh 5 seconds delay.
+Uh the voice is glitching, right? Okay.
+>> [snorts]
+>> Um
+Yes. Yes.
+So, is still the voice bad, right? I
+have to maybe
+to try something. What's just a second?
+Strange. I didn't change anything since
+yesterday.
+So, now I hope the voice is better and
+you can hear me better now.
+Okay, voice is very good. So, that's
+good. That's good.
+Um yeah. So, today is uh the data
+engineering parts.
+And um yeah, welcome everyone to the
+data camp. Uh sorry, the yeah, boot
+camp. Now, one thing before we start uh
+the session, I want to mention as well
+uh in the all those sessions that I'm
+doing now about um Databricks,
+it's not about that I'm going to teach
+you how to use the UI, how to use the
+tool. I'm just providing you, let's say
+uh the mindset behind using the
+Databricks, why we are using this tool.
+And if you were last day yesterday in
+this session, you understood that I like
+to talk about the theory, I like to talk
+why we have this tool because to be
+honest, you can get yeah, maybe um yeah,
+everything about Databricks, but the
+tool might disappear over the time.
+There is a lot of tools that I used
+previously in my career that totally
+disappeared and died over the time. So,
+it's not about learning the tool, it's
+about having the mindset. Because once
+you have the right mindset on how to do
+data projects, then you can uh then move
+to any new tool, okay? So, it's not
+about the tool, it's not that the
+Databricks going to make, let's say uh
+the yeah,
+uh going to make
+yeah, your company works perfectly with
+the data and stuff like that. It's just
+a tool. If you are good with the tool,
+you have the right mindset, then you can
+do good projects. But if you don't have
+the basics, you don't have, let's say,
+the right mindset,
+you might do as well bad stuff using
+Databricks. So, [snorts] that's why I
+try to mix stuff between
+um yeah, the concepts, the idea behind
+the scenes, and as well the tool. So,
+that's why we going to now start
+with our um yeah, with our plan. I'm
+going to go and share my screen now.
+Let me just go over here.
+And yeah.
+So, back to our road map,
+what we have done yesterday is the
+following.
+Let me just move the chat so I know that
+I can see whether there is any issues
+with the voice.
+Yeah.
+So, now
+um
+This is our road map
+for uh Databricks. Uh by the way, uh you
+can just copy the road map and you can
+adjust it the way that you want. So,
+it's is not static. You just have to
+install Notion and duplicate the road
+map and then adjust it the way that you
+you need. So, uh it is uh splitted into
+two sessions, you know, the data
+analytics, that's what was yesterday.
+And the day two, it was about the data
+engineering.
+And um yeah, I think we have covered a
+lot of topics yesterday.
+So, the module one was introduction to
+Databricks.
+>> [snorts]
+>> And the module two what about the data
+analytics parts,
+there is two things that I didn't cover
+and that is Power BI with Databricks and
+uh the notebooks. Now, about the
+notebooks, today I'm going to give you
+an introduction to the notebooks, so
+that means if you are data analyst here,
+you don't have to worry about it.
+And um yeah, I'm going to show you how
+to do that, but with the data
+engineering parts. Now, about Power BI,
+I want to say few words about it just to
+let you know how to connect Databricks
+with Power BI.
+And then we kick off the module three
+where we going to talk about data
+engineering. To be honest, I this is my
+first time I'm doing those boot camps,
+so I don't know how long it takes.
+Yesterday I said we're going to take
+about 3 hours and we took 4 hours. So,
+I'm going to go as much as I can and as
+long as I I have energy
+>> [laughter]
+>> and you guys are here, then we keep
+going, okay? So, now uh the way I'm
+going to do it, I will think that you
+are a friend sitting near me here and
+I'm explaining stuff that happens in the
+work, okay? So, there is nothing like
+structured or PowerPoint or stuff. I
+will just go and start like clicking
+around and show you around to make you
+confident with Databricks. Now, about
+the Databricks, one more thing,
+>> [snorts]
+>> uh you don't have to install anything
+locally at your PC. It is something that
+runs on the cloud, so we will not use
+anything from your resources at your PC.
+And you have just to create um free
+account by Databricks. It is
+available since few months ago only.
+Before you had to pay
+uh to to try Databricks, so it's now
+free. And um yeah, so you can create an
+account on it. You can find all the
+links in this Notion Notion road map.
+And uh one more thing,
+this is not sponsored by anyone, okay?
+So, this is not sponsored by Databricks.
+If I say something good about it, then
+this is my opinion and I'm not trying
+here to push the Databricks because I
+believe this tool made things easier for
+us, for data engineers and data
+analysts. And um yeah, but I am not
+attached to this tool, yeah? So, if I
+found
+better tool in the future, then I'm
+going to go for that.
+So, [snorts] that's it. And one more
+thing, by the way, I would like you to
+one more thing before we continue,
+that's to support the channel, please.
+So, if you go like, maybe share,
+subscribe if you don't have already. I
+checked yesterday the analytics,
+it says around 70% of you are not
+subscribing for the channel. So, I'm
+doing this in my now weekends on uh
+let's say, on the time that I could
+spend
+here with the family and stuff. So, um
+I would say support the channel if you
+can. Uh just um yeah, subscribe and
+stuff. It's going to improve the channel
+to reach out to others. So, now, this is
+totally for free. Again, you don't have
+to pay anything, not for the boot camp,
+not for the materials. I'm going to send
+you a lot of stuff
+as well after we are done with the
+session.
+And um yeah, let's go. Let's go. Let's
+go. So, I'm going to cover now one topic
+before we continue. It is the Databricks
+and Power BI. And then we go to data
+engineers. So, data engineers, if you
+are here,
+uh bear with me. And by the way, as a
+data engineer, you should learn Power
+BI. I used a lot of Power BI while I'm
+working, yeah, with Databricks as a data
+engineer. So,
+data engineers, you still have to do
+something with the Power BI, yeah? You
+can create a lot of monitoring stuff and
+um you can analyze your data,
+your pipelines using Power BI. So, it's
+something relevant for you.
+Okay. So, now um
+If you are new here, you're going to be
+shocked, but we talked about this
+yesterday. So, we talked about as a data
+analyst, you can use, yeah, SQL editor,
+you can uh create a dashboard, you can
+uh use the AI Genie, but I said always,
+if you are creating stuff that reports,
+still Power BI is a winner here compared
+to the dashboarding that you have
+Databricks. It's not they are they are
+not competitors, yeah, between
+dashboards of Databricks
+and the dashboard in Power BI. They just
+are used in different purposes. We use
+dashboards in Databricks only for
+explorations
+purposes, yeah?
+But the Power BI standard report, it is
+for the standard users, yeah.
+So, now
+in order like how how we going to do
+this? Um let me just start something
+here
+again.
+So, now
+it's going to be very simple. So, you
+have here the
+let's say the Databricks gold layer,
+okay? So, your data inside Databricks
+and you are doing the AI genie, you are
+doing exploration, doing the SQL and
+amazing things. But, now what you can
+do, you can go and grab a Power BI
+and you can treat Databricks as any
+source for data. Like think about it
+like database, okay? So, you don't have
+to you have to
+like make it complicated. Now
+in order to connect let's say Power BI
+with a Databricks
+you have here always the connection. I
+talked about it in the last videos in
+Power BI. So, you have here either to
+say, you know what? I'm going to go and
+pull the data from Databricks and put it
+in
+Power BI. So, you're going to go and use
+the import mode to import the data
+inside Power BI and this is the default.
+So, this is something that you're going
+to do. I'm going to say as a default.
+If things goes inside
+Power BI and you have let's say no
+issues with the import time, with the
+let's say load time inside Power BI,
+then go always with the import.
+Because the other scenario going to be
+little bit more expensive. If you go and
+say, you know what? I'm going to go and
+attach Power BI directly to the
+Databricks using the direct query.
+Um so, direct query.
+You're going to get
+you're still going to get an amazing
+performance, yeah, in Power BI because
+the infrastructure behind the data using
+that direct query is amazing. So, this
+if you are using Databricks, the
+answer time for your query is going to
+be very fast. So, that's why
+direct query with Databricks is I think
+the best option you have for this
+connection type because Databricks is
+completely based on Azure, okay? Or AWS
+and the infrastructure is very stable.
+So, that means
+you can go and use that direct query
+only for two cases.
+First
+if you have real big data, like huge
+amount of data and you are not able to
+use the import. So
+if let's say you have three, four, five
+gigabytes of data that should move
+inside Power BI, then the import going
+to be very slow for you. So, if your
+data is really big
+um I've done I can tell you we connected
+almost 40 projects
+to to our yeah,
+the Databricks. I can say most of the
+projects they managed to do the imports.
+So, it's only like only few projects
+where they said, you know what?
+It's we have really huge data and we
+should use the direct query. So, only if
+you have exception
+you have big data, then go with that
+direct query. And the second one, if you
+have real stream.
+So
+if you have here stream data inside
+Databricks, then of course you cannot go
+and refresh the data
+like each minute or something like that,
+then you have to go and use direct
+query. But, I can tell you
+from many projects that I've done, it
+was more than enough to use the import.
+So
+this is how let's say we configure
+the two tools and of course having those
+two tools is more than enough to
+to do any standard reporting
+and the connectivity is very very
+simple.
+I'm going to show you
+let's go back to Databricks again.
+So, now
+um of course
+the data going to stay on the Unity
+Catalog. So, if you go to the catalog,
+you still
+I think from last time we made the sales
+DB.
+So, our data is inside
+the Unity Catalog of Databricks and now
+of course we're going to use some kind
+of
+yeah, computing in order to send the
+data to Power BI and that's we're going
+to use usually the SQL warehouse.
+So, currently it is offline. I'm going
+to go and start it.
+Always keep your eye on the
+execution of or let's say whether your
+server is started or not. So
+I'm going to go and start it and now
+what is very important here, if you go
+inside so again, I'm clicking on the
+serverless starter warehouse. If you go
+and click on it, then you're going to
+see more details about your server.
+And this is very important because we're
+going to go and connect Power BI to this
+server in order to pull the data. Okay?
+So, that means we're going to go to the
+connection details over here and you're
+going to see here it's already telling
+you from Databricks, okay, you can go
+and connect
+this server with Tableau, Power BI, DBT,
+Python and a lot of things. So, this is
+usually
+um the way where we connect Databricks
+with many other tools.
+We go and use the SQL warehouse.
+And we're going to use now the same
+thing for
+yeah, for Power BI. Now, of course you
+can go and click on this here in order
+to get the file or if you go and start
+Power BI desktop.
+Let me just start one.
+So, now if I go and go to blank report,
+this it is very simple. So, all what you
+have to do is to just to go to get data
+and then to more.
+And just search for Databricks.
+So, once I do that, I will get two
+instances, one for Azure and one for
+Databricks. Now, the free edition is
+totally based on the AWS.
+So, that means we will not use the first
+one, we're going to use the second one.
+The Databricks without Azure.
+Uh but, if your project is based on the
+Azure then you have of course to use the
+first one. So, we click on the
+Databricks connect.
+And now comes exactly here the
+information that we need from the
+server. So, it's pretty simple. It says,
+okay, I need the server host name. I'm
+going to go and get the [snorts]
+server host name. Just copy it from here
+and paste it over here. Then we need the
+HTTP, the second field here, the path.
+And we're going to go over here, grab
+it.
+And then paste it over here. And
+actually that's it. You need only those
+two informations. Everything else leave
+it empty for now and then click okay.
+Just to wait a second until
+it connects.
+It's not happy about that.
+I think it's take some time so until to
+connect to
+Databricks also.
+Let's see.
+So, yeah.
+Connect. Oh, yeah. Now it's loading.
+So, now I'm going to I think yeah, so
+look at this. I'm connected now to
+Databricks here over here.
+And what you're going to see here now is
+exactly the preview from your Unity
+Catalog.
+So, whatever now I see here the
+workspaces is exactly the workspaces
+that I have in Databricks. So, now this
+is what we have done yesterday. We
+loaded the files into Databricks.
+And but we haven't done anything yet to
+those files. So, that's why
+um yeah, so I can go and grab for
+example the customers and now it going
+to go and load the data inside Power BI.
+And with that actually my friends, you
+can connect Power BI very easily
+using
+this way.
+So, I will not go now and build any
+dashboard or report because we have here
+data engineers. That's what to hear
+about engineering. I just wanted to show
+you this point how to connect Power BI
+to Databricks. It's very simple again.
+Um you're going to connect your data
+from the catalog.
+And you're going to go to the warehouse.
+Inside the warehouse, you're going to
+find the connection string and either
+you click over here on those connectors
+or you just copy and paste the first two
+options and then you can enjoy the two
+platforms. The Microsoft Power BI with
+the Databricks. And with that, I will
+not let's say keep um
+um yeah, speaking about this topic. But,
+again
+mostly let me just recap finally finally
+over here.
+So
+now
+I showed you this
+yeah, data analytics maturity and most
+of the activities that you can do as a
+data analyst, you can do it using the
+Databricks.
+So, you can clean data, you can do ad
+hoc report, you can do self-service and
+as well you can chat with your data
+using Databricks. But, the only thing
+that I don't think it is ready is to
+make standard reports for massive amount
+of users
+you still has to use Power BI. So, with
+that, I hope that we closed Uh, this
+topic and
+>> [laughter]
+>> and I hope it's clear for you about the
+Power BI.
+Um, yeah, I wanted to make a report
+yesterday with Power BI, but we spent 4
+hours, so that's why I will now just
+close the topic and I can be happy now.
+I showed you at least
+uh, how to use Power BI with a
+Databricks, when to use it. This is very
+important and the connection type. Uh,
+be careful be careful with the
+connection type because direct query
+going to
+uh, cost a lot of money for you.
+If you keep sending queries to
+Databricks and each time Databricks
+using resources,
+it means you're going to see it in the
+invoice by the end of the month. So, pay
+per use.
+Now,
+I think we are ready from or let's say
+we are done with the data analytics
+parts. Now, about the notebooks, the
+notebooks as I told you we're going to
+cover it now during the data engineering
+parts.
+Um,
+and yeah.
+So now, data engineering.
+We're going to start from the scratch,
+guys.
+Um, I thought about it today. I was
+thinking about today whether I do only
+the projects for you or I do the whole
+thing.
+But, I felt it is it's going to be
+really not clear why we are doing the
+projects in the way
+uh,
+without giving you the concepts. That's
+why I still believe we have to do the
+concepts.
+But, uh, I hope that we can do it in
+this 3 4 hours.
+So,
+um, let's start with the basic idea. Uh,
+I have prepared as usual few stuff for
+you.
+Now,
+um,
+we said,
+um, we have something called lake house,
+okay?
+Um, maybe this is not uh, really clear
+for everyone what is a lake house and
+stuff. So, I'm going to give you like
+uh, the way how things uh, developed or
+um,
+yeah.
+Uh, grow over the time. At the start, my
+friends,
+we had data analysts or let's say
+business users having questions. Maybe
+if you saw my introductions to um, let's
+say how uh, data teams works, I always
+start like this. I always start like
+this, yeah? So, [snorts] we have a
+business users having business
+questions, okay? Now,
+um, your data analyst usually at the
+start, if we don't have plan in the
+company and the company I don't have any
+strategy about the data,
+they're going to send their data
+analysts and they start making Excels
+left and right. And of course, over the
+time,
+we're going to have a lot of Excels left
+and right. There is no data management.
+Uh, the data is old. The data makes no
+sense. The answers are
+uh, let's say uh, different from one
+Excel to another Excel. And um, yeah,
+this analyst needs like at least
+uh, a month in order to prepare the data
+in the Excel. So, the companies, if they
+don't have plan about the data, they
+just do
+analytics using Excel, it's going to be
+full chaos. And I can tell you it's
+going to be expensive. And those people,
+the business users, going to make at the
+end wrong decisions.
+Now,
+I can say still companies doing this
+until now. But, the thing is inside the
+company, especially if it's big, you're
+going to have people that are um,
+doing some advanced stuff using modern
+platform, but still there is a lot of
+departments still using Excel.
+Um,
+that's why
+uh, we said we will not do this anymore.
+Uh, data analyst going to go to the
+right side a little bit. We're going to
+hire data engineer. Do I have here data
+engineer? No.
+So now, let's grab maybe
+someone like this and say you are data
+engineer.
+Actually, at the start we didn't call
+you a data engineer. We called you an
+ETL developer.
+So actually, we didn't have this name or
+this title.
+You called ETL developer. I was ETL
+developer at the start. So, I got hired
+as ETL developer. And uh, my job is to
+do one thing. They told me as data
+engineer, hey, go and grab the data from
+those multiple systems and put it in
+something called a data warehouse.
+So, I used a tool called Talend and I
+started grabbing the data from the
+multiple source systems.
+And I started doing a process called
+ETL. So, what is ETL? It means I extract
+the data from the source systems. This
+is the E. The T, I start preparing the
+data, transforming it, cleaning it up.
+And then, I load it to the data
+warehouse. So,
+um,
+I've done that. Um, let's say um,
+yeah, in few projects
+in order at the end to build a reports.
+Or let's say the data analyst or the BI
+developer going to go and build a
+reports, data analyzes on top of the
+data warehouse.
+So,
+I'm going to say at the start, I was an
+ETL engineer, uh, ETL developer, sorry.
+So,
+all what I need is
+a storage like data warehouse could be
+inside a SQL server, inside Oracle.
+And I start saving the data inside uh,
+the warehouses. Now, this is a big
+issue. This is a big issue over the
+time. The thing is,
+um, over the time those sources were
+getting bigger and bigger over the time
+and as well getting more complicated.
+Like for example, one of the sources
+says, "You know what? We will not give
+you an access to databases.
+This is not something that we do
+anymore. My data is inside Kafka. We
+stream. We are now modern and we stream
+data." Then me as an ETL developer, data
+engineer,
+I didn't have the enough tools to start
+streaming the data from Kafka inside
+this data warehouse. It is really hard.
+Like try if you have an on-prem system,
+I think I had some glitch.
+So now, um,
+I hope I'm back. Yeah, I think I'm back,
+right?
+So now, um, as an ETL Yeah, ETL
+developer,
+once I start facing complex systems like
+Kafka, like APIs, like stuff like that,
+they start like it was almost a hard job
+for me and I was not able to do this
+because I don't have that tool for that.
+And then starts we getting like some
+kind of I don't know images.
+I'm back. Sorry for that.
+My graphic card was
+not happy at all.
+So, I have to uh, restart. Can you still
+hear me or see me?
+Yeah, okay.
+Yeah, today
+I'm not happy with the technique, so I'm
+sorry. I'm going to
+immediately
+open everything again.
+So, just give me seconds.
+And then start sharing again.
+Dun dun dun.
+Motion.
+Yeah, I was doing like thousand things
+parallelly,
+streaming
+and recording and I don't know.
+The
+things as we are not happy, so
+let me just open motion again and we
+continue. Sorry for that.
+Or maybe because of Power BI, you know
+what? I can blame Power BI.
+It disconnected me.
+So, so I'm almost there.
+Streaming.
+Yeah.
+I should
+So now, then I think
+Yeah, so uh, the visuals are there. Um,
+happy about it.
+So,
+again sharing my screen. You are able to
+see this, right?
+Okay.
+Yeah. It's Power BI.
+So, okay. So, as an ETL developer, I uh,
+struggled with a new technology, all
+right? And I was not able to fit
+everything inside the warehouse. And
+guess what? Guess what? We start getting
+a new people that want to consume the
+data. So, the data scientist and some
+power users from the business, they
+started
+yeah, asking for crazy stuff. They said,
+"You know what? The dashboard that you
+are building not really exactly the
+thing that I need. Give me an access to
+your warehouse."
+So, people start not being interesting
+on the BI section of my data system.
+They start asking about the data
+warehouse section, okay? So, that's why
+it was full full uh, big issue. And over
+the time, most of the data warehouses
+get so big that you can't load it
+anymore because I saw at least three
+projects where they load the data every
+day for around 12 hours or 20 hours. It
+takes to load the data from A to B. 20
+hours every day. So, data warehouse
+project starts to fail, guys, because of
+the sources
+and because of the new demands the data
+scientist were
+interested, yeah, on data warehouse to
+make some modeling and they start
+asking, "Hey, go and grab for me the
+files that you have in the sources and
+stuff." So, the data warehouse, as a
+classical warehouses start to fail.
+And that's why we start seeing some new
+titles like big data developer or data
+engineer developers where we said, "You
+know what? Databases are really crap to
+build a data platform.
+Let's go and
+not use it. So, I'll just go and copy
+the whole thing and then
+we talk about the next step. It's around
+2010, okay, so 16 years ago
+we start doing the following. We say,
+"You know what?
+In order to fulfill all those
+requirements, we're going to go and
+build a data lake."
+So, now me as data engineer, I don't
+need database. I'm going to go and have
+a very very
+um
+cheap storage like the blob storage and
+I can pull whatever you wish. I can pull
+databases, Kafka, images, videos, JSON,
+whatever you want. I'm going to go and
+pull it and pull it and put it in one
+place, but guess what?
+I will not do any more of that T for
+you.
+The transformation, go and do it on your
+own.
+Just I I am now the loading master.
+Um
+so, I start
+we start saying, "You know what? I'm
+going to go and put everything in one
+place. It is cheap. It is fast.
+You have everything and everyone needs
+the data can go and get grab their data,
+yeah? So, the data analyst start
+accessing this data lake. The um
+scientist
+power users. So, they start accessing
+the data lake, but we have noticed this
+T
+it is the biggest problem, actually.
+Because the transformation, preparing
+the data, it is one of the most annoying
+step on the ETL because the data is very
+very raw. I can tell you I spent on one
+of the projects, like one source, only
+one source
+at Mercedes-Benz, I spent half a year
+just doing the T as a data engineer.
+Because the system is very complex and I
+have to do a lot of preparation steps to
+make it friendly for the BI, for the AI.
+So
+doing the T actually is the most hardest
+part. And now, imagine that you collect
+the data for the company, put it in one
+place
+and each new projects, they have to go
+and make the big T. They have to do the
+transformation. This is the heavy
+lifting. And they will keep repeating
+doing the same stuff over and over and
+over. And this is not working. That's
+why data lakes
+at the end, they were like, let's say,
+at the end, just a garbage where you put
+data inside it.
+And um it is very costly for the T. It's
+not costly for the storages. It's very
+cheap to do data lake.
+But
+the uh the process after that
+it was very expensive. So, imagine like
+in my project, I done transformation for
+one source system, 6 months.
+And imagine we connect 40 projects. So,
+40 projects they have to do 6 months of
+transformation, each one of them.
+You know? So, when they going to do the
+BI? When they going to do the AI stuff?
+It is not possible. That's why data
+lakes are crappy. They are failure, to
+be honest. And uh yeah, if you just
+start doing EL
+and wish that everyone else going to do
+the T
+they going to fail. That's why, my
+friends
+the T was really important for us as a
+data engineers to do. So, we cannot
+like, should we go back to data
+warehouses? Well, no.
+Still, we can have the issue with the
+data warehouses that is expensive and
+that is
+not suitable for all different types of
+data, not scalable. So
+the idea is to do
+both of them, actually.
+Is to make some kind of data lake but we
+going to make
+make it together inside a warehouse. And
+we call this, let me just give the
+titles.
+So, this is data lakehouse.
+>> [snorts]
+>> Um maybe the color bigger. So, we said,
+"Okay, I'm going to do both."
+Data lakehouse. And here we have what we
+have done here.
+Here we have done data lake.
+And here we have done
+the
+uh warehouse, right?
+So, data warehouse.
+So, now
+um
+what we going to do with that? I will
+just grab this away.
+Just maybe to put the visuals side by
+side, you know, for you because at the
+end you're going to get an access to
+those stuff. If you see like my
+those sketches. So, now what we said, we
+going to go and build
+lakehouse.
+I'm just going to grab
+this icon here and put it over here.
+And we said
+um yeah.
+Okay, we still need everything to be
+fast. We still need uh some some kind of
+storage that is accept any type of data,
+but my friends, data engineer, you still
+have to take the T back.
+>> [laughter]
+>> So, that's [snorts] why they gave us
+back the T.
+Uh which makes sense, of course. But
+um and and uh yeah, so
+we started doing some kind of
+warehousing again.
+But on a new technology. So, we said,
+"Okay, I'm going to make now not only
+one lake, I'm going to make like three
+layers."
+So, this going to be the um yeah, the
+first one going to be the bronze.
+And the next one going to be the silver.
+And the last one going to be the gold.
+So, now
+um and all all of them are lakes, yeah?
+They all of them are in not databases.
+They are based on files. Let me just put
+this below.
+Below.
+So, all of them are in lakes, but I
+start doing some T in between, okay?
+So, I'm going to of course, at the start
+I'm going to extract the data, load it
+in the lake and then
+I start doing some transformations
+between those
+steps. So, there are layers. And yeah,
+we call it bronze, silver, gold. You can
+call it whatever you want. You can call
+it stage, core, access, presentation
+layers. Like, if you join companies
+depends on the data architects, they
+start giving it different names, yeah?
+So, if the guy that is doing or the
+girl, of course doing the data
+architects
+one [clears throat] of them might say,
+"Yeah, this is bronze, silver, gold."
+And the other going to say, "This is the
+raw. This is the business layer." It
+like yeah.
+At the end, we need layers so that we do
+things step by step. We cannot do
+everything in one place, okay?
+And um
+yeah, then, my friends
+uh you going to have the shape of
+lakehouse. So, you are mixing
+data lake with the lakehouse.
+And now
+currently, with this concepts, we are
+ready to serve anything. So, now if the
+analyst comes and say, "Hey, I want to
+do data visualizations using Power BI."
+Then you can offer them the final layer
+to say, "Okay, go and grab this gold
+layer and start doing your BI."
+Maybe you're going to get data scientist
+and they're going to say, "You know
+what? This T, the last T is was not
+really okay. I need the raw data from
+the middle layer." So, they going to go
+and access the middle layer, okay? But
+we will never give an access to anyone
+to the bronze because the bronze is
+really crappy. It is like the raw data,
+nothing is done. It's like the data
+lake.
+So, that's why
+data lake, we don't give an access to
+it. We give something that is more
+prepared, more cleaned that is more uh
+like let's say ready to be consumed. And
+I think it looks like this now. The data
+analysts
+they grab the last form of your
+yeah, of your data because
+they want to spend less time doing
+yeah, steps. But the data scientist,
+since they are training models and doing
+AI stuff, doing machine learning, they
+need the raw data. The more data they
+have, the more uh they can um
+yeah, maybe
+train [snorts] their models, yeah?
+That's why I see it like this. And as
+well
+um yeah, the power users, they can
+decide whether they go to gold or to
+silver. So, actually, we are giving now
+the access to either silver or gold to
+end users. The bronze will yeah, we are
+not giving it. So, now
+I'm just to tell you, we spent almost 20
+years just building warehouses, okay?
+Now after 20 years, we start doing lakes
+around 2010.
+And the lakehouse, it is something I can
+say brand new.
+It is something that introduced actually
+not from
+like the data lake and the data
+warehouse, they introduced from the
+universities, they introduced from uh
+yeah, science work, but the data
+lakehouse is introduced from actually
+Databricks, okay? They is they are from
+the industry and they said, "You know
+what? Uh
+my platform um you can use uh you can
+mix warehousing and data leaks and I
+believe it was
+a good idea.
+But we are not there yet because to be
+honest
+I can tell you something.
+We have a big struggle still until now.
+Like I was a data engineer building
+this. I built this lakehouse. I spent 5
+years
+like 2 years building a lakehouse and
+then
+say
+still see some struggles on this. It's
+because those T.
+Yeah, the transformations are really
+heavy for us because
+the transformation was done before from
+a data analyst or maybe data scientist.
+They know exactly what they need. But
+now in case for us for data engineers to
+do the transformations, we have to ask a
+lot of questions. We have to talk to the
+stakeholders to the business users to
+understand the processes.
+It is really hard for us for engineers
+to do that is still until now because
+Now imagine you have here I don't know
+yeah 20 source systems 20 source
+systems.
+You have to understand each one of them
+in order to make that T. So that's why
+either we're going to bring the data
+scientist or the people here to join us
+building this lakehouse and each analyst
+going to go and turn to a business or
+let's say data engineer or we need
+solution. That's why still
+I'm not convinced that's going to be the
+final phase. And by the way,
+in companies like big companies, you
+will not have one central lakehouse
+as one single point of truth for the
+whole company.
+Like imagine company like I don't know
+yeah Netflix or Mercedes-Benz.
+We will not put everything in one place.
+There is no way there is like a team can
+manage to do the whole thing. Yeah.
+That's why
+there is a new concept as well 2 years
+ago called data mesh concepts. So what
+we say
+the following. The company is very big.
+Now
+each
+domain
+they're going to build their own
+lakehouse.
+So domain one domain two
+and it's going to look like this. So
+you're going to have in the company
+for each big domain
+a central team that is building such a
+concepts building data products building
+the gold layer but only for their
+domain. So for example, if I'm making
+the lakehouse for the engineers of the
+cars, I will not go to the sales for
+example and start building their data
+lakehouse. Okay? As a data engineer. So
+that means
+as a data engineer, I'm going to
+focus only on my domain building the
+lakehouse for this domain and then
+um
+and then
+the others should deal with the other
+data. We we will never make one
+enterprise because the idea of yeah
+warehouse and the idea of data lake is
+to make some like one data lake for the
+whole company.
+One data warehouse for the whole
+company. So that's why
+it is a networking and uh
+and currently it is like this.
+It is splitting now by the domains and
+you are building
+domain driven
+yeah let's say data products and
+Databricks is exactly preparing for this
+to build something called the data mesh.
+Both data mesh.
+Uh it is domain or yeah domain driven
+let's say data architecture
+to make a data mesh. But in order to do
+that, you need two things.
+You need my friends I have an icon for
+it. Oh yeah, those two. Come here.
+So now
+in order now like let's say I'm yeah
+working as a data engineer builds very
+amazing gold products for the users. Now
+I have to tell everyone about my new
+data products yeah as data engineer. So
+that's why I have to put it somewhere
+called the marketplace in the company.
+So marketplace.
+And [clears throat]
+I need a catalog.
+So
+data catalog, right?
+So
+I need the catalog to explain my data.
+Like for example, if
+a data scientist from a different domain
+comes and say whoa, we have here a very
+perfect let's [snorts] say data from the
+development.
+So first
+the data scientist going to go and
+browse the marketplace to see the data
+product and then read about it what is
+inside this data and then going to come
+to me and say can you give me an access
+to the data on me.
+So that's why
+without having in the company a
+marketplace for the data and the data
+catalog, it will not work. Now
+Databricks is moving to this direction
+because if you here or if you see, we
+have something called Unity catalog.
+This is the catalog that is
+available for the whole company.
+So now if I go in Mercedes-Benz for
+example and start I said
+closed my Databricks.
+I have to log in again.
+Just seconds.
+Sorry for that.
+I want to
+log in.
+All right. Just to make sure that I'm
+logging with my working account. I
+understood I am not allowed to use a
+personal account because this considered
+as work.
+>> [snorts]
+>> So now if I go to Mercedes-Benz and or
+yeah to any company that is working with
+Databricks and click on the catalog
+I'm going to see here not only those two
+workplaces. You can see here my
+organization. So I'm going to see here
+huge amount of workspaces that are
+available.
+And this is exactly what
+Databricks is trying to do. I
+I will see whether it's going to be
+successful but it is all about how the
+company going to make the data strategy.
+But currently things looks good. We are
+able to use Databricks as a single point
+of
+yeah let's say
+single point of platform to help us but
+it's all about the people that are using
+the platform. So guys
+this is the
+let's say
+the steps in the development of the data
+management and you as data engineer you
+have to understand those concepts
+to understand what you are doing. And by
+the way guys, I I really um
+recommend you one thing.
+Try to not join projects or companies
+that are still doing warehouses. It's
+really really important because I um
+Let me just check
+whether everything is correct here.
+So now
+if you go and yeah join a company as
+data engineer, you have to understand
+where are they in this road map.
+Okay? So if
+they are still doing those stuff
+it's legacy stuff. Yeah, it's old. If
+it's your first job of course I
+you can start building data warehouses
+but try to target companies that are
+working on big scale building lakehouses
+and stuff. And if you see in your
+company that they still are using
+warehouses try to push them to move
+toward something more modern. And if you
+see someone in the company are saying
+hey data leaks it's the best I don't
+know yeah.
+They are trying to build the data lake.
+Try to
+push more to say this is garbage yeah
+because this going to cost the company a
+lot. So you as data engineer you have to
+understand what you are building
+not just blindly let's say building some
+old technology and
+this is about the data management and
+currently we are at this shape. And most
+of the companies are trying to implement
+this because
+this makes sense.
+That each domain going to build their
+own and this makes sense that only lake
+you have to mix it with data warehouse
+and I am this is about the data
+management and hope that was clear. I
+just want to check the shot whether you
+guys are hearing me clearly
+before I continue.
+Okay.
+Good good good.
+Now
+let's move on. Let's move on to the next
+step. What do we have here?
+So that was about the data management.
+Now about the data engineers, we covered
+few stuff, right?
+We start talking about
+the
+how you work as data engineer. So
+we worked before as again with databases
+like my start before 15 years.
+We use databases. We use ETL tools like
+Talend. I don't know whether you would
+know Talend.
+um
+I don't know whether they are still
+here. Yeah, this year.
+So
+you have a lot of ETL tools that are in
+the markets that are trying let's say to
+push on their on-prem solutions. Those
+stuff from my point [snorts] of view are
+dead.
+So we are not using anymore ETL tools.
+um
+We are not trying anymore to build any
+data lake data lakes.
+Now things moving toward Databricks
+Snowflake
+moving as well to data
+stuff is from the Azure as well like
+data factory and Synapse and Fabric and
+stuff. So those are the tools that are
+supporting such kind of technology. Now
+let's move to the next step where we're
+going to start talking about Databricks
+itself.
+I'm just going to go and do quick quick
+recap for the new people that are here
+about the
+um
+this image here.
+Just quickly,
+um Databricks at the end, it is just
+from my point of view a platform that
+supports the Spark technology. So, they
+are the same team that um developed the
+Spark
+where it's very simple the idea. You
+cannot process the data in what using
+one machine. It will not work. So, you
+always need
+um let's say distributed machines
+in order to process whatever you do.
+Yeah, whether you are doing data
+transformations, data aggregations, and
+stuff like that. And um
+it is very simple the idea. You split or
+let's say the Spark can go and split the
+data into multiple machines
+in order to work parallelly. So, they
+work on parallelly and then they're
+going to collect the data in the final
+result.
+This is currently, yep, the best
+practices on how to process massive
+amount of data. Before we had the
+Hadoop. But the Hadoop issue was that's
+only that we are using the hard disk in
+order to store the data. With the Spark,
+it is more, let's say, faster because we
+are using the RAMs
+in order to store the data. So,
+actually, the Spark is just distributed
+system using using the memory in order
+to have speed. And now since this is
+massive amount of work for you as a data
+engineer to make the setup, to make the
+things, that's why we have an easy
+platform called Databricks that hides
+the complexity from you.
+So, the Databricks team going to like um
+yeah, prepare everything in the
+background, and you as data engineer
+going to be focusing only on the
+projects on how to do the ETL, how to
+move the data. So, that's why
+behind the scenes, it is Spark.
+And um yeah. And you are using
+Databricks just to make your life
+easier. But if you don't want to use
+Databricks, of course, and you want to
+go say hardcore
+you can uh you can of course use Spark
+and make like let's say um yeah, the
+configurations on your own. So,
+actually, you don't have uh if you have
+if you are expert on this
+uh you can make the configuration, you
+can uh buy the virtual machines from
+Azure, you can make the full setup with
+us Databricks, yeah. But
+of course, imagine you have a lot of
+projects in the company and the each
+data engineer going to spend a lot of
+time configuring the stuff before start
+building the ETLs. Or let's say the data
+platform, then this is a lots of time
+wasted, yeah. So, that's why this
+platform makes our life easier as data
+engineers. And we use it in order to
+process huge amount of data.
+Now
+we're going to go to the Spark.
+We're going to go now to the Spark
+stuff. Um
+since I said the engine is from Spark.
+Now, there are like multiple concepts
+that you have to learn about.
+Um the Yeah, let me just uh this is
+going to be a little bit
+Yeah, let me just start from zero
+>> [laughter]
+>> before confusing you, okay?
+There are
+Um so, again, we have this amazing
+engine the Spark engine, okay?
+He's going to deal with the whole thing.
+This is the brain, yeah. This is the
+the heart of the Databricks. This one
+going to go and start spreading the task
+into multiple machines, start managing
+the memories and stuff. So, this is the
+engine. Now for you as data engineer
+using
+uh Databricks or for you as a data
+analyst as well.
+Now [snorts]
+um you have two ways in order to give
+tasks for this engine, okay?
+So
+yeah, let's say there's like two
+languages. This can get a little bit
+confusing, okay? So, now
+you can actually use
+only SQL. So, you don't use anything
+else.
+You just go and select from where
+you just use SQL, nothing else. Not
+Python, not PySpark, not nothing. Just
+simple SQL.
+And then there is like an engine called
+Spark SQL. The query going to be sent
+over here. And the Spark SQL going to go
+to the engine and it's going to use the
+engine in order to do the query.
+So, and this is something, to be honest
+Databricks team and the technology
+behind as well the Spark is pushing a
+lot in order to have
+to have you only working with SQL to
+build not only to do data analysis. We
+saw yesterday we can as data analyst we
+can do data analysis, we can yeah, do
+queries and stuff. But now they are
+pushing as well that even you as a data
+engineer
+you can use only SQL to build platform.
+But
+from my point of view, you can do that
+only for like not complicated stuff.
+Maybe you have 10 files or 20 files.
+Then I can understand you can use only
+SQL
+to build the data lake house. But if you
+want to do something professional, you
+want to do something that has complex
+logic, that is let's say can deal with
+multiple scenarios, you have Kafka, you
+have streaming, and stuff
+I still believe it's SQL is not enough.
+It's um
+yeah, it's going to [clears throat] make
+the code very huge. That's why we need
+Python.
+And we can use Python, of course, in
+order to build our projects. And inside
+Python there is
+let's say a library or module that you
+can install called the PySpark. It's
+already installed, of course, on the
+Databricks because they expect you to
+use the PySpark.
+Um but you can use the uh PySpark
+in order to do the work, in order to
+work with the data. And
+the PySpark can look very, very similar
+to the SQL.
+So, remember in SQL you do select
+you join tables, you merge tables you uh
+filter the data, you do aggregations,
+and stuff. So
+you're going to find yourself that you
+are doing almost SQL but with a new
+language called PySpark. And the same
+thing, if you write something in PySpark
+it's going to go and end up using the
+same engine.
+So, people thinks like I saw a lot of
+juniors, they start writing SQL in query
+and they think you know what, I'm using
+SQL, this is very slow because it's SQL,
+it is not PySpark. But at the end, it
+doesn't matter. Whether you are writing
+SQL, whether you are writing PySpark in
+Python at the end, everything is using
+the same engine behind the scenes. So,
+if you are using SQL, that doesn't mean
+that it goes to something, I don't know,
+some
+old database, Postgres, or some
+something that is very slow. No,
+everything goes back to the engine.
+This is important to understand, okay?
+So, whether you are programming using
+Python
+PySpark or you are writing pure SQL,
+then this is totally fine.
+And there is one more thing
+we can put SQL inside Python. So, not
+only pure SQL statements, I can go
+inside my Python code
+and start
+writing SQL statements. So, it's called
+PySpark SQL.
+Okay?
+So
+you can write purely only Python.
+Again, so what are the options?
+Sorry, it's it's confusing even for me
+to to explain for you. So, either you
+write only SQL. And this we call it
+Spark SQL, okay?
+So, only SQL.
+Or only Python. Using the PySpark, okay?
+Or you can use both of them together
+inside Python. So, I'm using Python but
+as a framework, let's say. And inside
+[snorts] it, I'm going to write a mini
+query.
+So, this is we call PySpark SQL.
+So, those are the three, let's say,
+different ways. By the way, if you write
+something in the PySpark SQL, it's going
+to go to the Spark SQL and trigger this
+engine to translate the query and of
+course it's going to use the engine.
+So
+um
+yeah.
+So, actually, this is this is what we
+mean with all those stuff. So, now you
+know what is
+a Spark SQL, you know what is PySpark
+SQL, and what is PySpark.
+Yeah, they are different ways for you to
+write a code in order to communicate
+with this amazing engine.
+Okay?
+So, this is one concept.
+Uh maybe I'm going to show you.
+Let's go back to Databricks. I'm going
+to show you an example what I mean, what
+I'm trying to say because this going to
+be otherwise
+very theoretical. Now
+um yeah. So, now if we go back to
+Databricks
+yesterday we learned a lot about the SQL
+editor, the dashboard, the Genie, and
+now today we I showed you how to work
+with the Power BI.
+But you for you as a data engineer, the
+most important thing is to
+work with the workspaces.
+The workspaces is something for you and
+you have to use it, okay?
+So, um I'm going to guide you more about
+it. Now, you can connect here a GitHub,
+you can create multiple things. If you
+just go to create, you're going to see,
+oh my god, there's a lot of things. So,
+we have a notebook file, query.
+So, now the thing that you going to
+start using as data engineer is the
+notebooks.
+Um and here
+yeah, I'm going to get guide you in the
+UI again, but just let me show you the
+what
+what I'm speaking about those Spark and
+PySpark and SQL. So, now here inside
+the um
+the notebook if I say percentage SQL
+and then I go and write a very simple
+query. Select from and then, of course
+I want to check what I have here,
+tables.
+So, like this.
+Now, if I query this, what is going on?
+Um I'm writing
+Spark SQL. So, I am here on the right
+side. I'm writing a Spark SQL. It goes
+to the Spark SQL engine. It's going to
+trans- be translated and then sent to
+the Spark. Okay?
+Um it's might take a little bit time at
+the start because it's starting the
+server.
+Now, as you can see, it is working and
+everything now works
+again.
+Yeah. So,
+now I'm getting the data and again I'm
+using now the engine that's called um
+Spark SQL. Now, I can go and use start
+using the PySpark engine.
+So, for example, let's go over here
+and
+maybe
+I'm going to start writing some
+First, I have to import.
+Let me just uh find a nice example for
+you. So, for example, I'm going to go
+and start using um
+PySpark [clears throat]
+SQL
+and I'm going to import yeah, functions.
+Now, I'm going to explain for you
+more details what I'm I'm doing. I'm
+just giving you now an example, okay?
+So, I'm going to go and create a data
+frame. Of course, you're going to say
+what is a data frame? I'm going to
+explain for you that very soon. Now, I'm
+just reading the data again from my uh
+Unity Catalog. So, for example, I'm
+going to go and use the customers. So,
+just specify the workspace silver
+CRM cost info
+or
+um sales DB
+dim customers.
+And actually, that's it. So, I'm going
+to go and display
+DF display.
+So, now
+I'm using now not anymore is SQL, as you
+can see, it is kind of Python [snorts]
+with a PySpark. Now, as you can see, I'm
+getting as well the same result. So,
+what I have done, I just went through
+PySpark and I use the same engine for
+the same data.
+So, it is all the same thing. It's just
+it's different languages that I'm using
+in order to query. And now, the third
+way, I can put an SQL inside the
+PySpark. Let me just show you an
+example.
+So,
+I'm going to go and make a new code.
+So, here I'm going to say DF
+spark.sql
+and now um
+I can go and write inside Spark
+simple SQL query, exactly like the first
+one.
+So, let me just
+Yeah. So, we're going to do the same
+thing. Select from and we're going to
+say sales DB now workspace
+.sales DB
+.
+dim customers.
+And at the end, I can go, of course, and
+uh display.
+So, DF display.
+So,
+this is what we call
+again
+This is um PySpark SQL.
+So, I'm putting inside Python code an
+SQL statement.
+At the start here, I'm doing just
+PySpark.
+And the first one is just an SQL. So,
+actually, you have
+three different ways.
+Spark SQL. So, actually, you have three
+different ways on how to query the data.
+You just need to understand the syntax,
+of course.
+This is an SQL.
+And
+I'm going to do it here.
+You just have to understand the syntax
+and it doesn't matter which one you use.
+Yeah?
+All of them going to get exactly same
+performance. They are say- using the
+same engine. It's just the way you talk
+to your data.
+So, those are the
+different ways on how to interact, uh
+let's say, with the Spark.
+And um yeah, I believe
+if you can only use SQL
+I promise you I can do your project for
+this where we use only SQL. So, create
+table,
+uh insert, updates, um
+uh let's say, select, aggregations, data
+clean up, changing the data, everything
+we can do
+only using SQL. Of course, this is
+amazing. Like, if if I think about it, I
+would go back, I don't know, yeah,
+uh 20 years ago, this going to be a
+dream to use SQL to work with
+a distributed systems.
+So, now um of course, I have prepared
+those stuff that I want to explain for
+you uh what is going on. So, I want to
+do it always step by step, otherwise,
+it's going to be um
+let's say, shock for you. Now,
+So,
+I speak spoke about something called
+data frame.
+So, if you see here, I'm using something
+called a variable called DF and data
+frame, data frame. It's something that
+you're going to hear a lot. And if you
+use Spark, PySpark, it is the main thing
+that we use to do anything. So, the data
+frame concept is the most important
+thing to understand and yet it is very
+simple. It is very, very simple thing.
+So, now all what we do as data
+engineers,
+we have a source table. So, this is the
+source table.
+We want to take our data from the source
+and move it to the target, okay?
+So, this is the main idea what we do.
+Move it to the target. But, on the way,
+as we are moving the data to the target,
+we want to do some data transformations.
+So, I want to transform the data, to
+clean up the data, to aggregate the
+data, to do the business.
+So, now
+in
+the concept of, yeah, Spark or Pandas or
+whatever, it's not only for the Spark,
+okay? This concept is for many
+uh different like for the Polars as
+well, Pandas. Same concepts. It's going
+to say, you know what?
+First, read the data from the source.
+Put it in something called data frame.
+Data frame,
+it is first in the memory. So, it's
+going to go to the memory.
+And
+anything you do to this data frame,
+it's going to be processed always
+parallelly. So, it's going to go and
+always use
+Spark. If you are using Spark, of
+course. Pandas, there is no process uh
+parallel processing. So, the data frame
+is ready to be distributed on multiple
+machines.
+And if I do here, for example, data
+transformation, yeah, like I don't know
+what
+what you suggest, yeah, like um group
+by.
+Or I'm doing a trim.
+Or I'm doing an upper case. Whatever you
+do as data trans- transformations, it's
+always like this. The data frame going
+to be splitted into small
+data, distributed on multiple machines,
+and they're going to be processed for
+this function, and then they're going to
+return.
+And then you
+your data going to be transformed. So,
+data frame, it is something that is
+temporary.
+It's going to live as long as you have
+the session open and you are using the
+data. So, we take a copy from the data.
+We do whatever what we want on top of
+it. So,
+we
+we yeah, we usually don't do go
+immediately and do transformations
+directly
+on the source of the data, okay? We
+always take a copy. This is the main
+thing we do, okay? We always take copy.
+And here in the PySpark, we use the data
+frame. We do manipulation on it.
+So, this is one.
+Oops.
+So, this is the third thing. Then, we do
+data transformations.
+And then three, the last step we do is
+we write it
+somewhere else.
+And this is the concept actually for
+data engineering. Whatever we do,
+whether we are loading the data between
+the bronze or the silvers, always we
+have to think about those three steps.
+From where I read the data,
+I put it in data frame.
+I do something about it or maybe I don't
+do anything about it. Who knows?
+And then write it back.
+And of course, on the data frame, I can
+use SQL Spark. So, I can use only SQL to
+do those stuff. Group by, trim.
+So, the data transformation could be
+written, as we saw, inside
+SQL or using Python, yeah, PySpark.
+So,
+and uh yeah, this is the whole idea
+about the data frame. I don't know
+whether you know about the SQL concepts.
+I talked about the CTE, the subqueries
+where the database engine going to go
+and create a temporary storage of your
+data in order to do or in order to be
+reused multiple times.
+So,
+in reality, actually, this looks like
+once you start building um
+things using Spark,
+you will be doing something like this at
+the end.
+Maybe it's going to be more interesting.
+So, you're going to have like multiple
+steps and this is going to notice as we
+start building the project, okay?
+That I take the data frame from one
+thing to another thing. So, I take the
+data frame from the source,
+then I do one transformations on top of
+it.
+So, the first transformation,
+yeah, and then
+the output going to be used in order to
+do another step, then the output going
+to be used in order to do another step.
+And actually, that's it. Once you learn
+to do those stuff,
+you are actually, my friend, doing ETLs.
+And you are doing
+data transformations.
+Okay.
+Now,
+this is one more concept that you have
+to understand. So, so far we have
+learned
+about
+how to work with the Spark,
+what is the main thing about the Spark,
+like um
+how we use the data, how we load it
+inside the data frames and stuff,
+because if if you don't [clears throat]
+understand those stuff, it's going to be
+really hard to understand why I'm
+creating now a data frame, why I'm doing
+those stuff. And by the way,
+if you are using Databricks, it's going
+to be always like this.
+The source of your data,
+yeah, between silver and gold, yeah.
+So, the source might be a delta table,
+but we always try to load the data
+inside a delta table.
+So, this is always the the end format
+that we try to do, okay, inside
+Databricks.
+Always try to use this format. So, we
+will never go and use, for example, CSV
+file
+uh to be written as a CSV at the end,
+okay? We will never do that. We use high
+like
+um very advanced file format called
+delta table or delta files.
+Now, of course,
+if you want to be [snorts] a data
+engineer on data lakes, there is a big
+difference, maybe just quickly to let
+you know why why we have files, why we
+don't have like um database tables.
+Um
+there is a big difference if you go here
+over here.
+You maybe you can see a lot of SQL
+developers and stuff that they are
+building warehouses.
+Um
+they load the data inside tables, inside
+SQL servers, and maybe Postgres, and so
+on.
+But, we stopped doing that
+since the data lakes. In data lakes, we
+always store the data as files, okay?
+There is no more um normal tables, yeah,
+like SQL. You have to understand there
+is files inside lake. And even with the
+lakehouse,
+we are storing the data inside files at
+the end.
+But, of course, files has different
+formats and stuff. And the format for
+the Databricks, it is an open format
+called delta table. So, once you say,
+"I'm going to develop
+a data lakehouse inside Databricks,"
+actually are working with files. And you
+have to have some,
+yeah, basic uh let's say understanding
+on how to work with files. That's why
+I'm saying it is a delta table. Now, of
+course, you might ask, "What is a delta
+table?"
+Let's go to this image over here. So,
+delta file or delta table, whatever it
+is,
+um
+there is two types of files.
+Yeah? There is closed formats, like the
+one that is stored behind the scenes in
+databases.
+And there is uh delta files that or
+there is uh other type, the open files.
+Open file format, it is something that
+you can use wherever you want. I can
+take an open file and use it for AI, for
+uh BI, for analytics, for whatever I
+need.
+But, [snorts] the
+delta but the closed files inside the
+databases, they can be used only from
+the database engine.
+So, like only inside the database you
+can use the files,
+but the open format, it's something that
+you can use everywhere. And this is the
+concept that developed from Spark, yeah,
+from the team.
+They said, "We want to have to work only
+with open file formats." And one of the
+most, let's say,
+amazing file format that you can use
+called parquet files.
+Parquet files are amazing for
+historizations. This is as well
+something that we have to do as data
+engineers. We have always to maintain
+the history of the data.
+We have always like um
+to uh have the possibility to travel
+back to the data to see the history, how
+the data was looking like. If you read
+about data warehousing, this is the main
+idea of building a data warehouse is
+that I need as well to store the history
+of my data. And the parquet file is
+amazing technique or amazing file format
+to do that. Now,
+at the start, as I start using uh
+Databricks, there were no delta tables.
+There were only parquet files. Now, the
+thing is,
+if you start working with files, you're
+going to notice they are really not safe
+to use.
+Like if you do insert statements, if you
+do inserting new data, updating the
+files, the files can get easily
+corrupted. It is going to be really
+nightmare to work with the files and
+stuff like that. Uh to manage it, to
+maintain it, it is very risky.
+That's why they said, "You know what?
+We're going to add a new technique on
+top of the files
+to make it easier to be used,
+and as well
+to
+to maintain some kind of safety, let's
+say,
+um in order to do operations on top of
+the files. So, now you as data engineer,
+my friends,
+we are not going anymore,
+well, let me grab a data engineer.
+So, [snorts]
+come here.
+Come here, come here. So, you as data
+engineer,
+you will not suffer anymore working with
+those parquet files.
+You're going to work with more advanced
+file format or let's say technique
+that's going to makes your life easy and
+safe on how you store your data inside
+those parquet files, where you have
+something called delta tables. So, you
+can use the PySpark technology to do
+very easy operations,
+like create, read, how to write to those
+files,
+how to travel to the history, how to do
+audit, how to do optimizations
+using the delta tables, because they
+have they store not only the data inside
+parquets, they as well
+uh use uh logs and metadata in order to
+store informations. And I can show you
+some examples about this.
+Now,
+if you go
+anywhere, let's say,
+and start starting new query. Now,
+everything that I'm seeing inside the
+catalog, they are delta
+files, delta tables, okay?
+So, they are they are actually behind
+the scenes they are parquet files
+together with logs and metadata. And I
+can do very easy operations on top of
+it. Like for example, if I go and say
+SQL,
+describe for me
+describe the history, look, the history
+of one of my tables.
+This is something that you will never be
+able to do in any normal
+database, okay? This is something that
+you can do only
+uh using this format. So, I'm saying,
+describe for me the history of the
+dimension customers.
+So, now it's going to go and tell me,
+"Look, look to your data. It has
+actually four versions of your
+table. We have four versions."
+So, we have the version number one where
+Barra did create the table.
+Okay? So, this is me creating the table.
+This was the first version. The second
+version, Barra done some, I don't know,
+actually, what is this?
+>> [laughter]
+>> I added some comments to the tables. And
+then, yeah, I added few comments. So,
+actually,
+the Spark is storing any interaction I'm
+doing
+inside the tables,
+inside, sorry, the delta tables.
+So, now what is happening, each
+interaction
+I'm doing over here,
+it is creating history, it is logging
+what I'm doing, it having some audit
+about it. And with that, I can go and
+visit. It's called an I love this name.
+It's called time travel.
+So, now I can go and time travel with my
+data and say, [snorts] "Okay, I would
+like to work now with the
+with the version number two." So, for
+example, I'm going to go and say,
+"Select
+star
+from
+um yeah,
+the workspace ta-da.
+And now I can say, "Version
+as of zero." I would like to see my data
+as version number zero at the start
+without any changes.
+So, with that, look at this, I'm able to
+see the old history of my data. And
+this, of course, something that you
+cannot do in databases, not in Postgres,
+not in SQL Server. It is something
+that's
+we do
+uh with the delta files. So, as you can
+see, out of the box using very simple
+SQL query. Look at like it's very
+simple. I'm saying only version as of
+zero.
+I'm able to travel to one of those old
+parquet files, and I'm able to see the
+history.
+And now, because of the Spark SQL,
+I can do very amazing operations,
+like um
+uh visiting the the history, and I can
+do some insert, update, deletes, like
+I'm working with any simple database.
+And that's why, as you can see now,
+how SQL
+is is very important as a language, or
+let's say,
+yeah, as a way to interact with the
+data. Or All the companies like not only
+data bricks or Spark is doing this.
+Like even if you go to Kafka, you can
+write a SQL query in order to interact
+with the very high-end complex
+um machines and stuff. And that's why I
+can say it's always SQL going to be very
+important, even as a data engineer,
+because it is the way that companies
+tries to make things simple.
+And now in order to do of course time
+travel before I had to write some few
+lines in Python, yeah, in order to do
+this those stuff. So, as you can see
+uh this is something that is
+um
+let's say very easy to time travel. And
+one of the thing that you have to do
+as a data engineer of of course is to
+maintain those tables. Like for example
+this data here, yeah, my table. I
+created the table. I added few comments.
+Now imagine
+how much operations going to happen to
+your table like
+uh inserting data, changing the columns
+and stuff. So, the log going to be very
+very big. And of course
+the bigger the history
+the more files you're going to get
+inside your Delta files, yeah. Then
+you're going to get a lot of files.
+And things of course going to go slow
+because each time um
+uh let's say they're going to maintain
+those stuff, you're going to pay for the
+storage and stuff. So, you have as a
+data engineer of course to pay attention
+about how big how many files are inside
+your data. And that's why optimizations
+it's going to be a big thing for you as
+you work with Databricks to optimize
+your tables to make sure
+things doesn't go and explode.
+Okay?
+Um
+So, this is a very important concept.
+And one of the thing that's as well I
+think I made some overview about the
+operations that we do. Let me check. Do
+we have it here? Yeah, I have it here.
+Nice.
+So
+as you can see here, I just made like
+some collection of operations that you
+can do.
+Um
+it is very simple. So, here you have
+I'm going to say not Delta statements,
+I'm going to call it SQL.
+You can find it in the notion as well.
+Um
+you can do those operations that you you
+usually do inside databases like create
+table, read table, append data,
+override, update, delete. You can do
+either using SQL or using PySpark.
+And those operations I think everyone
+knows how to do, right? Like I don't
+want now to go through all those stuff.
+It's just basic SQL stuff, right? Delete
+from table, yeah.
+Um override from table, append.
+And uh upsert. Time travel, I just
+showed you this time travel here.
+And of course there's always PySpark
+version of each operations. So, I'm
+going to say of course I will not do
+that now.
+If you want to learn PySpark
+yeah, I'm not sure whether it is going
+to be
+very important always to learn the
+PySpark because you can actually do a
+lot of things using SQL. Always you have
+to have in your mind how to map PySpark
+to SQL and then you're going to get it.
+And uh you will not do crazy new stuff
+using PySpark. It's only few new stuff
+like the time travel, it is a new for
+you because you don't find it in in um
+in the normal databases, the history,
+the optimizations, vacuum. So, there are
+some operations that comes from Spark
+and you can do it in SQL. Just just
+learn how to do it.
+And I want you to understand something
+that is really important that I should
+to be honest I interviewed a lot of data
+engineers and I asked asked them always
+like um what are the different ways on
+how to insert data
+uh inside um
+Spark uh or Delta tables. So, there are
+mainly three ways to insert data.
+I started to make make sketch about
+this, but to be honest I'm it's not
+ready.
+So, now
+there is mhm mhm
+yeah, let me let me try to say. There is
+three levels on how to insert a new data
+to your old table.
+So, the first one called override. Like
+it's very simple. Override, what it
+means? It's going to go and so, this is
+the source of course. Just let me add
+here source.
+And this is your target table.
+The example is not really prepared, but
+I can just tell you like quickly. The
+override, it's going to go and delete
+everything previously that you have and
+it's going to go and take this as a new
+copy to your data. So, whatever comes
+from the sources, it's going to be the
+new data. So
+the old data going to disappear and the
+new data going to be placed. So, this is
+the override. There is append, it is
+insert only.
+So, you're going to go and take the new
+data and just put it at the end of the
+old data.
+Okay?
+So, this is append, insert only. So, the
+old records will not be touched.
+Okay? So, again override, the old data
+going to disappear.
+We are replacing.
+The append, the old data will not be
+touched. No updates can happen. We are
+just appending.
+And the upsert, it is the way how we do
+incremental loads. So, it's going to go
+yeah, the example sorry for that. It's
+bad. So, the example says here or let's
+say the upsert, it says
+update first and then insert. So, that
+means each row going to be checked.
+And going to say okay, do we have this
+record already?
+If yes, then I'm going to go and update
+it.
+Otherwise, if it is
+it is not existing in my data, it's
+going to go and insert it.
+And this is something really important.
+Like if I
+rank the all three, I'm going to say
+append, it is I'm going to say
+only in few use cases you can use append
+only if you have like event.
+Like you have some sensors are giving
+you some data.
+And yeah, maybe you can go and use
+append only if you have sensors or stuff
+that never change, okay?
+But usually we have to decide between
+override and upsert in Spark. Okay?
+And I can tell you if the source system
+is very small, so small source system
+then don't deal with the upsert. Upsert
+is little bit risky sometimes if the day
+was bad and you didn't load correctly.
+So, if you have small source system,
+just go and say override.
+But now if you have a big source system
+so, if you have a big source system here
+mhm
+big source
+of course it's
+overwriting might take long time. That's
+why you have to think about the upsert.
+And um
+of course that depends whether there is
+primary keys or not and stuff like that.
+And um yeah, so upsert it improve the
+performance where it's going to check
+first
+um to update if the data exist. If not,
+then insert. And with that only few rows
+going to be changed. Uh the override,
+it's good for small source systems, but
+anyway, you don't have to worry about
+the history
+because out of the books you're going to
+get the history with the Delta tables.
+Because we are already automatically
+like
+storing the parquet files.
+So, that's that's means I'm going to get
+always the history of my data.
+And this is amazing things. This happens
+a lot as well in my project where the
+upsert was really bad or something went
+wrong in the target table. I just go and
+visit the history and grab the data from
+yesterday
+and then correct it and then do the the
+operations again. So, now those are the
+three operations and as well
+actually
+uh you have for it some statements.
+So, the override data
+where you're going to use the override
+mode, the updates
+and as well the
+update inserts.
+>> [snorts]
+>> And there is append, exactly. So, you
+have all those all those three.
+And uh yeah, so I'm going to say let me
+check whether I have still some concepts
+that I would like to explain for you.
+Yeah, we're going to talk about the
+notebooks. But now how late is it? I
+think I would love to have a break
+before continue because next it's going
+to be
+um we're going to start talking about
+uh some examples. So, that means we're
+going to have
+notebook. I'm going to explain lakehouse
+little bit for you and then I hope that
+you can manage it in 1 and 1/2 an hour
+or 2 hours to build some kind of data
+lakehouse. I I really want to build it
+with you, but it I don't know how long
+it's going to take me. But I will
+challenge myself to do it. So, going to
+take break now 15 minutes.
+We're going to get back and start
+working on the building the data
+lakehouse. I hope that makes sense. And
+of course the questions we going to do
+at the end some Q&A and I'm going to
+check your questions. So, I hope that
+you enjoyed the first part of the
+session.
+And I hope that was not that
+complicated.
+Now let's take 15 minutes breaks and I
+will get back to you.
+>> Woo.
+>> You have 1 minute to go and then we
+start.
+Mhm?
+I look tired, yes.
+To my screen time.
+Ah, I have
+You saw this gift that I got in my 40th
+birthday.
+It's amazing.
+I have some
+some toys.
+Uh this one I got it from
+>> [music]
+>> um YouTube
+as a gift.
+It's a like a LEGO LEGO puzzles.
+You just like uh build it together.
+This looks nice. I have it always at the
+background.
+And it goes there, very famous
+Nescafé.
+I don't know why I have this cup to be
+honest. I
+3 years ago I wanted to put something on
+my table. I uh
+yeah, at the start I drink some Nescafé,
+but
+then it just became
+>> [music]
+>> part of my brand.
+Yeah, another gift from uh YouTube. So
+behind me three gifts from YouTube
+actually.
+Thank you for your support, of course.
+No, it's all from uh YouTube.
+Okay.
+So I hope that everyone's back before I
+keep showing you my toys that I have
+here.
+Um I hope that I didn't get you confused
+with our road map.
+I just want to share something with you
+before we continue.
+So now
+Thank you so much for the donation. I'm
+not used to
+to check the donations and stuff, but
+thank you so much for that. So now um I
+developed, let's say, a new road map for
+you for data engineers in Notion and
+made a video about it. It's going to be
+a next
+uh Tuesday
+where I describe exactly step by step
+how to do and how to learn the stuff.
+Like for example, as you can see
+the foundations is always SQL and
+Python.
+So it's really you have to learn all
+those stuff first.
+Otherwise, if you jump immediately to
+tools like Databricks, PySpark, it might
+get you confused.
+So that's why you have to learn the
+foundations, then I take you in the next
+steps on how
+what Yeah, which platform to learn
+and how to prepare to get interviewed,
+to get hired, and then I explain for you
+the next steps on your journey. Not only
+like to get you hired.
+As well how to grow as a data engineer
+at the companies. The thing that you
+have to learn uh the first steps in your
+career in your job. Yeah, like data
+security
+and things about the cloud, about the
+Kafka. So there's a lot of things to
+learn, but first the foundations. You
+need the foundations, you need the SQL
+and the Python, yeah. Without it you
+cannot proceed with the next steps. So
+uh I will going to share this road map
+in the
+I talked about it like around 35
+minutes.
+So it's going to be published in uh
+yeah, um Tuesday.
+But now we are talking about our road
+map. Our Databricks road map. So let's
+go back here.
+Um let's continue. So
+I
+Yeah, I introduced you to a lot of
+things.
+And I can tell you
+if you understood now from me around
+50% of what I said
+it is more than enough as a junior.
+Those stuff
+let's say, it's something that you're
+going to learn during the job as you are
+doing the project and stuff like that. I
+didn't learn this uh on my own. As I'm
+doing the project, I was introduced or I
+heard about, okay, there is a Delta
+Lake, there is Delta tables. So I start
+reading about it. So
+I wanted to give you in one shot
+everything and whatever stays, the 50%
+that stays now in your head, this is
+more than enough as a junior data
+engineer, okay, guys? Because you're
+going to learn those stuff as you do
+projects and um
+I
+Yeah, I tried to push on you or let's
+say on those concepts just to understand
+the fundamentals, but of course as you
+are doing the project you will not
+notice like how the data is splitted to
+multiple machines. There is a lot of
+like even here those files and stuff is
+going to be behind the scenes for you,
+but I need you to understand when I say
+optimizations or when someone say
+history of the files, you have to
+understand the concept behind it. So
+that's why I was trying to push on you
+on on that concepts, but as you start
+first projects it going to break the
+ice. You going to understand the whole
+thing, okay?
+Now
+we can do now a project
+and of course this like I have done the
+same project in the SQL. It took me
+around 5 hours to just explain how to do
+the project. So that's why I'm going to
+try how to do my best to explain how to
+do the project so that's
+you have enough knowledge to do a
+project on your own. This is very
+important.
+I want you to build a lake house at your
+end. It is totally doable. It is not
+that hard to do. I'm going to give you
+the scripts at the end of the boot camp.
+I'm going to give you the whole scripts
+on how to do the lake house.
+Of course there are levels of lake
+houses, okay? There is an advanced one,
+there is a medium, there is an easy one.
+I want you to start with the easy one
+where you build a data lake house based
+on files and CSV files. Not based on
+Kafka on APIs and stuff like that. This
+is something that you can do as a next
+step. So
+I want you to do a very simple lake
+house and to go through all the phases
+as I do in my projects. So what I'm
+going to show you now it is something
+that if now I get hired again somewhere,
+I'm going to do exactly the same steps
+to build their lake houses and I will
+try to show you this. Now
+this is like my perspective on how to
+build it. There is no like one book or
+one way how to build a lake house. There
+is no standards, okay? How to do it.
+Depends on the situation, depend on the
+scenarios depend on the sources, on the
+company itself and the data architects.
+Depends on the scenario you build it,
+but I'm going to give you now
+after a lot of let's say 5 years of
+building it, I can give you now
+immediately the last version where I
+built a lake house.
+I made around from
+the system that I have built five
+versions of it. So I migrated my lake
+house five times until I got the last
+shape of it because there is a lot of
+variants, a lot of options, that's
+trade-offs and stuff, yeah? So I'm going
+to show you now a way that comes from
+the industry that works and exactly as I
+left 3 months ago, okay?
+So this is the I would say [music] the
+the way that I would do it. You might
+face another project where they do it a
+little bit differently, they give
+another different names, but at the end
+be honest, it doesn't matter. At the end
+we prepare the data for others. Now
+in the projects
+the first step that you usually do is
+that you have to make a picture for you
+on how you going to build the project.
+You cannot go immediately and start
+scripting. This is the
+last thing that you do, okay? You have
+first to design a lake house for you.
+So now if even you start a demo project
+for you or even if it's like only the
+portfolio project, you have to build one
+big picture for your project. You have
+to have the concept and then you start
+implementing, otherwise
+it going to be messy. It's going to be
+like full of crap.
+So
+that's why my friends
+you have to build something like this.
+Of course you can use the tool that I'm
+using here or I recommend you to use the
+draw.io.
+This is as well an amazing tool to build
+an architecture. If you followed me in
+the SQL warehouse, you're going to find
+me building a lot of draw.io diagrams.
+Doesn't matter which one. Take just
+I don't know, yeah? Whatever tool you
+want. There is no standards for this.
+Now
+you have to design usually we design for
+the lake house three layers.
+The standard says, okay, call it bronze,
+silver, gold. Okay?
+Now you need always if you are building
+a data lake
+yeah?
+You need always a place where you have
+the raw data as it is. This is very
+important to not do immediately any
+transformations. I just want to load. So
+extract and load. The E and the L.
+I don't I don't want to do anything
+else, okay? Just the E and the L. I want
+to put it here in the bronze and we
+don't change anything. So it's going to
+be usually one-to-one copy of the data.
+Okay?
+Let me just make this small. This is
+one-to-one copy of the data.
+I will not do any data transformations.
+No transformations.
+Of course those are my rules, okay? Or
+let's say the standards as well from
+Databricks. There is a reference
+architecture that I'm going to link it
+as well with the notion.
+You can follow it as well. So we don't
+do any transformations. We just copy the
+data as it is one-to-one inside the
+bronze and there is a reason for this to
+be honest. Why we do this? The thing is
+if something goes wrong on your silver
+and gold, okay?
+And I don't know, yeah? You have You
+have issues here.
+Something went wrong. Now
+instead of relying on the sources to get
+the data, you can rely on the bronze.
+In order to have some kind of state of
+yeah, archive for your data. So that you
+can always rebuild the silver and gold
+using the bronze without worrying about
+whether the data is available on the
+sources because in many scenarios what
+happens your source going to go and
+delete the data. They want to optimize
+their storage. They want to do
+something, yeah? So they go and delete
+the data and imagine if you don't have
+an archive for it.
+You come to the silver and say, "Whoa,
+where is my data?
+>> [laughter]
+>> I don't have it." And you're going to be
+in big big problem. That's why we say
+we make a bronze layer without any
+transformations because if you do any
+kind of transformations here
+it going to be really hard, let's say to
+do the transformations backward to get
+the raw data, okay? So don't touch the
+data. Don't do any transformations at
+the first layer. This going to save your
+life in many scenarios during the
+projects, okay? And it going to build an
+archive for you and if in your company
+you have some audits they going to do
+some audits on the data and stuff like
+that. You can say, "You know what? I
+have my bronze. Go to the bronze and
+you're going to see the data." So
+they can audit the data as well if you
+have some I don't know, yeah? Security
+problems or let's say the the source
+needs some backup. So there is a lot of
+benefits of having the raw data. So
+that's it.
+With that I define my rule. This is the
+most important thing. You define the
+rules, okay? Again.
+Now the next step of course
+I need to clean up the data, right? I
+cannot leave it like this. So that's why
+you're going to start doing
+clean.
+You're going to start doing some
+transformations.
+But not all of transformations.
+Transformations
+my friends has always two types.
+Okay? There is transformations that you
+do in order to clean up the data
+like you can see during the projects
+there is transformations where you do a
+trim for the white spaces, uh changing
+the case of the data types. Um yeah,
+maybe uh replacing the nulls with a new
+value.
+So there is a lot of clean up activities
+that we do. If you learned in SQL for
+example, you know all those functions in
+the string functions, the number
+functions. So we have a lot of
+clean up transformations, I'm going to
+call it.
+But there is another one called business
+transformations or business rules.
+It is something that
+comes from the business and where they
+say, "You know what?
+If we have more than if a customer have
+more than 100 orders, then this customer
+is VIP."
+So those rules comes from the business,
+from the process, from your company. And
+there is no standards for it. Each
+company has its own business rules. So
+this we call as well transformations.
+Now
+since we have two types of
+transformations, we will not put
+everything in one place, you know? We
+always try to split. The more split the
+the the easier to manage. But of course
+you have to have a balance. I saw
+to be honest, I I saw like
+some projects where they have crazy
+number of layers.
+Like I wanted to do a lineage, so I went
+from one layer to another layer to
+another layer. So it it was crazy how
+they do the layering and that's because
+they have bad data architects.
+So as well not for each thing you're
+going to go and make like a layer for
+it, otherwise
+you're going to lose it. So maximum do
+three layers.
+And here you're going to do in the
+silver only data transform, only clean
+up transformations. So you're going to
+clean the data, you're going to do some
+maybe standards
+data type changes. So you define the
+rules.
+So what you are allowed what is allowed
+here.
+And in my projects to be honest, I
+didn't allow
+to do data modeling in the silver layer.
+There's like of course some people going
+to say, "Oh, this is crazy. Why you
+don't allow data modeling here? No data
+modeling."
+The thing is I would like to maintain
+the shape of the data like the source
+systems. There is I I had it a lot where
+some data scientist comes and say, "Hey,
+I would like to analyze one of the
+sources, but I would like to have the
+data as it is. I know the tables, I know
+the structure. Don't break that model.
+Don't introduce something new."
+Yeah? So, data scientist or even data
+analyst or
+Yeah, so DA. So, there will be some like
+if you work differently on how you work,
+but the bigger the project gets, the
+more people going to come and say, "I
+would like to see the original tables
+like it is from the sources."
+But of course, in clean way. That's why
+I made a rule there is no data modeling
+in the silver layer, but you can decide
+something else. You say, "Yeah, let's go
+and build a data model inside the silver
+layer." Yeah? But I just find it's
+something that you can do in the next
+step. Now, in the next step,
+we're going to do a gold layer and here
+going to be the business ready layer.
+Okay?
+So, this is the business layer where you
+allow those business rules. Yeah? So,
+now you allowed to change the shape of
+the data. You can do
+like um whatever, let's say, go break
+the data model. Go introduce
+uh that's no
+snow
+flake,
+the star schema. Sorry, I just forgot
+the name.
+3 months away from the project and I
+start forgetting the name. So,
+so, star schema.
+Build what even like aggregation like do
+do whatever you want here. Break the
+model. Prepare the data as the final
+user going to use it.
+Okay? So, this is the gold layer where
+you introduce the business. And now,
+you're going to
+say the access points for my lake going
+to be the silver and the gold. Okay?
+Now, many many use cases
+and I allow like
+By the way, as a data engineer, you have
+to work as well as
+not the data owner, but you're going to
+be the advisor for the data because data
+owner are usually from the business. So,
+as data engineer, you're going to be the
+product owner. Yeah, exactly, the
+product owner. So, if someone comes like
+data analyst or data engineer say, "Hey,
+I would like the data."
+You can always try to push your gold
+products because they are really
+prepared and ready.
+Yeah? But if
+things doesn't go work or let's say
+doesn't like um yeah, work for the data
+analyst or scientist, you say, "Okay,
+then you are allowed to go to the
+silver." But always try to push your
+final product.
+So, now, once you do this projects
+and yeah, let's say, you decide
+I want to build those three layers
+and you decide on the rules, then you
+already have done a lot of things. You
+made You made it clear how you're going
+to build the lakehouse.
+And either you're going to do it as data
+engineer or some senior data engineer or
+data architect. But to be honest,
+they only do this. They decide on the
+layering. They decide on the rules and
+they write some standards. Like maybe
+some guides for the developers, for the
+junior data engineers where you join the
+project and
+um you check the rules. By the way, if
+you join any project, always ask about
+the rules. What you're going to do in
+each layer. Yeah? And if they don't have
+one, then
+say, "I'm going to create the rules
+for for the project." Okay? So, this is
+something that is very important. Now,
+how you going to build this? It is as
+well not that crazy.
+It is simple. Once you understand the
+pattern, you can build this very easily.
+So, now,
+we have This is a concept. Okay? So,
+this is we're going to say high-level
+architecture
+for your projects.
+So,
+now, how we how you usually implement
+this?
+We write scripts.
+So, you're going to write a script for
+the bronze. You're going to write
+scripts
+for the silver and you're going to write
+script for gold. So, you have to do some
+scripting.
+Okay? So,
+scripting. Whether you are using SQL or
+PySpark SQL or PySpark, whatever. Yeah?
+So, you have to write some kind of
+scripting. Now,
+the scripts, they have to do something
+that is as I told you with the data
+frame. We just move those stuff here
+below.
+So, now,
+not only scripting, you have to have the
+storage, right?
+So, you have to build the storage and
+usually we put everything in the Unity
+Catalog.
+Okay? So, now, what the script going to
+do, it's exactly like the data frame.
+It's just going to read the data from
+the left side, do transformations, and
+then write it to the storage.
+Then the next scripts, the silver one,
+going to read the data from the previous
+layer, do transformations.
+Of course, here we will not have any
+transformations at the start. But in the
+silver, we're going to do
+transformations and then you're going to
+write it back.
+And then, guess what? The last layer,
+you're going to read from the silver, do
+transformations, and write back.
+And that's it. This is
+all what you have to do in the scripts.
+Read, do something, and write.
+Now,
+once the data lands in the final layer,
+everyone going to be happy about it and
+you're going to go and say, "Hey,
+the data is ready. Go and consume it."
+Okay? Now, of course, another thing that
+we have to build
+is that we have to go and build a data
+pipeline.
+This is for the automated automation.
+So, data pipeline.
+This is something that's we have as well
+to do
+in order to make an orchestration.
+Orchestration means
+um we're going to put everything in one
+place
+and
+we're going to have like play button. I
+don't have a play button, so I'm going
+to make it like this.
+>> [laughter]
+>> I want to click on this
+button
+where it's going to do the rest. So,
+first, the data pipeline going to go and
+trigger
+Let me maybe use some
+laser point. So, it's going to go and
+trigger this notebook and then the next
+step going to go trigger this notebook
+or script. And then the last step you
+can go trigger this. And that's it. So,
+data pipeline is simple thing. It's used
+for automations and you can say, "You
+know what? Every day
+I don't know. Yeah, 00 1 a.m., you have
+to start."
+So, actually,
+this is the fundamentals as data
+engineers. You have to learn how to
+write scripts. You have to learn how to
+write into the data and at the end how
+to build a data pipeline.
+So, now, um
+this is the plan and
+I want you to do this and to build this
+kind of projects. Of course,
+um the first thing that you have to do
+is my friends is to go and build or
+create
+a repository. Let me just check whether
+I have it ready here.
+So, now,
+um you have to learn how to yeah, work
+with the Git and GitHub and um it is
+very simple. You just go and create
+first of all an account in the Git
+GitHub and inside it, you're going to go
+and say new
+and just make
+for example, Databricks
+bootcamp. Just give it a name.
+Okay? So, 2026. So, you're going to go
+and build a new repository or create a
+new repository because you need it in
+order to save all your scripts.
+Okay? But now, we will not go in all
+details on how to use the Git, how to
+push inside it. We're going to make just
+simple repository and we're going to
+store inside it our code, our data sets,
+and everything. And this is amazing
+thing and order as well to for you
+to um to share at the end your
+repository. So,
+I would Yeah, make it as one of the
+tasks that's I expect from you after the
+bootcamp and stuff that you build
+repository. You put inside it your
+project and start sharing it with
+others. Okay? Like in the Discord or
+maybe in LinkedIn.
+And uh you're going to put inside it
+everything. Yeah?
+Now, I created already one called data
+camp um Databricks bootcamp.
+I say data camp all the time because
+of the sponsor. I used to say that
+almost in many videos.
+Um
+So, we're going to get that repository.
+Okay? So, this is my repository. I'm
+going to put inside it the code and just
+copy the URL. Yeah? From that
+repository. Now,
+the first thing that we have to do is to
+go back to our
+uh Databricks
+and all our work going to be now inside
+the workspaces. So, now,
+again, as a data engineer, you have to
+keep your eyes on some different stuff
+in the UI. As a data analyst, you said,
+"Okay, the most important thing is for
+you the SQL. You create the dashboard,
+the Genie, and stuff." But as a data
+engineer, you have to keep your eye on
+the workspace, on the catalog,
+and on the compute. So, storage. Again,
+it's like this picture.
+The scripts, it's the workspace. The
+storage is
+the Unity Catalog and the compute. So,
+those three going to be your main tools
+where you have to explore. Now, inside
+the workspace, you can do a lot of
+things. You can start writing I don't
+know. Yeah, code and stuff, but we will
+not do that immediately inside the
+workspace. We're going to go and connect
+our GitHub
+to the workspace so that I save my work
+inside my GitHub. Because now, if I go
+and share my work with others, they have
+to have an account
+in Databricks. They will not see my code
+and you're going to struggle or maybe
+you're going to lose your account
+someday. Who knows? Maybe they're going
+to stop giving this free edition, but I
+hope that they will keep doing that.
+So, that means, my friend, work always
+in a Git folder. So, we're going to go
+and say create a Git folder.
+Now, I'm going to go and connect it very
+easily. So, I'm going to go and give it
+the URL of the new repository that I
+have created and just give it a name.
+So, this [music] is
+the boot camp for data engineering and
+then create a folder.
+So, now
+I am inside now
+the
+Yeah, my Git repository and anything
+that I do now
+it's going to be stored, of course,
+after I commit, inside my Git
+repository. Now, on the left side, let
+me just guide you a little bit in the
+UI.
+There is stuff called home. Okay?
+If you extend it, you're going to see
+here the link to the Git. You can see
+this folder icon called Git folder. That
+means it is connected with your Git.
+There is stuff that someone else shared
+with you. Maybe like I go and share with
+you a code or something. You can have it
+over here. And there is stuff that is
+stored
+at your
+workspace.
+And yeah.
+So, we're going to go inside our Git and
+now
+you can like work here as any like uh
+Python project, okay? So, you can create
+folders. You can create Python code or
+notebooks. So, now what I'm going to do,
+I'm going to say, you know what? I'm
+going to go and create a new project.
+So, I'm going to call it spike.
+Um lakehouse.
+Though
+Yeah, maybe give it a name like this,
+okay?
+So, here I'm going to put all the codes
+for [music] my projects. Now, inside it,
+of course, we have two options.
+So, either you're going to work with
+notebooks or you're going to work with
+Python files.
+Now, if it's your first time hearing
+about the notebooks, let me just go and
+create a notebook.
+Uh a notebook it is like, let's say, an
+advanced editor where you can use, for
+example, in Databricks multiple
+languages. So, I can go and use here
+Python. I can use an SQL and R, Scala.
+So, I can use
+different programming languages inside
+my notebook. And I can do it step by
+step. Like before, if you write a Python
+code, it's going to be like a huge book
+of code
+and it's going to be really hard to go
+and execute the like list uh the
+subsections of your code. With the
+notebooks, you can break the complexity
+into smaller sections and you can see
+the result of each step.
+So, for example, here I'm going to say,
+for example, I am inside this box.
+I can do, for example, an SQL query,
+okay? So, select star from something.
+Yeah?
+Now
+if I'm done and saw the result, I can
+start a new block. If you go and hover
+your mouse here, you're going to say,
+you know what? Now, I would like to work
+with Python. So, I'm going to go and
+start
+the default going to be always Python.
+So, I'm going to start like importing
+stuff and start writing a for loop and
+start writing my code. And then after
+that, you might say, you know what? I
+would like to put some definitions.
+So, you go
+and write here
+um SQL query
+to explore to explore
+my tables, for example, like this.
+So, you can start as well documenting
+the code
+as as a nice document using the markdown
+language.
+So, this is really amazing way on how to
+structure or to work with the data. This
+is originally made for data scientists
+in order to work or data analysts as
+well to work with the data. And now as
+well, you can use it as a data engineer.
+So
+this is one way on how to write, let's
+say, code or script in
+Databricks. But of course, you still can
+go and write, my friends,
+uh Python code.
+So, not only a notebook.
+Now
+um as you go with the project, I will I
+will just explain one thing quickly.
+Now, you have those two types of files
+to write your code.
+Now, I'm going to say
+at the start, don't write a lot of
+Python code.
+Just use notebooks. If you are junior
+engineer or you just start your journey
+with Databricks, try to avoid using
+Python code. Yeah? Because it's going to
+be a little bit complex for you. I'm
+going to say
+work with the notebooks.
+And once, let's say, you feel yourself
+comfortable with the tool, with the
+platform, then start slowly switching to
+Python
+files. Because it is more professional,
+let's say, to manage your code and how
+to call things.
+So, I'm going to say, yeah, at the start
+use notebooks and Python. And you're
+going to end up seeing yourself
+using both of them. So, you're going to
+write a lot of code using Python.
+So, maybe one for the functions, one for
+the metadata and stuff like that. And
+then you're going to end up as well
+having a notebook that orchestrate those
+files, okay?
+But now, this is advanced. This is for
+later.
+For now, I'm going to say focus on
+writing a Python and your code inside a
+notebook.
+Now, inside the notebook
+as well, it's like the SQL query. You're
+going to find here the server status.
+Let me just I think
+um add my mouse. So, you can find the
+server status. You can start running
+your notebook.
+And you can run each section on its own
+using this play button here. So, either
+run the whole thing, every section, or
+go and start the whole thing.
+So
+um and by the way, this is not something
+only for Databricks.
+Notebooks could be used as well in other
+tools. And the final phase of you, let's
+say, to be honest, I long time I didn't
+work with the notebooks because I
+switched as well using the Visual Studio
+Code.
+Now, the thing is with the Visual Studio
+Code
+it is, let's say, more professional in
+how to write code, okay? Oh, this is the
+challenge
+I made last time.
+So, uh
+you can use Visual Studio Code as well
+to write code inside Databricks, but you
+have to install an extension and as well
+things going to run locally at your PC
+at the development time.
+But I'm going to say
+this is the last tip of you. Once you
+write perfect notebooks, once you
+understand how to work with the UI,
+start exploring how to use Databricks
+inside Visual Studio Code because you're
+going to open
+a lot of features there and it is more
+professional to edit the code, to
+maintain the code, to work with the Git.
+So, I'm going to say, if you are junior
+data engineer, yeah, you're going to be
+working inside the UI of Databricks. But
+if you want to go as a senior, you want
+to be professional, you have to jump to
+the next tool, yeah? This is about the
+scripting just to give you an intro
+about it. But
+be, let's say, at the start, don't
+overwhelm yourself with a lot of things.
+I just I'm just explaining for you how
+things works in the future, okay? So,
+now we're going to do things inside a
+notebook.
+And uh what is very important inside a
+notebook is to check those three.
+There are here three icons. They are
+really, really important. So, the last
+one called the catalog. So, once I click
+on the catalog, I see my data, okay? You
+see here
+you can browse the structure of your
+data. Not the data itself, it's just the
+structure of your catalog, the tables,
+the schemas and stuff. So, this is
+something that is important to see. Then
+you have the workspace structure. If you
+want to browse between the folders. So,
+if I want to navigate through my
+projects,
+I'm going to go over here, click on it
+and then start brow like navigating
+through my projects. If I want to work
+with the data, then I'm going to switch
+to the catalog in order to see the data.
+So, you're going to see me clicking on
+those three icons. And the last one, it
+is amazing to see the structure of my
+notebook. So, for example, maybe I'm
+going to go over here and say
+step one.
+This is the step one.
+And then I have a sub step. So, I'm
+going to say
+step 1.1.
+You can see here I'm getting the
+structure as well.
+And then maybe later we're going to have
+another one. So, step two.
+So, with that you can see the structure
+of your notebook. And of course, this is
+very important as your
+code going to grow and grow and get more
+complex, it's always to check the table
+of the content in order to see
+how the how the things are structured
+and always be structured in how to write
+your code. I see a lot of um
+junior developers, they jump and start
+writing code inside the notebooks.
+And there is no documentations. There is
+no headers. There is no like any table
+of content. Just take it step by step.
+Organize your notebook. And write always
+the steps that you are doing, then
+everything going to be easy for you. So,
+now
+as you can see, we have those now uh
+three things and this is the notebook
+uh structure now.
+I'm going to say I want to build this
+lakehouse.
+So
+uh the first first of all, the first
+thing that we do actually is that we
+have to build the storages. So, I have
+to have something called bronze, silver,
+gold. And
+now
+either you're going to click around, of
+course, I create stuff.
+And of course, you have to decide in the
+workspace. So, I can go and make it
+inside
+>> [music]
+>> the workspace or I can go and create a
+new completely workspace. If you go and
+click on the organization, let me just
+go click over here
+and then create. You can see I can
+create complete uh
+I think in the catalog, yeah.
+So, if I go to the catalog, I can create
+complete a new workspace. So, it's
+called here.
+Um
+why I don't see it?
+Maybe in the free edition I cannot do
+that anymore. Ah, create catalog, sorry.
+Create catalog. So, if I click over here
+and say this is the
+I don't know the dev projects.
+And with that you are creating a
+complete catalog.
+So, as you can see here on the left side
+I don't have any more the workspace. I
+have as well the dev projects. So, this
+is the whole I can put everything now
+inside it and start working on it. But
+now I'm going to stick with the
+workspace.
+Now, the first thing is that I want to
+build the schemas. I want to build all
+those layers. So, what you can do
+we're going to [clears throat] go and
+write script for it or you can click
+around.
+Where you can say, okay, let's go and
+create the schemas. I'm going to create
+first the bronze
+inside the workspace.
+So, this is the first schema.
+Then the second one going to be
+Let me just go back here. So, create
+schema.
+Silver.
+And then gold.
+So.
+Now this is what we should do. We put
+each layer in one schema and then inside
+each schema we're going to find the
+different tables, okay, that we are
+processing. So, with that I have empty
+now containers
+where I put my data. Of course, I don't
+have anything any data yet. Now, in
+order to make things easy and this is
+the thing with
+free edition you cannot go and connect
+it to
+let's say
+to your now local database or something
+like that. I'm going to go now and put
+my files inside Databricks using a
+volume.
+So, now what you can do
+I'm going to put inside the bronze
+now
+a volume.
+So, here what we're going to do
+we're going to put CSV files and we're
+going to consider this as
+a source system, okay? So, this is my
+sys yeah.
+The source system where I'm going to put
+my CSV files.
+Just in order to practice, okay?
+So, I'm going to go and put now inside
+the volume and this going to be
+considered as a source system. I'm going
+to go to the bronze. Make sure to click
+on the bronze and then I'm going to go
+and start saying create volume.
+I'm going to call it
+source system.
+Just to to have it like a real, let's
+say, projects.
+Source systems and then create.
+So, as you can see I'm just preparing
+the setup now to do the project. So, I
+have now the bronze and inside it I have
+a folder. Now, again a volume it is like
+a folder in the cloud and you can put
+inside it whatever you want, okay? Now,
+let me just go and grab the data. Let me
+just see where I have put it the
+[snorts]
+data that I have.
+So, Databricks.
+Now
+um as well the data is available for
+you.
+And if you go to the engineering parts,
+I created this
+kind of data that is
+let's say very close to the chaos that
+you have in projects, okay?
+So
+you have two source systems, the CRM and
+ERP. And inside it you have, let's say,
+dirty data. They are not really prepared
+and they need a lot of transformations
+to be consumed for analytics. So, I have
+two systems, CRM and ERP, and both of
+them are storing the files inside CSV.
+If you done my SQL projects in data
+warehousing going to find the same
+files.
+So, that's why I I'm going to use the
+same thing over here. Now, in order to
+upload those files it can be very
+simple.
+So, as we have done it last time we're
+going to go and upload this volume. And
+now all what you have to do is to just
+drag and drop those files inside
+this box over here and then I'm going to
+say upload.
+So, now
+with that, as you can see
+if I click this away, you can see here I
+am inside the volume
+and I have here two folders and inside
+it I have my data.
+So
+I'm still, let's say, outside my
+lakehouse, okay? We didn't yet load
+anything.
+Now
+what we said about the bronze, guys? We
+said in the bronze we're going to take
+the data as it is and we will just load
+it inside the bronze, okay?
+So
+and
+that of course, once we load the data
+inside we will be using all time delta
+tables. Let me just take this icon here.
+So
+the storage of all those layers it's
+going to be delta tables.
+We will not
+let's say save CSV files
+as as a data to be used, okay? So, we
+have to convert everything to a delta
+table.
+So, this is the format that we're going
+to use. And now the source systems of
+course we have here CSV files. Now, how
+we going to start writing the code?
+Uh for this we're going to go of course
+to the workspace.
+And I'm going to go inside my projects.
+And now
+I'm going to go inside the folder that I
+just created. So, now I still don't have
+anything yet. It's just one notebook.
+I'm going to go inside it and I'm going
+to go give it a name.
+So, this going to be the bronze layer.
+Bronze.
+Yeah.
+Take it. Bronze and I will just delete
+those stuff.
+Just to start from the scratch.
+So, now
+Okay. So, now what we have to do is
+again to load
+as I told you
+over here.
+So, we're going to load the data from
+the volume, then do nothing to it. We
+will not do any data transformations and
+load it back to the bronze.
+So, it's pretty simple, right? So, read
+and write.
+Now
+we're going to go over here and start
+saying
+for example
+let's go and write code.
+So
+we're going to say we're going to go and
+create
+a data frame
+where we're going to read the data
+from the
+yeah, the CSV file, right? So, we're
+going to say Spark. Now, I'm writing
+Spark code. I'm going to say read.
+And then here we can have
+different options on how to read the CSV
+files. So, we're going to say the header
+and then, if I remember exactly, we're
+going to say, okay, they contain header,
+so true. As you can see now we start
+scripting, right?
+So, we start writing code. So, the Spark
+first option is I'm going to read the
+file with the header and then I'm going
+to say
+I want to use the same schema. So
+infer schema.
+And then true.
+And then now it's suggesting for me the
+rest of course, so it's going to be CSV.
+And
+I will put everything here inside CSV
+file.
+Second, so we can say
+item.
+And then inside the item
+I think we're going to put the CSV file.
+So, the path going to be
+uh the path of the file. I have to
+check.
+So, now it's going to be the volume.
+So, the volume.
+Volumes.
+Workspace.
+Bronze.
+Pro files.
+Um
+we're going to call it, I think
+not from the bronze. Where we have that
+data? Just a second. Let me check here.
+So
+it's in the source systems.
+Ah, yeah, here. So
+I just have to find the correct place.
+So, it's going to be in the bronze and
+then the source
+CRM.
+And then
+where it is? It's going to be the ghost
+info.csv.
+So, I am I am here, okay? So
+I am reading now the CSV file, let's
+say.
+And now, since we said in the bronze
+layer we don't want to do any data
+transformations
+we're going to do and write it directly
+to the goal. And the goal here is of
+course is the bronze.
+Okay? So, we read, we put it in data
+frame and then we write it. And this is
+again this is our goal. So, now
+as well same thing
+um
+I'm going to say maybe here in the text
+>> [snorts]
+>> reading
+from CSV file
+as
+as documentation. Now, the next step
+we're going to say write it.
+Write it.
+To
+bronze layer.
+Okay.
+So, we're going to write the whole thing
+inside the bronze layer and for that
+we're going to use as well the data
+frame.
+And here we're going to write it like
+this. So, we can say
+DF
+write
+and then mode. Yeah, as you can see I'm
+getting the suggestion. I'm going to
+follow it. So, we're going to write and
+of course you have to define always how
+you going to write the data, whether it
+is an overwrite, an insert or an update.
+So, doesn't matter. Let's say the thing
+that you define. And I'm going to define
+here now the goal. The goal going to be
+um
+the bronze dots and now I'm going give
+it a name. It's going to be maybe the
+same name as it gets from the source
+system, but I'm going to give it first
+the source system. It's going to be CRM
+{underscore} cost info.
+And that's it.
+So now with this
+let me just try this out whether it
+works.
+So now with this, I'm writing the data
+frame that I collected inside the new
+table inside the schema bronze CRM cost
+info. So now it is done. And now of
+course we have to go and check.
+So we're going to write SQL maybe for it
+and go to the catalog and then [music]
+we're going to go to the workspace
+bronze.
+And
+it actually should be here, so
+I think it is it went to the default,
+right? No.
+I have to use the catalog. Yeah.
+So
+I'm going to say it should must be go to
+the workspace.
+I have to find always the the
+what to call it? The catalog where it
+goes. So workspace
+bronze. Let me just try it again.
+So it must go there.
+Okay.
+Let me just try to select the data.
+So select from
+this table.
+Look, it is now inside.
+And maybe I'm going to go and refresh.
+Ah, look at this. It is here. So now if
+you look inside the schema bronze, I
+just written the data frame inside the
+table. And now I have a table called CRM
+cost info.
+And the data is stored as
+um let's so let's say it is a delta file
+now, a delta table.
+Now if I go to my catalog on the left
+side of course and go browse the schema
+I will see now I have just converted it
+the volume the CSV file into a table.
+So with that
+I can see that um the data is loaded
+one-to-one inside the bronze.
+And it is now using let's say the new
+technology, the delta tables. And
+actually that's all what we do in the
+bronze layer.
+We just loaded the data as it is
+one-to-one from the sources
+inside
+our tables. So now what we're going to
+do actually is that we have to go and
+repeat the same thing for each file
+for each table in order to create the
+bronze layer. So now if we go to the
+bronze layer over here
+you see
+in the volumes I have like
+uh let's say six uh files and have to go
+and repeat the same thing like six
+times. Now here of course
+as you are writing your first script
+inside uh your lakehouse
+the first time you're going to be
+writing it like this. You know what? It
+I'm doing all the thing for one table.
+Now once you write it inside this like
+in the inside this notebook, you have to
+review the whole thing and think about
+it how to make things more smarter. Like
+for example, I can go and put the whole
+path for example in uh a dictionary in
+order to do iterations because I'm
+repeating the same thing now over and
+over. So now you're going to find
+yourself doing the same steps over and
+over for each table. And of course
+this is something not really nice to do.
+But now just for the yeah, test
+we're going to go and grab uh let's say
+the next file.
+And that's going to be
+this one here.
+So this time we will not make mistakes.
+>> [snorts]
+>> Hopefully of course.
+So
+we're going to read the file and then
+write it. Yeah.
+So let's see whether I have done any
+mistakes here.
+So
+just copy again. Check. I'll just change
+here the CSV file name. So BRD info and
+then store it again in the
+next file, okay? So
+BRD info.
+So actually that's it. If I go and
+execute it
+So now
+I have written
+I moved the data from the volume to the
+bronze. So if I go and refresh
+check the workspace bronze tables, you
+can see I have now my second table. So
+now
+thing is I'm going to go and
+keep repeating this step, okay? Because
+this is something that we have to do for
+all files.
+Um
+imagine you have to do this for
+thousands of files, right? So that's why
+it will not be really smart to keep
+repeating and repeating and repeating.
+What we do in this case in engineering
+parts
+to not have the same things over and
+over, we go and make like some kind of
+metadata or let's say configuration.
+And I have here as I was today preparing
+it
+um you go and create and put all the
+path of the files in a separate config
+file, we call it config file. And here
+inside this Python code, there is no
+let's say
+uh there is no um
+any anything about Python code or we are
+not doing any transformations or
+loading. We are just describing the
+parameters of the files. So I'm going to
+say, okay. For example, I have the
+source system CRM. Then the next one is
+going to be the path of the file and
+then the target. So now I just describe
+it like the source, the target and the
+path. And I describe this for each file.
+So with that, I'm going to have my uh
+let's say my configurations and then
+in the bronze in the next step in the
+notebook, I will just do a very simple
+um iterations. So now what I'm going to
+do I'm just going to go and read my
+configurations.
+And then I will just do a very simple
+for loop. So I'm going to go loop
+through all the configuration that I
+have done. And then as you can see here,
+I'm reading from the file and I'm
+writing to the file to the delta table.
+So with that, I will not go and repeat
+or let's say copy-paste the code like
+200 times. I'm going to be configuring
+it and then looping through the files.
+And this is something that's always
+going to be like this.
+So you always start writing from the
+scratch at the first tables. And then
+over the time you're going to see ah I'm
+repeating myself. And then you can start
+doing some for loops and make it more
+smarter. So now of course I can go and
+it's going to work now. If I go and
+start like doing the same thing over and
+over, it's going to work. But it will
+not be nice because if you decided to
+change let's say for example
+I decided to change the mode. It's not
+anymore override. I would like to make
+an upsert or merge or something. Then I
+have to go for each table and change it,
+right?
+>> [snorts]
+>> But if you have your code let's say like
+this, I just do have to change it in one
+place and then this going to be iterated
+for the rest of the files. So this is
+the next step that we usually do. We
+look to what we have done and then we
+try to make it uh smarter.
+So now if you look to the
+notebook, you're going to find to the
+structure you can find it is very
+simple. We are just reading from the
+source and writing in the bronze layer.
+And you're going to repeat doing this
+for all the files. So I will say that's
+all for the bronze.
+And if you go to the next level where
+you say
+we're going to build the silver, okay?
+So the silver it's all about reading
+from the bronze.
+And now writing in the silver.
+But in the way we have to do some
+transformations, right? As we said, we
+have to do clean up for the data. We
+have to do some standard stuff and to
+make changing of the data type, but we
+will not change the data module.
+So
+if I go back to my um workspace here
+I'm going to go and create a new
+notebook.
+And this time I'm going to call it maybe
+silver.
+But for the first table. So if I have
+here, let me just go back to the
+catalog. What do we have here?
+In the s- bronze tables.
+So now
+I'm going to say, okay. I'm going to go
+and start preparing the first table from
+the bronze. So what is the first table?
+This is a CRM cost info.
+Now
+how going to be the structure of this
+notebook? It's going to be
+three steps. So the first step it's
+going to be
+of course reading.
+Right?
+So we have to read
+from bronze.
+We have to do then this is how I like
+structure first my code. I'm going to
+say then I'm going to do some data
+transformations.
+Yeah.
+And then the last step
+I'm going to do I'm going to write
+back. I'll write into silver
+table.
+So this is the basic let's say structure
+of your notebook in the silver.
+You read the data. You do data
+transformation and then
+what you're going to do you're going to
+um
+write it.
+So now
+let me just check.
+Okay, so now just to mix things a little
+bit faster, I will try to get the code
+that I have prepared today that I don't
+have to write things from the scratch
+and make mistakes on the way.
+So just give me a second.
+So on the code
+demo
+code
+silver.
+So now
+Okay, now
+the first thing that you have to do as I
+said is to read from the bronze table
+and this time it's going to be easier
+because I don't have to deal with the
+CSVs and stuff. I'm just reading from a
+delta table. So the first thing is that
+we create a data frame and we're going
+to say spark
+table and then I'm going to specify
+the table that I want to
+prepare, right? So it's going to be the
+customer info.
+So with that if I run it
+I'm creating now that data frame.
+Okay? So
+I'm back to this picture again.
+Yeah, here. So now I'm reading from the
+source which is the bronze. I'm putting
+now in data frame and now the data is
+the data frame. I would as you can see
+here I spark SQL connect data frame. I
+created one
+and now
+I'm going to do something about this
+data frame, right? I have to do like
+preparations. Now in order to understand
+what to prepare, you have to explore the
+data. You have to analyze the data. What
+what are the issues inside this file? So
+that's why actually we usually do as a
+next step before we do any
+transformations, you explore the data
+and find issues. So I'm going to go and
+say okay, the F display
+and start exploring the contents of this
+file.
+What is the quality?
+Now of course maybe from the symbol of
+data you can understand few stuff like
+for example if I check here, I'm going
+to see
+the names of the table is not friendly.
+As you can see the names are not really
+friendly. I have to maybe rename it.
+This is as well one type of
+transformations or clean up. So I can
+rename the table name column names and
+as well the table names if they are not
+friendly. I can check for example as you
+can see here
+um
+This is the order. So I think
+it is reading the order start. Let me
+check. I think I as well
+um we loaded the wrong data inside this
+table.
+Okay, we have the order information now
+inside the customers which is not really
+good. So as you can see I have made as
+well mistakes in the bronze. Let me see
+what I have done here. So we are reading
+from
+This is This is not correct.
+So I have read from the sales details
+and written inside the customers info
+which is not really nice. So I'm going
+to maybe change it in the bronze.
+So
+I'm going to read from the correct one
+and then write in the correct one. Okay,
+so this is the same file, same table.
+Let me just run this again.
+does not exist
+Ah, yeah because of this. Sorry about
+the start.
+So
+checked.
+So now
+I think we're going to get the correct
+data. I miss I have to drop the table
+first. Oh, yes.
+No, no, no. So merge schema.
+um
+I would say I'm going to drop the table.
+I don't like it.
+So
+drop table SQL.
+Help me here. Drop table and I will drop
+the whole thing.
+So it's going to be
+this one here.
+Drop table workspace.bronze.
+So it's CRM customer table.
+So
+So it's dropped and now we should not
+get any error.
+Reject and run.
+Okay, so now back to the silver
+and I'm going to rerun my um
+data frame. So I'm going to read the new
+data
+and then let's check the display.
+Ah, now I'm getting the customer info.
+So correct. So now this is one of the
+issues that I noticed. So as you can see
+as well the column names are not
+correct. Now if you check over here, you
+can see for example there are white
+spaces inside the data like for example
+here the first name has some white
+spaces by just looking the data. So the
+string values are not clean. We have to
+trim the data. This is very important.
+This is what the one very famous mistake
+that you can get is that the data should
+be trimmed, yeah, for the string values.
+And as well now there is different ways
+on how to
+yeah, transform the data. Like for
+example here I have those
+shortcuts, yeah, or abbreviations of the
+um the status or the gender. Now I can
+decide as well in my project to say I'm
+going to get a full friendly names or
+values for my data. So depends on what
+you collect as you are exploring the
+data. Like for example here I already
+saw
+that I want I have to
+trim the string values.
+I have to make normalizations
+for the marital status and the gender.
+So I'm just collecting the issues by
+just checking the data or you can start
+querying the data for example for the
+nulls and I can say the names are not
+friendly
+for both the table and as well the
+column.
+So you start exploring, you know, what
+what are the issues that you can find
+inside the bronze table.
+You check as well the data types. Like
+for example here the date, I can see
+this date is is is okay.
+So the format is correct. There is no
+strange things and with that you collect
+the thing that you have to transform and
+you start doing that transformations.
+Like for example, I'm going to make a
+rule where in my project I'm going to go
+and trim always the spaces in all string
+values. Whether there is space or not, I
+will just make sure that there are no
+spaces. So for example, I'm going to go
+and make
+for loop. So for fields
+So for fields in the F schema
+fields and with that you're going to go
+and iterate through all the columns
+inside the data frame and here I'm going
+to say if is instance for example if the
+data type
+As you can see now I'm getting the whole
+suggestion.
+So if the data type is a string, if the
+column is a string value, you have to do
+something about it. So I will not do
+replace. I'm going to go and say DF
+with column and now I'm using PySpark
+operations, okay?
+So field name
+and then trim.
+I want to trim the columns
+of the field name.
+name. So with that
+I hope that I got the syntax correct.
+So with that I'm saying go through the
+whole data frame column by column
+and check the data type. If the data
+type is string, then go and apply the
+trim on top of it.
+So with that I make sure that all the
+string values are trimmed and I should
+not face any issues
+with that. But of course I think I have
+to import some libraries.
+So I'm going to go first and do This is
+usually what we do at the start. We
+start importing some PySpark
+functions and the same modules in order
+to do the data transformations. Like for
+example here the column,
+the trim, the string types, all of those
+stuffs are stuff that I have to import
+in Python. So that's why the first step
+can be always
+going to be the init step. So I'm just
+going to say this is indeed
+and this going to be the init
+step.
+And
+with that if I go and run it
+I'm importing the things and now we
+should not get
+any issues. So let's run this again.
+And it is working. So now if I go and
+display it again, the F display
+as you can see
+with that all the string values are
+corrected. I don't have any white spaces
+on the left or on the right and this can
+happen for all the string values. So
+I can say successfully
+We'll just go and remove this one here.
+So successfully we have done the first
+data transformations
+and this one called trimming the values.
+So
+this is one thing and um another thing
+that we can do
+is that we start giving some um let me
+just display the data frame again.
+So
+um
+DF display.
+You start fixing the issues step by step
+for each table. So with that we fixed
+one day one of the issues. Another issue
+as I said those are abbreviations. I
+would like to have the full name of
+those abbreviations. So I'm going to go
+and do some kind of, let's say,
+normalizations, yeah, of the code.
+The data, sorry. So, we make from the
+abbreviations a longer name. So, this is
+a second step in my transformations. I
+have the code here prepared, so I don't
+have to
+write the whole thing. So, what I'm
+saying here, if you find an S, then make
+it single. If an M, married. If an F,
+then female. If an M, male. So, I'm just
+making the things more friendly.
+And um it is just a case when, of
+course,
+um
+I'm using now the PySpark. You can go,
+of course, and start using an SQL,
+the case statement of the SQL. So, I
+don't have to,
+let's say, start um writing those
+PySpark operations. I can go and do the
+whole thing using SQL, where we can say,
+you know, you remember select, and then
+case when,
+and then end, from, stuff like that. So,
+you can do the whole thing using SQL,
+the data transformations.
+It's not only PySpark. But, I would like
+to show you just the PySpark. It is as
+well very simple. You just know the
+syntax. So, it is as well when it is
+equal to S, then replace it with single,
+and married, and stuff like that. So,
+it's just all about to understand the
+syntax. And if I go and, for example,
+execute these parts, I will be as well
+now normalizing the
+uh names. So, now if I go over here and
+say,
+show me the data.
+Uh you can see now I have the full names
+for those columns. So, with that I have
+done another type of data clean up. I'm
+I'm making things more usable, easier to
+use, and understandable. Now, the last
+thing is that
+I would like to go and rename the
+columns. So, as you can see here, CTEID,
+uh first name, there is like uh those
+cryptical um prefixes at the start,
+GNDR.
+I would like to have a very simple
+naming convention
+uh for it. Of course, you have to decide
+in the project how you're going to do
+the naming, whether it's going to be in
+English or different language. So, now
+as well renaming considered to be a data
+transformation.
+So, now what I'm going to say, I'm going
+to go and um
+how we usually do it,
+is that you will not go one by one
+renaming the columns by operations. We
+usually define at the start the schema,
+or let's say, how things can be mapped.
+And here I'm using a dictionary now.
+So, now I'm saying, if it is CTEID, then
+it's going to be the customer ID. I'm
+doing some some kind of mapping or
+translations, okay? So,
+I'm just going to put it in a
+dictionary, where I define uh the column
+names.
+And, of course,
+if you want to be more advanced on this,
+you can go and start specifying in the
+dictionary a lot of things, like the
+data type, the um
+the comment, the description of the
+columns. So, you can add a lot of things
+inside it, not only the translation.
+But, for now I'm going to make it
+simple, so I'm just mapping the names
+from the old to the new.
+And
+now we're going to do the step over
+here, where I'm going to say,
+renaming the columns.
+So,
+if I go
+now,
+there is a code snippet for it, where I
+prepared it. So, we're going to go and
+iterate through all the columns
+uh inside this dictionary, and we're
+going to start replacing the old name
+with the new name. So, I'm just renaming
+things in one simple
+uh for loop. So,
+let me just check this.
+I think I have
+a different name for this.
+Uh I have to execute the first parts.
+So, let me just execute this. It's not
+yet defined. So, try and okay, and then
+run this here.
+Okay, so perfect. Now, I'm going to
+display again. Always check each step by
+step you do, always check what happens
+to your data frame.
+So, now look at this. I have now
+friendly names. The values are correct.
+The values of the status, the gender. I
+have long names. So, with that I have
+done three transformations in this data
+frame. So, again, by looking at this,
+if you think about it,
+uh we have here a bronze table.
+Let me just remove this here.
+So, we have bronze table. The target is
+a silver table.
+So,
+and we went through three stages in this
+code.
+So,
+first we read the data inside data
+frame, and then I have done
+the trim. So, we have done here a trim.
+Now,
+it went the data frame to the second
+stage, where we said, you know what, do
+the normalization
+for the data frame.
+And then,
+of course, the last step,
+I just renamed the data frame.
+So,
+rename. Now, I'm done. Let's say we are
+done with the transformations. Those are
+the three steps. Now, the last thing,
+I'm just going to go and write it to the
+silver.
+So, it's going to be the same command.
+It's not something crazy.
+Let me just grab this here. So,
+I don't need to display the data
+anymore. I am at the final stage, and
+now I'm going to go and write it to a
+silver. Now, each time you want to write
+thing, always you have to decide the
+mode. Now, as I told you, the easiest
+mode for small data is always overwrite.
+So, that means I'm
+replacing the whole table. I'm removing
+all all data and inserting new data. So,
+now if I go and execute it,
+it will be now um
+loading the data in the gold table. Of
+course, you have always to check whether
+it is written correctly, not to make
+mistakes like I have done. So, if I go
+to the workspace over here, and go to
+the silver,
+uh I can find my table. So, now
+of course, I can go and query the data
+from the silver.
+Of course, I have to switch to SQL,
+select
+star from
+and then
+I will see the cleaned up data inside my
+notebook.
+Of course,
+uh it is always nice to see when you are
+done the structure. So, look at this.
+At the start,
+I just imported few things from PySpark,
+and I mapped, let's say, the friendly
+values of the columns. So, this is the
+initialization step. Then I read from
+the bronze. I do the transformations,
+trimming, normalization, renaming the
+columns, and at the end just write it
+back somewhere in the silver.
+So, actually, that's it for the silver
+table.
+And of course,
+if I want to extend this, we can go
+through all files, but it'll be taking a
+lot of time. So, if I go to the bronze,
+we have to go and, of course, to do all
+those stuff for each table. So, as you
+can see,
+this is something that is really um
+involves a lot of manual work.
+And imagine you have like thousands of
+tables.
+In my project, we have 800 tables, and
+that's why
+we spent around, yeah, I can say to you,
+3 4 years just preparing the data.
+So, that's why I'm going to like explain
+for you, it's still a lot of work that
+has to be done from data engineers. Now,
+things kind of works like this. If I
+have here
+from the sources I have, let's say,
+1,000 table,
+you will not be able, let's say, to
+clean up everything in one go. You have
+to spend always to decide which are the
+most important tables and stuff. So,
+maybe maybe if you are good enough, you
+cleaned up only 500 tables.
+So, usually in the silver, we can have
+like half the amount, or not not
+everything cleaned up. It needs time.
+And in the gold, of course, you will not
+go and module everything from the start
+and stuff. So, in the gold, you might
+end up having from the 500, you're going
+to buy by doing some joins and stuff,
+maybe maximum 50 tables.
+So,
+this is because it is very hard to go
+from one stage to another stage. Okay?
+But, um
+I'm going to say, yeah, 50 tables, but
+after joining a lot of tables and stuff.
+So,
+with that I'm saying like
+whatever you get from the sources
+doesn't mean that you can process
+everything until the gold. Okay?
+So, sometimes you process only the
+tables that you really need. Uh depends
+on the team
+of that's uh in the project. Um um yeah,
+you're going to end up like cleaning a
+lot of things. Um we had 12 data
+engineers. That's why we managed to
+clean up 500 tables. And this something,
+of course, AI cannot do that for us.
+Now, as you can see, it is taking some
+time just cleaning up few tables. They
+are simple tables I'm even having in the
+demo. But, as you can see, it's taking
+time. And imagine now you have a lot of
+a lot of data, a lot of tables. You have
+to understand the content, the
+complexity, and start doing
+transformations.
+That's why uh the AI, for example, here
+is only assisting me with the syntax,
+because um
+I will not like memorize all the
+syntaxes of the PySpark, of course. So,
+AI going to speed up the process, so
+that if I make mistakes, it's going to
+assist me. But, you will not have an AI
+for now that's going to do the whole
+thing for you. It will not work.
+It will never Yeah, it might happens,
+but for [music] now,
+you need data engineers to do this. So,
+as you can see, it is
+already a lot of work that you are
+doing.
+>> [music]
+>> AI going to assist us in building uh
+let's say
+the syntax, helping us in the syntax and
+stuff, but it will not try this. You'll
+always need it for now human to do those
+corrections. And [music]
+those stuff were easy, but in real
+projects
+if you go in a difficult domain
+the cleaner process might take a lot of
+time. So, now
+again, what you have done, we have done
+this for first table
+and um yeah.
+If we go to
+the code that I have prepared over here
+I went through all the tables and done
+the same thing.
+So, again, I for example, the next table
+I'm going to go and start translating
+things from one table from one column to
+another. I read the table from the
+bronze, do transformations depend on the
+content of the data, and then write it
+back. So, I went and done it for all
+tables
+that I have prepared for you, but it's
+something that you have to do on your
+own. So, um
+you will have a template as a reference
+for you, but I really request you to
+like recommend you to do the same what
+I'm doing now.
+Read the data inside data frame, explore
+it, and think about what is wrong, how
+to correct it, and then write it back at
+the end to the next layer.
+Now
+I just wanted to show you one example.
+Of course
+um the next stage is the same thing,
+right?
+We want to write a gold layer.
+So, now what you going to do?
+We going to read from the silver
+apply
+some transformations, I write it back to
+the gold layer, okay?
+Now, let me check whether we can do this
+quickly
+because I think we have already
+3 hours. Now
+I'm going to go over our workspace
+again. So, what do we have inside the
+project? We have the bronze scripts, we
+have the silver only for one table.
+Of course, they are not complete.
+And now we're going to go and create one
+more for the gold. And of course, you're
+going to make one notebook for each
+table.
+Okay?
+I will not put everything in one
+notebook, so it's going to be
+one gold
+for for example, the customers.
+Just
+let me check.
+So, go there.
+Okay.
+So, now
+the gold layer from coding perspective
+going to be the easiest compared to the
+silver or bronze.
+But, it has one complication that you
+have to understand how to do the
+business transformations and how to do
+the data modeling.
+Because
+the thing is
+um
+as you can see in the silver, I didn't
+change the data model. It was one table,
+I written it in one table. I didn't
+change it or something like that. But,
+in the business or let's say in the gold
+layer, I have to introduce a new model.
+And here the complexity is all about the
+data modeling. How I'm going to
+um let's say present the data.
+They are different ways on how to model
+data. So, this is of course a big
+section about uh data modeling. Like you
+have
+star schema.
+Let me just um show you here.
+Maybe you have some nice pictures
+about it.
+I have of course explained those stuff
+in the SQL course. So
+you're going to have like some central
+table called facts.
+And then you're going to design around
+the dimensions.
+So
+and this is something that you have to
+do in the gold layer. You have to decide
+on how to model the data
+inside your gold layer. So, either you
+use fact and dimension, some other
+people goes in another direction where
+they say, "You know what? I will not go
+in this complexity of making dimensions
+and facts. I'm going to go and make
+something called um flat tables."
+Flat tables means I'm going to go and
+make a very huge table
+where
+so let me just um have it here an
+example for you.
+Do I have your table?
+And so
+so, either you say, "You know what? I'm
+going to go and make fact and
+dimensions." And as we saw in the
+picture
+so, this is dimensions
+dimension here, dimension
+so
+and here are facts.
+And you start uh building this model,
+which is very perfect for
+um business intelligence, of course.
+This is an amazing for business
+intelligence and Power BI. If you give
+Power BI this model, it's going to be
+very happy.
+And the data analyst can immediately do
+amazing things. So
+and this is what I recommend you as well
+to build is to build um dimensional data
+model.
+Some lazy people, let's say
+they don't do that because it is complex
+or let's say they don't have the skills
+to do this. So, what they do, they make
+one
+big flat table, flat table.
+Yeah?
+So, they going to put all the
+informations that they need for the
+analyzes in one big table.
+Of course, this is going to be a huge
+table if you do that. Like for example,
+in our
+data um
+yeah, in our example, we have six files.
+You can actually go and put everything
+in one big table. Yeah? And then you
+say, "You know what? Go and
+connect your Power BI
+to this one big flat table."
+So, this is of course something you can
+do, but I find it lazy.
+And then not interesting to model. You
+have to do proper data modeling, so you
+have to build dimensions and facts
+in order to
+to uh make things easier, let's say
+first of all for the BI.
+And um
+it is easier to do a lot of operations
+in the BI world where you do for [music]
+example, the aggregations, the slicing,
+the filtering on the dimensions and
+stuff. I'm not going in those details
+because it takes a lot of time to
+explain it, but uh what I'm saying, you
+have to decide how you're going to
+present the data. So, if I decided to
+make it as a star star schema, then I
+have to commit on that.
+And I have to start modeling the data
+that looks like star schema, and then
+start building the gold layer for that.
+And uh if you say, "No, I would like to
+make it flat tables." Then just make the
+rule here, we make flat tables.
+And maybe you can go and decide on both
+of them. You say, "I'm going to make
+flat tables and as well
+star schema."
+Yeah? So, you have to decide on how
+you're going to build the gold and how
+the shape of this going to looks like.
+Uh in the example that I prepared for
+you, I'm going to build a star schema,
+but I will not be able now to show the
+code, to be honest, because
+I am a little bit uh let's say tired.
+That's [laughter and snorts] why
+what I'm going to say, the structure of
+the gold
+notebook, it looks exactly like this.
+So, again, we have initial step. This is
+the first. It's like the silver.
+I need to read. So, again
+where we going to read from? So, we
+going to read from silver table
+or tables if you want to merge multiple
+tables together.
+Okay? So, table or tables
+depends.
+Then you're going to do I'm going to say
+the business transformation
+and modeling.
+Okay?
+And then after that, the last step in
+your notebook
+you're going to go and write it to
+uh the gold
+table.
+Yeah? Something like that.
+And
+if you go to the silver, it looks
+exactly the same steps, yeah? But, the
+source is different, the target is
+different, and the type of
+transformations is different. Now, I
+should not
+in the gold layer
+I should not go and do trimming or do
+let's say
+uh casting of data types. If I do it in
+the gold, then this is a mistake
+because I have I haven't done it in the
+previous layer.
+So, make sure
+and this happens a lot. If I'm working
+in the gold, I notice, "Ah, the data
+still dirty."
+I go back to the silver and start
+cleaning up and then go back again to
+the gold and start doing the gold
+transformations. So, now I'm going to
+show you just an example how this going
+to looks like.
+Dum dum dum. Do I have here? So
+the initial steps it's going to be the
+same thing, so you're going to go and
+read from PySpark um modules and prepare
+things. And now
+comes
+the very important part is how to do
+the data transformation.
+Now
+this is something that I um discussed a
+lot in my team, okay?
+Now
+why I tend always to use SQL?
+There is a reason. So, in my team, we
+had this trial. Some people says, "You
+know what? I want to work with the
+PySpark. I just want to work using
+Python and those stuff."
+And there is another uh group of people
+they said, "You know what? SQL is way
+better to do this."
+Now, why I prefer to write only SQL in
+the gold layer? And that's because the
+logic comes from the business. And
+believe me
+writing showing the code for the
+business from PySpark, no one going to
+understand it. Because once this is is
+struggle as a engineer, okay? Again, so
+let me grab the business people or maybe
+the data analyst or someone.
+Let me grab this one, this guy here.
+This is data engineer.
+So, data analyst.
+Maybe data analyst, a lot of people can
+be involved in the gold layer. How to do
+that?
+Business transformations. So, business
+users
+I have to just to check whether I'm
+still on the stream because to be honest
+Oh, I'm still on the stream, right?
+I didn't check at all, sorry for that.
+Are you guys understanding what I'm
+trying to say? Uh Are you guys confused?
+Now,
+um
+Yes, for one week. This is your example
+of the business transformation. Okay,
+I'm going to continue.
+Okay.
+I hope that I didn't lose you guys.
+Ah, the music background still playing.
+Oh my god.
+Wow.
+Really?
+My god, I am
+I really apologize for this. I promise
+you I'm going to go and make another
+boot camp.
+>> [laughter]
+>> I I apologize a lot. I didn't prepare a
+lot because to be honest it's my first
+uh boot camp that I do and I decide I
+decided this time to not prepare. I just
+wanted to go and
+talk to you about how we do the
+projects, to to be natural, you know? I
+don't want to have scripted, let's say,
+boot camp or to have presentations and
+stuff. So, I just
+um
+I just uh wanted to go through the
+projects and yeah, sometimes we struggle
+like this. If you forget about the
+syntax and stuff, but
+you like the music, guys.
+Okay.
+Maybe the music was the best part.
+Well, you [snorts] have to blame Black
+Soul, guys.
+Okay, I'm going to put slowly the music.
+>> [laughter]
+>> How many people we have still here? I
+cannot imagine that we have a lot of
+people still here. I'm pretty sure I'm
+lost like
+most of you. Let me check.
+Uh
+1K 1,000 people are still watching
+watching. What are you doing, guys,
+here?
+I just
+The background music was great.
+Sorry, I I just want to drink some water
+and I'm going to get back to you because
+um a little bit
+tired. I'm talking for 2 hours now.
+>> [laughter]
+>> I love you all and and uh I'm I'm happy
+that you're enjoying it, okay?
+No, please, not the music. Okay, okay.
+So, I I don't know yeah, some of you
+need the music, some not. I'm going to
+remove the music cuz it's distracting.
+1 minute and I'm going to be here just
+to drink some water.
+Um
+The thing is, guys, I talked to one of
+my my friends as a data engineer and I
+told him, "You know what? I'm going to
+explain a data lakehouse live stream."
+And he said told me, "No way.
+No way you can do this because it takes
+a lot of time
+and uh yeah, it's it's something that
+you need maybe a week to build." And of
+course
+um I wanted to this to be like a little
+bit challenge for me to say, "No, I can
+press everything in one. I'm going to
+explain from the data engineering step
+until we build the lakehouse. I'm going
+to do the whole thing in one session."
+So, I think it was a little bit hard,
+especially if you're not prepared at
+all.
+I had only I just prepared a notion road
+map and the little bit the sketches what
+I'm going to sketch for you, but the
+code um I just played with it today. So,
+you know what? I was not really
+um
+I really for it, but uh I hope that you
+are enjoying it.
+And I'm enjoying it as well. It's
+challenge for me. First time I do such a
+live stream
+Usually I hide like, let's say, I do it
+behind the screen. I take my time,
+record, edit and stuff, but doing it
+live it's going to be challenging
+because there's a lot of ideas and
+always I have to keep in my mind that
+some of you guys are juniors. Maybe some
+of you first time hearing about those
+stuff. So, I have to
+to uh to keep this in my mind and not to
+explain things as I'm explaining it for
+an expert. So,
+uh I hope that you're enjoying it.
+And uh yeah.
+So.
+Um
+Okay, so you guys are still here. I
+thought no one is here anymore, but we
+have 1,000 people here. Guys, if you
+like it, just share it and support the
+channel, okay? Be nice and support the
+channel and I see the love. Thank you so
+much.
+So, [snorts] I'm going to put the shots
+here.
+I promise I'm going to improve on those
+boot camps and let's say
+um on the live chat and interact to you
+more.
+>> [snorts]
+>> My coffee is here. I drink my last
+coffee,
+but uh the thing is
+it's too late. It's late for one more
+coffee. It's only in the morning. I
+usually after 2:00 I don't drink any any
+more coffee, otherwise I'm going to
+sleep bad.
+So, uh I'm going to get I'm going to get
+back to you after we are done the final
+step. So, let's let's keep going.
+Now,
+the gold layer, it is something that's
+I'm going to say
+um it is something that is um hard to
+build because of the business rules. And
+this is something that
+makes lakehouse hard for data engineers
+because we have to understand the
+business.
+And as I told you
+if I have 1,000 table, like how the hell
+I'm going to understand all of them? And
+as a project lead, to be honest, I
+struggled a lot with this because
+the department or let's say the company
+going to push on you if you have a nice
+solution building lakehouse.
+I started my projects with only eight
+tables.
+And we were only two persons on the
+projects in Mercedes-Benz.
+And I managed to make two tables here
+and here five tables. So, this is my
+start
+5 years ago.
+And then once things worked and the
+first data analyst started working on
+this gold layer
+things start to scale. So, I start
+getting one system after another.
+And I start as well leading this and
+telling, "Okay, you know what? I need
+one more data engineer because more
+sources, more data." So,
+I we start to have like 100 tables here,
+20 and maybe here five or let's say 10,
+yeah?
+And the more I get
+>> [clears throat]
+>> sources, I stacked more people until I
+reached like a cap
+where my department say, "You cannot
+hire more people on your projects.
+That's it, 20."
+>> [laughter]
+>> And of course, not all of them were data
+engineers, but um some of them were data
+analyst from business. So, we were like
+mixed people and some data scientists.
+And I we reached at the end of the
+project like 1,000 tables.
+And yeah, the 500 and here I can't
+recall, maybe 80 or something like that.
+Now,
+of course, you're going to ask how those
+20 people understood thousands tables.
+Well, first of all, time. You're going
+to learn with the time about the domain.
+I know a lot of things about the domain
+that I learned. I worked with because of
+those transformations, because of those
+layers, okay? So, only through the
+project you're going to learn how to do
+the transformations, how to build the
+model. So, it's need time and since I
+have the hard cap of my projects only 20
+people
+that's why I am forced to do a lot of,
+let's say,
+optimizations in the code and how we
+structure the code.
+So, we worked a lot on building
+Let me just grab this again. This is the
+main idea of making things automated. We
+worked a lot on making a perfect
+metadata config files.
+And our main jobs, it were it was all
+about making a for loop.
+It's only looping through the metadata.
+So,
+the scripts in my project was very
+small. We don't have like big codes.
+And uh that's because of the help of the
+automation that we do of uh working on
+the metadata. We always describe the
+data first and then write the code. So,
+I describe always what is the source,
+where the path, where is the target. And
+then
+we go and iterate through all the
+columns and the tables. And
+now I'm just doing for you one example
+project. I'm going to give you the code,
+of course, uh that's so that you have
+it, but I'm planning for this year as
+well to go fully
+in one project that maybe takes a month
+or something like for really take give
+it enough time. Either I'm going to
+record it or doing it live like this. Um
+but I want uh really to go deeper on how
+to build fully automated uh lakehouse
+like an expert, okay? Like top level.
+So, I'm showing now only like for a
+junior level.
+How to build a lakehouse, but if
+things gets real, you're going to get a
+lot of tables and you have to do some
+kind of automations. So, now back to the
+topic.
+Um to gold layer. And here there is
+dilemma about this where
+um I was in the lead and I have
+engineers telling me, "Let's go and
+write things in the PySpark." And other
+says, "Let's go write things in the
+SQL."
+Now,
+um
+of course, if you use PySpark, it is,
+let's say,
+more looks more advanced, but I noticed
+something that
+we always going to ask the opinion of
+the experts, whether it's a data analyst
+or maybe a process expert, you know, I
+grab someone from the process experts
+that knows about the cars in
+Mercedes-Benz more than me and tell him,
+"Hey, come, please, help me about the
+data. I'm not understanding anything."
+They They join the project, not join the
+project, we go on a meeting and stuff,
+and then I explain for him the gold
+layer, like show him the code and show
+him the stuff. And once I show people
+the PySpark code, they I lose them. They
+They will never understand what I'm
+talking about.
+Because they are not used to see Python
+code.
+Okay?
+So, that's why I decided in my project
+to use only SQL
+on the gold layer.
+Because it [snorts] involves a lot of
+discussion with a business non-technical
+people. I'm not saying that analyst is
+not technical.
+You guys maybe learn some Python.
+But since I'm discussing this a lot with
+the end user or with the consumers of my
+data,
+I decided to use only SQL in my gold
+layer. But of course, there is no wrong
+and right.
+You can use both and depends on the
+team. Some people really some high like
+some high-end data engineers, they hate
+writing SQL.
+I don't know why.
+I I like writing it, but uh I like
+simplifying things.
+Um but there are some people they are
+scripters, they know, they just script
+things in Python like crazy and they use
+only PySpark. So,
+I made a rule, only SQL in the gold
+layer.
+And um yeah, and this makes easier and
+over the time I noticed as well I had
+more people helping me and building the
+model. And this was an I think. So,
+that's why I
+recommend you
+to use PySpark maybe and in the silver
+layer,
+but with the gold layer, go fully SQL.
+And this is why That's why
+I wanted to show you uh the code.
+Da da dum. So, on the gold layer.
+So, it kind of looks like this.
+I'm just going to go and um grab
+the logic.
+Of course, I didn't read all prepare all
+the silver tables, that's why it will
+not work, but now
+you're going to write an SQL query. So,
+as you can see,
+this is the flexibility now with the
+notebook.
+In one place, you write SQL, then
+Python, then jump back back to SQL. So,
+we're going to write the logic only
+using SQL. So, for example here,
+I'm building the customer key. I'm
+having another case when I'm joining the
+tables. Of course, you can do the whole
+thing using PySpark, but I'm joining the
+tables and I'm preparing, let's say, the
+logic. Of course, here there's not a big
+logic for the
+business um
+for the business users, but I think I
+have
+another better example. Let me just
+check.
+Hm hm hm.
+SQL SQL SQL
+SQL warehouse
+docs
+Um
+scripts called
+Hm, I'm just trying to find you one
+business logic that you can maybe
+understand me.
+Uh it's uh the reports.
+So,
+yeah, I I don't have the code ready. So,
+it's all about actually business logic.
+It's all about defining the rules. Like
+for example, I'm just going to get give
+an example. For example, if the
+total number of orders, let's say,
+yeah, if the sum of orders
+um of course, it's not prepared now, but
+if the total number of orders, as I
+said, like over 100, then this is green.
+Yeah? If it is um
+if it is lower than as you can see here,
+I'm getting the suggestion like crazy
+from the AI. If it is lower than yellow,
+uh otherwise, it is red. So, I'm
+defining here the loyalty of the
+customers. This This is a a business
+rule. This is something that I will
+never know from my own. I have to ask
+someone from the process when it is
+critical or when how how we going to
+rank the customers and stuff like that.
+So, as you can see,
+it is just simple SQL statements that's
+where you can define
+um the
+the business rules and you're going to
+build the model that you want. So, as
+you can see here, I'm joining multiple
+tables and I'm building only one table
+about the customers. Now,
+in our silver, if you go through the
+files, you're going to find like we have
+three tables about the customers. So, we
+have the customers info, we have another
+table about the customers for the
+locations, maybe about the what do we
+have? The emails or stuff like that. So,
+we the customers informations are
+spreaded multiple ways and I decided in
+the gold layer that I'm going to go and
+put everything in one dimension called
+the customers dimension. So, I'm
+changing now the shape. In the silver,
+it was one table inside, getting inside,
+transforming the table and then writing
+one table. So, it's only one table in
+one table out. But with the gold layer,
+I can go and merge like five, six tables
+in one big flat table or building the
+dimension
+uh that involves multiple tables from
+the sources. So, it's going to look like
+this.
+Um
+you're going to write a query.
+Let me just go back.
+Hm hm hm.
+So,
+code
+I just jumped to another project.
+So,
+Okay.
+And actually,
+uh you're going to run this query inside
+the Spark to put it in data frame.
+So, now of course, I don't have all the
+tables. I have only the customers info,
+that's why I will not be able to
+join all those tables. I'm going to go
+and remove them.
+But
+the whole notebook is going to be ready
+for you once you start working. Let's
+say it's something like this, okay?
+It's Yeah, it's just select from and
+then row number. It's not crazy things.
+But imagine there is joins and I'm
+building that dimension um
+customers. So, it's going to be dim
+customers.
+And with that, I'm putting now the data
+inside data frame. It says here
+something wrong.
+So, I don't have this table anymore.
+Let me check.
+Do you have a silver here? Did I run the
+silver? So, silver silver silver.
+Uh I called it customers info. So, I I
+renamed the table. So, customer info.
+Customers, like this.
+And then run.
+And uh what else? So, I think we have
+I have to check I renamed stuff. So,
+customer ID, customer name, number. I
+don't have customer number. We have
+customer key.
+So, first name, last name, whatever,
+yeah? So, run again. Okay. So, with
+that, I this
+Yeah, I consider it to be, let's say,
+the business transformation. Actually,
+it must be here.
+So, there is no reading actually from
+silver tables.
+It's going to be automatically done
+inside the from, right? Because we're
+using SQL.
+So,
+I'm reading from the silver. It is
+inside the query. And I put it in data
+frame. At other ends,
+guess what?
+We're going to go and write it in a gold
+table. We're going to call this the
+dimension customers.
+Now, of course, the customer key
+exist.
+Hm.
+Uh we have two customers keys, sorry.
+Let's go and remove it.
+And then run again.
+Thank you.
+Just got some tea.
+So, now
+and then I'm going to write it back to
+the gold dialogue. Uh sorry, uh
+customers, let's go
+to the catalog now, to the workspace, to
+the gold. And with And with that, as you
+can see, I have the dimension customers.
+So, actually, as you can see, the gold
+layer, it's something that is easy to
+implement.
+This is the easiest one. You can see,
+I'm just writing an SQL,
+putting it in data frame and then
+writing it back to the gold layer. But
+the magic, of course, is all about how
+to design the gold layer, how to write
+the business logic. And um
+if you follow now my scripts, where
+we're going to go and create um
+a dimension for the customers, a
+dimension for the products and the fact
+table for the sales. I'm going to put
+for you, let's say,
+uh the guide step by step
+on the tasks and how to do it, but I
+just wanted you to show you an example
+on how we uh do things over here. So,
+again,
+let me just recap. The bronze layer, it
+was simple. We read the data from
+whatever it comes from, from CSV, we
+write it back. It's not a big deal.
+It is as well very easy, so I don't have
+to understand any business logic. I can
+do this for any company. Okay, so I just
+read from the source and put it in the
+bronze.
+This is very easy. Now, if you go to the
+silver,
+I still don't need some big knowledge
+about the business, right?
+I read the data, so again,
+I read the data from the bronze. I just
+go and start exploring the data to see
+you
+what are the issues. And those are the
+typical issues that happens in each
+project. You will always have white
+spaces. You will always have some um
+changing of data types or maybe
+normalizations of the values.
+So, I don't need here really big
+knowledge of the domain. I just can
+explore the table, think about the
+transformations, and uh do stuff. Maybe
+from time to time I'm going to ask, like
+for example, what the S means, what the
+M means. So, maybe I'm going to ask the
+uh source system or the business people
+or the process, but it is not that
+heavy. I don't need a lot of people to
+help me on this, okay? So, I just clean
+up the data and then at the end
+go and write it to the silver. Now,
+for the gold,
+you just need to write an SQL query to
+build the model. So, here we are
+building the dimension, then the next
+one, the fact and stuff, but here it's
+always depends on how I'm going to
+present the data in the final step. Now,
+once what can happen next?
+I have the data in the gold.
+And now,
+I'm going to go and start
+telling people about it, of course. So,
+I'm going to go and tell, okay, look, in
+our data, the bronze data is really
+crappy data.
+Now, we have a very better, let's say,
+quality of the data that we have down
+sales. I have a dimension called
+customers. Go and start using it.
+So, the data analyst or whatever using
+with the data, they're going to go and
+stop using CSV files and their stuff and
+they're going to consume the gold table
+that you have. This has the highest
+quality of the data and if you go, for
+example,
+let's go and query this table.
+This is
+the finest products that you're going to
+build as
+data engineer.
+And of course,
+you're going to uh describe it as well.
+So, I'm just going to come back to this
+point over here.
+So, uh you're going to say, look to this
+table. It is very simple. I have here
+customer key, customer ID, first name,
+last name.
+And in the background, it was three
+different files. Okay? So,
+instead of three different files, we put
+everything in one place and anyone want
+to do any
+or let's say I or I go to Genie now and
+maybe enter the data, they're going to
+work with this version of the data, the
+final version. And of course, you have
+to
+work on the metadata, of course, in the
+catalog. So, if you go back to the your
+You can do it in the scripts, of course.
+You're going to go to the gold and
+start, of course, describing the data.
+You're going to say, you know what?
+How we cannot add that active
+subscription.
+I have to start my server
+in order to edit the data catalog. So,
+of course, you're going to start editing
+the comments
+and say, okay, this is unique identifier
+about the customer. I'm just adding here
+stuff from the AI.
+And you have to make your data
+uh let's say, easy to understand for
+you, for the AI.
+I'm just using
+the AI to describe, let's say, this
+table.
+And with that,
+your data analyst going to be very happy
+to consume this version of data.
+Instead, if you go back to the bronze,
+now go back to the bronze. Look to the
+source system.
+Instead of this those crappy files. So,
+look at this. It's called customer info.
+And in the other source, it's called the
+customer infos.
+You can see cost AZ12, I don't know,
+lock A101.
+It is very critical and this is usually
+how the sources
+um stores their data, yeah? And you're
+going to get the data like this. So,
+it's really hard, let's say, for start
+like for someone that's going to start
+working with the company analyzing the
+data to work with those CSV files until
+they understand.
+So, now we speed up
+we data engineers, we speed up the
+analytical process by providing
+this clean data. So, now,
+anyone that starts, they can start on
+clean stuff and you have to promote.
+Now, I am, let's say, the
+uh we call it the product owner of this
+and I'm going to now provide it for the
+others and I take care of the
+correctness of um my um let's say, uh
+data catalog that I'm providing. Now, of
+course, what is the next step? I just
+went now through the scripting, right?
+So, we saw how to script the
+each layer. It's very simple, not that
+hard. And then we store the data inside
+here, but of course,
+now,
+next day, we will get some new data,
+right? So, I will not go each day
+and uh going in my projects
+and start
+uh starting things manually. So, I will
+not go every day here
+and start clicking, okay, run all.
+So, loading the new data from the CSV.
+So, and refreshing the silver. So, as
+you can see,
+I'm just running the whole thing. So, we
+are just loading the data, everything
+completed, then I'm going to go
+uh to the next step where
+where is it? To do.
+So, here.
+So, to the silver and click over here
+again. I think you understand what I'm
+trying to speak, what to say.
+We will not do this manually because
+this is not human.
+So, what you're going to do,
+we will not do this manually. We're
+going to go and build, my friend,
+something called a data pipeline in
+order to automate our work. And this is,
+let's say, the last thing that you have
+to do is to orchestrate the scripts that
+you have built. And of course, it is
+very simple as well in
+uh Databricks.
+And there is, of course, another tool
+that is very, very famous to do the
+orchestration. It's called the Azure
+Data Factory.
+Let's know whether I have here something
+for it. Data Factory. Ah, yeah, this
+one.
+I think you might heard about this a
+lot, the Azure Data Factory. A lot of
+companies going to hire, let's say, data
+engineers to build the orchestration
+using Azure Data Factory.
+And um I can say this is not anymore
+necessary because since last year,
+Databricks provided now as a new tool
+called
+Before we called it workflow, they
+called it workflow, now they call it
+jobs. So, we can do now orchestration as
+well inside Databricks. You don't have
+to go outside.
+Like I think in the first 3 years, I
+used Data Factory in the Azure to
+trigger those notebooks. So, I used this
+to trigger all those notebooks and to
+build the pipeline,
+but [snorts] I don't need to do any more
+of that. Now, we can go and use our Do I
+have an icon for Databricks?
+No.
+So,
+I'm going to use now something called
+jobs in Databricks. And this is the
+second, let's say,
+this is the your tool to
+build now your pipelines. If you see in
+your projects, guys, this happens a lot.
+I saw it a lot.
+Um I tried like I I was um yeah.
+Um
+Um I played a role as well in the in the
+company where I reviewed a lot of
+projects and tried to give them
+consulting.
+And this is one thing that I noticed a
+lot. People are building in Databricks
+the whole notebooks and the whole work,
+but only in the last step they go and
+attach Data Factory for it. So, don't do
+that because they don't know that they
+can do it in Databricks
+or they [snorts] are, let's say, lazy to
+do that. You can do as well the data
+pipeline using Databricks. You don't
+have to jump to a new tool. So, it's
+very simple, very, very simple. All you
+have to do is to go to the jobs and
+pipelines
+and then go to the create and say create
+a job. So, now, again,
+in the workspace, I connected my GitHub
+to write my code. In the catalog, I
+stored my data and built
+my uh layers and move the data around.
+And the last step is the jobs. So, I
+want to do now data orchestration.
+So, create a job
+and
+it is very easy. So, what we're going to
+do with that is we're going to say,
+I want to run a notebook.
+Okay?
+So, let's say, the first one is the
+bronze layer.
+And then I'm going to define where is
+this, you know?
+So, it is inside my projects. It's
+inside the
+I click house. Uh the first one going to
+be the bronze. So, this is the notebook.
+Say, okay.
+There is, of course, some configurations
+below that in order to configure the
+server, the stuff, but let's leave
+everything as a default and say create a
+task.
+So, this is the first step. Now, what is
+the next step? Of course, in our
+pipeline, we have to trigger the silver
+layer, right? So,
+we can say add task. Again, we are
+adding a notebook. Of course, you can
+add some SQL file, SQL query, Python
+stuff, but usually, usually,
+our
+code going to be inside notebooks that
+going to run the whole thing. So,
+usually we are running always a
+notebook, okay?
+Because even if you use, as I told you
+here,
+even if you start scripting using Python
+Python files,
+at the end you're going to put
+everything in a notebook
+in order to trigger those Python files.
+So,
+and and of course your pipeline going to
+be triggering the notebook. So,
+I think there will be no need to use any
+other uh let's say types.
+Um so, the next step is silver layer.
+And of course here we can have like
+multiple tables, but now I have only one
+script or one notebook for it.
+So, now we're going to go and select our
+silver. Say confirm.
+And the last step.
+I create a task.
+So, now
+yeah, we are here. So, as you can see
+it's very simple. Bronze, silver, and
+then the last step is
+our gold.
+So, I can say gold layer.
+And da da dum.
+Go to the boot camp. Mhm. Then gold
+layer.
+I'm just connecting now my scripts.
+So, actually that's it for now.
+And um yeah, you usually it's going to
+be
+not a lot of things. Yeah. So, it's
+going to be looking like this. Three
+steps. This is my project. And now,
+instead of triggering each notebook, as
+I told you,
+you have to press a button, play,
+run the notebook.
+So, I can go over here and say run.
+Now, what going to happen it's going to
+go and create um
+a job for it.
+And it's going to start executing the
+steps one by one. We just see the runs
+over here.
+So, it is running. So, the here is the
+task design and then the runs you go
+over here and you see what what is
+happening actually.
+You can click on the run.
+And you can see what is happening. So,
+now as you can see Databricks is running
+the first notebook.
+Usually the first job takes the longest
+because it is going to start the uh
+let's say the server. It might take some
+time until the server started. And then
+uh the next step's going to be faster as
+it spins. So, now it is still running
+the bronze.
+Of course you can go uh inside and see
+what is happening, right? You can see
+uh the steps. You can see here uh
+it's almost done with all steps. Let's
+go back.
+So, runs da da dum.
+So, now if I go to the graph, it is done
+with the bronze. It is done with the
+silver. And now the last layer. No, it's
+not done. Still running the silver,
+sorry.
+So, silver is done and now it goes to
+the gold. It is running.
+And
+it is just creating the dimension of
+customers, one table.
+So, successfully. Very nice.
+Now,
+of course you have a lot of options here
+to see
+the graph, how things works. So, you can
+see the bronze layer took the longest.
+It's it's not because moving the CSV
+files was hard. It's just because the
+server was warming up and starting, you
+know? Because it is
+uh you have to understand um
+the Databricks,
+they don't have infrastructure. They
+don't have
+uh let's say servers, CPUs, RAMs, stuff
+like that. They use the cloud from other
+um
+yeah, from other uh platform like the
+Azure and W AWS.
+So, in this example, and you as well as
+if you have the free account, it is
+using AWS cloud. So, that means
+Databricks has to go,
+start up some virtual machines and
+warming them up in order to start doing
+a task.
+That's why always at the start it can
+take long time because it is
+communicating to the other cloud. It is
+starting the virtual machines. And then
+uh only then if everything is ready,
+then it's going to start. But it's it's
+pretty fast, right? So, this is not the
+load time, okay? The loading of the
+files it could happen in few seconds.
+Now, you can see here the next steps is
+only 17 seconds, 20 seconds. And of
+course you can see deeper if you click
+on each one of them and see exactly
+where the errors. So, now
+um of course once I'm done, um
+that's it. I'm going to go over here and
+then go to my jobs and then task. And of
+course I don't want to click manually
+run now.
+I can go and add a schedule for it. So,
+I can go over here and say,
+you know what? My data comes every day.
+And I want to run it in specific yeah,
+hourly, daily, weekly. So, depends on
+how you want to configure it, exactly
+which minute and stuff. And you say
+save. And with that, my friends, it
+going to run every day and it's going to
+tell you
+the next run going to be around 10:00
+p.m. You can configure exactly where it
+should start.
+And um actually this is all what we do
+after we write our scripts. We configure
+the orchestration. We add to it a
+trigger.
+And um of course
+this is yeah, let's say this is a
+fundamental thing. This is the main job
+that we do. But inside
+we do as well some extra luxury stuff
+inside the data pipeline where we add
+quality checks. Like after loading the
+bronze, I might add one more notebook to
+check stuff. If everything is loaded, do
+we have any empty files and stuff? So, I
+might add in between
+those layers as well some quality
+checks. But this is not my main job. My
+main job is to move the data from A to B
+and to transform the data and get it
+ready. But once we have time, then of
+course our job is to add some quality.
+Yeah, quality checks. Maybe I'm going to
+add some logging, some extra stuff. But
+all those stuff are like add-ons around
+my core pipeline. My core pipeline is to
+load the data data and transform it.
+Now, of course
+you can go and uh check the job runs
+every day. After I made a trigger,
+I want to monitor, right? So, I will not
+go
+to this over here. There is something
+nice called data engineering and you
+check every day the job runs. So, this
+is what I do in my project every day.
+As I'm drinking my coffee, I go and
+check my jobs.
+So, I check, okay, the jobs ran for only
+1 minute. It was successful. Perfect.
+Then the day is amazing. But if I see
+here this is not successful, then
+I will not do anything else until I fix
+this and run this pipeline. So, this
+going to be my main job after I built, I
+have to operate it. I have to check the
+health of the pipelines. If everything
+is running correctly or not. And you can
+do this completely using
+uh Databricks over here. You can monitor
+your pipelines.
+And uh one more thing. Uh yeah, as you
+grow with a project, as I told you I
+have 20 people in the project. So, we
+have a lot of people. So, we added as
+well some email notifications in the
+notebooks in order to send emails. Like
+maybe I get an email at the morning
+whether everything is okay. I don't want
+to open Databricks and see the status.
+So, you can start adding some add-ons,
+some stuff in order to make it like
+better and better. But
+the first thing that I have done in my
+project, I built this
+for around
+20 tables at start. Only we were only
+two people. So, we built this
+for 20 tables. It was successful. And as
+we have more in developers and stuff, we
+started expanding, expanding. So,
+um
+I want So, I I think this is the end,
+let's say of this project
+for now. I'm going to provide you the
+scripts of course for everything, but I
+want you really to do this project. It's
+very easy. Maybe you saw me a little bit
+struggling with the CSV files at the
+start, but it is really easy to do. Just
+have this mindset. You have now six
+files
+in the
+um practice in the project.
+Let me just go over here.
+And start uh Sorry. Sorry. Sorry. I'm
+still here.
+So,
+I'm just saying.
+Mhm.
+Just take a shot.
+So, now
+I'm just saying that um
+um Yeah, I'm just checking. Sorry.
+Yeah. Get the six files from the
+project.
+Go through the six files from the bronze
+to silver.
+them up and prepare them. And have six
+tables in the silver layer, okay?
+After that, try to build a dimensional
+model where you have two facts and one
+one fact and two
+um dimensions.
+If you build it and then
+build the whole pipeline and run it
+every day, it's free. It costs like it
+will not cost you anything. And now it I
+think it's costing me some some euros
+because I have now the enterprise
+edition. But run it every
+and you're going to get the feeling of
+that engineer. You're going to get
+exactly how we work. And this is all our
+work. We move the data from A to B. We
+build the pipelines. And then of course
+start taking things to the next level.
+How I'm going to add data quality? How
+I'm going to like for example
+connect an API.
+Okay? Maybe how to connect Kafka later
+on. Like then go to the next level and
+start making your code smarter, add
+functions and stuff. So, this is the
+very fundamental phase that you can do.
+It's totally doable for you. I just show
+you an example. Um
+and I believe I'm going to do a full
+project later
+uh on this.
+Um in in in YouTube or maybe a boot
+camp.
+Um because of course we cannot do
+everything in one day like this. Uh but
+I just wanted you to give you the
+feeling to go through the theory to have
+this
+three layers, how I think about it, what
+to do so that you get the feeling it's
+not only theory for you, not only
+something that we just um have some uh
+picture about it.
+And um yeah, um this is going to be your
+task to build a project. I have the same
+project, exactly the same files.
+I built a SQL data warehouse project for
+it completely using SQL Server, which is
+very
+um
+very similar to this, but we are just
+here using PySpark for it. So, the the
+mindset is the same. We take the data,
+we clean it up. So, you can check the
+SQL data warehouse projects, how I
+cleaned up everything using SQL.
+But um I'm going to provide you as well
+the code for tomorrow.
+I hope that you
+enjoyed this session. Let me just uh get
+the shots to start reading your stuff.
+Mhm.
+So, now
+tada
+and the picture
+Mhm.
+Mhm.
+Okay. So, now I got your chat and I can
+see what you're talking about.
+So, now
+um what's going to happen next, okay?
+So, that's was actually about the boot
+camp that I planned. It was a little bit
+uh let's say open-ended for me.
+And um I'm going to say I'm going to
+give you now uh tomorrow I'm going to
+write for you an email
+with all the steps that you have to do
+as a task, as a homework. Okay? So, I'm
+going to define for you as well the
+project steps, like what to do in the
+bronze and the silver. I'm going to give
+you an example template for you in case
+you struggled. So, that's means it is
+not
+uh it is not something that you have to
+do on your own. In case you struggled,
+you have a reference, but struggle,
+please struggle the platform. You will
+not do anything wrong. It's totally
+free. So, do it.
+Um uh
+uh make mistakes, struggle, and then
+check if you are not able to do it. I'm
+going to send you the task. I'm going to
+send you the code.
+And uh if you are interested about those
+sketches, I'm going to send you as well
+these draws. Maybe it's going to stick
+for you in your head as a reference for
+you. Um
+Data engineering and Databricks, you
+cannot teach it in one day. Yeah? I just
+wanted you
+to feel confident about how we work in
+Databricks. It's not about
+uh like to teach you about exactly each
+single details uh inside the Databricks.
+I can I cannot do it in two days, but I
+wanted to give you a feeling. So,
+yesterday it was all about the mindset
+of a data analytics, how to analyze the
+data. And as you can see
+like I don't know whether you got the
+feeling.
+You have to have the fundamentals. The
+SQL, it is the most important thing,
+SQL. If you do
+or SQL
+if you learn it, you can do analytics
+and as well you can do engineering. Like
+the whole gold layer, it's all about
+SQL.
+SQL
+So, you can do whole layer on that
+engineering by completely writing SQL
+scripts.
+Okay? Then left for you as that engineer
+the bronze and silver, and here you
+cannot use only SQL for that. You have
+to learn PySpark. And it's only the
+basics, how to read from file, how to
+write to a file, and how to do simple
+operations like
+trimming, case when, and other stuff.
+So, I think it's totally doable and um
+once you learn it, then it doesn't
+matter whether you do the projects in
+Databricks. You can go and do it in
+Snowflake if you want. You can do the
+projects in a different place. At the
+end, it's always the same mindset for
+you as that engineer. We take the data,
+we transform it, and then we do
+something about it.
+And I [snorts] have done this 17 years
+like this um using Talend.
+Okay? Then using SQL Server
+um
+>> [clears throat]
+>> codes using only um
+only SQL stored procedures.
+Okay? Then Informatica.
+Then I used Synapse. Then I went to Data
+Factory.
+Yeah? And Azure services and stuff. It
+was catastrophic. I didn't like it.
+Then I went to Databricks. Now I'm
+talking about Databricks. Maybe in two
+years
+I'm going to start talking about a new
+tool, but it's always the same mindset.
+Keep keep it clean. Have an architecture
+picture.
+Follow it step by step and load the data
+from A to B, do transformations. And for
+you as a data analyst as well if you are
+here, it's the same things as well.
+Yeah?
+It is whether you are building the
+uh I don't know, yeah, total orders by
+category in Power BI or Tableau or in
+uh let's say in Databricks um
+a dashboard. Doesn't matter the tool.
+They all have the same steps.
+So, we're going to get the next tool.
+I'm sure that it's way better than
+Databricks. That makes our life easier.
+Okay? But we still have to do the job uh
+where we do the same steps, but maybe
+easier than this. Maybe we are writing
+only to AI. Maybe I'm going to write AI
+uh check for me uh I don't know, do the
+trim for this table. But me as that
+engineer, I'm going to investigate the
+table and understand the issues and
+understand the business that I have to
+add inside the tables. But maybe the AI
+going to do the whole thing for me. I
+don't have to write anything.
+I don't have to write the trim, the
+syntax. Of course you can go and use all
+the time ChatGPT, but we still have to
+write now code. We still have to add the
+code to add it in the pipeline, but in
+the future
+we might not do all the the whole thing
+not, yeah? So, we will not use maybe
+Databricks. We're going to use the next
+better tool.
+So, the tool going to die.
+Um I'm not saying about Databricks, but
+any tool going to die all the time
+because we're going to get the best next
+thing.
+But you as that engineer, you have to
+have the right mindset for it. That's
+why I don't like making a course or a
+boot camp where I just go immediately to
+the UI.
+I saw a lot of like uh courses. I'm not
+bashing now other people, but they go
+immediately to the UI and start
+explaining
+uh click here, click here, and click
+here, and then you going to get the
+thing. No, you have to explain why we
+are clicking left and right. You have to
+explain the process because
+once they understand it, it doesn't
+matter the tool. Like
+now if I compare the Tableau course that
+I have made and the SQL course,
+I see the SQL course has more
+value to the community than the Tableau
+or the Power BI.
+Because those stuff, the tools going to
+die, yeah? So, that's why
+I invested a lot of time making the SQL
+course two years because I know how SQL
+is important for many people. That's why
+I spent two years really sketching and
+making stuff
+just to explain this technology for you.
+But now explaining Power BI, I will not
+yeah, I will deep dive in it, but it
+will
+the course going to die after one or two
+years because we're going to have the
+best thing after after that. So, that's
+why I'm saying
+don't be a guy that is only expert with
+one tool. Be a guy that is expert in the
+process and how to think like a data
+engineer.
+Uh because it doesn't matter you're
+going to live, let's say um longer in
+that company, you're going to be more
+important.
+Um I can I have I have I have a lot of
+stories to tell you about the like what
+happens between data engineers and
+stuff. But I can tell you there are data
+engineers that they think clearly. They
+don't think about the platform, the
+tools.
+And they jump between tools easily in
+one week. Like I can jump now in next
+uh like I haven't done a project in
+Snowflake, okay? But I know the
+technology. I know how things works
+behind the scenes. I know the theory.
+But I haven't done a project in it, but
+I can do in one week a project in
+Snowflake. Or give me, I don't know,
+yeah, Fabric or whatever.
+It's all the same ideas. So, that's why
+don't be a data engineer that is expert
+with only one tool. I saw some engineers
+that were, for example, in IBM Cognos. I
+don't know whether you know the tool.
+They made a lot of courses about the IBM
+Cognos. They
+they spent thousands of dollars, of
+euros
+just getting certifications. They are
+the big expert of IBM Cognos for data
+analytics. Guess what? The tool died. No
+one is using it in projects.
+Now
+it's going to be and it's as well
+emotional. Like we talked to this data
+engineer, hey, come come build the
+project with me in Databricks.
+They didn't believe on it because they
+invested a lot
+getting
+into this tool.
+And it's going to be really hard to get
+you out from the tool. So, I'm just
+trying to say be flexible.
+Don't read uh read documentation about
+Databricks. Understand the concept
+behind it and then do your projects. I
+explained now the stuff for you
+uh how to do
+to do the project and stuff, but you
+have to do it in your own.
+I believe only by doing projects it
+going to work. It going to click.
+But I hope you enjoyed the boot camp. I
+enjoyed it myself. Today was harder for
+me to be honest than yesterday
+because um uh let's say there was a lot
+of topics that are hard to explain and I
+tried to make it easier for you. But I
+enjoyed it. So, um I'm going to leave
+the video now um
+in in YouTube. Um
+uh tomorrow you're going to get from me
+some recap email, a lot of content for
+you in the email. So, make sure you are
+signed up uh for it. And yeah, I might
+do another boot camp which is more
+detailed
+where we going to go through maybe a
+whole month or only data engineering.
+So, I can take you in each day maybe in
+one layer and then make it slow, you
+know?
+And take you to the thoughts on how to
+promote your code from the junior level
+to the senior level to the advanced
+level. So, I have I need time for it of
+course, but I think
+if I'm going to make courses about it,
+it's going to take time. As you know me,
+I sketch a lot and take time about it.
+So, that's why I think I'm going to make
+another boot camp. I will see whether
+it's going to be free. I'm not sure
+about it.
+But,
+I'm for sure I will be doing more live
+content like this.
+I hope that you enjoyed it, guys. And um
+I am happy to have you here. Thank you.
+Thank you so much for being here. If you
+have questions, maybe I can pick few
+questions from the chat now because I'm
+looking now to the chat. So, if you have
+anything that's you want to ask, just
+ask me.
+Um and
+I'm going to check that now.
+About the certificates, I will not be
+providing any certificates because this
+is not sponsored from Databricks.
+And yeah, it's not I cannot give you any
+certificates here. I really
+think it is better if you go and get
+certified directly from Databricks. It's
+way easier for you.
+The job market
+about data engineering in Germany, it is
+I'm going to say
+things are not really easy like before.
+But, I believe it is for you as data
+engineer, it is easy let's say to find
+for you job now. If you push on it, if
+you have nice projects, if you
+can present your ideas and your stories
+and you convince let's say the
+interviewer, then I believe it's not
+that hard to get a job as data engineer.
+I believe data engineering now is
+booming. And yeah, a lot of companies
+have a lot of raw data.
+They need us to build it. Um
+so, that's why I think it is totally
+doable.
+There's no big difference for you
+between Databricks, AWS, and Azure.
+If you There's like two ways for you to
+work with Databricks. Either just
+working inside Databricks without
+worrying about the cloud and you can do
+that. Like for now,
+I didn't go to AWS or Azure to do
+anything. I just stayed inside
+Databricks and you can do that. But, if
+you take things to the next level
+where you want to configure exactly the
+cluster, exactly the SQL warehouse the
+way that you want, then you have to go
+and start working with AWS and Azure in
+order to prepare the correct virtual
+machines and then let's say to configure
+the cloud for Databricks. You can do
+that. But, I would say don't get now
+yourself involved with this because
+usually in big projects you can have a
+dedicated team preparing cloud platforms
+for you and as a data engineer you don't
+have to deal with all those stuff. So,
+don't worry a lot about it. Just use
+Databricks as it is and going to be
+fine.
+Um the process about how to get involved
+stakeholders or business people or
+processes in the projects, it depends on
+how you're going to do it. So, either
+you're going to book a meeting with the
+guy or the expert.
+So, you tell him or her you know what, I
+have an issue in my projects.
+Can you help me with that? So, I'm going
+to show him the data. I'm going to show
+him the script and maybe I'm going to
+get some consulting from him. Or if the
+project is very important and you have
+really an enterprise big data lake
+house, then you can start talking to the
+managers to order to involve completely
+one expert only helping you building the
+gold layer. So, this has happened as
+well in my projects. We invited to our
+projects
+one person from the process, from the
+business where he every day help us on
+explaining things for us. So, that means
+I didn't have to do it as project lead.
+Then I always use the experts and fully
+dedicated helping the data engineer on
+how to build the logic. And this is
+something that happens of course that's
+you can get people involved. But, if you
+have small projects
+you have like only five three four
+engineers, I don't believe you're going
+to get this luxury to involve completely
+people from the process because they
+have better job to do.
+Now,
+Mhm. What kind of work?
+Okay.
+Um a very nice question. What kind of
+work junior data engineers will do
+compared to seniors?
+The answer going to be
+next Tuesday. I'm explaining this
+exactly in the video, but I can give you
+shortly as a junior data engineer
+you're going to get tasks from senior
+data engineer or let's say project lead.
+And they're going to tell you for
+example, go to this table and write a
+silver script for it. So, you're going
+to get specific task to do something,
+okay? And you're going to ask help maybe
+from time to time, you know what, I'm
+not able to understand whether this is
+correct or not or I don't understand the
+data. So, the
+senior is going to help you in order to
+write let's say the code and guide you a
+little bit, you know?
+But,
+your task is always to get a Jira ticket
+maybe or something like that. Do the
+scripting and then push your work to the
+seniors. The senior is going to review
+your code and then accept or not.
+Usually there will be some iteration
+with them. And as a senior data engineer
+developer, like
+I can tell you your main job
+is
+to decide
+on I'm not sharing my screen. So, maybe
+tell you here. So, as a junior developer
+senior developer, it is all about
+thinking about the data architecture.
+It's as well thinking about complex
+tasks. Like for example, if you get
+Kafka now. For this project now, we have
+CSVs and now I'm going to get a Kafka
+data. I will not give this new source to
+a junior data engineer because we didn't
+have a an example about it. We don't
+have a template. So, that's why as a
+project lead, I'm going to go and give
+this task to a senior data engineer
+because this is the first time we are
+connecting Kafka to the lake house. So,
+the senior going to think about this
+issue, which connectors we're going to
+use, how to consume the Kafka. And
+they're going to start writing the first
+scripts in order to load maybe one
+topic, two topics from Kafka into the
+lake house. And once we have the first
+examples, then they
+we can now start connecting the juniors
+and explaining how to connect Kafka
+because we have already an example. But,
+I cannot go as a project lead and give
+an advanced complex, something
+completely new to a junior because they
+always need some example about it. So,
+as a
+as a senior data engineer, you're going
+to spend half of your time
+doing complex tasks and the other half
+is guiding the others. So, you're going
+to mentor the others, you're going to
+help them, you're going to review their
+work, you're going to maybe reject,
+accept. So, it involves a lot of let's
+say
+consulting and guiding, mentoring the
+others.
+And then
+after the senior, you might go to data
+architect or maybe you're going to leave
+the project like me. You're going to you
+will not be scripting, you're going to
+be
+let's say guiding the projects, you're
+going to be defining the tasks, you're
+going to be defining the standards in
+your projects and reviewing as well the
+data
+and understanding the business processes
+and stuff like that.
+So,
+Okay. So, now I'm going to wrap things
+up. It is already late and I'm tired.
+I'm going to go and drink my tea. This
+time there's no coffee.
+Thank you so much, guys. Everyone, thank
+you so much for joining the session. I'm
+really happy that you enjoyed it. And
+yeah, wait for tomorrow. I'm going to
+give you tasks. Join the Discord. I will
+be there. I'm going to be answering your
+question there. So, I
+as well we have a lot of experienced
+people in the Discord community. Support
+the channel. So, subscribe, like,
+comment in order to reach more people
+like you. And yeah, I'm I'm going to go
+and build this community. I'm going to
+go and build the Discord server. I'm
+going to go and make all those boot
+camps and stuff. So, I have a lot of
+plans on my table.
+The Python course, the Power BI. I'm
+going to start speaking about PySpark.
+And
+so, I have a full plan. I'm trying to
+build let's say this community. It's
+going to be exciting. So, help me
+building this. As you can see, I'm
+trying as much as possible to do things
+for free. Believe me, those courses,
+those stuff going to cost I'm not trying
+to sell something, but
+I'm seeing people charging thousands for
+teaching Databricks. It's crazy. Like
+why why that?
+So, I see a lot of experts charging
+thousands. I saw another data engineer
+course 7,000
+dollars. 7,000 dollars to teach data
+engineering and I find this is crazy
+because if I was a junior or student, I
+would never be able to pay this. Even if
+I am expert, how I'm going to pay for
+this?
+So, that's why I'm going to say uh I
+will try my best to make those stuff
+free.
+And as well try to benefit a little bit
+more from the data community from um
+from the data academy selling courses
+and stuff, but always with um
+uh let's say uh affordable amounts. And
+I'm I want to spread this for uh as much
+as I can for people. So, but I need from
+you to support the channel because to be
+honest,
+the statistics says 70% of you are not
+subscribing, not liking, and not
+communicating at all. So, you have to
+give back a little bit
+in order for me to keep doing this.
+Otherwise, if let's say I'm not growing
+and I'm not seeing any progress, I have
+to go back. I have to maybe apply again
+for my Cedo Spence if they allow me. I
+don't know. But uh if things will not
+work and I'm not getting the support,
+but so far, the support's amazing, but
+only 30% of you. So, I hope that you can
+push on the rest, the 70%. So, guys,
+keep supporting those free content
+because if you don't do that, they will
+disappear. And you're going to end up
+only having people that are charging you
+$7,000
+for a data engineering course. Come on.
+So, thank you so much for today. I
+enjoyed it a lot. I'm going to improve,
+let's say, from one live to another
+session. And thank you so much for the
+mods for moderating the shots.
+Have a wonderful day. I hope that you
+learned today something new. And yeah,
+happy uh wait for the email tomorrow.
+And
+do the tasks. Do the homework. If you
+don't do it, then I'm going to be really
+sad
+because I I think the real learning
+going to happen there. So, please do the
+tasks. And believe me, if you do it, you
+going to be adding an amazing skill this
+year for you. Okay?
+I'll not say Databricks going to die in
+1 year, yeah. I'm just saying uh
+like
+it's going to die someday.
+But uh
+keep supporting and um keep doing the
+tasks. And I think um you're going to
+add an amazing task for you. So, thank
+you so much for everything and have a
+wonderful night.
+Take rest. And thank you so much for the
+all the love and stuff that I'm I'm
+seeing.

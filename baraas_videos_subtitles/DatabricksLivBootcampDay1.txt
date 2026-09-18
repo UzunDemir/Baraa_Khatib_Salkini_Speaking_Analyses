@@ -1,0 +1,4751 @@
+All right. All right.
+So, welcome everyone to the datab bricks
+boot camp. I'm just checking the chat.
+It is just crazy like we have big number
+of audience today around 2,600
+watching. So welcome to the datab bricks
+podcast. I'm really excited about it. I
+was like preparing a lot of things for
+you. So
+um it's my first time let's say doing
+this boot camp. So it's going to be
+amazing. I'm really excited to see the
+shots to see the interaction as well
+with you uh to see where you guys come
+from. I'm sorry whether this is too late
+for some of you but um I think it's
+going to worth it. So now um yeah
+welcome. I'm excited about it and yeah I
+think this is really amazing to do it in
+this new year. I'm happy that the first
+session that I'm doing now is about data
+bricks because it's going to be an
+amazing tool that you can add to your
+resume to your to your career. Um so
+now about uh what I'm doing currently.
+I'm just preparing uh let's say the
+Python course to be finalized and then
+publish it in the YouTube. So it's going
+to be amazing preparing SQL challenges
+as well for you and those boot camps. So
+now uh I thought about it like if I
+going to make the boot camp let's say uh
+I'm going to record it and start doing
+the sessions and the courses it might
+take long time. That's why I thought why
+not just go in boot camp live chat with
+you and start showing you what you can
+do with this tool with the data bricks.
+So now if you don't know uh don't know
+me already I am Baron I am uh living
+here in Germany I come from Syria I have
+master's degree in data engineering I
+worked around 17 years in data projects
+and um I led a data engineering project
+at Mercedes-Benz we built in the last
+five years one of the biggest data lake
+houses in data bricks where I led end to
+end the whole projects for let's say
+data engineering analytics AI and Yeah.
+Uh we connected around 40 analytical
+projects uh to them to this platform. I
+was uh the leader of it end to end. We
+had around 20 people on the projects. So
+we had data engineers, analysts and we
+all worked in one platform and that was
+data bricks. So that's why I collected
+in the last five years a lot of
+experience about this tool and yeah I
+thought I'm going to share now with you
+how we worked why we need this tool and
+to give you let's say little bit
+insights about the the data bricks and I
+noticed one thing about it that uh the
+courses that are available online that
+was I see that is really expensive so I
+saw there were some courses about like I
+don't know 1,000 or 7,000 just teaching
+data bricks. So I thought this is really
+crazy because it is a huge wall for
+anyone that wants to improve their
+career. Yeah, they want to learn this
+tool. So I thought uh why not to make a
+boot camp for it to tell you that guys
+about it and uh why we need it. So uh
+it's as I said it's two days completely
+for free and um yeah I'm going to start
+recording it as well and then maybe put
+it in the data academy. Um but yeah it
+is um something that I wanted to do long
+time ago like as I'm teaching scale and
+Python I said I really want to teach
+about data bricks because we are doing
+amazing things. So that's why I'm really
+happy really really happy that I'm
+finally uh talking about it. Now um one
+thing about this podcast um first of all
+I saw a lot of question about in this
+direction there will be no certification
+from me. So I will not like now after
+the course or the podcast I'm going to
+give you certificate or something. All
+what I want to do is to just make you
+familiar with this tool with this
+platform. The thing is this is yeah
+considered to be let's say an expert
+tool. It is not that easy like let's say
+you are learning an Excel or or let's
+say PowerBI or SQL. It is a huge
+platform and it might be scary
+especially for data analysts. That's why
+I thought uh yeah I'm going to try uh
+let's say to give you the mindset how
+things works behind the scene and try
+step by step to tell you about uh uh
+this platform. So that's why I will not
+teach you only about the UI as you know
+me. I want you to understand the idea. I
+want you to understand how things works
+behind the scenes. Why we have data
+bricks like uh why we have the unity
+catalog and all those terms because if I
+go now I just show you the UI it might
+take like only two hours and we are
+done. So it's not the purpose of that to
+let you know about the UI. It's all
+about to understand uh why we have such
+a platform why the companies are now
+like moving toward data bricks and um so
+I will not of course cover in the two
+days the whole uh platform it's a huge
+platform so I'm going to start let's say
+to pick the thing that is really
+relevant for you as a data analyst and
+data engineer so you will not be
+learning everything but I'm going to
+choose for you the most important topic
+for you and then you can practice on
+your own but I just want to break the
+ice between you and such a platform. Uh
+one more thing this video is not
+sponsored by anyone. So it's not
+sponsored by data bricks by anyone. I
+talked to them about it actually.
+[snorts] Uh but we didn't like reach any
+anything that we can say okay they are
+sponsoring this. So I'm now telling you
+like the full honest opinion about this
+data platform. And uh yeah and this
+gives me as well a little bit freedom to
+talk the way that I want about the
+platform. So nothing here is sponsored.
+It's totally free for you. So um um
+nothing to pay here. And um yeah now the
+thing is um last year datab bricks was
+let's say as a student or you want to
+learn it you have to pay let's say some
+licenses or let's say for the usage. But
+we have good news that by the end of the
+last year they um created a free edition
+for you. So that means if you want to
+follow me in this boot camp you don't
+have to pay anything. You're going to
+get free account from datab bricks for
+totally for free and as well all the
+materials the GitHub the notion
+everything that I'm giving you as well
+for free. So you don't have to pay
+anything. Creating the account can be
+very easy. There is nothing to be
+installed locally at your PC. So you
+don't have to go and install anything.
+You just need your web browser and
+that's it guys. So um and one more thing
+uh that I wanted to say that um about
+data bricks it is just a tool okay so it
+is not something that's let's say you
+have to deep dive and understand every
+single detail about data bricks and I
+recommend this as well for all other
+tools yeah so don't go deep in each tool
+and say I am now the datab bricks expert
+or the powerbi expert you just have to
+learn the basics because the thing is
+those tools comes and go. So now you're
+going to learn about it. You just try to
+understand the idea behind it. Uh how we
+work because I am pretty sure that over
+the time we will not use data bricks.
+We're going to use another tool. So it
+is just a tool and uh and of course uh
+it's important to understand the skills
+how to use it and then easily going to
+jump between data breaks or maybe you're
+going to go to snowflakes and so on. So
+don't uh let's say get attached very
+very strongly to one tool to one
+platform and um yeah so learn the skills
+behind it and uh yeah now about the
+tools or platforms they have they can
+either make our life easier or our life
+harder so and that's it so that's why I
+think data bricks makes our life easier
+as data engineers and analysts and uh
+one more thing actually those platforms
+are at the part they were not designed
+for data analysts like you. Okay. So I
+know that uh we have here a lot of data
+engineers and as well we have uh data
+analyst but I'm going to tell you
+working with big data it is not
+something that's designed for data
+analyst data analyst like always used
+let's say SQL or maximum maximum they
+get to power. So now we're going to push
+harder and we're we're going to take you
+to a new platform which is a place where
+you work with big data with a scalable
+system and at the same time it is easy.
+So um it is not that hard. Um so yeah um
+I'm going to show you now the road map
+where we're going to start and yeah I'm
+going to go and share my screen. I hope
+that you guys can hear me well about the
+questions that you are posting in the
+chat. I will not be able now to read the
+the chat and answer questions. It's
+going to be um there is will be a
+session where we going to go through
+your questions. Okay. But of course you
+can talk to each other and start
+chatting but don't focus on the shots.
+Focus on what I'm uh trying to say and
+what I'm explaining. Now let's go to the
+notion. So now I'm sharing my screen and
+uh one of the things that I have
+prepared for you is uh the boot camp. So
+the boot camp completely let's say all
+the links and everything I put
+everything in the notion you can use it
+after the boot camp as well. It's not
+only for now it's not only for day one
+and day two. You can take it as well and
+uh work on it let's say um after the
+sessions and you can extend it. You can
+go and copy the notion road map and you
+can extend it maybe for more content. So
+I'm just giving you let's say the first
+step okay this platform and I'm trying
+to make it as um yeah as easy as
+possible for you. Um yeah so now at the
+starts we have some let's say uh some
+important links and which skills you
+need again for that analyst. I'm going
+to show some SQLs. So you should have
+some basics of the skills but we will
+not do crazy things. We're going to do
+only like select join where and those
+stuff. So we will not be doing some
+intensive SQLs and for that engineers
+for tomorrow uh you should have some
+python pi spark pi spark I would say
+it's not necessary because uh I'm going
+to show you very basic things but at
+least python skills for that engineers
+now all the links are here so what do we
+have we have a notion road map that's we
+are seeing now here we have uh data sets
+you can download them I have prepared
+now for the analyst parts data sets and
+of course if you don't want to use my
+data sets. You can use your own. So if
+you have anything that is at your end,
+you can use them. You don't have to use
+mine. Uh the discord it is here. I made
+the channel where we can discuss after
+the boot camp. So if you have question
+that I didn't answer or something, you
+can go over here and start discussing
+with us. I will be checking the discord
+channel and try to answer as much as
+possible. There are as well. Uh I saw in
+the community we have a lot of amazing
+people like the black soul. He assisted
+me with the questions. So go there and
+ask questions.
+or discuss uh the GitHub here I'm going
+to put all the codes everything that we
+are using in the GitHub so they will be
+available as well here so those about
+the links uh now about the agenda so the
+day one I splited it into introduction
+and data analyt analytics so that means
+introduction it is as well important for
+you as a data engineer
+uh so the whole day is not only for
+analytics okay so data engineers don't
+leave stay here get the introduction and
+of
+During my first session about the data
+analytics, I'm going to be explaining a
+lot of things like the Unity catalog,
+the clusters, the the compute and stuff
+like that. So I would say for that
+engineer stick for the for the two days
+for the second day is going to be about
+data engineering purely for that
+engineering. So what we're going to do,
+I'm going to introduce some concepts uh
+some things that are relevant uh let's
+say about data bricks and as well some
+generic things and then uh I'm going to
+try to build with you like let's say
+very mini data lake house. Okay. So
+we're going to build bronze, silver,
+gold uh using very simple let's say
+files. uh I will be using the same data
+that I used in the SQL data warehouse
+because uh the data was really let's say
+uh not uh um yeah not ready and the data
+was a really good example on how we do
+transformations. So that's why we're
+going to build the SQL data warehouse
+but using now data uh data bricks and
+data lakehouse concepts. So now about
+today I will uh give you an introduction
+about what is data bricks. Um we're
+going to have 15 minute break and then
+uh we're going to go um let's say into
+all topics of data analyst inside data
+bricks and at the end we're going to do
+a Q&A and recap. Now the thing is this
+is the first time I'm doing this boot
+camp. So I don't know how this how long
+this going to take. I hope I hope this
+going to take less than 3 hours. But um
+yeah, it depends on let's say the energy
+or let's say how fast I'm going through
+the topics. But I'm going to take my
+time. So it's like I'm your friend. We
+are sitting together and I'm explaining
+things that I know. So if things take
+longer then it's going to take longer
+but I hope not. So um that's why uh I
+will try my best to speed up a little
+bit. I'll cover as much as I can. And
+one thing before we kick off, let's say
+the first part, it is totally okay if
+you like let's say 30% or 40 40% of
+things that I'm explaining you don't
+understand. Okay? Because I'm going to
+try to bring a lot of topics, a lot of
+things that are maybe not that relevant
+yet for you as a data analyst or new for
+you. So if you get from the whole boot
+camp only 60% 70% then I'm totally happy
+about it. Okay. So, uh um because you
+cannot explain the whole thing in two
+days. Okay. So, that means after the
+boot camp try to read, try to cover the
+gap. Okay. Barat said about the Delta
+Lakehouse. What is the Delta file and
+stuff? So, you have to uh to do your
+homework as well and try to uh
+understand the gap that you have. Okay.
+But I don't believe that you're going to
+cover the 100% from only two days. This
+will not be possible. Now, um about
+Yeah.
+about the first day as I said we're
+going to go about some theory as you
+know me I don't go immediately to the UI
+we go through the uh through the theory
+I want you always to understand the UI
+as I said it is not that important you
+can do it without me you can just check
+I don't know some tutorials on YouTube
+and maybe you understand the UI um but
+more than what is for me more important
+I want you to understand the things the
+theory and uh with that it's going to
+stick on your head and you're going
+understand why we are doing what in data
+bricks and at the ends by the way they
+will be homeworks so I will uh after
+we're done today I'm going to send you
+like two homeworks one for the
+introduction I have prepared already the
+homework for the first module but for
+the second module I have to prepare it
+after the session so I'm going to send
+everything in the email as well about
+the homeworks um homeworks uh they going
+to take I believe at least 3 4 days okay
+so you cannot cover it uh for the next
+day so So, it's a homework that you take
+your time and do it. And uh yeah, for
+each module, there will be at the end
+some tasks for you. And I'm going to say
+uh we're going to start. Let's let's go
+and start. So, now um of course, I don't
+have PowerPoint prepared or anything. As
+I said, as a friend, I'm going to uh
+explain things. So, I will now jump to
+another tool. Just let me try to do this
+now.
+Um let's go to the first first point.
+Why why we have data bricks?
+What is the idea behind the whole thing?
+Um
+uh so yeah this time I'm not I'm not
+sketching because sketching I've noticed
+it's going to take a lot of time uh
+doing the whole sketching. So that's why
+I will use now another tool for the
+presentation. So now the whole idea I
+want you to understand the whole idea
+why why do we have it? Now
+let's say that you are uh let me just
+bring this here and uh start recording.
+So now
+um this this is the whole idea. So you
+are a data engineer, a data analyst to
+like whatever and you need to do some
+processing of the data. You want to
+query data, you want to do aggregations,
+you want to do some data
+transformations. So now what you do
+usually you have like at the start we
+had only one machine and we send our
+query uh the query going to be processed
+and then somehow we're going to get a
+result back from this machine and we're
+going to get our result our data. Now
+this worked for us as a data analyst and
+data engineers um for some time until
+the company starts to let's say provide
+more data. So the data in the companies
+are getting bigger and bigger because we
+are able to connect machines. We are
+able to connect uh let's say new sources
+of data. So as this goes big as the data
+goes big in the companies we have as
+well to have as well bigger uh
+processing machines. So bigger server
+bigger uh computing resources. So what
+we what we have done at the start we
+went and start buying bigger servers.
+Okay. So uh bigger machines. But the
+thing is at the ends like whatever you
+get it will not be enough this one
+machine it might break this one machine
+still takes a lot of time and this
+concepts you cannot scale the compute as
+you are scaling your data so that's why
+came the first idea like this is around
+20 years ago I I know I went very um
+very far away but this is the first idea
+the Hadoop
+so what What we said at the start we
+said okay you know what this is this one
+single point of computing will not work.
+What we have to do is to go and split
+your compute into multiple nodes
+multiple machines. So we need multiple
+things. Okay. And now as well we split
+our data. So we went and split splitted
+our data into those machines. Okay. So
+now
+uh let me just copy and paste. So we
+splitted the data into different
+machines and this is awesome already
+because you know what if one of those
+machines did pale that's totally okay
+because we have the other machines and
+as well at the same time uh we are
+faster because they going to process
+those chunks faster than one big chunk.
+So that's why after they are done
+they're going to go and uh give us the
+data. Let me just get something like
+this. you're going to get the final
+results and it's going to be combined
+together so that we got the final result
+like this. Now this way of splitting
+into multiple servers, multiple machines
+that was an amazing because it speed up
+uh the data and whatever like however
+the data is big we were able to oh I see
+that we have people that are invited. I
+don't know why.
+So please don't go in uh as I'm
+explaining now. So that was a great way
+to scale with the Hadoop. So that's why
+the first idea of how to handle the big
+data and we data engineers were happy
+about it and we start doing um uh big
+data processing using uh Hadoop but
+there were one big issue with the Hadoop
+it is really annoying that the data
+going to be stored inside our hard
+disks. So the data is still let's say
+slow the processing still slow because
+each of those small servers has to
+interact with your read and write
+activity on your hard disk and this as
+well takes time. So that's why this was
+let's say the biggest uh drawback of the
+Hadoop that's it is using your hard disk
+to store those chunks of data and that
+was not enough that was not enough
+that's why another team I think around
+209
+or something like that spark game team
+said you know what the idea is great
+we're going to have this splits but
+instead
+just put the data in the memory
+So use the memory of those servers.
+Don't put it in their hard disk. Now of
+course if you are using memories uh it
+is like limited with the size and stuff
+but it was an great idea. So that means
+we going to put the data inside the um
+yeah the RAMs or the memory and this is
+the let's say currently the best concept
+on how to process big data. This is this
+is the solution currently on how to do
+it. But um we don't have now currently
+better than this idea on how to process
+data and of course there were like next
+problems you know like uh how we going
+to program this how we going to code
+this and of course at that time pi spark
+was the sorry the python was uh the best
+thing
+uh to do so that's why they thought okay
+we're going to put the whole commands
+and whole thing inside python and people
+going to use just our library so pi
+spark network in order to build the uh
+this uh setup. So that's why
+um it was easy for us then as a data
+engineer to say you know what I know
+Python I can work with Python and I can
+build this whole thing but so far it was
+only data engineers working on this so
+or let's say IT people you know
+it was uh only for the experts
+[laughter]
+of data processing so um
+so yeah so We d that engineers we start
+using pi spark and we start using this
+technology and we were ready to process
+massive amount of data using the memory
+but still still still this is a huge
+pain. This is a huge problem because um
+we still have to configure a lot of
+things. We have to configure the
+storage. We have to configure those uh
+those nodes like we spend a lot of time
+just to make this picture uh in reality
+not only theory. So that's why um if we
+if we hired let's say data engineers to
+do this they going to spend all their
+time configuring those servers preparing
+the uh let's say the storage the blob
+storage and stuff so they were exhausted
+the data engineers just to make this
+that's why
+came data bricks and say it is by the
+way the same team so the same people
+that's came up with spark and the pi
+spark and uh the whole technology they
+said okay you know what we should Now
+build a platform. We should build
+platform. We see the struggle and they
+uh f like they started the data bricks
+company and they said you know what the
+best thing to do we as a data bricks
+team we're going to handle the whole
+complexity of this setup. So we going to
+build something called data bricks. Let
+me just put this in the correct layers.
+Where is it?
+So
+yeah so they said you engineers okay get
+out get out from this picture it is uh
+you are wasting a lot of time here and
+we going to make a very let's say we're
+going to make a layer for you and uh we
+datab bricks team
+uh we're going to take care of this
+infrastructure to make it easier for you
+and you as that engineer here above you
+just have to deal with your projects you
+don't have to deal with the
+infrastructure
+The infrastructure is something that's
+going to be uh in our hands. You just
+focus on your projects, build whatever
+you are processing. Focus on the data,
+focus on the projects and don't focus on
+this here. And uh in few clicks you can
+build a complete let's say uh clusters
+and uh things like that. But so this was
+the main idea of data bricks. Okay. So
+it cames all from processing massive
+amount of data and uh it came from uh
+the spark the Hadoop the spark and then
+pispark and now they built this data
+platform since I think 2013 uh we have
+data bricks and yeah and that engineers
+were happy about it. I am I was happy
+about it. I start using it around uh
+2019 2020 and um it was it was like
+easier for them and they can focus on
+the projects more and guess what guess
+what not only data engineers now we have
+data analysts
+that are interested or let's say it is
+easy now for even data analysts to start
+working and uh on this big data platform
+so it's not anymore only for the
+specialist to work on data bricks as
+well for people that are near to the
+business and try to answer business
+questions. So actually um we have now a
+lot of things uh for you as data analyst
+and now they are pushing the platform of
+course to all different users that they
+wants to work with the uh with the data.
+So even like the business users now I'm
+going to say they can actually start
+using data bricks using AI of course. So
+now that's why you are here as a data
+analyst you want to work with data
+bricks you want to extend your knowledge
+about this [snorts] and uh uh for us
+data engineers it just data bricks just
+made our life easier. Okay. So instead
+of wasting our time on all the
+infrastructure, we get something out of
+the box. And now the second benefit for
+you as data analyst, it is finally easy
+for you to start working with big data.
+All right. So so that's was actually the
+history. This is the the main idea of
+why do we have a data bricks. Now
+um so this is the technology. There is
+another reason that our datab bricks
+company are trying to uh let's say um
+explain for us why datab bricks is uh is
+there. Let me just go to the second
+here. So now yeah
+um so now I'm going to tell you from
+company perspective why companies are
+interested on the data data bricks and
+uh this is how they sell it for us. I I
+like I think it is correct. Okay. So, uh
+it's not something that I I think they
+are they are wrong but I have a
+different opinion about it as well. So
+now the thing is in companies especially
+in big ones you don't have like one
+central team that is handling the data.
+Okay. So you don't have like one central
+platform to say uh you know what uh this
+is the place single point of truth.
+You're going to have different many
+teams are building data projects. So you
+have departments, you have sectors, you
+have a lot of teams, a lot of people. I
+I don't know everyone at for example at
+Mercedes-Benz it is so huge company it
+is like impossible to know everyone that
+is actually doing projects. So the thing
+is in normally in companies you have
+really
+um huge number of projects
+that are doing something with the data.
+So they might doing some AI, the other
+are doing some dashboarding, standard
+reports and stuff. So you're going to
+have a lot of data projects. And the
+thing is uh I've seen that of course and
+it was really painful because
+uh let me just take here an icon like
+database
+each of those projects like if you start
+if you are a team and you start building
+any projects um you first you have to
+decide in the tools. So you're going to
+say you know what let's go and use for
+this team an Oracle database. The other
+team going to say ah let's go and use
+the SQL server. Third one says uh let's
+go and build the data warehouse using
+SQL server. So they start
+uh uh they start
+building their projects using completely
+different tools. So each one of them
+going to have different tool. So not
+only the storage by the way, it's as
+well how they process the data. So each
+one of them as well going to go and
+check the market. Okay.
+Um let's just take this one here. I'm
+going to use talent for example in order
+to process the data. The other one going
+to use another tool. Yeah. And uh each
+of those teams going to start you
+processing the data using different
+teams uh different tools like
+Informatica Talent. the other one can
+use maybe data factory and stuff like
+that. So they all have their own
+pipelines and of course um data
+visualizations. Now thanks god we have
+PowerBI and Tableau because before
+PowerBI and Tableau there were a lot of
+tools that are used but it's somehow
+PowerBI and Tableau they managed to
+reduce the number of tools to only two
+but still it's not clear what is better
+really PowerBI or Tableau. uh but I can
+tell you um two is better than 10. Okay.
+So each one of those two teams start as
+well having their their own uh uh
+front-end tools and like I'm just
+showing you small picture. Okay. So
+imagine how big the companies are and
+each team each department need to see
+some numbers they need to see uh like um
+yeah they have their key metrics and
+they need a team in order to bring those
+metrics from the sources. So it was to
+total cows and I was one of those teams.
+Okay. I worked before uh using an SQL
+server as the ETL tool. I used um uh
+talent that's why Mercedes-Benz did hire
+me because I was talent expert and I use
+Tableau and uh in the whole company they
+have different tools. Not only the tools
+are different, not only the storage are
+different, it's as well the policies are
+different between those people. So
+[snorts] for example if you come to my
+projects if I am let's say uh if I am
+okay with the data security people I
+might give you all the data but the
+other one they might say you know what
+I'm not going I'm not going to give you
+an access to all the data I will give
+you only access to only few rows. So
+each one of us starts defining different
+um uh policies on order on how to access
+the data and that was a nightmare
+because it really depends on the humans
+that are running the project and as well
+the security and how you understand the
+security. So that's why we had like
+different technology, different policies
+and the same data as well might be
+around but we don't know about it. Like
+for example I you know I can give an
+example if we are having the customer's
+data the customer's data might be as
+well in different projects but we don't
+know about it like maybe this team got
+an excel with all customers data and
+they store it inside their system. So if
+you come as a manager in the platform uh
+sorry in the company or you want to do
+some data governance it's going to be
+almost impossible because uh the data is
+all spreaded around there is no uh let's
+say unified or let's say there is no one
+click uh one uh overview of the data I
+don't know where are the customers data
+they are everywhere we try to manage it
+of course but it is nightmare this is
+all let's say before uh using a platform
+And data bricks now promise us they say
+uh you know what uh you can
+use my platform you can use my tool and
+uh let me just make this everything
+smaller.
+So
+um datab brick says you know what you
+don't need the whole thing just build
+one data layer. So,
+uh, let me just try to here, right? Data
+layer or let's say we're going to call
+it, um,
+delta
+lake. Build one layer of data.
+So, put everything that you have in the
+company in this layer. And after that,
+go and define the policies. So, after
+that, we're going to define the policies
+using something called the Unity
+catalog.
+So, you define the policies only once.
+If you say for example the customer's
+data goes only for this department then
+you define only once and and then bring
+everyone from the company and they start
+doing their use cases. I think they are
+the data analysts so sorry for that and
+then bring everyone else
+data analysts
+and uh bring the business users the
+standard users. So we're not going to
+give now titles or stuff. Bring everyone
+to this platform.
+That engineer is going to build this and
+uh do the use cases. So whether you have
+like a PowerBI report, you have an AI,
+you have um yeah machine learning use
+case, just put all your use cases here.
+So I'm just going to put it here. So use
+case one, use case two, anything about
+the data, it's going to be on top of
+this of those two layers. If you do it
+like this then
+um they let's say they're going to say
+um yeah everything going to be fine. Now
+I've seen this transition before. So I
+was on the left side and me myself
+before 5 years we moved to this and I
+can tell you it's yeah the tools always
+the platforms always like uh uh promise
+you um uh let's say that they going to
+solve all the issues but all it's always
+about the mindsets of people that are
+building this platform that are using
+the tool. If you are let's say a bad
+data engineer or let's say you have a
+not skilled team or you don't have the
+right mindset you still can make weird
+things inside the data layer and the and
+the policies and stuff. So yes, data
+bricks kind of makes it easier for you
+to build this vision. But uh we need as
+well the right people in order to to
+make it. But things are better now. Like
+after 5 years I checked how things are
+working. It's like no one anymore
+talking about um pipelines about for
+example talent uh Informatica about the
+different tools. This is really the old
+the old words at least where I worked.
+So this is really an old word and no one
+anymore is discussing should I use an
+Oracle for data analytics, should I use
+um Cognos, should I use um um SQL server
+or anything? No, we are all now at the
+one platform and we are all using um um
+data bricks and this makes this is a
+great idea because you know what like if
+the manager is going to say see this
+picture they're going to be very happy
+about it because they don't have to deal
+with all those tools and licenses and
+you need way more data engineers and
+more people building those projects. So
+this reduce the number of data
+engineers. This makes it uh unified like
+for example if they going to train the
+company about one tool they going to
+send them and say okay learn data bricks
+they will not send them to learn like
+100 tools. So things looks easier and I
+believe things are way easier than
+before but still it is not clean not not
+really good on how we build those data
+products.
+So now that's why I just wanted to tell
+you this is what data bricks uh try to
+sell. Let's say if you go to the
+presentations I believe it is 50/50 true
+it's always depends on the people that
+are building the projects but still it
+is way better than the old words. Okay.
+Now that's why a lot of companies now
+they dream of this. They want to build
+this because they know how expensive the
+old words. That's why a lot of people
+now are moving to the data bricks and
+they are learning those tools. I'm sure
+one day we will not have data bricks. We
+going to have another tool uh that is
+[snorts] uh maybe going to be hype.
+Okay. It's not about the tools, it's
+about the idea. But this is one step
+into uh making things uh easier and uh
+of course you as a data analyst you can
+use a powerbi maybe in order to do some
+data analytics on the platform. So this
+is let's say from technology perspective
+why we are um sorry the previous one
+yeah so this is from technology
+perspective why data bricks exists and
+this is from the other side like let's
+say company why the companies are moving
+to data bricks okay um so so this is so
+far about this now I'm going to tell you
+how we use data bricks in real projects
+so I have you some icons.
+I hope that is uh all clear for you
+guys.
+Um so now the how we build usually data
+bricks and uh what are the different
+rules.
+Let me just go this mode and start
+explaining it. So now in companies
+mostly mostly most of the data are
+databases. Okay. Uh this depends on how
+advanced the company is. Um but um some
+companies are pushing on using Kafka. So
+that's why um um now like at the start I
+used a lot of databases but now recently
+I noticed a lot of sources are providing
+data in Kafka because this makes life
+easier for everyone for the data that is
+produced and for me as a consumer. So uh
+this is one thing that um it is very
+important uh to to learn as a data
+engineer. um your data could be in a
+file server, it could be in the internet
+or maybe you can get it from API. So now
+and we have on the right side consumers
+and use cases and a lot of people want
+to use the data. [snorts] So now the
+first thing that's going to happen is
+that they're going to bring you data
+engineer and can I tell you okay you're
+going to get an empty data bricks. So
+this is data bricks this is you data
+engineer [laughter]
+go [snorts] build for me the platform.
+So uh so this is the heavy lifting to be
+honest this is unfair.
+So we [clears throat] d that engineers
+we get the empty data bricks and we need
+to build a data product. Okay. So uh
+what happens is that um you're going to
+like data bricks gives us some reference
+on how to build uh such a data system to
+say you know what uh build something
+called data lakehouse. I'm going to go
+in deep details about data lake house
+tomorrow because now I'm trying to make
+it uh let's say uh um more focused for
+data analysts. So now what's going to
+happen you as a data engineer you're
+going to make three layers. So you're
+going to make something called bronze
+layer silver and gold.
+Now it's called the medelian
+architecture and let me just give it the
+names here. Bronze.
+Now here we have the silver
+and then the gold. Okay.
+So those are your three layers. And why
+we have three layers? It's because it is
+separations of concerns. It is easier
+for us to manage three different
+purposes than just put everything in one
+place. Now we will not go in a lot of
+details. What going to happen that
+you're going to go and pull the data
+from wherever the data come from. You're
+going to go and build your pipeline
+to load those three layers. And
+um what else? Of course, you will be
+configuring uh everything in the uh the
+Unity catalog.
+And again, I will not go in details.
+You're going to understand those stuff
+maybe starting from tomorrow. And uh
+you're going to build the data
+lakehouse. My friends, this is our job.
+This is all what we do.
+Uh let me just put everything here so
+that's it looks nice.
+Okay. So
+you're going to build this data lake
+house.
+So
+sorry about the colors. I am picky a
+little bit. Okay. So this is all what
+you do as a data engineer. And this is
+of course very hard. It's not that that
+easy to do this because it involves a
+lot of data processing, data
+transformations, understanding how to
+module the data and stuff like that. But
+this is your word. This is what you're
+going to do as data engineer and you can
+do the whole thing just data bricks. So
+you don't need any other tools. You
+don't need a storage. You don't need uh
+let's say to go and get a database I
+don't know from Oracle Bosch. You don't
+need anything. You can do the whole
+thing, the pipelining, the automations,
+the uh the uh the definition of the
+policies, everything in one single tool
+and this is amazing. Um I like I spent
+the last five years only opening this
+only that bricks as data engineer. Okay,
+so no other tools which is before I used
+to open at least six seven tools in
+order to do this. So now um this is your
+main job to build this and of course
+everything ends for you as that engineer
+as you build the final layer. So the
+gold layer is the final product that you
+come and say you know what I have now
+all the data ready everything is
+prepared and now I have something called
+data product and you start using it
+um you start using it uh for analytics.
+So now comes the um use cases and here
+we have a lot of people are interested
+in your data. So you're going to have
+standard users, you're going to have
+data scientists, you have power users.
+So you're going to have a lot of people
+and I missed here of course the data
+analysts.
+So data analysts.
+So now uh as a data analyst or let's say
+someone want to do a use case um you're
+going to go and access the gold layer
+and there are a lot of options on how to
+do this. Now one very I'm going to say
+um easy way or let's say standard way is
+just to use a new tool or let's say not
+data bricks tool you're going to go and
+you build something called standard
+reports using powerp.
+So this is our favorite thing that we do
+and uh this is something that I think
+many of you did already learn how to do
+this. So what we're going to do we're
+going to go and uh connect
+um yeah the gold layer or start
+consuming the data from gold layer start
+building standard dashboards for our
+users and then comes those standard
+users. When I say standard user, it is
+just a user that can click. Okay, it's
+not someone that can do any big things.
+So you build the yeah let's say the
+standard reports for them or maybe for
+you even depends on the use case and you
+offer it as a solution for standard
+users. But this is not the only thing
+that we can do with data. This is one of
+the things but of course this is
+something that something that we do a
+lot. Okay, we build standard reports.
+Now another thing that actually actually
+you have to do as a data analyst you
+have to do something called data
+exploration. You have to explore the
+data.
+Yeah. And now I'm going to tell you uh
+you don't have to do it in PowerBI
+because you have of course you can do it
+in PowerBI but we have now better
+solution. You can use as well data
+bricks to explore the data. So this is
+usually that exploration.
+It is something that you do for
+yourself. So it's not that you are going
+to offer the data later to someone else.
+You are just exploring the data. You
+want to understand the context. You have
+to understand uh like um what is inside
+this data lakehouse because you cannot
+jump immediately and start building
+dashboards without understanding the
+content. So that means actually as data
+analysts this is the last thing that you
+can do is you build a report in PowerBI
+but before building PowerBI reports you
+have to do a lot of investigation and
+exploration and this time you will not
+do this anymore using PowerBI you have
+to do this now or let's say you can do
+this now using the data bricks and
+[snorts] there are many options on how
+to do it like um for example
+uh you can use um notebooks. I'm going
+to show you of course all those stuff
+you [clears throat] either you can use
+your notebook in order to do it in case
+you want to work with Python and SQL or
+you can just use an SQL editor as well
+inside data bricks.
+So this is a second solution for you in
+order to explore the data and work with
+the data and actually you are as well
+always using the same data. So we are
+always going to the same single point of
+truth. We are not going to take our own
+copy and put it somewhere. Okay, we are
+always using we are the same gold layer.
+So now you can explore the data and
+since it is an SQL editor, you're going
+to notice as well that some of your
+standard users going to say, you know
+what, I learned SQL maybe using my
+course [laughter]
+and I have some skills in SQL. this
+PowerBI report that you are building for
+me, it's not something that I really
+want. I want to go as well and play with
+you inside the data. So that's why some
+of those standard users going to be a
+power user. It's it's like a user that's
+has let's say SQL skills and going to
+say you know what I'm going to work with
+you on exploring the data because
+uh the reports are making no sense
+currently. So that's why at this level
+we can say not only the data analyst
+even the business users if they have SQL
+skills they can start exploring the big
+data the data lake house and um one more
+thing that you can do as well actually
+you can explore the data or build
+something called dashboards so not only
+in powerbi you do uh dashboarding you
+can as well do dashboarding here so but
+I'm going to say dashboard boarding in
+data bricks is different than
+dashboarding in powerbi.
+So let me just make it like this.
+The dashboarding in I'm going to say
+like like this. It is not the final
+product of your dashboard because if you
+go through like a project and you start
+building PowerBI reports, you're going
+to understand okay there is like
+multiple versions of your dashboard.
+There is a dashboard where you are
+exploring the data and understanding
+maybe how I'm going to present the data,
+whether the data makes sense and stuff
+like that. And there is a final let's
+say pixel perfect dashboard that you can
+present to your standard users. So
+that's why actually it is totally
+possible to do dashboarding in data
+bricks and to say you know what I'm
+going to explore things first inside the
+data bricks. I'm going to build let's
+say a rough plan on the project using
+the dashboard inside data bricks and
+only after we agree all together this is
+something correct the data makes sense
+someone going to go and build it in
+powerbi okay so that's why dashboarding
+it is as well possible here and now um
+yeah the data scientist let me just uh
+put it here because we will not we are
+not focusing on this you can do machine
+learning
+uh as well as a data scientist test uh
+using the same data of course but now
+something yeah I'm going to say this is
+since the middle of last year the
+standard users now actually get they can
+as well interact with this data lake
+house but not using SQL of course not
+using dashboards but my friends let me
+just search do I have something I don't
+have okay I wanted an icon for AI let me
+search for an AI Maybe I'm going to find
+something here. Yeah. So, forget about
+it. So, they going to use uh prompts
+like Shajd, let's say, in order to
+interact with the data. So, they're
+going to use the natural language in
+order to speak to the data inside the
+code layer. So actually not only they
+wait for the PowerBI reports those users
+that has no idea how to use Python or
+SQL or PowerBI they can start
+interacting with the data using AI. I
+believe we are not there yet because
+you still has to I'm going to show you
+the AI in the inside data brick. You
+should still have some basic
+understanding of SQL to understand
+whether everything is fine. But I tried
+this out with with few standard users.
+It worked but in many cases it didn't
+work. So that's why I'm going to say I
+think we should wait a little bit for
+the standard users. But there is
+possibility now to talk to the data.
+It's something you don't need to build
+PowerBI. You don't have to use Python
+SQL. You just go and have a shot with
+your data. And this is now what they are
+pushing to it. Now, if I look at this
+like uh as a big picture on data bricks,
+um I'm going to say this is like
+something that I didn't dream of because
+working in big data projects like this,
+it is only for experts. It's only for
+people that have heavy scripting. They
+know what's like how to configure the
+clusters and stuff. And even for a data
+analyst, it was not something that you
+can go and start interacting with with
+this box over here. Maximum maybe the
+data engineer going to give you an extra
+database. Let's say going to put the
+data inside it in order for you to work
+with the PowerBI. So the whole thing the
+data leaks before it was only for data
+engineers. It's only for them like no
+one gonna going to access it. It's only
+for you. you build it and then you start
+sharing different products using SQL and
+databases. But now we don't do that
+anymore because we going to offer the
+data for multiple use cases and everyone
+now able to interact with such a
+platform where you have um yeah
+multipprocessing and scalable systems.
+So um yeah I think this is crazy from my
+perspective [laughter] and uh yeah uh
+that's why as well uh why data bricks is
+now uh something very widely used or
+getting a lot of attention. So now for
+you as data analysts as you can see you
+have different ways on how to work with
+this tool. For data engineers it is very
+clear I'm going to prepare the data from
+left to right. But for you as data
+analyst you have different ways. You can
+jump immediately to PowerBI. You can
+skip the whole PowerBI thing. You say
+you know what I will not use PowerBI at
+all. I'm going to stay inside this uh
+platform and just do uh those stuff. So
+now um this is maybe gives you a little
+bit uh big picture on how we work on
+this. Um I lived the whole process end
+to end. So um I have built this it took
+me around yeah I'm going to say 3 years
+in order to have very solid um uh data
+products. But uh as I started using the
+platform datab bricks it was like at the
+start as well doesn't have all those
+tools. All those tools are something new
+like uh the dashboarding the AI um um um
+the unity catalog all those stuff are
+very new it's only 2 three years years
+old it's not something like uh existed
+long time ago uh what existed long time
+ago is how to use data bricks to uh
+let's say to use the compute and storage
+to build those three layers but those
+use cases it's only something new that's
+why now even for data analyst it is very
+um uh let's say
+um relevant for you to use this
+platform. So now
+um yeah this is the big picture and this
+is what we're going to do. I'm going to
+take you into step by step on how we do
+those stuff inside um uh data bricks. So
+now uh let me just go outside
+look at this second.
+All right. So, let me just check the
+plan. Where are we so far?
+So, now I'm going to say we covered from
+one machine to data bricks. I explained
+for you why we have it um yeah from
+company's perspective and uh data bricks
+in a real company's workflow. We talked
+about it as well. So, now um I'm going
+to take you into to the tool. So, I
+talked a lot about it. By the way, I'm
+going to go and share those stuff with
+you. So you're going to get an access to
+this uh what I'm drawing. And now um
+yeah, let's go to datab bricks and start
+checking the interface.
+Uh the first thing um you can find of
+course uh the links in the notion or you
+just like search for it datab bricks
+free edition. Uh you're going to sign up
+for the free edition and if they ask you
+whether you're going to use it for
+personal or for work, it depends. Like
+for me since this is a work I'm going to
+use the the uh the let's say the
+enterprise edition so I'm going to pay
+for it but for you as you start learning
+data bricks and only for learning
+perspective uh it is totally free for
+you but if you go and you start using it
+in order to sell a course or maybe for
+your work at the company you are not
+allowed to use the free edition. Uh but
+for you this is free. Before like few
+like one year ago it uh costed money to
+do this because they were like a
+community edition. It was uh pretty uh
+bad let's say missing a lot of features
+and uh and most of the students went and
+start using data bricks where they paid
+um paid money for it but now it's free.
+So congrats really I'm happy about it
+because this going to cost you some
+hundred uh dollars. Yeah, in a month. Uh
+but uh starting from now, it is free
+edition for you because um will not cost
+you anything. And yeah, let me just say
+something. I I want to still motivate
+you about to learn this. You guys are
+all learning Excel. You are guys are
+learning PowerBI and you the job market
+is horrible now. It's really horrible to
+find a job. But you can do it of course.
+But now if you go and say, you know
+what, I have knowledge about data
+bricks. I know how to analyze your data
+in big scale using cloud and stuff like
+that. It's going to be really a big
+addition for you and everything for
+free. So, uh and that's why I'm trying
+now to give you this uh demo as well to
+be as well for free for you. So, there's
+no for you um blocker at all to start
+learning those technologies. Uh and it
+can open your perspective on how
+scalable or let's say big companies
+works. Okay. So, I really recommend you
+to do that. It is not that hard. And uh
+yeah just go and get your free edition.
+If you don't I'm not saying that you
+have to do it now. You can do it after
+the session. But I'm saying uh register
+there here um if you are just training
+then just go and use it for personal
+uses. If you want to sell something or
+you want to analyze your company's data
+then you have my friends to buy it.
+Okay. Now
+uh I'm going to take you to the
+interface. Um
+if you yeah logged in it's going to be
+looking like this. Okay. Now um the free
+edition has some tutorials for you and
+some let's say nicer start up uh for
+you. But now since I'm using the uh
+let's say the premium edition it's going
+to be like this at the start. Now uh
+first of all as you saw
+uh this is a web browser. So now I am at
+a website link. Okay. So I don't have to
+install anything. This is amazing. I
+don't have to I can work with very bad
+PC, very bad laptop and do big data
+things. So you don't have to install
+anything. It is just a URL over here.
+You go inside and everything happens in
+the cloud. Okay, maybe this is something
+that I didn't mention. [snorts] Uh datab
+bricks in the background. they are using
+um virtual machines uh and and storage
+and stuff completely from um AWS and uh
+Azure. Okay. So that means they will not
+use your computing power. They will not
+using the the storage that you have in
+your PC and [snorts]
+uh yeah it's going to be free for you.
+So now this is the interface. So I am
+now inside data bricks guys. Um
+the thing is the UI changes a lot but
+still the same ideas. Okay. So maybe
+after a month or I don't know maybe a
+year you're going to find some different
+icons. Maybe they're going to change few
+names but it always stays the same. Now
+if you go in data bras you have first to
+keep your eye on the left side. The left
+side is the most important thing. Okay.
+So now on the left side there are a lot
+of things and uh it might get you
+overwhelmed at the start. Okay, because
+you're going to find here, I don't know,
+workspaces, recent catalog, SQL stuff,
+data engineering, AI,
+and like a lot of stuff. So, this might
+confuse you at the start. Now, if you
+are a data analyst, you have to keep
+your eye on one section that is very
+important, the SQL section. All those
+tools in the SQL, it is something for
+you, for you as that analyst. So,
+there's no way around it. all those
+stuff you can use it and you can try
+those out. So the whole SQL section is
+for you. Now about the first side here
+I'm going to say the most important
+thing here is the catalog and the
+compute. Okay. So now um I'm going to
+say let's go to the catalog.
+So um it's of course the first question
+that we always ask ourself where is the
+data in each platform. If you go to
+powerbi or excel and something like that
+the first question you can say okay
+before I play with the data I need the
+data itself. So um in data bricks they
+call it unity catalog or they call it
+catalog and uh they present the data in
+um in in in a way that looks like a
+database. So it's if you worked before
+with SQL server maybe with process SQL
+it's going to be very familiar for you.
+So the catalog it's where your data is.
+It looks like a database but it is not a
+database. It's very important to
+understand this is not a real database.
+Okay. There is no uh database management
+system running uh this over here. Okay.
+And um yeah so the catalog is important.
+The other thing is the compute.
+Now in the free edition
+um there is only one um let's say one
+compute for you one server for you that
+you're going to use because they don't
+want you to create any new servers and
+stuff then the free edition going to
+cost a lot of money so because each yeah
+each compute it is like virtual machine
+from Microsoft and if you make it scaled
+like to a large compute it's going to
+cost a lot that's why they don't allow
+you to create let's say high-end uh
+clusters or computes they're going to
+allow you to have only one so you need
+storage always and as well the compute
+now about the catalog let's go back to
+the catalog I'm going to tell you
+something here
+uh there is yeah I have to go back
+[laughter]
+to show you an image so just a second
+um
+this is relevant for you as Um,
+let me see what where I put it.
+Oh yeah. Yeah, here. So
+now this is relevant for both of you
+guys that engineers and data analysts. I
+would just to let you understand what is
+going on. Now
+uh in databases um
+the data always stores in files. Okay,
+like generic concepts
+uh there is always files and in
+databases like SQL server or rack
+posress the files of the databases are
+not for you. You are not the one pro
+like can go inside and start working
+with the database file. They say it's
+going to be closed file and only my
+engine the Oracle angel or the SQL
+server engine only my engine can
+interact with those files. So they are
+closed files if you are working with
+database. But now in data links like
+data bricks the files are having an open
+format called parquet. So the open
+format file it is something that is say
+you know what we will not be like the
+databases where everything is closed and
+locked and you cannot let's say use the
+data. We're going to have an open file
+format where everyone is welcome to use
+the data. So that's why we have
+something called market files and um in
+the background everything going to be
+stored inside a blob storage in the
+cloud. This is a bigger like let's say a
+term that is used in cloud and um yeah
+it's like just a container of files. So
+you can put inside it anything. You can
+put an image. You can put a CSV file and
+uh the standard way on uh uh using files
+in datab bricks called delta tables or
+delta files. They are bracket files but
+with some uh let's say uh some extra
+logs and transactions like extra add-ons
+but it is an open file that actually you
+can use it for any purpose. You can use
+it in datab bricks you can use it
+outside datab bricks. So it is something
+that is open and you can use it and now
+2 years ago you have as a data analyst
+to deal with those files. Okay. Because
+um it is it was the way how you work
+with uh Azure and how you work with data
+bricks. Everyone has to learn how to
+work with the delta files and how to uh
+to read the data from file. So everyone
+like even as a data analyst you couldn't
+able to went to go immediately to SQL
+and start using it. you should start
+using some Python code. But now things
+changed as they said, you know what,
+this is still very hard for people like
+only experts can deal with this. That's
+why let's make a something that's
+everyone knows
+um something looks like a database. So
+they build something called Unity
+catalog on top of it or let's say meta
+store that makes it looks like a
+database for you and database everyone
+can use it. So they as you know in
+database systems there are always
+hierarchy on how you def how you find
+your data or how to organize the
+company's data though in data bricks
+they start with a meta store and then
+you have something called cataloges yeah
+let me just use this here laser so it
+start with the uh meta store this is the
+highest node this is the company yeah so
+I'm going to say this is my company and
+then you can build different catalog
+logs in data bricks you can say okay for
+the sales I'm going to have catalog for
+the development another catalog for the
+production maybe for the HR another
+catalog so for each projects for each
+big thing uh we can uh create a new
+catalog and now of course inside each
+projects depends on your design like you
+can go and start building different
+schemas so I can say okay in my project
+I'm going to go and adopt the bronze
+silver gold so I'm going to go and
+create schemas
+So far it is everything is logical like
+everything is just organized data it's
+nothing like you don't see data inside
+catalog you don't see data inside
+schemas or it's just how you organize
+the company okay and now
+um inside the schema things gets
+interesting you can build a table this
+is I think everyone of you knows SQL
+table like you have rows and columns and
+stuff or you can build a view on top of
+it or you can build something called the
+volume. A volume it is just like yeah a
+folder folder that's looks like blob
+storage where you can put data that is
+not ready to have the table shape. Not
+all data have columns and rows right you
+have some JSON files maybe an image a
+video whatever so you cannot put
+everything as a table and view that's
+why you have the volume and it is just
+um yeah a folder container where you can
+put all those stuff inside it and then
+there is something called functions it's
+some advanced things it's in case you
+want to build some automatic filters or
+you are building some role level
+security and stuff like that now this is
+the main idea of the Unity catalog in
+data bricks. It is just a way on how to
+organize the data and to hide the
+complexity behind data bricks. So you
+don't have anymore as data analyst to
+understand all those stuff but as a data
+engineer you have to learn how to
+process a delta file, how to process how
+to load into delta files. This is
+something that we still have to deal
+with but it is way easier than before.
+As that analyst you don't have to
+understand the whole technology.
+Um yeah so this is exactly what I'm
+trying here to show you.
+Um this is again the catalog I'm here
+and let me see here. So now we have
+workspaces. So um no it's let's start
+from the top my organization. So this is
+my big company over here and then below
+it we're going to have a workspace for
+each projects. So for par project we're
+going to build one. For your project
+we're going to build one. So each one of
+us going to get a project. Inside it
+we're going to have schemas. So here
+maybe I'm going to go and put the
+silver. I'm going to put the bronze, the
+gold and stuff like that. And then
+inside it, if you drill down, you're
+going to find the tables or the views or
+the volumes. So now everything is empty
+if you started with data bricks because
+you don't have any data. And that's why
+we're going to change that. We're going
+to go and upload data to it. I will show
+you in a minute. But I just wanted to
+understand what is a Unity catalog.
+Okay.
+All right. So now um this is the
+catalog. Now about the compute.
+So I'm going to go to the SQL warehouse
+or to the compute. Now there is two
+things in about the compute and data
+bricks. I'm going to of course go and
+show you an image. Cannot stop jumping
+back to here. So about the compute it is
+very complex topic. Still still it's
+complex topic but it's way better than
+before. Okay. Now database compute
+splits into two sections.
+A cluster. So let me just go and uh grab
+here few things. So if you are a data
+engineer
+you have to understand everything behind
+the clusters. Cluster is for you. So a
+cluster it is something that I'm going
+to be building in order to configure how
+to process my data and usually I do
+everything using pi spark and python and
+I have to um I have a lot of details to
+prepare maybe some libraries maybe some
+installations. So the clusters are
+something advanced in order to do data
+engineering or to do of course data
+science. Yeah. So if you are a data
+engineer, data science, you have to go
+with the cluster way. But if you are a
+data analyst, my friend, you have a nice
+life because you will be using the SQL
+warehouse. SQL warehouse, it is as well
+a cluster compute, but it is made really
+easy that you can configure it very
+simple. So you just have to say the size
+like the t-shirt size S, XS, medium,
+large, X large. So it's just you
+configure the the the the yeah how big
+is this warehouse and actually who can
+access this warehouse and that's it. So
+actually it is totally optimized totally
+prepared for you to reduce the whole
+complexity of the whole thing below it.
+So you don't have to understand anything
+over here. You just define the size of
+your warehouse and and start using it.
+And as a data engineer, you're going to
+be using cluster. And there there will
+be a lot of options. But sadly in the
+free editions, uh we are allowed all to
+use only the warehouse. Okay. So you
+cannot configure any clusters. It's
+going to be um something that I think
+you have to go to the premium and start
+paying and configuring your Azure and
+stuff like that. So it is not easy to
+learn all those stuff as a data
+engineer. But as data analyst, you don't
+have to deal with this. There's
+something called warehouse and this
+warehouse is uh is a cluster powerful
+cluster and you decide the size of it.
+Now there is like two ways or let's say
+two types in each there is a serverless
+and there is something that you manage.
+So a serverless just to let you
+understand um I have a picture here. No
+I don't have a picture. So now behind
+each of those clusters let me go back
+here. Okay, so we are at the SQL
+warehouse. This serverless warehouse, it
+is something that starts immediately and
+always online. Let's say
+um you can use it immediately. Now the
+old way of using warehouses, it was you
+have to spin up, you have to start the
+cluster or the warehouse, you have to
+wait 10 minutes until data bricks starts
+the Azure virtual machines and stuff. So
+it is a process that took a lot of time
+let's say [clears throat] 10 minutes to
+start and as well um uh let's say about
+the speed it was something that yeah um
+not that not that fast that's why now we
+have something called serverless
+serverless is always online and you pay
+for let's say for only if you use the
+data so like before without serverless
+you have like I cannot create tier one I
+have only serverless is uh once I click
+start so as you can see here there's a
+start button
+so start this warehouse it's going to
+start now once I click start I start
+paying for the whole infrastructure for
+Microsoft and datab bricks but now I
+click start but I'm not paying anything
+because I'm not using the platform I'm
+not using any data so it is always
+online and only if I start using the
+data and start processing the data I
+will start paying for the service so
+that's why the server serverless. It is
+something as were introduced last year.
+It um it is a type of a warehouse that
+is always online and it is fair to use
+because before you have paid for
+resources without using it, okay,
+because you just started it. So, uh the
+serverless you're going to find it in
+compute and as well in the warehouse.
+So, now as a data analyst, you usually
+don't have to go to over here to the
+compute.
+you always go to the SQL and you find
+the SQL warehouse and you start it. Now
+each one of you once you create the
+accounts you're going to get this
+serverless uh account and uh you can
+start as you can see it is small. So um
+uh I cannot go and make it larger but
+there's one thing that is cool here guys
+in the since we are at the cloud and we
+are doing a project in the cloud. Now
+this something happens a lot like if I
+am working if I start my day and I start
+working in building a dashboard or let's
+say working with the data I always use a
+small one small server okay but now
+let's say that I have presentation day
+and I have to show a very important
+analyzis to my manager to stakeholder so
+I am in a meeting like now and I want to
+start uh uh presenting the results in
+this day I go and make it large in case
+to make things faster and to make things
+smooth. Okay, so this is something like
+you didn't dream on the onrem before in
+the cloud. You can always uh scale up
+like make everything very fast to have
+an amazing um an amazing presentation
+and then scale down everything so that
+you don't pay a lot of money. And this
+is something guys like it was a dream
+before. So now as you can see here I
+think because I have the premium edition
+or something like that as you can see it
+is very simple to configure. Look at
+this. Um I have to say whether it's
+small um or or medium large excel and
+stuff. If you go to the uh large over
+here then I think I'm going to pay a lot
+of money. So actually I have to go and
+make it small
+and you just decide you know what
+whether it's going to shut down after 10
+minutes or something like that. This is
+this is joke. Okay. So this is really
+easy. Now um about the def um the
+cluster informations. Yeah. So actually
+that's it. It's simple. But I cannot
+show you how data engineers do the
+compute because actually I should have
+connected data bricks to Azure and stuff
+like that. But you as a data analyst you
+don't have to deal with this. So now
+this is the most important thing is
+always the storage and the compute.
+Okay. So once you know where to find
+those two, make sure that this is
+online. Okay? So always start the
+serverless and if this is green then
+everything is running. If not then
+you're going to get errors and it will
+not work. So those are the two things.
+Now of course uh the question is how to
+work with the data. Let me check how
+late is it. So let's do as well 10
+minutes and then I'm going to do a break
+so that I um can take some fresh air. So
+I hope that makes sense so far guys. So
+I hope that is something that um makes
+sense. I try to make things are clear
+for you um like datal analysts and
+engineers and and um even if you are
+total beginner because I don't know uh
+let's say where are you in your career
+maybe you are just a simple I don't know
+PowerBI user or an Excel user but I'm
+trying to make it as simple as possible.
+Of course, if the session is very small,
+I'm going to ask you like where you can
+like let's say whether you are engineer
+and analyst and go deeper. Yeah. So
+that's why I'm trying now to balance
+think between showing you how data
+bricks works and then the other side try
+to make my language like easy for you.
+So now
+uh what else I have to show you? Of
+course um if you go to the catalog over
+here, it is empty guys, right? So we
+don't have anything here. uh if you go
+to the default default is always like in
+any databases you will have a default
+schema and it is an empty so now I'm
+going to show you two ways on how to
+upload data so he be careful on how to
+do this and um understand how we going
+to do it so now you have always to
+understand where the data going to land
+going to land okay whether it's going to
+go to the default or it's going to go to
+the new schema so once you upload data
+you should know where the data is going
+Okay. So now I have a workspace. I have
+a default inside it. And now I can go
+and put data inside this default. Or you
+say, you know what, I'm going to go and
+make my own schema. And this is what I
+recommend you to do just to learn how to
+do it. So make sure always to click on
+the right level and you say go and
+create schema. I'm going to call it for
+example here
+uh sales
+sales uh DB.
+It's a new location. Or if you don't
+want to want to do that of course you
+can use the default. So now as you can
+see I have now something called sales
+DB. So now this is a new schema and as
+well empty. So everything is empty. And
+now we can start uh putting data inside
+it. And here comes something really
+important to understand. Um
+once you start using the project in um
+yeah in real projects you don't manually
+upload data to data bricks. We don't do
+that. Okay, it is just for data analysts
+in order to do quick exploration. But we
+as data engineers, we never upload data
+like the way I'm going to show you. So
+I'm going to show you now a method that
+you do to explore data or maybe just to
+practice with data bricks. We as data
+engineers, we connect the data using the
+networking and the codes and everything
+that you have in data bricks in order to
+build automated pipelines from the
+sources. We don't upload the data
+manually to data bricks but now we're
+going to do it manually so that you
+practice and as well in the free edition
+you cannot go and build those pipelines
+automatically from the sources. So
+that's why as long as you are using this
+platform now we upload data manually. We
+don't do anything automatically. And if
+you want to practice as a data engineer
+let's say uh if you want to practice uh
+building an automated pipeline from the
+sources then again you have to buy the
+full edition but I believe it is
+unnecessary you don't have to train now
+on how to do things from sources you
+have to learn the tool you have to learn
+the platform that's why it is totally
+okay if you as a training phase as you
+are learning the platform is to just
+upload things manually
+So now we're going to do there's two
+ways to do it. There is uh let's say a
+hard way and easy way.
+Um let's say I'm going to go and click
+on the new. So
+and you're going to see here the first
+button you says um add or upload data.
+So I'm going to go and click on it. And
+here you have three options. Okay. The
+first option is to say create for me a
+table. So again what is a table? Let me
+just go over here.
+So you say I want you to create a table.
+I want to create this over here.
+This is the first option. The second
+option you say the second opt option you
+say I want to uphload files into a
+volume. So that means where is it? Here.
+So I'm going to use the volume. I don't
+have data that is ready to be as a
+table. So I have an image. I have
+something maybe CSV as well. It's fine
+but I want to upload to a folder not to
+a table. So this is the second option. A
+third option where you use the
+connectors. Yeah. Like for example you
+can use the fiverron in order to load
+data from Google drive or I don't know
+there's a lot of tools. We don't use
+this in real projects. Okay. this five
+strong I think it is crabby tool but we
+we don't do this in real project but you
+can to practice go and connect your data
+from one drive from google drive it's
+just you have to create an account it's
+free as well so you can create a free
+account and you can start using the data
+that is available in those platforms but
+in real projects the data engineers
+should do real automations and they
+don't do this this so for now you have
+those three options I'm going to say
+we're going to do and try two of them.
+So I will start with a volume. So how to
+up to upload to a volume. Um the first
+thing again we're going to go and I
+think I have to create a volume first.
+So let me go back to the catalog
+and go to the sales DB.
+Let me check. Yeah over here. Okay. So
+now again I am in wire workspace. I am
+in the catalog the sales DB. The first
+step if we is to go and create a volume.
+So you click on your schema and then you
+go to create and then volume. Once you
+click on it, it's just you are let's say
+you are creating a folder at your PC.
+It's not crazy thing. Yeah. So I I'm
+just going to call it I don't know uh my
+data or something. So my data.
+So here either you're going to use the
+unity catalog from datab bricks or
+external volumes if in case if you want
+to do something external in Azure or
+AWS. I'm going to say we stay with the
+data bricks. We will not go and use any
+other cloud provider. And make sure that
+you are on the right workspace and the
+correct schema. So here if you go inside
+you're going to find the default and the
+sales DB. So make sure you are in the
+correct place and create the volume.
+Now, as you can see, I'm going to have
+here a folder. You can see it's very
+simple. So, it is where is it? It is a
+folder and in the cloud. Okay. So,
+that's all about the volume and you can
+put inside it whatever you want. So,
+again, you can put uh images, you can
+put uh your videos, [laughter] you can
+put whatever you want inside it. Now, in
+order to upload things, we're going to
+go click here on the upload to this
+volume or to the new. I'm going to go to
+the new um upload data then volume and
+then I just have to find my data.
+So so
+second
+I prepared something here.
+So now uh by the way about the files uh
+I prepared two folders in inside the
+data sets. You can find them in the
+GitHub or if you go to the download uh
+link. So if you go to the um analytics,
+you're going to find two data sets, the
+sales data sets where you have two
+dimensions and one fact and another one
+you can find the HR data sets. So here
+we have like one big data set that I use
+in order to build PowerBI HR dashboard.
+So you can use whatever you want. I'm
+going to go and you know what I'm going
+to go and upload everything from the
+sales. So if I just drag and drop
+and actually that's it. So but I have to
+define where this should go. So check
+the destination over here. You're going
+to say to the um sales DB and to my
+data. So that's it. You define the path.
+Always keep your eye once you upload
+something where the data going to land.
+Otherwise you're going to upload it and
+you will never find it. Okay? So this is
+always keep in mind uh in order to see
+your data you have always to check the
+destination. So I have everything ready.
+I'm going to say upload.
+And now as you can see it is uh working.
+Now in order to check we're going to go
+to the workspace uh sorry to the catalog
+and then to the workspace sales DB my
+data. And look at this. I have now my
+CSV files. So as you as you can see as
+you are like uploading files to your
+Google drive or whatever as you can see
+now my data is here. Now um of course
+the question is how to query the data.
+So we have the data uh over here. Um one
+thing that you can do is to go to the
+workspaces over here and you can go and
+create something called notebook.
+Just a second.
+So now um I'm going to tell you all the
+details after the break about the
+notebooks. So don't worry about it. I
+just want to show you how we're going to
+query the data. So I am inside the
+notebook. I can write here Python or
+SQL. Now on the left side I still see my
+data and all what you have to do is to
+write actually an SQL query or if you
+don't want to do it in the notebook you
+can go and to the SQL editor as well.
+It's going to be the same thing. So
+you're going to go and create a new
+query.
+It's like you are inside database and
+you're going to start saying select star
+from and then
+you go to their volume
+and say for example the data yeah the
+customers
+and I think we have to put before it CSV
+so CSV dots
+and then I'm going to run it.
+Um it's always going to ask you about um
+yeah which compute going to be used in
+order to run the query. We have only
+one. So we're going to have only one.
+I'm going to say start attach and run.
+So now it's going to start the server
+and it should now run my query. As you
+can see uh you're going to see the
+status over here. So it say waiting and
+here you see it is green. That means the
+server is online. And it's always like
+this. Your first query might take some
+time in order to spin the cluster and
+spin things. Now look at this. I able
+now to query the CSV file. But again
+very important to understand we are not
+using the technology of the data bricks
+yet. We are not using really the delta
+files. We are just having a CSV file
+inside storage and we are querying the
+data. So we are not using the full
+benefit of data bricks. Okay. It is just
+a CSV file. I'm just reading it and I
+can use SQL in order to create the data.
+But this is actually a bad way on how to
+work with your data inside data bricks.
+We should work all with with
+a delta table a table not a volume.
+Volume is something not prepared. It's
+something not clear. That's why we will
+I don't recommend you to work with like
+this using um volumes. Instead, we want
+to create a table and creating table is
+as well something very easy. We're going
+to go to new then add and then this time
+we're going to say create or modify
+table. This is way better and as well uh
+safer. So I'm going to go and but here I
+can only grab one table at a time. So
+I'm going to take the customers.
+Now again you are uploading files. Look
+where you are uploading. So by default
+as you can see I am at the workspace the
+schema default and I don't want it here.
+I'm going to want it in the sales DB and
+the table name could stay like customers
+like this. I have preview of the data.
+And once I click create
+now databicks is doing a lot of things.
+is creating the table is creating a
+delta files and storing everything
+inside delta files and market files. But
+for you, you will not see all those
+stuff. You're going to see now if you go
+to the catalog uh inside your new
+schema, there is a new table called um
+uh customers and now you have a lot of
+details about this table like compared
+to the volume. The volume is just CSV.
+So now what we have done we just created
+a table which is something amazing. We
+created this one using the delta
+technology the open file and now the
+full um yeah all the features of pi
+spark and the multipprocessing and
+everything going to be unlocked because
+you are using now an advanced format but
+of course you are not seeing the files
+now you are working as a table like you
+are in any SQL database. So I have now a
+schema inside the table and now once I
+start quering this table I am back to
+SQL course as I presented for you SQL.
+You're going to go to the SQL editor and
+you don't have to to understand the full
+path like here you know in the volume
+you have to understand the like where
+the file is stored and stuff like that.
+So we're going to remove this crab from
+here. Uh now think like you are working
+with any other database. I'm going to go
+to the tables and I'm going to say and
+by the way if you don't want to write
+the whole path if you hover on the table
+name you're going to find those two
+arrows like insert table name or if you
+go to the volume as well it's going to
+tell you insert the volume name. So this
+is just quick way in order not to mess
+up let's say the whole path. So I always
+click that it's easy for me or you start
+tipping. So now guys we are back to SQL
+and if I run it this is I can say a
+magic for
+um maybe I'm old guy [laughter] seeing
+this but this is really magic with just
+simple SQL query I'm able to use the
+whole technology stack guys I'm I'm
+already using the delta files I'm
+already using the whole platform of
+multipprocessing everything in the RAM I
+can use bispark like um it is um it is
+now very very friendly for you data
+analyst. So now we are working with the
+cloud. We are working with
+multiprocessing. The data goes into the
+memory. Um you can do very huge SQL
+queries with very fast performance and
+uh yeah you are working directly in a
+data lake. So you are not working to
+simple database. You are working
+directly in data lake. You don't need
+like someone to provide you an extra
+database because you can only know SQL.
+No, you are working directly on scalable
+system. So this something big I I see it
+from my perspective it's something big
+and uh yeah
+um with that those are the two ways
+let's say on how to upload data the
+volume I'm going to say just practice it
+do it once but it is not something for
+you as data analyst it's something we do
+for data engineering and we can explain
+uh tomorrow why but for you if the data
+inside the tables then you are unlock
+unlocking the whole uh benefits of data
+bricks And uh yeah, you're going to go
+and repeat the same thing like twice,
+three times and upload all your files
+inside the schema. And we start using
+SQL. Now, what I'm going to say, I need
+really a break like 15 minutes. I'm
+going to go and put a counter and um let
+me just check here the plan. Look at
+this. We already covered a lot of
+things. Uh we already covered what is
+data bricks, the interface, how to get
+the data. So actually we are covered the
+module one and um if you go to the
+homework this is something that you're
+going to do tomorrow. I'm going to
+double check it again but I have for you
+here the steps again in order for you uh
+to follow at home and on on your paste.
+So I have some links for you as well. So
+actually I can say we are done with the
+module one. The module two I'm going to
+wear the hat of the data analyst. Um I
+will not I will stop talking about data
+engineering because I talked a lot about
+that. I am data engineer so that's why I
+bring it a lot. Now I'm going to explain
+few stuff about data analysts and the
+mindset and then I'm going to show you
+all the possibilities on how to use data
+bricks as a data analyst and if you do
+this I think then you have more enough
+skills let's say to say I can use the
+platform and at the end there is I hope
+that we can do it. I'm going to connect
+data bricks to PowerBI in order to do
+the things that to let them interact
+with each others. So for now I'm going
+to take take 15 minutes break. I hope
+you guys enjoying the course or let's
+say the boot camp and those stuffs make
+sense for you. So I'm going to take 15
+minute. I'm going to make timer now and
+then we come back in 15 minutes. So
+thank you so much and
+be right back. Right. I'm going to drink
+some water.
+Okay.
+[snorts] I hope you guys got a nice
+break
+and to uh maybe
+that was a lot of information at once.
+Um um I was just following the chat. So
+I'm really glad that you are enjoying
+the boot camp. Um yeah, again it is
+something that's um yeah my first time
+yesterday doing it. Uh but I used to it
+because I um usually spend sometimes at
+my work sitting with colleagues and
+trying to explain things for them.
+That's why I I'm used to it onetoone
+let's say but not for 2,000 people. And
+it's it's crazy that we have more than
+2,000 people interesting in data bricks
+and staying too long too late uh for
+this. Um I think for the next boot camp
+that I might make I'm going to make it a
+little bit earlier so it's not too late
+for you because I want to drink as well
+cafe and uh yeah it's too late. If I
+drink coffee now I will not sleep good.
+So that's why uh I didn't like like the
+light late uh boot camp because I want
+to drink something
+uh maybe only tea but uh yeah next time
+I'm going to make it a little bit
+earlier uh in order to for me to drink
+coffee and it's not too late for you. So
+um I'm really happy that you are
+enjoying the boot camp and it is not
+that um let's say uh complicated for
+you. I was a little bit afraid because
+um those kind of platforms they need
+time you know you cannot do it in one go
+but I'm happy that you guys are able to
+to follow. Uh I saw uh repeated
+questions about uh the links. So either
+you sign up and you're going to get all
+the links inside uh the course or the
+notion road map. So the notion road map
+going has all like everything all the
+links all the tasks. So you can follow
+me using the notion road map. I think
+Taha did post it like many times. You're
+going to find the link to the data sets
+um link to the GitHub to the code and
+stuff. So um I'm going to keep adding
+stuff to it. So it's not something the
+notion road map it's something completed
+because to be honest I didn't have a
+time for it. Um I started creating it
+like two days ago but um I'm going to
+keep adding resources to it. So it's
+going to be living in notion road map
+from my side and um you you can sorry
+you can keep uh using it for your datab
+bricks training. So I will add like
+certificate links and stuff like that
+but for now you have the basics you have
+the road map let's say the steps the
+data sets and stuff and um if you don't
+need my data sets you can use your own.
+So if you have the data set that you use
+in order to do a projects previously
+with PowerBI and stuff you can use it.
+So it's not all about following me step
+like exactly like how I do it. Okay. Uh
+grab the data that you like from other
+projects and do the steps. I like it
+more than just like you know using only
+my data. But my data um the engineering
+one is a dirty data because we have to
+do a lot of data preparations and
+cleanup. And uh the analytics one it is
+the sales um sales data set which is
+always easy to understand. you know you
+have orders you have customers products
+and the HR one I I believe I have to
+generate more data sets over the time
+but there is a lot of things to do so um
+yeah you can use my data sets in order
+to practice data bricks or um just use
+your own okay um now we will do the
+second part I hope that you guys got a
+nice um uh small break uh in order to
+have some energy for the next session
+this one I hope that's going to be
+interesting as well for you. I hope you
+are enjoying the mix between theory, the
+why, and not only the tool because I I
+believe it's more important than the
+tool. So now um let's have a look back
+to our notion road map. Let me just
+now it's going to start recording and
+start sharing. So now
+um as I said this is the notion if you
+are new here let's say you missed the
+first part again um this is the whole
+notion road map you can get the link in
+the chat there is here uh the data sets
+we have a discord community guys I
+really recommend you to join there um
+because to be honest there are a lot of
+um like communications in or comments in
+YouTube in LinkedIn and stuff and not
+able to follow everything But I'm
+enjoying a lot the discord community. Uh
+there is like uh uh the section of the
+cafe break where we talk about things. I
+can jump to data engineering data
+analytics. So join the discord and uh
+ask questions and um and don't expect
+that I'm going to answer everything
+because the community going to help you.
+So it's for you. It's not for me. It's
+for you. So that's you can guys connect
+to each others and start helping each
+others. And I already uh knew a lot of
+nice people there. Yeah. For example,
+Plexol and Taho, they are from the
+Discord community. So, it is as well
+nice chance for me to get closer to you.
+So, yeah. Uh go to Discord. Um the
+GitHub things uh it has the data, but
+every all the codes that I'm going to
+show, I'm going to put it there as well.
+So, it's not finalized. Now, uh we're
+going to go to the mod dual 2. So, now
+the introduction that was all about data
+bricks. Now we're gonna focus on the
+data analytics part. So you as data
+analyst how to use this platform. Okay.
+And um yeah and I'm going to show you a
+few examples on how to do it. Okay. And
+you can use it in order to do projects.
+I recommend you at the end in the task
+in the homework I'm going to let you
+tell you to build a project to build
+sales dashboards or customer dashboard
+or something like that inside data
+bricks. Okay. So now uh what we going to
+do? Um yeah here sorry the module two.
+So now um can I talk about you data
+analysts like what are the different
+levels that we have as a data analyst
+and then what is your role? I think I
+explained a lot about how to use it uh
+how to use data bricks as a data analyst
+and then we jump to practice. So I'm
+going to show you the notebooks going to
+show you the different ways on how to um
+to use data bricks and we're going to
+talk about something really interesting.
+I think this going to be the most fun
+one that I tell you it's going to be
+you're going to have a chat with the
+data. So we're going to use the AI genie
+in order to talk to the data. This is
+the most important like this fun one.
+Okay. And uh after that if time is left
+I hope that we can go and connect
+PowerBI to data bricks. So now let's
+start step by step. I wanted to give you
+again the big picture about analytics
+and maybe explain some basics about yeah
+how things works. Maybe you know already
+this but this is like at my work each
+time I join a company I like I switch
+between five companies. Okay. I try to
+map the company to this picture here.
+This is very important to understand
+where the company at because different
+companies have different scenarios
+different situation with the data with
+the platforms and stuff and some you
+might join like small company but they
+are like really advanced in how they do
+analytics and then you join maybe um a
+big company where they are really at the
+start with with the data. So or maybe it
+depend on the department and stuff. So
+it's really important for you as a data
+analyst to understand where my
+department where is my company at this
+map at this road map are we just at the
+start are we in the middle so you have
+to map it and each time I join a project
+I try to map here and say you know what
+we are at the level I don't know in the
+middle or at the left and stuff and I
+talked about it to the managers um and
+uh this helped me a lot to build
+completely new projects like because
+it's easy to understand for many
+And I really recommend you if you join
+new projects or new company to
+understand where they are and how they
+do those stuff
+and to map it and to push on the company
+to say you know what we have nice
+reports let's go to the next level and
+you have like a road map for you for
+data analytics. Okay. And I can tell you
+the situation in many companies is
+really really bad. We didn't do anything
+yet with the data. We are just at the
+start as a data analyst or data
+engineer. So now this is the road map
+and uh usually we start with the raw
+data. Let me just take the laser. It's
+fancy. So the company has raw data and
+some companies I can tell you many
+companies they are at this level. They
+didn't do anything yet. They just have
+data. They just have row data and they
+might have some Excel left and right but
+they didn't do anything with the data.
+Okay. And uh and I can tell you 80% of
+companies they didn't do anything
+because first of all they are busy with
+their processes with their products and
+stuff and they think those stuff are
+only like let's say luxury things. If
+you have extra money maybe you can do
+something with the data but the scenario
+totally changed because all the
+companies understood without good data
+you are doomed. you cannot do real AI uh
+use cases. That's why now a lot of
+companies pushing on on this road map to
+have a company that is data driven.
+Okay. So if the companies are not
+focusing on this road map, they going to
+be doomed especially in the AI. So
+that's why many companies currently in
+the road data. Then you're going to find
+maybe other companies they start
+building some data warehouses, some data
+league. they hired some data engineers
+and they start cleaning their data. So
+this is something that some companies
+did understand. Okay, the raw data is
+not usable and I have to start building
+data lakeouses. So this is something
+that actually I'm going to say uh let me
+grab the data engineer. So this is
+something that the data engineer going
+to do. Okay.
+Now um
+okay now as a data analyst um the first
+thing or let's say the most use case
+that you're going to spend years
+building is the standard reports.
+So the standards reports it is just like
+you know you join you join um um a
+department and you tell them uh you know
+what you guys have an excel you're
+building the whole tracking or
+monitoring for the process using this
+excel let me make from it like standard
+report that the whole department can use
+like if someone has an question like for
+example how many orders we got yesterday
+okay so what happened uh yesterday or
+the last month or the last quarter
+So we built standard report and
+everything that you see in PowerBI and
+Tableau they are all almost all of them
+you are building a standard report for
+the company. So it's standard
+dashboards. A lot of people going to
+join and see those standard reports and
+it is something that of course companies
+needs a lot because most of the work
+currently is done inside Excel and no
+one is building let's say clean standard
+reports and that's why uh many companies
+are now hiring data analysts in order to
+build for them standard reports. So this
+is something you're going to have huge
+audience,
+huge audience that's going to use the
+standard reports. But now I can tell you
+as well many companies didn't yet build
+standard reports correctly for their
+departments. All of them like yeah not
+all of them a lot of them are still
+using Excel. A lot of them are still
+using some PowerPoints and stuff to do
+presentation for their reports. So they
+are not there yet. Now of course this is
+the first level but now if you want to
+make a domain driven or let's say
+datadriven company you cannot just wait
+on the standard report. The thing is
+standard reports takes time to be built
+okay from you data analyst or uh from PI
+developer. So
+they going to yeah let's say um you're
+going to build a report maybe takes you
+few weeks or a month and then you have
+here huge audience and they're going to
+tell you you know what this is not
+exactly what I need I need one extra
+column I need one extra filter I need
+this data sets to be inserted so they
+are always like asking for extra stuff
+and you as datalist or let's say as a PI
+uh developer you going to take time you
+say okay I'm going I'm going to take
+this column. I'm going to take this
+filter, extend the report, make new
+report. So, you're going to be a
+bottleneck for people. Okay? And uh
+that's why
+you have to offer in the companies as
+well somehow on how to do ad hoc
+analyszis. So that means the user um
+going to do in his own uh the analyszis.
+So they don't wait for anyone from the
+tech or the IT to build the reports.
+They going to be building it. And of
+course there is different types of data
+analyst. Okay, I'm talking about now the
+IT data analyst of course from the IT
+but there is like from the business side
+as well the data analyst and stuff. So
+I'm just saying the next level is to let
+people build their own reports. They
+going to build their own uh uh insights
+and you cannot be the bottleneck to say
+only the standard reports. So this is
+one thing and same goes for the next one
+self-service PI.
+So not only quering the data but as well
+building the dashboard on my own as as a
+business user. So this is something that
+go advanced. If your company already
+offering this solution to say you know
+what my business user has different
+options to consume the data they can
+um they can uh consume my PowerBI report
+but if they want they can go and use uh
+SQL editor to do it or they can use I
+don't know um um Tableau or something.
+So you have to understand where the
+company and I believe very very very few
+companies offering their users to play
+with the data. They don't offer them
+like let's say uh a way to do
+self-service BI or like um that I go and
+jump immediately work with the data. It
+is something that's really hard to do in
+PowerBI even. Okay. So it's something
+yeah many companies are not there yet
+and of course
+uh it's going to be a dream if you have
+a real data scientist working on the
+next levels. Do I have here data
+scientist? No I don't have one. Okay I
+have to grab a new one.
+Yeah. So now for the right side it's all
+about so yeah as a data analyst you
+always answer one question. What what
+happens? Yeah. And why it happens? Where
+is the bottleneck? Why? Um uh not why uh
+how many orders did happen in the last
+month? How many um yeah which yeah which
+step in my process is bad which which
+step is good. But if you're going to ask
+stuff about the future, about
+production, about um let's let's say
+about what going to happen in the
+future, it's something that actually
+data scientist going to do.
+And my friends uh it is something that I
+rarely see that um yeah that that
+analyst really um scientists sorry did
+really achieve um let's say final goals
+of this road map. So because the thing
+is data scientist join companies you see
+so they hire data scientists in the
+company he or she joined the company and
+they say okay I'm going to do now some
+let's say machine learning stuff I'm
+going to predict the future I'm going to
+yeah going to do stuff but where is the
+data going to say ah you know what the
+data is still raw still here the data is
+still here so you as a data I saw it
+like multiple times I know at least five
+data scientists join products
+join projects. They are ready. They have
+the skills. They have everything but
+there is no data. They so they go over
+here and they play the role of the data
+engineer and they do stuff. So now we
+will not go deep dive in the data
+science stuff because this is not the
+goal of this uh boot camp. Now we're
+going to focus on this. So now
+um we want to analyze the data but there
+is not only one way. Now the thing is
+what is very cool is that you can do the
+whole thing now not the whole thing I'm
+going to say
+a tool like datab bricks going to help
+you to do those stuff okay but it will
+not do do it for you so you can use data
+bricks to clean the data as that
+engineer you can do the whole BI
+self-service as well using data bricks
+self-service BI I'm going to say data
+bricks is amazing to do to use. And I'm
+not really sure about the standard
+reports, guys. I'm not really sure that
+the standard reports is something that
+we use PowerBI uh sorry, data bricks to
+do. We still need PowerBI to do the
+standard reports. So that means
+um from this picture, yeah, cleaning the
+data never used PowerBI for that. We
+don't use PowerBI to in real projects.
+We don't use PowerBI to clean the data.
+Now to do some PI or let's say
+self-service things data bricks is
+amazing tool but standard reports still
+PowerBI dominates and Tableau yeah not
+only PowerBI Tableau but datab bricks is
+not there yet data you cannot say you
+know what I will just use only data
+bricks for data analyszis this is
+something that they are pushing on but
+the thing is in it is like very yeah how
+to explain it the business users are
+very demanding people Okay. So your end
+users are very demanding. They're going
+to ask you move the filter in the right
+side, add more views. So you need
+flexibility on building the dashboard,
+the standard reports. And datab bricks
+will not offer you any flexibility to do
+that. So you can build something like
+very standard like let's say very um
+yeah, let's say first version of the
+dashboard, but once uh you deep dive
+into the demand of building standard
+reports, you're going to hit the limit.
+So that's why actually we still need
+PowerBI
+even in big scale database um data
+platforms. So I see it like this. I see
+it's now easy to do all those levels
+using data bricks and you still have to
+learn PowerBI to do the standard
+reporting. Now I can tell you 80 80%
+let me just here make this here as a
+data analyst 80% of your work are
+building those stuff. Okay. So the
+PowerBI stuff and those like the ad hoc
+and the self service it is something
+that is nice extra advanced for you and
+you say you know what in our company we
+do self-service BI and we're going to
+use it using datab bricks we will not
+use powerb of course you can do the
+whole thing guys you can do the whole
+thing you using powerbi so the first
+level sorry here clean the data build
+standard reports add to kind of but yeah
+we have better now we have better um we
+have possibility to do that using the
+data bricks. So this is how it looks
+like for me. Of course this is a tool
+ple which tool is better and stuff there
+is not always right and wrong but for my
+side I think in big companies they're
+going to always work with those two. So
+as data engineer it's nice thing to do
+with the data bricks but for you as data
+analyst if you can master those two then
+it's going to be really amazing. Now uh
+again as I told you most of the
+companies are still still here they are
+still here struggling here. Okay not
+like this still dream a dream for many
+companies. Yeah. So and tools like data
+bricks can make things easy but it will
+not implement it. So having just data
+bricks doesn't mean that everything is
+solved. You need to have a right data
+strategy and right mindset in the teams
+to build it. Now let's go again to the
+levels. Uh I'm going to say levels and
+tools of data of yeah data analysts. Um
+I'm going to take this over here. So I'm
+going to say you have a database. This
+is the first level of doing data uh
+analytics. So now yeah my friends the
+first level that now I'm going to say
+80% of data analysts are using Excel. So
+what's going to happen? You're going to
+have a small data sets
+and uh you're going to say uh just a
+second let me just get something here as
+well.
+Yeah, this one here. So now the first
+level
+uh of that analyst you're going to go
+and say yeah you know what I'm going to
+extract here um small data sets one
+table small data small uh let's say
+table I'm going to put it in excel and
+I'm going to do here everything inside
+excel the whole process end to end so
+this is the first level and I can tell
+you until now 20 uh 26 many people are
+doing this many people many companies
+are doing this because it's easy like
+they don't have to learn any platform
+they just have to learn Excel and it's
+easy to kick off you know the projects
+you don't need data engineers and the
+whole thing so that's why because if it
+is easy
+80% of people are doing this doing
+manual work and this is I can say a
+cancer for any company because you're
+going to have a lot of data scientists
+cleaning up the data multiple times and
+repeating repeating the same work and uh
+they are not able to do any real
+analytics big data uh stuff because you
+cannot do this on a big scale data data
+lakehouse or um a big data on the
+company. You need always to extract only
+small subset of the data. [snorts] And
+uh yeah, good luck doing big data
+analyszis on top of this. That's why the
+second level you might say, you know
+what, I'm going to go advanced now
+and I'm going to say
+um I'm going to go and grab a PowerBI.
+I will not use any more Excel and using
+PowerBI
+things going to be more organized and
+things are nicer. So you're going to use
+PowerBI to pull the data and you're
+going to start building your
+visualization. So I'm going to say this
+is the second level but still inside
+PowerBI you are doing the whole thing.
+So you are doing uh something we called
+ETL but you're going to do the load
+uh sorry the extract
+transform and load the whole thing you
+have to do everything in PowerBI the
+heavy lifting happens inside and um I
+can tell you this is not yeah this is
+still better than Excel um but um yeah
+you can handle better the data it has
+more speed because the data are loaded
+in the memory the column store so you
+can start doing some fast analyzes way
+faster than Excel. Uh but the thing is
+the extract and transformation it is
+something that is not really um yeah not
+really helpful for PowerBI because if
+you have a big data set then you're
+going to noticed that it's taking too
+long time to do the data transformations
+to do the loading and if the data just
+get little bit bigger few gigabytes
+you're going to it's going to be out of
+control you cannot use PowerBI for that.
+So that's why the next level that you
+say
+um um yeah let's go and build a data
+warehouse. Do I have an icon for it
+here? Yeah.
+But I will not build it on my own. I
+would love to have a data engineer to
+build for me a data warehouse. So he's
+going to go and um grab a data engineer
+and let's say he going to build
+an automated um yeah pipelines and he
+going to do for you the extract and load
+and uh transformation the ATL and you
+going to go and say I'm going to go and
+connect the PowerBI only to do the data
+visualizations.
+Okay. So with that you reduced your
+heavy lifting and you focus on answering
+the business questions. Okay. So this is
+way way way better than before because
+here you spend most of your time doing
+the ETL on your own. Okay. And not
+focusing on the business, not focusing
+on delivering fast reports because here
+in order to deliver one insight, it
+makes takes you a month. Okay? Here it
+might takes you like maybe a week or
+something. Here you can do it in a few
+days. Yeah.
+So
+this is the level three.
+So um you can you can uh focus on what
+you you do the best. Okay. And not it's
+not like it's not your job to work with
+the raw data to be honest. Now we're
+going to go to the last level. Now the
+thing is data warehouses.
+It's only for structured data and in
+companies we have a lot of very
+interesting data that for you as data
+analyst that you cannot find inside data
+warehouses. Okay. And I can tell you
+data warehouses they die over the time.
+So as this gets bigger. Okay. Uh this
+guy going to struggle all the time
+bringing the data in the data warehouse
+and he cannot bring all the data. So for
+example if he come as data and say hey
+go and bring me those I don't know JSON
+files. You going to say wait in data
+warehouse we cannot put uh unstructured
+data. I can only put structured data.
+Yeah. and maybe can I come to the data
+and you tell me there is like a big
+table and say you know what the ETL is
+taking already five uh let's say uh 12
+hours to load I cannot put any more big
+tables so a lot of things can be
+rejected from the data engineer because
+he's using
+yeah let's say um onrem system or using
+um some some old things so actually you
+are limited still limited but you still
+it's way better than before okay now the
+last phase
+I'm going to say uh it is where your
+data engineer is building for you a data
+lake house using data bricks
+just second. So,
+so here your data engineer is building
+for you a data lakehouse using a
+scalable system and then you as data
+analyst
+you have here not only the possibility
+to work with um yeah with data bricks
+you can connect your nice powerbi to
+very very fast uh infrastructure and as
+well you can use datab bricks on your
+own to do amazing things. So not only
+you are doing things with PowerBI, you
+can as well use data bricks to do data
+analyszis. And I think if you reach to
+this level
+where you are where your company is
+working already data bricks and building
+lake houses and you as that analyst have
+the skills to use those two tools I
+think then you mastered or let's say you
+know the best tools. Okay. But that
+doesn't mean that you are a great data
+analyst. Okay. I'm saying this because
+it's not not about the tools but this is
+the last level that you can reach in
+order to do
+um yeah tooling skills. Yeah. Not not
+not the soft skills or the right mindset
+for that analyst. We are just talking
+about tools. But this if you can do this
+then you can do way more than just
+Excel. You you are faster. You can work
+on very like uh different data that you
+didn't dream of before. and um yeah and
+uh you can work with big data and stuff
+like that. So I think those are the
+levels that I always think about that
+analyst and um yeah most of the
+companies are yeah they are still here
+like most of the analysts they are still
+doing this one here they love their
+excel um and yeah a few managed to build
+the data warehouse and I think this is
+the future here where they going to
+build lakeouses and the companies are
+moving toward this not only because of
+yeah yeah data bricks and stuff it's
+because they need the data to be ready
+for AI. It's all about AI now. So now
+those are the different levels and now
+let's go back to this image where I'm
+going to tell you where is it? This was
+somewhere here.
+Okay. So I'm going to go back to this
+image in order to let you know how we
+work as a data analyst using data
+bricks. Now I will reduce this little
+bit because this is very chaotic. So now
+you understood so far that someone like
+that engineer going to build those
+bronze server gold. Okay. Now it's all
+about what happens here. Like it's a
+little bit chaotic. So
+I'm going to show you only one way on
+how to work with data bricks. Okay. But
+I think this is the right way. So now uh
+what can happen that you as a data
+analyst you have a goer. Okay. So again
+here now uh the first thing that we do
+is that
+since it's not like before okay now if
+you start working in big data you will
+get as well big data you will get a lot
+of tables you will get um a lot of files
+a lot of things so it's going to be
+really hard for you as I said to go and
+immediately start building your
+dashboard
+so this is something
+so this is something really hard to do
+immediately
+You cannot go and immediately build a
+PowerBI dashboards because you don't
+know what is the content here. Okay, you
+don't know exactly which table to grab,
+which um yeah, which data set to use. So
+now what you going to do? You have to
+explore this.
+So you have to explore it.
+Now in order to explore the data sets,
+you have different tools in in data
+bricks. So as I said um I'm going to say
+the f yeah the easy option is to use um
+an SQL editor.
+So SQL editor in datab bricks.
+So this is the first option that you can
+use
+and um using just SQL you can manage to
+start exploring the data and the nice
+thing is that so let me grab those
+standard users.
+Now you have here standard users and I
+told you there is somewhere a business
+user or let's say powerful user from
+those standard users that understand the
+requirements and understand how to deal
+with the data. So the thing is you're
+going to grab one of the power users and
+you're going to start together with this
+user exploring the data together. Yeah.
+So I'm going to say powerful or yeah
+let's say our business user.
+So now you both start exploring this
+data lake in order to identify exactly
+the data that you need and you can both
+work on Excel and uh sorry um SQL and
+you both can use the SQL editor so you
+can share it with you. It's like you
+start writing query then you send an
+email this um like I um I trained two oh
+yeah one thing in my projects I had one
+data analyst and one business user and I
+trained them I made like such a session
+to tell them you know what so you start
+writing the SQL I told the analyst you
+start writing the SQL query write it
+until the end and once you have the
+first draft share the SQL with the
+business user he knows SQL as well and
+then they both start working on the same
+SQL query like imagine that crazy right
+so both they u he tell you oh this is
+the false this is not the right table to
+join this is the correct table and they
+start talking and discussing stuff using
+the SQL editor yeah so now
+once let's say
+when they have like multiple queries
+okay as they work they're going to build
+a lot of queries now once they have all
+those queries they going to go and put
+everything in one dashboard So
+I'm going to call it the first version
+first version of the dashboards.
+So this is what we do in data bricks. We
+can go and put all those queries in a
+dashboard in order to have the first
+look of our use case our our reports and
+of course the dashboard is getting the
+data from here. Yeah. [snorts]
+So now you can build your first the
+first version of the dashboard using
+data bricks. And now once everyone is
+happy the business user the and you as
+that analyst you say you know what this
+is exactly going to solve a lot of
+problems. So now what is naturally the
+next step is to expose it for the
+audience right for the standard users.
+So they go and convert this dashboard to
+a powerbi report so that everyone can
+benefit with this.
+So this is the cycle. Um I'm going to
+repeat it again. Let's say so data
+analysts you start exploring and working
+with the raw data using data bricks and
+you write only SQL queries. Once you
+have a nice version of it, you talk to
+your business users. Hopefully you have
+someone that knows SQL and you guys
+start working on enhancing the queries
+and then you start putting all the
+puzzles together in one dashboard and
+discussing okay this looks nice it and
+once you say this is exactly what we
+need this is exactly are the dashboard
+you go at the last step and start
+building PowerBI report a standard
+report okay so that's why we have data
+bricks and powerbi and uh this is exly
+the process and exploration becomes
+something very important as a data
+analyst and you're going to spend most
+of your time just exploring again
+if you have an Excel or a normal
+database you're going to have like five
+six tables and that's it but now since
+things are easy for us data engineers
+we're going to give you a lot of data
+we're going to give you a lot of tables
+and suddenly you as data analyst you're
+going to say wow we have here thousands
+table I
+really I I built like few data products
+and the count the whole thing is like
+300 tables. So this is too much yeah for
+data analyst and to be honest it's now
+their job to start exploring correctly.
+That's why now exploration is something
+really important to learn as data
+analyst because you are working now with
+big data and big companies. That's why
+you're going to spend most of your time
+exploring together with the business
+user
+until you guys bring the correct data
+from this huge data base. Okay. So, uh
+once you have the version and then you
+can work on it. Now, before it was
+easier because it is clear the company
+has five six tables and you build uh
+your dashboard. But now you are working
+on scale database. So now I'm going to
+show you how to do those stuff guys.
+uh using uh data bricks and of course
+there is something called notebooks
+um yeah let me just rank those stuff
+little bit so okay
+so I'm going to say working with SQL
+editor
+and building the dashboard it is not
+that hard okay so it's something
+[clears throat] medium it's not like
+writing SQL you know what it's not that
+hard now building as well PowerBI report
+it's as well medium it's not crazy but
+there is as well I saw some that analyst
+they were able to use a notebook
+I can tell you later why because I don't
+want to overwhelm you so there's
+something called notebooks now the thing
+is some data analysts go crazy
+and they say I don't want to learn only
+SQL I want to learn Python I I want to
+learn everything I like I saw some
+curious people they say I I want to
+learn programming but I will not program
+a pipeline but I will use the features
+of pandas of pi spark in order to
+analyze the data. So you have some crazy
+data analyst, they go full in and they
+start using not only SQL, they want to
+do a for loop, they want to do an LS,
+they want to do um yeah some pispark
+things in order to analyze the data. So
+they go and start uh using notebooks.
+But this my friends is hard. It's
+advanced. Okay, not that hard. But you
+just have to learn the language and I
+don't expect that a lot of analysts
+going to do that. Okay. But I'm going to
+find few that are willing to do that. So
+I'm going to say this is advanced thing
+to do. [snorts] So the rest is easy or
+let's say medium and the easiest of
+course I'm going to put the easy like
+tab only on the AI because the AI going
+to be the easiest way to do PI. Yeah.
+But now let's go back to this picture
+and I will guide you. Oh, let's see.
+We're going to have few examples on how
+to do the uh those stuff. [snorts]
+Now let's go back to our data bricks. So
+that's what the theory. Sorry for that.
+I always take my time but I enjoy this.
+I enjoy explaining behind the scenes and
+how we work. I want you to understand
+this because I see a lot of people just
+talking about u the tools. Okay. Uh this
+is I don't think this is the right
+knowledge to share. we have to share a
+little bit how things works behind
+because I was at your age or let's say
+I'm an old white old guy but I was young
+and I didn't really understand like why
+why I'm learning scale why I'm learning
+Python why I'm learning this tool how
+how like how I'm going to use this in a
+company so that's why I try to push on
+this little bit and uh maybe sometimes
+it's a little bit boring to see only a
+theory but [snorts] um I think we must
+share those stuff how things works in
+companies Now,
+so back now back to data bricks. Again,
+this is only your web browser.
+Everything runs behind the scene in the
+cloud and um as you can see guys, it is
+um yeah, nothing to install. Now
+[snorts] again what I told you
+everything it's very important to see
+the catalog. Now we're going to go to
+our catalog again. Uh we uploaded only I
+think only one file, right? So we build
+it one table but I we uploaded all the
+files to volumes but I will not use
+volumes. It is very stupid to use as a
+data analyst here. It's way better to
+use tables. Okay. So now what I'm going
+to do I will just go and upload this uh
+other files just quickly. So I will go
+and create a new table.
+Drag drop. I think adding data to
+um to data bricks is easier than RPI.
+So the second table is going to be the
+products. Of course, since I said I will
+use sales DB, we have to change the
+schema. Always check the destination.
+And by the way guys, if you get for some
+reason here nulls. Okay. So now in the
+preview here to see whether everything
+is correct or not. If you see here
+things are null and red that means the
+format is not automatically uh let's say
+uh correct. So you have to go to the
+advanced attributes and here you're
+going to find the file type. It's
+usually CSV so you cannot have any other
+type and uh you check the separator the
+skip character and stuff. So uh in the
+data set that I give you it is a comma
+separator and the first row is the
+header. So it the default thing is
+enough and I think it's data is like
+smart enough to detect those stuff but
+for some reason if you are getting nulls
+then you have to play with those options
+here until you get it right or you
+understand the CSV file whether it's
+correct or not. So now I see the data
+this is my new table. I'm going to leave
+it as it is. It is in the correct schema
+create table. So now my CSV file is
+uploaded and at the same time datab
+bricks is converting the file format to
+delta format which is way nicer
+than CSV and now I have it inside a
+database or let's say yeah my catalog we
+say catalog we don't say database okay
+for the for the language it looks like
+database but we say catalog it's inside
+my catalog now the whole thing we call
+it unity catalog so if someone tells you
+show me the catalog or go to the
+catalog. We mean this over here like a
+database. But I this word is not that
+accurate if I keep saying database.
+Okay. So now we're going to upload a
+third one in our catalog. Let me just go
+it uh quickly. So the facts I'm going to
+go and drop the facts.
+So that's it.
+Looks fine. Add the schema. Schema and
+create table.
+Great. Now we have all the three files.
+Of course, as I told you, uh you can go
+and practice with any data sets. I have
+here for you another one, the HR. It is
+only one one data set that I use for
+Tableau. You can use it if you want. But
+uh now I just introduced the sales in
+order to have three tables. Okay. Now
+what I wanted to do offline and not we
+will not do that now. Now the unity
+catalog or the catalog of data bricks
+has a lot of things. This it's really
+amazing you know we have something
+called metadata in databases. It is just
+description of my tables description of
+my columns and stuff. But in data bricks
+they went to the next level of the
+metadata. they knew that the metadata is
+the core of uh let's say for any AI use
+cases in the future. Yeah. So that's why
+they focused a lot on offering a lot of
+features inside let's say the metadata
+or the catalog so that they use AI to
+learn on the usage to learn on the
+metadata. So now again what is metadata?
+This is a very important word to
+understand. It is just the column name,
+the data type, the comment, um
+the table name. So it so it's just
+describing your data, data about the
+data. Okay, so it's just the
+description. It's not the data itself.
+Now in data bricks, um you can add here
+as you see the column name and the data
+types and very very important for AI, if
+you are building as a data engineer or
+data analyst some nice tables or nice
+views, you have to add comments.
+Comments are description. So what are
+the customer key? What is the customer
+ID? The more you add content to datab
+bricks, the smarter the platform going
+to be because it's going to use
+everything. It's going to use all those
+metadata to uh to teach the AI to
+fine-tune the AI model and that's later
+you're going to use it in order to do
+chat with your data and stuff. So the
+the whole mindset changes as as you work
+with the catalog is that before I added
+comments just to yeah nice info for the
+team so nice info for my project you
+know what this is a customer key if a
+person goes and sees the comment they
+going to understand the content but now
+we add comments we add metadata not only
+for us but as well for AI so now that's
+why it is become I'm gonna write an
+article about it but it is something
+that is getting very very important
+It is it is way more important even now
+than data modeling. If you have a
+perfect data set, but you don't have a a
+good metadata inside it, your AI going
+to be crabby. So now the table has a lot
+of things to see. As you can see the
+overview and as you can see here AI
+starts working with you in in data
+bricks like everywhere. If you're start
+writing SQL, if you start writing
+pispark,
+um you're going to get always an AI
+assistance. So um yeah, look look at the
+description. It says the table contains
+information about the customer. It
+includes details such as names, stuff.
+Oh, this is really nice description. I'm
+going to say okay, I'm going to accept
+this description. And now my table has a
+nice description. So I just described
+the uh the table. Let me check. I can as
+well generate a comment from the AI.
+Let's see. So it is unique identifier
+for each customer recorded in the table.
+This is nice. So I'm going to go and add
+it. So now I'm making as you can see I
+don't have to write anything. Let me
+just go to the maybe country generate a
+comment.
+So now AI generating metadata for me. So
+that's later the AI going to use it in
+order to do nice things. Of course this
+is easy for the AI in those data sets
+because it is very obvious. Yeah. What
+is a country? But in real projects the
+AI will has no idea what are those
+columns for. Okay, because in real
+projects you're going to get some data
+set that has very cryptical names like
+yeah I cannot say a lot of things about
+the work. Okay, but um in the car
+industry we have a lot of tables that's
+you need read a lot of documentations in
+order to understand the columns. So uh
+it will not be obvious AI will not help
+you to describe you have to grab it from
+some documents and try to write the
+comments on your own. But here things
+are easy and uh yeah so now another
+thing what you can find here the symbol
+of data the details permissions and all
+those stuff we found it in databases
+normal normal databases but now there is
+history look how amazing at this I can
+say I can see now the full versions of
+my tables look at this
+um bar this is my email address I
+created a
+I change a column because I added the
+description. I change another column.
+Now you can see a log of everything
+happens to the table. And this thing you
+will never see it in databases. And
+that's all because my friends, we are
+using something called an open format,
+an open file format. Where is it?
+I think we are using delta tables. Delta
+tables going to store all the logs, all
+the transactions. That's why you're
+going to see everything. I have this oh
+my god in my projects like if I make any
+mistakes I'm going to see immediately
+who to blame or what happens. So you see
+in some nice logs and another thing the
+lineage.
+So you're going to see um uh let's say
+if you have multiple tables or multiple
+layers you're going to feel the this is
+interesting for only maybe data
+engineering. Then insights
+um I don't have anything here but you
+can see which user actually using the
+most of your table. You're going to see
+how often this table is used from you
+from other you have a lot of statistics
+and all those stuff is captured inside
+the cloud and it's going to be used as
+well for the the AI. So this is yeah
+next level guys because to be honest
+those stuff we will never find in any uh
+normal like onrem data warehouse stuff
+like this. So it is capturing a lot of
+things like if I go now and do a query
+inside this table it can be captured and
+stored inside the insight but of course
+since we are we have free new account
+and um yeah I think things looks empty
+and the last one um quality let me
+enable that quality monitoring let's go
+and enable
+so disable disable
+I have to configure the schema and stuff
+but I can add out of the box as well
+quality checks how how many nulls uh
+whether the data is complete and stuff
+like that. So as you can see a table in
+datab bricks have a lot of features and
+and not only metadata. Yeah. So a full
+full information as well. You can browse
+your catalog by clicking on each of
+those objects and you're going to see
+some some stuff. Okay. So now I have my
+three tables. I have my data. Now what
+is the next step? Okay looks looks nice.
+Now this data could be used in many
+different use cases or in many things.
+Now, as I said, you as a data analyst,
+first you have to explore the data. So,
+I keep jumping between those stuff.
+Sorry for this.
+So, yeah, I need an SQL editor to
+explore the data. And now, if you go to
+the tool, this is the most important
+thing for you, an SQL editor. So, this
+is something that we keep using all the
+time and it is very advanced, the SQL
+editor and data bricks. So if you go
+inside it now you have to keep your eye
+on few on a few stuff. Okay. So first of
+all you have to keep your eye on this
+green uh dots over here because
+um because it's going to tell you
+whether the compute is online or not. If
+it's not online then you might get uh
+yeah uh let's say you will not get
+results or stuff like that. So make sure
+it is online started or it might take
+few times few minutes in order to be
+started. Yeah, especially if it's small.
+So, uh, make sure this is green. Um,
+what you can keep your eye on on this
+run all.
+So, as a default going to be 1,00 and
+this, oh my god, how much time I had a
+not a conflict, but my data analyst or
+my power users tells me bar I'm not
+getting all the results and um yeah uh
+in my data I have like 100 thousands.
+Why I'm getting only thousands? It's
+because of this here. I cannot change
+it. it's going to be always as um limit
+1,00. So if you have more than 1,00 make
+sure to remove it, remove the limits.
+But if you are just exploring it's
+enough. So this is the reason number one
+why someone cannot blame you why the
+data is missing because of this. Now um
+and as well what's else? Yeah. Now about
+the query this is the SQL editor right?
+So this is the whole SQL editor. I can
+write now SQL select star from stuff
+blah blah blah. Now you have here two
+options. Either you're going to write
+the full path of your your table. So
+we're going to say okay
+let's say uh it is the workspace because
+we are at the workspace.
+Okay. Then the next level going to be
+the schema. Then the next level going to
+be the table. So I'm giving the full
+path. As I told you, you can go to the
+two arrows and do that or actually you
+can configure the whole thing here on
+the top. So you can say always
+everything that I query is going to be
+from this sales DB
+and I believe if you go and remove it,
+it's going to work. So that you skip but
+I always forget about this. So that's
+why I always add at the start the
+workspace and the sales DB. So you can
+go and query. Now it's going to say uh
+the schema has changed. New session is
+required. Okay, start a new session.
+Now I query the data and uh look at
+this. I have some uh results as a table.
+Now this is very classical as a
+database. Now if you worked before in
+databases, you always get the result as
+uh a table, right? So this is something
+that's yeah um classical. Now what I'm
+going to do, I will just do one query
+where I'm going to go to the fact um to
+the sales. Let me just go over here to
+the tables. So I going to go and target
+the fact sales and I will do simple
+aggregation where for example I want to
+do yeah let me think maybe total orders
+over the time. Okay so it is very simple
+aggregation that we're going to do.
+I hope that you guys are able to see um
+if it's small say something right. So
+now um what we're going to do uh we're
+going to go and say
+maybe the order dates. I grab the order
+date. I grab the sales amount
+and just to check whether they are
+inside if yes. Okay. So now I'm going to
+use some date trunk. I think it's date
+trunk in order to make it as a month.
+So,
+so this is um order dates and now group
+by
+just grouping by just to do some basic
+aggregations. Okay. Now,
+um get some error sales amount. We don't
+have sales amount.
+Oh, I have to sum it, of course.
+Now I get some uh let's say corrections
+from the AI. So now I'm aggregating the
+data by the month. Okay. So um it's
+something that we usually do. We
+aggregate the data by something whether
+it's a date or a product or any
+dimension. So so far it is usual stuff
+right it's like only pure scale. But now
+what I can do I can go and share my
+query with someone else. So now I say
+okay this is the result this is the
+analyzis I'm happy about it I explored
+let's say those stuff and now what I can
+do I can go and share it with other
+colleagues so now if my colleague is as
+well having an account and stuff like
+that I can go and say I'm going to write
+his username or ID and I'm going to say
+you know what I'm done with the
+analyszis so now I'm talking about the
+collaboration guys so um now scam
+someone else as I said the power user
+and they going to start working with you
+in the same query. So now we're going to
+share the query with them and start
+working together. So he going to see
+exactly
+uh the query the same query but of
+course depend on the security levels and
+stuff they might see as well the same
+data if they have enough rights on the
+unit catalog. So that means now two
+people are working in the same query and
+they going to extend it and keep working
+on it until it's correct. Now if you say
+okay this is perfect this is exactly
+what I'm searching for. Now of course
+you can go and download it as Excel CSV
+but I can go and change as well the
+visual of it. So if you go and click on
+the plus over here I can change how the
+data looks like. So for example here um
+yeah of course data bricks is going to
+suggest for you something which is very
+correct. I need a line chart. Line
+charts are usually the best for things
+over the time. So I'm going to have a
+line chart for it. And I'm going to say
+there's here some configurations. It's
+like PowerBI. So you're going to change
+here the type. Maybe you're going to
+make it power line area pi. And you have
+here some yeah some visuals. But again
+it is not that strong like Tableau or
+PowerBI. So the options here is only to
+do exploration. It's not to do fully
+standard reporting for your end users.
+So now if I like this visual I'm going
+to save it.
+And now look at this. I'm able to see
+the result as a data and as well as a
+visual.
+So I'm working this is something you
+cannot do in SQL server or in in Oracle
+or whatever. Yeah. So it's it's it's um
+it's something that you can do
+immediately on your query to do
+visualization. So I'm going to say here
+the uh orders over time.
+And now we can do something more crazy.
+I'm going to now call my query as well.
+Uh EDA maybe um orders over time.
+And now so I shared it with someone
+else. I changed as well the visual of
+the results. And now what we can do we
+can go and add it to a dashboard. So now
+this is a really nice query that I need
+that I want to put it in a dashboard. So
+what you going to do not only sharing it
+I can go click on the yeah here small
+icon and say add to a dashboard. So we
+are making now brand new dashboards or
+you can add it to already existing
+dashboard. Okay. So I'm going to say
+here I'm just exploring exploring the
+sales dashboards
+uh exploring the sales sorry sales data.
+[snorts] So I'm going to go and add it
+here. It's like dashboard. It's like
+just collection of interesting insights
+that you are finding inside your
+dashboards. And now and now um data
+bricks going to moves you to another
+tab. So uh by the way once you start
+working with data bricks you're going to
+open a lot of tabs in your browser
+because yeah it is it is how you start
+something new. So I always start my day
+with one tab and end up with 300 tabs.
+So now uh I'm going to put now now this
+is the dashboards and as you can see
+this is the result of my query. Now it's
+like you are doing PowerBI but very
+simple one. So I can go and add a text
+for it. I'm we're going to like make a
+new dashboard soon. So I'm going to say
+I'm just um EDA sales dashboard uh sales
+data. Yeah. So just the title of my
+dashboard. And now what we're going to
+do, we keep going. We keep exploring the
+data and whenever you find something
+interesting for your project, for your
+use case, you pin it in this dashboard.
+So now what I'm going to do, I'm going
+to go back to the queries
+and
+sorry SQL editor and keep going. So I'm
+going to go and add maybe another query
+and here on the plus. So a new query
+and I just prepare few stuff so that's
+we don't spend a lot of time just
+writing. So now this is another query
+where I'm just aggregating the data by
+um uh by the category but here I think
+have different schema sales DB
+here as well sales DB I'm just showing
+to do with the workflow. Okay. So now
+another query another aggregation and
+once I run it I am going to get this
+data the row data of the results. I'm
+going to go and add a new visualizations
+for it. So now always databick is going
+to try to bring for me a suitable
+visualization but not always correct. So
+now I might go with the me by charts
+then save.
+So now this is another visual where I'm
+going to say okay this is sales by
+category
+uh this is as well my EDA query
+sales by category.
+So now if I like it and I can go share
+it and if everything nice then I'm going
+to go and as well add it to my
+dashboard. So I will not create a new
+dashboard for it. I'm going to go and
+add an existing dashboard for that and
+it's going to be
+the exploration dashboard. So, import.
+Now I'm getting exactly the result of my
+second query. And as you can see, can
+move things around. Come on, move. Oh.
+Yes. Now, now it's moving.
+So
+with that, my friends, as you can see,
+I'm putting all the knowledge that I'm
+finding in the data. I'm exploring the
+data, of course, not only me, maybe with
+someone else. And each time I find
+something really interesting, I'm
+putting it in a dashboard. And now this
+dashboard, of course, the knowledge that
+I collected over the time, I can go and
+share it with others. Yeah. But now
+we're going to talk about the
+dashboarding. Uh this is the dashboard
+that we are building. If you go and give
+it to a standard user, yeah, to someone
+is very demanding. Someone that needs
+colors, needs stuff. They might not like
+it. Where is it? Here. They might not
+like it. They're going to say, "What is
+this? I need a filter. I need my logo. I
+need my stuff." And here it is very um
+yeah, as you can see, you can add only
+visual text and filter and that's it. So
+that's why this kind of work is actually
+only like between small team or let's
+say small group of people that are
+exploring the data and understanding how
+to let's say solve the business issues.
+So that's why we don't expose those kind
+of dashboards with big audience. Okay,
+you cannot do that. First of all, it can
+be very expensive. something that I
+didn't talk about guys. Each time a
+query each time you query here
+um
+so let me go back to the queries each
+time you do a query it's going to use
+some kind of resources in in AWS or
+Azure you're going to use some resources
+from data bricks some some servers and
+stuff and you're going to pay for it
+yeah and um if you now give huge
+audience the dashboard and stuff each
+click each something they do it's going
+be uh something that's going to create
+costs for the projects because you pay
+as you use. Okay, so you pay as you use.
+It's not like PowerBI like you put the
+data in the in the data sets and the
+import mode and stuff and uh the
+calculations you are not paying for it
+actually anything unless you use direct
+query of course but now everything that
+happens here has a price your company is
+paying for it. Now if I expose of course
+the dashboards for huge like I don't
+know 3,000 people can I generate really
+a lot of costs that's why this type of
+activities is actually
+um for exploring [clears throat]
+purposes for understanding the data for
+uh yeah for this kind of work for for
+you even for you as data analyst because
+now I've done the exploration on my data
+sets next day I have a nice dashboard
+without connecting any extra tool yeah
+yeah to the data bricks without using
+PowerBI. So this is something that is
+really advanced for you as data analyst
+that you write queries, you can
+immediately build the quer the
+dashboards and uh you can collaborate.
+This is something amazing. I I I found
+it with a lot of projects. We
+collaborate with the business users
+directly on the query level. So this is
+something nice and um this is actually
+the exploration phase yeah of data
+bricks. Now there's another way where
+let's say
+you say you know what I don't want to
+start from the SQL editor I don't want
+to write queries I don't want SQL I just
+want to build a dashboard yeah it's like
+PowerBI I'm PowerBI guy I don't want to
+go in the whole process writing SQL's
+group by I don't know date trunk
+function stuff I don't want to do the
+whole thing I just want to build a nice
+dashboards and I want to explore the
+data using dashboards
+So this is of course totally possible.
+Uh this is another way but I don't
+believe this is a nice way to analyze
+data but another way that you go
+immediately to the dashboard. So on the
+left side you don't go to the escro
+editor you go immediately to the
+dashboard and say create a new
+dashboard.
+Now this is brand new dashboard. Okay.
+So it's empty and yeah like any other
+tool you need data first. So you go to
+the data on the link side and here you
+have different options. So either you
+upload the data directly to the
+dashboards it's like PowerBI okay or you
+select and start picking the tables that
+you want like for example over here add
+a data source or you start writing a
+query that is dedicated only for this
+dashboards. So you have those three
+options. Now if you are a guy that's or
+girl you don't want to write any skill
+query you're going to go and say yeah
+add the data source and now you're going
+to browse your unity catalog your
+catalog okay so the workspaces uh the
+sales DB and you're going to say yeah I
+like the fact table I would like the
+products as well and that's it I I need
+those two and you say convert yeah so
+now
+Barbie going uh put those two tables to
+be ready for you to be used for your
+dashboard.
+It's um a data brick. Sorry. So it's
+like PowerBI. I'm selecting the things
+that I need. Or if you don't want Yeah.
+If you want still write SQL,
+you can go and say create
+fromQL query. So now you don't pick the
+tables. What you going to do? You're
+going to write your query that's going
+to use for the dashboard. So as you can
+see here, everything is empty. So and um
+yeah you have to write the query that
+you want. So we are skipping actually
+the SQL editor. We are going through the
+data dashboard and here uh for example
+I'm going to go and put one query there.
+I'm just joining the tables together.
+I'm joining all the data that I need. So
+for example
+I'm joining the facts with the products
+and then with the customers and I'm
+selecting only the data that I need. As
+you can see here
+um I'm not doing the aggregations. Okay.
+So there is no group by there is no
+having there is no sum or average or
+anything. Okay. So we are just
+selecting we are picking the things that
+we need in order to build the
+dashboards. So now if I say this is the
+query that I want then run
+have syntax error. We have to find out
+where is it.
+I have here double point.
+So now
+I'm going to get the results and after
+you say okay this is exactly what I need
+then I go to dashboards. Now here you
+have your data ready and you start
+building your dashboard as a very simple
+PowerBI thing. Yeah. So you say okay my
+dashboard has sales
+uh has a title. of sales dashboards.
+I'll not go in a lot of details. I think
+this is something really cool for you to
+explore on your own.
+So, but I just want to show you a few
+things. So, this is a title of my
+dashboard and then I'm going to say I
+need a visual for it. So, I'm going to
+go and grab a visual. And now,
+>> [clears throat]
+>> uh the first thing that you want to
+decide is where the data comes from.
+Now, in this dashboard, I said two
+tables and then query. Actually, you
+don't need all those stuff. You just
+need one of them. So either the tables
+or the query. So I like my query
+and yeah so it has bar charts. So what
+you going to do? I'm going to say
+I'm going to count. So here you have to
+yeah it's like you're defining a visual
+in PowerBI. Nothing crazy.
+So count the orders and then buy
+something, right? So, by category
+looks nice, right? No, not yet. Oh,
+well, it looks nice. Look at this. Now,
+I have a ranking of or let's say I can
+see how much sales or how much orders we
+have for each category. Um, you can
+switch it by those arrows. So, you can
+choose the visuals. You can It's just
+fun. Yeah, you don't you don't need me
+to show you those stuff actually. Um,
+can I add a title? Title. Title.
+Jo and access title. Yes. Okay. So, this
+is the first dashboard. And maybe I'm
+going to go and make another one,
+another visual.
+This time I'm going to make a line
+charts. Again, I like line charts. And
+then maybe the
+sum of sales. and then by order date.
+Order date. Order date. It's here.
+So this is my line chart. Looks weird. I
+have to flip. And with that I have my
+second uh visual for my dashboards. So
+as you can see guys, this is like yeah
+one way as well to start immediately
+with a dashboard. You don't have to
+write first a lot of queries. But this
+is how things works. You cannot if you
+have an access to a lot of data you
+cannot just go immediately and know
+exactly how to build the dashboard. I
+believe first you have to go through the
+exploration phase through the SQLs and
+only later you start building your
+dashboards. Yeah. So um this is what you
+can do. Now we have covered already few
+stuff right.
+Um we have covered already the SQL
+editor which is the most important
+thing. Yeah, the SQL editor in data
+bricks. You saw the first version of a
+dashboard. It is very fundamental. It's
+not fancy, not pixel pixel perfect. And
+um yeah, what is missing? Let's see the
+most interesting one, the AI. Now,
+of course, we have AI. So,
+um we will not go to the machine
+learning and AI stuff where we can train
+a model or something. We are talking
+about something called AI Genie. Uh it
+is introduced uh by the way um uh
+introduced a few um yeah maybe I'm going
+to say half years so far for the AI
+genie. It is very very new and I
+presented this topic for top top
+management at Mercedes-Benz. They were
+very excited about it because this is
+really the future of how to work with
+data as data analyst. And this is
+something
+I I'm very excited about it. So let me
+explain for you what is AI journey.
+Um I'm not sure we are have already
+three hours right
+I will keep going. If you guys are tired
+um then I'm sorry for it but I will keep
+going. So now AI genie um the thing is
+datab bricks is very smart.
+They let you add your data here. And as
+I told you inside your catalog, they
+they stores a lot of informations. Okay,
+they are storing everything about inter
+like
+um about your tables, the history, the
+lineage, the insights. So they keep
+learning, keep training on everything
+happening on their platform. So they
+they know which table is the most
+important table in the whole company.
+They know the lineage of the data. They
+know the queries that you are doing.
+Like all the queries I'm doing now, they
+are stored somewhere in data bricks.
+They know the dashboard that I just
+created. They know the catalog itself.
+If you add comments, if you add stuff,
+they keep keep collecting collecting a
+lot of statistics, a lot of metadata
+about my data. And they feed their AI.
+They feed the AI with all those stuff.
+So with that data bricks AI going to be
+smart enough to answer business
+questions using LLMs using natural
+language. So they have their own models.
+They have a lot of models. Okay. It's
+not only one.
+Um it's it's um it's not only one. It is
+a lot of a lot of LLMs that is used
+here. The GBT the uh the one that
+converts to SQL. So they are using a lot
+of things in order to uh to let's say to
+train all the usage all the metadata and
+of course you're going to help as a data
+analyst like this is the new role of of
+your you as data analyst not only
+building dashboards you have to help the
+AI to answer the business questions
+correctly. Okay. So data bricks going to
+use the usage data bricks going to use
+your help as a data analyst in order at
+the end to answer correctly the users.
+So the loop looks like this.
+Um standard user going to ask the AI
+genie from data bricks. It might might
+make mistakes. The team I believe here
+the data analyst. It's not the data
+engineer. Okay. Data engineer has no
+idea [laughter]
+about about the usage and about the
+users. We are far away guys. So it's
+it's you as a data analyst. So you as a
+data analyst my friend you're going to
+update the meta data
+of the data bricks so that genie
+improves so that the AI improves and
+answer people better. So that means
+um yeah so the AI gen uh fundamentally
+it uses two things of course.
+So it uses
+let me take this. So it uses the tables
+that you have the data the storage and
+as well it uses the same SQL warehouse
+that we just used in our queries. So
+nothing crazy. Okay. So it is the same
+resources that we are using. So table
+and storage but it going to learn it is
+learning
+it is learning from everything that we
+do here. So there is stuff that actually
+you don't have to do anything about it.
+It's the logs, it is the queries, the
+Unity catalog and stuff. Those are stuff
+the logs especially. It's something that
+is out of the box. It's going to learn
+it automatically. But still as a
+business user or let's say as a data
+analyst I'm going to say here. Sorry. So
+data analyst
+or or maybe
+yeah. So you still going to give
+instructions to the AI. you're still
+going to go and update the meta data
+before we call it my friends data
+steward. Okay, the we had like data
+stewards that going to do the job but I
+believe data stewards cannot do that. We
+need a data analyst that knows exactly
+the correct queries sorry and edit the
+instructions. So you still have some
+manual work to do in order to enhance
+the AI. And then of course the business
+users or the standard users whatever
+standard users my friends they're going
+to go and they're going to use their um
+natural language. So they're going to
+ask how many orders happens how many um
+yeah how many customers we have and
+stuff. So they're going to use their
+their language to ask the AI. The AI
+going to go and generate an SQL query.
+SQL query.
+This is very important. SQL query guys.
+It's going to generate SQL query.
+And that means currently [clears throat]
+I don't know maybe in the future it's
+going to be better, but the AI going to
+generate an SQL query. It's going to be
+sent to the warehouse and it's going to
+get the result. Now my friends with the
+SQL query you cannot do advanced
+analytics you can only ask about let's
+go back to this picture
+if you have an SQL
+you can only do this part
+where is it so you can only do this part
+what happens so that's why you cannot
+ask the AI genie about things in the
+future to tell them okay predict how
+much money my company going to make in
+next two years. Why the question why? It
+cannot answer why. Yeah. So it will not
+answer why um why we have bad sales. Why
+the sales are dropping in specific? It
+is not that like magic. Yeah. It will
+it's just creating SQL queries. Okay. So
+don't expect this is something that I I
+written a guide on it in Mercedes. So
+once you start using my genie
+my genie
+um here do not ask why. [laughter]
+So that's why I don't think it's yet
+there. Yeah because those people if you
+give them prompts they're going to ask
+why. Yeah. So that's why they generally
+say oh it's it's a hard question for me.
+Yeah. So you can ask only about the um
+yeah the past. So do not ask why. And I
+believe this needs still time but but um
+it's already doing the BI word. So you
+can use genie it's called as well B I AI
+they they changed the name data bricks
+changed the name and said this is B I AI
+so that's everyone you cannot ask why
+why is you still need the data
+scientist. Okay. So now
+um I'm going to show you how to do this
+and I recommend you really to spend a
+day or I don't know spend a lot of time
+with this because this is really fun.
+Now we're going to go to the genie
+over here. Look at this. How simple to
+make. So what going to do? Few clicks
+new. It's like I'm building a dashboard.
+Now I'm going to say uh go and grab my
+data. So the fact sales create.
+Now I have my data set. Okay. So again
+like dashboard or query you always start
+by defining which data should be used
+for the AI. And believe me this is
+something at work it is one of the
+hardest thing to choose exactly what
+should be used inside the AI. Okay. So
+um yeah you can understand this once you
+start using uh AI gen with a lot of
+people. So now it's like guys here
+you're going to give it instructions. So
+maybe you're going to give it a company
+name. Okay my company is so I am
+YouTuber gold uh data with bar I don't
+know you give it instruction. Yeah keep
+the language. Um yeah, I don't want to
+answer in shorts.
+Um yeah, and maybe
+um I don't know
+use icons whatever you you give it a lot
+of instructions and um you start maybe
+if your data set is very complex, you
+start explaining a little bit your your
+data. Like for example you can say use
+um
+um use um always starts from the fact
+table
+don't go immediately dimension you can
+give it some like it depends as you go
+with the AI with your data you start
+giving it instructions as I told you
+this is the loop you give it you give it
+feedback and you improve and then okay I
+have to save Sorry.
+Yeah. And then you can define as well
+how the join should happen. Left join,
+right joins and stuff. So as you can see
+it is completely based as well in SQL.
+So now uh what you can do here you can
+give it like some example queries like
+for example if a user asks um I don't
+know how many orders always use this
+query. So you can write as well queries
+from your side as a golden queries in
+order to be used from the AI. So there
+is this is where you're going to work as
+data analyst where you give you are
+giving instruction to the AI and now I
+can start giving like the user going to
+go over here as as ship. Yeah. And uh
+what do we have here in the data? Sorry,
+I have to have a look how many orders.
+Show me
+total orders over the time
+maybe something like this.
+So now the AI is work like now what is
+happening with that it is going through
+the whole process. So it is trying to
+see what it's learned. It's and uh it
+generated an SQL query. It sent this to
+the warehouse and the warehouse
+answered. So now look at this. Oh no,
+sorry this is here. So now I get a
+prompt telling me okay you have five
+orders by this day, four orders by this
+day and so stuff like that. So now I can
+see the results. it is written as a text
+and as well I can see a table like query
+and of course you can see the query that
+is used so now
+yeah that's why standard user cannot
+evaluate whether this is correct or not
+but you as that unless you can see the
+query you say okay this is correct he
+remove the order date he used the day
+trunk as I used it yeah that day trunk
+in order to go to the granularity of the
+day so I think everything looks cool but
+I'm going to say here Um yeah
+um show total
+orders by months
+and now we start prompting and start
+talking to the data. Um
+now as you can see I see the data now by
+the month. Okay. So you see here
+December and January and stuff. And now
+we're interesting always to check the
+query. Now look at this. He's doing the
+date trunk with the month. So now we are
+in different granularity and this is
+exactly the power of AIBI. [snorts]
+So I believe in the future this going to
+be your role as data analyst
+your user going to go and start talking
+to the data. Okay they going to start
+having a chat with the data but I don't
+believe you are there yet. Okay. Um so
+they're going to have a chat with their
+data and they going to have the results
+and you as data analyst you're going to
+evaluate those stuff. You're going to go
+over here and say uhhuh let me see
+where's the query where's the query so
+let me show the query this is correct
+and then you give it a thumbs up or
+thumbs down or you can add it as an
+instruction so here you say perfect you
+have done well job so with that you are
+teaching uh the AI and uh giving a
+feedback and this is very important now
+why this is very powerful again guys why
+this is very powerful it's not a simple
+AI model or LLM model that is using this
+it is a huge work at data bricks to keep
+learning about everything happening on
+the platform. they are like there's of
+course possibility for you to use yeah
+some some model yeah not from data
+bricks you can go and install a model in
+datab bricks and you start converting
+the natural language to AI uh to to
+generate the skill queries but the thing
+is they are investing a lot they are
+investing huge number of money the data
+bricks in order to make this works in
+order to have this so I don't believe we
+can compete with this as data scientists
+I don't believe we can bring for our
+users a smarter model that's allows you
+to chat with your data. I believe the AI
+gen going to yeah they're going to win.
+It's because they are just investing of
+this. Now I hope that's no one from
+datab bricks here [laughter]
+but they're going to generate a huge
+amount of money of this guys because the
+thing is
+why why they are they're going to make a
+lot of money of this. One of them is
+using the resources. Using the resources
+now let me go here
+um
+here. Now imagine imagine what is
+happening here. Now in the company you
+have yeah let's say data analyst they
+are working with a writing an SQL query.
+How much time it takes you to write a
+query? Yeah, it takes maybe I don't know
+10 minutes and maybe in the whole day
+you write kind of three five queries
+over the time right now how you are
+generating five queries and you are
+using the resources five times
+now imagine if this works a standard
+user is going to use their AI
+each prompt
+is generating a query and it is using
+resources and you are paying for data
+bricks So it's going to be it's going to
+be amazing. Yeah. So there will be huge
+usage there will be huge audience not
+only not only we d that engineers and
+data analysts there will be standard
+users they're going to leave our leave
+the whole thing and they start chatting
+with the data and this of course means
+consuming a lot of data so and a lot of
+resources and stuff but I believe um
+this is a win-win situation. It is
+important that everyone in the company
+to work with the big data not not that
+not like the old style like uh let me
+I'm closing now the loop guys
+now not like the old style not like the
+old style where only the very very
+experts the two three people that can
+work with big data can work with the
+data now they are bringing everyone to
+be able to work with peak data. So not
+only data engineers
+as well you as data analyst and now the
+business users and stuff and yeah so
+that's why everyone now can talk
+actually with big data I presented this
+uh to the higher management they were
+very excited about it I rolled this out
+to few users uh not to a lot in order to
+practice and to add the instructions
+here but um it needs time and I think
+this going to your main job to add the
+right comment to add the right data to
+not like to help the users doing PI on
+their own. Believe me, if you are a data
+analyst that are hired in central IT
+somewhere, you will never be able to ask
+the right questions like a business
+user. A business user can ask the right
+questions. They know what is the
+business questions and you are always
+the middle guy between the business user
+and the data. So they have always to ask
+you to
+answer the questions. So now we are
+sorry to say that removing you in the
+picture and you are the going to be the
+one that is helping the platform helping
+this to be correct because without you
+as a data analyst this will not work. I
+don't believe it's going to ask the
+right questions here. It's going to
+hallucinate. It's going to make the
+wrong data. This is very simple. Yeah,
+I'm showing you now sales orders. But in
+processing the companies, they are very
+very expens very complicated. Selecting
+the right data, it's not something easy.
+So there's a lot of work for you to do
+in order to prepare this environment. I
+don't believe a data engineer like can
+do all those stuff unless they
+understand the data as well. So that's
+why I'm really yeah excited about this.
+I wanted to show you those different
+ways on how to use AI. I wanted to give
+you the mindset from me not only uh yeah
+you can hear me make an I'm just giving
+you my thoughts process as well with
+that that you can um understand what is
+going on. Now I was expecting that I'm
+going to build a full dashboard and
+stuff but I enjoyed more taking you into
+a whole process. So let me go over here
+again to the module 2. I hope that I
+know that you guys are tired. I'm
+blabbering a lot but I hope that you are
+enjoying this. Um, so now we went I
+would say through everything. So not
+everything I'm sorry we didn't cover the
+data bricks app Power RBI and we didn't
+I didn't introduce you to notebooks. So
+that's why what I'm going to say we
+managed to close all those topics but
+what left is the PowerBI part and the uh
+the notebook part. So what we're going
+to do I'm going to move those two to
+tomorrow with the data engineering. I'm
+going to do this at the start quickly.
+So I recommend you to uh to join as well
+tomorrow because uh we're going to talk
+about all those stuff. Um I'm going to
+say there will be homeworks but you can
+start with the first section. I'm ready
+here. So you can go over here and do all
+those steps
+and uh yeah do it. Um yeah it must not
+be until tomorrow. Okay I will not
+control you. [laughter]
+You going to do it on your own. Okay so
+you can do those tasks and uh if you
+have any questions ask in discord. I
+will be there as well answering your
+questions but tomorrow I need it in
+order to prepare for a little bit for
+the data engineer. That's why the
+homeworks for the data analytics is
+still empty.
+uh once I cover both of the days I'm
+going to go and add homework for you as
+a data analyst and homework for you as a
+data engineer. It's just to guide you on
+the steps, okay? So that you remember,
+okay, Abara, I did I first start the
+query and then insert the dashboard and
+stuff. So I'm going to put for you here
+all the tasks and then you can work on
+it. So but give me some time. I will
+update this by the end of tomorrow
+and um [snorts] yeah, I don't know. I'm
+I'm happy that we managed to cover all
+those points.
+And I'm sorry I I was not able to read
+all the shot. I'm really focused on my
+mind. I'm trying to remember thing at
+the work how things works um like at the
+company and explain little bit for
+[clears throat] you why. I hope the
+language was uh not that hard. I hope
+that this was slow for you. As you can
+see there is a lot of things that is
+going on data bricks. There's a lot of
+developments. All those stuff is in the
+last two years. like before two years
+the whole platform looks completely
+different. I didn't uh there is was no
+AI gen there were no dashboards queries
+and stuff like even the unity catalog
+the whole unity catalog is what not
+there it was only for uh data engineers
+okay so now the platform is expanding
+and I can tell you one of the yeah where
+I worked completely I can tell you 400
+projects 400 projects only using data
+bricks inside one company so what I'm
+going to tell you uh keep your eye in
+this platform um do the tasks. Yeah,
+learn it, read about it. I'm going to
+add as well some uh training materials
+on it.
+Um let me just stop the recording
+because I think I'm lagging. So now um
+I'm saying do the tutorials, do a
+project. Okay. Um end to end, upload
+data, ask business questions, query,
+make dashboard, add it to the genie, ask
+questions, then put everything in one
+big project. Explain everything that you
+have learned from data bricks and then
+show it. If you are searching for a job,
+explain what you have done in data
+bricks for in the interview. Tell them
+maybe a little bit my mindset that I
+have told you. Um show them uh get
+repository where you have your queries.
+Uh speak about data bricks uh at your
+interviews as a skill that you have as a
+data analyst. Um this is amazing if you
+have of course Excel, PowerBI, those
+skills are needed. I showed you like 80%
+of people working with Excel. Um
+standard reports. This is the most
+important thing that you're going to do
+in PowerBI. Learn those stuff. But give
+your time this year. Give time for this
+platform. Learn it. It's going to be
+huge jump because now most of the data
+analyst all of them are learning only
+PowerBI, Excel, SQL. Okay. And you're
+going to stand out the crowd if you show
+ah I know about the cloud. I I work in
+the cloud. I I used data bricks. Um I
+can work with big companies. I can work
+with um like such a scalable uh systems.
+I can configure even AI. You know you
+can go and and tell people you know I
+configured AI. I give instructions. I
+it's like a whole projects. Yeah. And
+it's very easy like it's only clicks.
+That's why if I were in your place as
+that analyst, I'm going to show a full
+use case on how I work with it. If you
+have built some kind of let's say
+portfolio about this, then share it with
+others please because there's very few
+people now are working with the data
+bricks but like thousands are just using
+PowerBI. Yeah, there's a lot of people
+talking about PowerBI the whole day and
+sharing project and stuff, but you can
+start as well guiding the others. If
+you've done nice projects, talk about it
+in LinkedIn, share it in the community
+here in Discord and maybe um yeah, share
+share the channel, [laughter] of course,
+if you like this kind of uh boot camps,
+I enjoyed it a little bit. I'm a little
+bit exhausted because I yeah, I prepared
+the notion road map and then the
+communications and stuff. I think I I'm
+learning as well how to do this. Uh but
+I enjoyed it a lot. I'm really sad that
+I'm not able to read your shots all the
+time, but I I will visit it after the
+record. I'm gonna see all those stuff.
+So, um
+I hope that you guys enjoyed the boot
+camp. I really enjoyed it. Maybe we can
+do few questions, Q&A,
+just 10 minutes, let's say, just to
+check your questions. Um, I'm gonna say
+let's see some questions and uh I'll try
+my best to answer it. I don't have I I
+wanted to use um a different app in
+order to highlight the comments but I I
+didn't manage to do that. That's why I
+will not be able to highlight the
+comments but I will try my best to
+um
+to maybe answer them.
+Just a second. Um,
+window capture
+shoot.
+Can I show the shots
+studio YouTube?
+Oh, look at this. Can I show the shots?
+So now
+now we can see the chat as well. Okay.
+So now [clears throat]
+yeah I will try to pick few questions in
+order to answer. Uh sorry I will not be
+able to go through all the questions but
+again I'm available um every day on the
+discord. I check all their their
+discussions. So if you have any
+questions um let me know. Now um
+Okay.
+Okay. Let's let's pick this question.
+It's important. The difference between
+snowflake and data bricks. Um
+um yeah, we didn't talk about this
+actually a lot about the competitors.
+It's not the only platforms out there
+guys datab bricks but it is the new way
+on how to build data platforms to help
+companies like doing data strategy.
+Okay. So but datab bricks is the one
+that is currently is able to cover all
+the aspects.
+So they are covering the data
+engineering the data analytics the data
+science and even now they are going to
+the direction of transactional
+applications.
+So they want they are really want to
+cover everything and this is something
+that you don't have in snowflake.
+Snowflake is very centralized on the
+data warehouse idea
+using SQL but as well using the open
+format and all those stuff but they are
+very focused narrow focused and um
+focusing on only one topic to build uh
+yeah SQL data warehouses data systems
+completely using SQL and to do analytics
+but the scope is very small yeah that's
+why that breaks is um opening the door
+for like they are working on multiple
+directions at the same time and I think
+they are they are winning currently but
+it's it's as well a fight it is as well
+a concurrence to uh data bricks I don't
+know how things will goes but I see
+things is moving more direct data bricks
+but maybe because I worked in company
+that is working with data bricks but I I
+believe um it is it's winning in this
+direction
+so Now, um, by the way, everything that
+I'm telling you, it's only my
+experience. It could be I could be wrong
+or something like that. So, I'm not the
+one that knows everything, right?
+Um,
+do I have to learn ML as that engineer?
+No, you don't have to do machine
+learning as that engineer.
+my experience in Bangalore. Oh my god
+guys, I have a lot of photos and videos
+in India.
+Like there's a lot of things that I can
+make content of. Yeah, my visit to
+India. Um I enjoyed it a lot. Uh it was
+it was one unique uh experience visiting
+India. Uh I loved it. It was it was
+amazing. I it was something that I uh I
+wanted a lot. I worked with a huge team
+from India like around uh yeah 50 can I
+say 12 colleagues from India and we
+worked a lot very hard very hard
+building this data platform this data
+warehouse data lake house we worked a
+lot together and we spent every day
+every day like 10 hours I going to say
+just building building we were very
+successful together but I didn't meet
+meet them in person I we always talk
+talk in the meetings and stuff and
+finally I decided to go to India and to
+visit them and it was an amazing
+experience. I experienced the culture. I
+experienced how they work. It's really
+fun to work in India because there's
+like you can make fast friendships and
+stuff. Uh I I enjoyed the culture there,
+how they work. And uh yeah, they had
+really nice offices there, nicer as in
+Germany. And yeah, there's a lot of
+things too. Maybe I'm going to make one
+one episode about work about India. I
+spent there uh two weeks. It was
+amazing. I liked it. But now I'm not
+able to visit them because I left
+Mercedes-Benz.
+You guys are awesome Indian people. You
+guys are very very nice people. Very
+polite. But you have some some things
+that you have to improve. You are very
+shy. Like come on. You are very shy. You
+have to you have to open up. You have to
+be confident. You have to sh to share.
+You are very shy. And this is something
+that is not always a great thing at work
+because a lot of you have great ideas
+but you guys are afraid to say it or shy
+especially if you are juniors so you
+have to be more confident. Shy is good.
+Um but of course very respectful very
+polite so that's why I I say uh yes it
+is good to be respectful to be nice but
+at work sometimes you have to be harder
+you have to not shy it's not work not
+working at work you have to you have to
+talk you have to challenge you have to
+do stuff so but you guys are really shy
+and uh I think once you get to be a
+senior or a little bit older then you
+start being like more talkative
+I hired in my project a lot of juniors
+that engineers they are we're all shy
+all like not talking a lot and this I
+need uh in projects uh a lot of times a
+lot of inputs from the developers and if
+the developer is shy and not talking
+this is not really good but in the other
+side uh it was very respectful I I liked
+it a lot and um yeah I hope that I can
+visit you again so uh you brought the
+topic But [laughter]
+um let's talk about
+um another questions.
+Um okay, data fabric.
+Data fabric and data bricks. uh data
+fabric it is um yeah I I've done one of
+my project at the start using uh
+Microsoft products uh like the synaps
+and um the data factory
+and all their Microsoft tools in the
+Azure I didn't like it it is not
+something that you can do in order to
+build an enterprise big projects because
+it is all about
+like if you want to make small project
+it's fine but they are not thinking
+big okay and I don't believe datab
+bricks is going to be a solution to be
+uh data sorry not data bricks data
+fabric I don't think it's going to be a
+solution for an enterprise a big company
+because they are not focusing on the
+right topics and I'm not a fan of that
+that's why I I don't believe that a
+fabric
+it's going to be um um yeah has like a
+big future compared to data bricks
+because the data factory tool is not
+really good tool uh compared to the
+pipelines using workflows in data bricks
+it it's like the
+the the way that Microsoft do their
+their yeah their tools is that they
+build bring one tool and then they maybe
+over the time they forget about it or
+they don't focus on it and stuff so you
+cannot really count on it um I'm going
+to say they have done an amazing job
+Microsoft by making the the Azure
+platform by making the PowerBI but I
+don't like their ETL tools. I don't like
+their um services and I don't believe
+that the fabric or whatever the name
+they bring in the future that's going to
+survive
+and uh yeah it's not for professionals
+so you cannot uh you cannot do that.
+Um,
+what all should we learn to get data
+brick certified data analyst like the
+other than what we teach? Well, in order
+to get certified, you have to of course
+do the exam
+and enroll. But uh to get certified from
+data bricks, yeah, you have to train
+yourself. you have to learn to get
+yourself familiar with all what I've
+explained today. Go through maybe the
+notion road map and try to train. The
+thing is if you get the training from
+data bricks uh they offer a lot of free
+stuff by the way. So always I'm going to
+say subscribe for their stuff. You can
+make as well boot camps with data bricks
+and start learning. Uh so I recommend
+you to as well to yeah check what they
+offer for free and if you have enough
+money then go and buy their courses and
+stuff. It's it's pretty expensive but uh
+it worth it. Yeah. If you want to get
+certified uh then you can learn
+everything on your own. Join all those
+boot camps like now I'm doing. Go and
+check the Alex the analyst as well. He
+done two hours as well introduction to
+data bricks. So check the other
+YouTubers
+but the best way is to do your own
+project. So you bring your data set try
+with all those tools and then yeah
+you're going to learn it on your own. I
+I didn't do any courses to learn data
+bricks. So I just learned it on my own
+reading the documentations stuff and I
+think you can get certified very easily.
+Yeah. From data bricks but I don't give
+certifications here if you join like my
+data academy and stuff we give you um
+the completion. Yeah. And it's not that
+it's always big difference between
+completion of the certificates and the
+certificate directly from data bricks or
+from Microsoft or from PowerBI. They
+have more weights. Well, this is against
+my my platform, but this is um uh let's
+say um
+yeah,
+getting certificates from uh data bricks
+is going to be way easier. So guys, I'm
+going to say um
+what other tools are important for data
+engineering? You can do the whole thing
+only in data bricks. I'm going to say um
+you could learn like I don't know data
+factory if you want to add from Azure or
+you start yeah learning the other
+platforms but um I made the full road
+map on data by the way that engineering
+road map going to come on Tuesday it's
+going to be full step by step on what to
+learn to become that engineer like
+better than me okay so [snorts] now I'm
+going to say guys I really enjoyed uh
+this session I have to stop because I
+want to take a
+So I enjoyed a lot this session. I think
+I'm going to make more over the time
+free one like this not only for data
+bricks yeah for powerbi and maybe only
+just chatting with you uh give me time
+to learn how to do the stream correctly.
+Okay. So I am going to bring more tools
+and by the way there is one more thing I
+might bring few people from the industry
+to have a have a talk to like I knew a
+lot I knew a lot of like experts in that
+engineering and analytics and I want
+them to get here in the stream and to
+have a chat with them so that you
+understand their mindset and how they
+think and you can ask them directly
+questions. So I'm going to work on that
+and other than that uh I'm going to say
+thank you so much. Thank you. Thank you
+so much. I read all your comments. I
+read uh everything in discord. Sadly I
+am not be able now to answer everyone. I
+enjoyed the first phase in in YouTube
+where only like few of you watching my
+videos. I was able to like answer
+everyone of you but now I am able only
+to read them and to give hurt and um
+trying to involve in discussion in
+discord because it is easier and I can
+like uh uh I can get engaged with you.
+So the community is in discord and uh I
+love everyone there. They are really
+amazing people. I see your comments.
+Your support is amazing for me. It is
+like I never expected this. Thank you so
+much for the support guys. You can do
+anything you like you can dream of. So
+keep learning, keep pushing. Uh the uh
+even the job is horrible now job market
+but you can get hired and you can work
+on all those tools and uh yeah share
+your knowledge. Share your knowledge is
+very important. So if you done something
+nice in datab bricks, share it in
+LinkedIn, share it with others. I love
+you all. Uh thank you so much for
+watching. I hope that was good for you.
+And uh yeah, I'm going to say see you
+tomorrow in that engineering and have a
+nice day. Bye-bye. Sleep well.
+So,
