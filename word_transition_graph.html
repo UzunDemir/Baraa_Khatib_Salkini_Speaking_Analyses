@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "the", "label": "the", "shape": "dot", "size": 223.89895889599546, "title": "PageRank: 0.1069"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "to", "label": "to", "shape": "dot", "size": 129.37145440995204, "title": "PageRank: 0.0597"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "data", "label": "data", "shape": "dot", "size": 94.53829114220117, "title": "PageRank: 0.0423"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "go", "label": "go", "shape": "dot", "size": 83.35340246805468, "title": "PageRank: 0.0367"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "is", "label": "is", "shape": "dot", "size": 80.23071766640336, "title": "PageRank: 0.0351"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "and", "label": "and", "shape": "dot", "size": 79.76816505276692, "title": "PageRank: 0.0349"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "have", "label": "have", "shape": "dot", "size": 77.67965765526084, "title": "PageRank: 0.0338"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "first", "label": "first", "shape": "dot", "size": 66.6121423045922, "title": "PageRank: 0.0283"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "going", "label": "going", "shape": "dot", "size": 60.11914423176629, "title": "PageRank: 0.0251"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "we", "label": "we", "shape": "dot", "size": 56.550686882599216, "title": "PageRank: 0.0233"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "of", "label": "of", "shape": "dot", "size": 56.335444192964914, "title": "PageRank: 0.0232"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "same", "label": "same", "shape": "dot", "size": 52.850781641436555, "title": "PageRank: 0.0214"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "lot", "label": "lot", "shape": "dot", "size": 47.89956808642841, "title": "PageRank: 0.0189"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "you", "label": "you", "shape": "dot", "size": 47.16104977750328, "title": "PageRank: 0.0186"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "can", "label": "can", "shape": "dot", "size": 46.50661181931737, "title": "PageRank: 0.0183"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "not", "label": "not", "shape": "dot", "size": 45.113168593622554, "title": "PageRank: 0.0176"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "next", "label": "next", "shape": "dot", "size": 44.53569238080017, "title": "PageRank: 0.0173"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "be", "label": "be", "shape": "dot", "size": 44.308774910504056, "title": "PageRank: 0.0172"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "see", "label": "see", "shape": "dot", "size": 44.12986675594488, "title": "PageRank: 0.0171"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "this", "label": "this", "shape": "dot", "size": 43.916709586968686, "title": "PageRank: 0.0170"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "last", "label": "last", "shape": "dot", "size": 43.86331319530397, "title": "PageRank: 0.0169"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "course", "label": "course", "shape": "dot", "size": 42.83509252926168, "title": "PageRank: 0.0164"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "it", "label": "it", "shape": "dot", "size": 42.10160935843669, "title": "PageRank: 0.0161"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "let\u0027s", "label": "let\u0027s", "shape": "dot", "size": 41.54392171658782, "title": "PageRank: 0.0158"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "now", "label": "now", "shape": "dot", "size": 40.42801682101831, "title": "PageRank: 0.0152"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "say", "label": "say", "shape": "dot", "size": 40.34467115067696, "title": "PageRank: 0.0152"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "do", "label": "do", "shape": "dot", "size": 39.588705924412395, "title": "PageRank: 0.0148"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "a", "label": "a", "shape": "dot", "size": 37.97761098861635, "title": "PageRank: 0.0140"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "are", "label": "are", "shape": "dot", "size": 37.899360578377326, "title": "PageRank: 0.0139"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "so", "label": "so", "shape": "dot", "size": 36.11823326474351, "title": "PageRank: 0.0131"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "here", "label": "here", "shape": "dot", "size": 36.11823326474351, "title": "PageRank: 0.0131"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "then", "label": "then", "shape": "dot", "size": 35.46537446462817, "title": "PageRank: 0.0127"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "well", "label": "well", "shape": "dot", "size": 34.730258380334114, "title": "PageRank: 0.0124"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "execute", "label": "execute", "shape": "dot", "size": 31.156593403529524, "title": "PageRank: 0.0106"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "that", "label": "that", "shape": "dot", "size": 31.09487756871144, "title": "PageRank: 0.0105"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "as", "label": "as", "shape": "dot", "size": 30.20478594691117, "title": "PageRank: 0.0101"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "right", "label": "right", "shape": "dot", "size": 30.01285366771061, "title": "PageRank: 0.0100"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "order", "label": "order", "shape": "dot", "size": 29.31539995238101, "title": "PageRank: 0.0097"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "means", "label": "means", "shape": "dot", "size": 28.877046348661683, "title": "PageRank: 0.0094"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "example", "label": "example", "shape": "dot", "size": 28.554632950477053, "title": "PageRank: 0.0093"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "going", "title": "13089\u00d7", "to": "to", "value": 13089}, {"arrows": "to", "from": "we", "title": "8050\u00d7", "to": "have", "value": 8050}, {"arrows": "to", "from": "go", "title": "7665\u00d7", "to": "and", "value": 7665}, {"arrows": "to", "from": "to", "title": "4004\u00d7", "to": "go", "value": 4004}, {"arrows": "to", "from": "you", "title": "3573\u00d7", "to": "can", "value": 3573}, {"arrows": "to", "from": "so", "title": "3349\u00d7", "to": "now", "value": 3349}, {"arrows": "to", "from": "this", "title": "3339\u00d7", "to": "is", "value": 3339}, {"arrows": "to", "from": "the", "title": "3142\u00d7", "to": "data", "value": 3142}, {"arrows": "to", "from": "have", "title": "2958\u00d7", "to": "to", "value": 2958}, {"arrows": "to", "from": "to", "title": "2875\u00d7", "to": "the", "value": 2875}, {"arrows": "to", "from": "it", "title": "2860\u00d7", "to": "is", "value": 2860}, {"arrows": "to", "from": "to", "title": "2742\u00d7", "to": "be", "value": 2742}, {"arrows": "to", "from": "we", "title": "2594\u00d7", "to": "are", "value": 2594}, {"arrows": "to", "from": "let\u0027s", "title": "2559\u00d7", "to": "go", "value": 2559}, {"arrows": "to", "from": "order", "title": "2389\u00d7", "to": "to", "value": 2389}, {"arrows": "to", "from": "as", "title": "2332\u00d7", "to": "well", "value": 2332}, {"arrows": "to", "from": "and", "title": "2311\u00d7", "to": "the", "value": 2311}, {"arrows": "to", "from": "we", "title": "2299\u00d7", "to": "can", "value": 2299}, {"arrows": "to", "from": "of", "title": "2248\u00d7", "to": "the", "value": 2248}, {"arrows": "to", "from": "can", "title": "2218\u00d7", "to": "see", "value": 2218}, {"arrows": "to", "from": "you", "title": "2102\u00d7", "to": "have", "value": 2102}, {"arrows": "to", "from": "to", "title": "2101\u00d7", "to": "do", "value": 2101}, {"arrows": "to", "from": "that", "title": "2058\u00d7", "to": "we", "value": 2058}, {"arrows": "to", "from": "of", "title": "2036\u00d7", "to": "course", "value": 2036}, {"arrows": "to", "from": "and", "title": "1991\u00d7", "to": "then", "value": 1991}, {"arrows": "to", "from": "the", "title": "1896\u00d7", "to": "first", "value": 1896}, {"arrows": "to", "from": "so", "title": "1823\u00d7", "to": "we", "value": 1823}, {"arrows": "to", "from": "have", "title": "1733\u00d7", "to": "the", "value": 1733}, {"arrows": "to", "from": "is", "title": "1725\u00d7", "to": "the", "value": 1725}, {"arrows": "to", "from": "so", "title": "1713\u00d7", "to": "let\u0027s", "value": 1713}, {"arrows": "to", "from": "and", "title": "1600\u00d7", "to": "now", "value": 1600}, {"arrows": "to", "from": "have", "title": "1489\u00d7", "to": "a", "value": 1489}, {"arrows": "to", "from": "you", "title": "1444\u00d7", "to": "are", "value": 1444}, {"arrows": "to", "from": "as", "title": "1442\u00d7", "to": "you", "value": 1442}, {"arrows": "to", "from": "so", "title": "1381\u00d7", "to": "this", "value": 1381}, {"arrows": "to", "from": "now", "title": "1365\u00d7", "to": "let\u0027s", "value": 1365}, {"arrows": "to", "from": "and", "title": "1353\u00d7", "to": "we", "value": 1353}, {"arrows": "to", "from": "the", "title": "1282\u00d7", "to": "same", "value": 1282}, {"arrows": "to", "from": "and", "title": "1235\u00d7", "to": "execute", "value": 1235}, {"arrows": "to", "from": "can", "title": "1221\u00d7", "to": "go", "value": 1221}, {"arrows": "to", "from": "now", "title": "1203\u00d7", "to": "we", "value": 1203}, {"arrows": "to", "from": "that", "title": "1127\u00d7", "to": "means", "value": 1127}, {"arrows": "to", "from": "so", "title": "1122\u00d7", "to": "that", "value": 1122}, {"arrows": "to", "from": "to", "title": "1107\u00d7", "to": "say", "value": 1107}, {"arrows": "to", "from": "let\u0027s", "title": "1103\u00d7", "to": "say", "value": 1103}, {"arrows": "to", "from": "a", "title": "1091\u00d7", "to": "lot", "value": 1091}, {"arrows": "to", "from": "and", "title": "1068\u00d7", "to": "as", "value": 1068}, {"arrows": "to", "from": "that", "title": "1061\u00d7", "to": "you", "value": 1061}, {"arrows": "to", "from": "execute", "title": "1007\u00d7", "to": "it", "value": 1007}, {"arrows": "to", "from": "so", "title": "951\u00d7", "to": "the", "value": 951}, {"arrows": "to", "from": "to", "title": "950\u00d7", "to": "have", "value": 950}, {"arrows": "to", "from": "lot", "title": "948\u00d7", "to": "of", "value": 948}, {"arrows": "to", "from": "is", "title": "936\u00d7", "to": "not", "value": 936}, {"arrows": "to", "from": "go", "title": "923\u00d7", "to": "to", "value": 923}, {"arrows": "to", "from": "the", "title": "911\u00d7", "to": "next", "value": 911}, {"arrows": "to", "from": "the", "title": "881\u00d7", "to": "last", "value": 881}, {"arrows": "to", "from": "and", "title": "848\u00d7", "to": "this", "value": 848}, {"arrows": "to", "from": "you", "title": "807\u00d7", "to": "go", "value": 807}, {"arrows": "to", "from": "is", "title": "793\u00d7", "to": "a", "value": 793}, {"arrows": "to", "from": "it", "title": "752\u00d7", "to": "so", "value": 752}, {"arrows": "to", "from": "now", "title": "752\u00d7", "to": "the", "value": 752}, {"arrows": "to", "from": "and", "title": "750\u00d7", "to": "you", "value": 750}, {"arrows": "to", "from": "right", "title": "745\u00d7", "to": "so", "value": 745}, {"arrows": "to", "from": "here", "title": "740\u00d7", "to": "we", "value": 740}, {"arrows": "to", "from": "so", "title": "693\u00d7", "to": "it", "value": 693}, {"arrows": "to", "from": "it", "title": "681\u00d7", "to": "and", "value": 681}, {"arrows": "to", "from": "so", "title": "644\u00d7", "to": "as", "value": 644}, {"arrows": "to", "from": "so", "title": "634\u00d7", "to": "you", "value": 634}, {"arrows": "to", "from": "and", "title": "619\u00d7", "to": "of", "value": 619}, {"arrows": "to", "from": "do", "title": "611\u00d7", "to": "that", "value": 611}, {"arrows": "to", "from": "as", "title": "597\u00d7", "to": "a", "value": 597}, {"arrows": "to", "from": "have", "title": "596\u00d7", "to": "here", "value": 596}, {"arrows": "to", "from": "can", "title": "595\u00d7", "to": "do", "value": 595}, {"arrows": "to", "from": "do", "title": "593\u00d7", "to": "it", "value": 593}, {"arrows": "to", "from": "the", "title": "586\u00d7", "to": "order", "value": 586}, {"arrows": "to", "from": "then", "title": "544\u00d7", "to": "we", "value": 544}, {"arrows": "to", "from": "see", "title": "539\u00d7", "to": "we", "value": 539}, {"arrows": "to", "from": "be", "title": "533\u00d7", "to": "the", "value": 533}, {"arrows": "to", "from": "that", "title": "533\u00d7", "to": "is", "value": 533}, {"arrows": "to", "from": "are", "title": "521\u00d7", "to": "not", "value": 521}, {"arrows": "to", "from": "a", "title": "513\u00d7", "to": "data", "value": 513}, {"arrows": "to", "from": "see", "title": "500\u00d7", "to": "the", "value": 500}, {"arrows": "to", "from": "here", "title": "486\u00d7", "to": "and", "value": 486}, {"arrows": "to", "from": "and", "title": "480\u00d7", "to": "here", "value": 480}, {"arrows": "to", "from": "data", "title": "478\u00d7", "to": "and", "value": 478}, {"arrows": "to", "from": "to", "title": "470\u00d7", "to": "see", "value": 470}, {"arrows": "to", "from": "do", "title": "452\u00d7", "to": "we", "value": 452}, {"arrows": "to", "from": "and", "title": "404\u00d7", "to": "it", "value": 404}, {"arrows": "to", "from": "well", "title": "403\u00d7", "to": "the", "value": 403}, {"arrows": "to", "from": "data", "title": "400\u00d7", "to": "so", "value": 400}, {"arrows": "to", "from": "the", "title": "395\u00d7", "to": "right", "value": 395}, {"arrows": "to", "from": "and", "title": "394\u00d7", "to": "say", "value": 394}, {"arrows": "to", "from": "now", "title": "392\u00d7", "to": "of", "value": 392}, {"arrows": "to", "from": "is", "title": "391\u00d7", "to": "to", "value": 391}, {"arrows": "to", "from": "then", "title": "381\u00d7", "to": "the", "value": 381}, {"arrows": "to", "from": "are", "title": "377\u00d7", "to": "the", "value": 377}, {"arrows": "to", "from": "now", "title": "359\u00d7", "to": "as", "value": 359}, {"arrows": "to", "from": "we", "title": "356\u00d7", "to": "going", "value": 356}, {"arrows": "to", "from": "so", "title": "355\u00d7", "to": "here", "value": 355}, {"arrows": "to", "from": "it", "title": "349\u00d7", "to": "now", "value": 349}, {"arrows": "to", "from": "let\u0027s", "title": "345\u00d7", "to": "have", "value": 345}, {"arrows": "to", "from": "is", "title": "343\u00d7", "to": "going", "value": 343}, {"arrows": "to", "from": "say", "title": "340\u00d7", "to": "that", "value": 340}, {"arrows": "to", "from": "and", "title": "340\u00d7", "to": "so", "value": 340}, {"arrows": "to", "from": "and", "title": "339\u00d7", "to": "let\u0027s", "value": 339}, {"arrows": "to", "from": "course", "title": "330\u00d7", "to": "we", "value": 330}, {"arrows": "to", "from": "do", "title": "323\u00d7", "to": "the", "value": 323}, {"arrows": "to", "from": "means", "title": "322\u00d7", "to": "we", "value": 322}, {"arrows": "to", "from": "is", "title": "314\u00d7", "to": "that", "value": 314}, {"arrows": "to", "from": "here", "title": "313\u00d7", "to": "the", "value": 313}, {"arrows": "to", "from": "and", "title": "304\u00d7", "to": "do", "value": 304}, {"arrows": "to", "from": "now", "title": "303\u00d7", "to": "you", "value": 303}, {"arrows": "to", "from": "of", "title": "295\u00d7", "to": "this", "value": 295}, {"arrows": "to", "from": "then", "title": "294\u00d7", "to": "you", "value": 294}, {"arrows": "to", "from": "it", "title": "291\u00d7", "to": "going", "value": 291}, {"arrows": "to", "from": "it", "title": "283\u00d7", "to": "to", "value": 283}, {"arrows": "to", "from": "this", "title": "281\u00d7", "to": "and", "value": 281}, {"arrows": "to", "from": "it", "title": "280\u00d7", "to": "as", "value": 280}, {"arrows": "to", "from": "here", "title": "276\u00d7", "to": "so", "value": 276}, {"arrows": "to", "from": "this", "title": "271\u00d7", "to": "so", "value": 271}, {"arrows": "to", "from": "that", "title": "263\u00d7", "to": "the", "value": 263}, {"arrows": "to", "from": "have", "title": "261\u00d7", "to": "it", "value": 261}, {"arrows": "to", "from": "say", "title": "260\u00d7", "to": "you", "value": 260}, {"arrows": "to", "from": "as", "title": "254\u00d7", "to": "we", "value": 254}, {"arrows": "to", "from": "do", "title": "247\u00d7", "to": "is", "value": 247}, {"arrows": "to", "from": "to", "title": "235\u00d7", "to": "this", "value": 235}, {"arrows": "to", "from": "to", "title": "234\u00d7", "to": "a", "value": 234}, {"arrows": "to", "from": "we", "title": "227\u00d7", "to": "go", "value": 227}, {"arrows": "to", "from": "that", "title": "222\u00d7", "to": "are", "value": 222}, {"arrows": "to", "from": "this", "title": "221\u00d7", "to": "going", "value": 221}, {"arrows": "to", "from": "course", "title": "220\u00d7", "to": "the", "value": 220}, {"arrows": "to", "from": "you", "title": "220\u00d7", "to": "say", "value": 220}, {"arrows": "to", "from": "it", "title": "220\u00d7", "to": "you", "value": 220}, {"arrows": "to", "from": "say", "title": "218\u00d7", "to": "the", "value": 218}, {"arrows": "to", "from": "see", "title": "218\u00d7", "to": "it", "value": 218}, {"arrows": "to", "from": "can", "title": "210\u00d7", "to": "say", "value": 210}, {"arrows": "to", "from": "see", "title": "200\u00d7", "to": "that", "value": 200}, {"arrows": "to", "from": "here", "title": "200\u00d7", "to": "is", "value": 200}, {"arrows": "to", "from": "have", "title": "199\u00d7", "to": "now", "value": 199}, {"arrows": "to", "from": "not", "title": "198\u00d7", "to": "be", "value": 198}, {"arrows": "to", "from": "of", "title": "197\u00d7", "to": "data", "value": 197}, {"arrows": "to", "from": "well", "title": "195\u00d7", "to": "we", "value": 195}, {"arrows": "to", "from": "let\u0027s", "title": "194\u00d7", "to": "see", "value": 194}, {"arrows": "to", "from": "you", "title": "192\u00d7", "to": "to", "value": 192}, {"arrows": "to", "from": "it", "title": "189\u00d7", "to": "a", "value": 189}, {"arrows": "to", "from": "we", "title": "186\u00d7", "to": "do", "value": 186}, {"arrows": "to", "from": "example", "title": "182\u00d7", "to": "the", "value": 182}, {"arrows": "to", "from": "course", "title": "181\u00d7", "to": "you", "value": 181}, {"arrows": "to", "from": "that", "title": "181\u00d7", "to": "so", "value": 181}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 100, "springConstant": 0.08}, "maxVelocity": 50, "solver": "forceAtlas2Based", "timestep": 0.35, "stabilization": {"iterations": 150}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
