@@ -63,14 +63,23 @@
 ## ✅ INSIGHTS 
 
 [1. 100 фраз, чтобы говорить в стиле Baraa](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/100_phrases.md)
+
 [2. 100 фраз, чтобы говорить в стиле Baraa (часть 2)](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/100_phrases_v2.md)
+
 [3. Коммуникационный набор](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/communication_kit.md)
+
 [4. Ядро словаря по принципу 80/20 (Парето), по частям речи](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/core_vocabulary_pareto.md)
+
 [5. Глубокий анализ спикера](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/deep_speaker_analysis.md)
+
 [6. Обороты речи спикера (discourse markers)](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/discourse_markers.md)
+
 [7. Словарный запас и частотность фраз (n=2..10)](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/ngrams_2_10_report.md)
+
 [8. Частота слов по частям речи (весь корпус, 8 курсов)](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/pos_frequency_report.md)
+
 [9. Граф построения начала предложения](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/sentence_starter_tree_deep.png)
+
 [10. Граф построения конца предложения](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/sentence_ending_tree.png)
 
 
