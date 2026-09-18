@@ -82,7 +82,7 @@
 
 [10. Граф построения конца предложения](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/sentence_ending_tree.png)
 
-11. Поток из 5 слов в предложениях Baraa
+[11. Поток из 5 слов в предложениях Baraa](https://htmlpreview.github.io/?https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/sankey_sentence_flow.html)
 
 [12. Граф переходов слов](https://uzundemir.github.io/Baraa_Khatib_Salkini_Speaking_Analyses/)
 
