@@ -82,6 +82,7 @@
 
 [10. Граф построения конца предложения](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/sentence_ending_tree.png)
 
+<img width="1538" height="859" alt="image" src="https://github.com/user-attachments/assets/9fcb4c45-c793-4b15-bfea-07e3fc9c587b" />
 
 ---
 
