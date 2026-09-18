@@ -84,6 +84,8 @@
 
 11. Поток из 5 слов в предложениях Baraa
 
+[12. Граф переходов слов](https://uzundemir.github.io/Baraa_Khatib_Salkini_Speaking_Analyses/)
+
 <img width="1538" height="859" alt="image" src="https://github.com/user-attachments/assets/9fcb4c45-c793-4b15-bfea-07e3fc9c587b" />
 
 ---
