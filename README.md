@@ -51,6 +51,8 @@
 
 **Ясность — это не харизма. Это измеримая повторяемость и сдержанность.**
 
+Речевой профиль спикера [здесь](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/Baraa_Speaker_Research_Report.pdf)
+
 ---
 
 ## 💡 Практический вывод для изучающих язык
