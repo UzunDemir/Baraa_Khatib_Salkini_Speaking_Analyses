@@ -58,6 +58,10 @@
 
 Ноутбук с исследованими на [kaggle](https://www.kaggle.com/code/demiruzun/baraas-speaking-analysis/edit)
 
+Ну и самые полезные инсайты я выделил в этом блоке.
+
+## ✅ INSIGHTS 
+
 [1. 100 фраз, чтобы говорить в его стиле](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/100_phrases.md)
 
 ---
