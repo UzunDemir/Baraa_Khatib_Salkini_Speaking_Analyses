@@ -53,6 +53,8 @@
 
 Речевой профиль спикера [здесь](https://github.com/UzunDemir/Baraa_Khatib_Salkini_Speaking_Analyses/blob/main/files/Baraa_Speaker_Research_Report.pdf)
 
+Ноутбук с исследованими на [kaggle](https://www.kaggle.com/code/demiruzun/baraas-speaking-analysis/edit)
+
 ---
 
 ## 💡 Практический вывод для изучающих язык
